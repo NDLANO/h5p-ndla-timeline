@@ -5,7 +5,6 @@ export interface H5PObject {
   Fdfds: typeof H5PWrapper;
 }
 
-
 declare class EventDispatcher {
   /**
    * Add new event listener.
@@ -57,8 +56,12 @@ declare class EventDispatcher {
    * @param {boolean} [extras.bubbles]
    * @param {boolean} [extras.external]
    */
-  trigger: (event: string | any, eventData?: any, extras?: {
-    bubbles?: boolean;
-    external?: boolean;
-  }) => void;
+  trigger: (
+    event: string | any,
+    eventData?: any,
+    extras?: {
+      bubbles?: boolean;
+      external?: boolean;
+    }
+  ) => void;
 }

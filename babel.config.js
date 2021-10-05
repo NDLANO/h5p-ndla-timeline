@@ -3,12 +3,10 @@ module.exports = {
     [
       "@babel/preset-env",
       {
-        modules: false
-      }
+        modules: false,
+      },
     ],
-    "@babel/preset-react"
+    "@babel/preset-react",
   ],
-  plugins: [
-    "react-hot-loader/babel"
-  ]
-}
+  plugins: ["react-hot-loader/babel"],
+};

@@ -3,7 +3,7 @@ import { hot } from "react-hot-loader/root";
 
 type Props = {
   adjective: string;
-}
+};
 
 class App extends React.Component<Props> {
   render() {
