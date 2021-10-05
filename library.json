@@ -1,0 +1,20 @@
+{
+  "title": "fdfds",
+  "machineName": "H5P.Fdfds",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 1,
+  "preloadedJs": [
+    {
+      "path": "src/fdfds.js"
+    }
+  ],
+  "preloadedDependencies": [
+    {
+      "machineName": "H5PEditor.Fdfds",
+      "majorVersion": 1,
+      "minorVersion": 0
+    }
+  ]
+}
