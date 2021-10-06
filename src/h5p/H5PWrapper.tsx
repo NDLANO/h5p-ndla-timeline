@@ -13,9 +13,9 @@ export class H5PWrapper extends H5P.EventDispatcher {
     ReactDOM.render(<App adjective="beautiful" />, this.wrapper);
   }
 
-  attach([containerElement]: JQuery<HTMLElement>) {
+  attach([containerElement]: JQuery<HTMLElement>): void {
     containerElement.appendChild(this.wrapper);
-    containerElement.classList.add("h5p-fdfds");
+    containerElement.classList.add("h5p-timeline");
   }
 
   private static createWrapperElement(): HTMLDivElement {
