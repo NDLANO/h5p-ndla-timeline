@@ -5,10 +5,10 @@ import { H5PL10n } from "./types/H5P/H5PL10n";
 
 const semantics: Readonly<[H5PFieldGroup, H5PBehaviour, H5PL10n]> = [
   {
-    label: "Topic map editor",
-    name: "topicMap",
+    label: "Timeline editor",
+    name: "timeline",
     type: H5PFieldType.Group,
-    widget: "topicMap",
+    widget: "timeline",
     importance: "high",
     fields: [
       {
