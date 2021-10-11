@@ -9,9 +9,11 @@
     "moduleResolution": "node",
     "target": "es5",
     "allowJs": true,
+    "checkJs": false,
     "jsx": "react",
     "downlevelIteration": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
   },
-  "include": ["./src/**/*", "H5P.d.ts"]
+  "include": ["./src/**/*", "H5P.d.ts"],
+
 }

@@ -1,30 +1,33 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { TimeLineItem, TimeLineItemProps} from "./TimeLine";
+import { TimeLine, TimeLineProps} from "./TimeLine";
 
 export default {
     title: "Atoms/TimeLine",
-    component: TimeLineItem,
-  } as ComponentMeta<typeof TimeLineItem>;
+    component: TimeLine,
+  } as ComponentMeta<typeof TimeLine>;
   
-  const defaultArgs: TimelineItemProps = {
-    events: [],
+  const defaultArgs: TimeLineProps = {
+    timelineDefinition: {
+        events: [{start_date:{year:2021}, text:{text: "test",},},],
+        title: {text:{text: "hei"}}
+    }
   };
 
+  export const Empty: ComponentStory<typeof TimeLine> = () => {
 
-  export const Empty: ComponentStory<typeof TimeLineItem> = () => {
-    const args: TimeLineItemProps = { ...defaultArgs };
-    return <TimeLineItem {...args} />;
+    const args: TimeLineProps = { ...defaultArgs };
+    return <TimeLine {...args} />;
   };
 
-  export const WithTitleAndEvent: ComponentStory<typeof TimeLineItem> = () => {
-    const titleSlide:TitleSlide = {
-        text: {headline: "TITLE", text: "title",},
-    };
-    const event:Slide ={
-        start_date: {year: 2021,},
-    };
-    const args: TimeLineItemProps = { ...defaultArgs, title: titleSlide, events: [event], };
-    return <TimeLineItem {...args} />;
-  };
+//   export const WithTitleAndEvent: ComponentStory<typeof TimeLineItem> = () => {
+//     const titleSlide:TitleSlide = {
+//         text: {headline: "TITLE", text: "title",},
+//     };
+//     const event:Slide ={
+//         start_date: {year: 2021,},
+//     };
+//     const args: TimeLineItemProps = { ...defaultArgs, title: titleSlide, events: [event], };
+//     return <TimeLineItem {...args} />;
+//   };

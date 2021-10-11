@@ -1,19 +1,21 @@
 import * as React from "react";
-import Timeline from 'timelinejs-react';
+/// <reference types="timelinejs3" />
 
-export type TimeLineItemProps = {
-    events: Slide[],
-    title: TitleSlide | undefined,
-    options: TimelineOptions | undefined,
+export type TimeLineProps = {
+    timelineDefinition: TL.ITimelineConfig;
 };
 
-export const TimeLineItem = (timelineProps:TimeLineItemProps): JSX.Element => {
+export const TimeLine = (timelineProps:TimeLineProps): JSX.Element => {
+    React.useEffect(() => {
+        const TL = require('@knight-lab/timelinejs');
+        // Update the document title using the browser API
+        console.log(TL);
+        new TL.Timeline('timeline-embed', timelineProps.timelineDefinition);
+      });
+    
     return (
-        <Timeline
-            target={<div className="timeline"/>}
-            events={timelineProps.events}
-            title={timelineProps.title} // optional
-            options={timelineProps.options} // optional
-        />
+        <div id="timeline-embed">
+            <span>hello</span>
+        </div>
     );
 };
