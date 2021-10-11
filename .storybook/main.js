@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const useLessLoader = require('storybook-less-loader')
 
-=======
-const useLessLoader = require("storybook-less-loader");
->>>>>>> 4498b25 (prettier)
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
