@@ -1,5 +1,5 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const useLessLoader = require('storybook-less-loader')
+const useLessLoader = require("storybook-less-loader");
 
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
@@ -9,7 +9,7 @@ module.exports = {
   },
   webpackFinal: async config => {
     addScssSupport(config);
-    useLessLoader(config)
+    useLessLoader(config);
     return config;
   },
 };
@@ -37,4 +37,3 @@ function addScssSupport(config) {
     exclude: /\.module\.scss$/,
   });
 }
-
