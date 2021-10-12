@@ -65,6 +65,14 @@ const config = {
         exclude: /\.module\.css$/,
       },
       {
+        test: /\.less$/,
+        use: [MiniCssExtractPlugin.loader, "less-loader"],
+        // use: ExtractTextPlugin.extract({
+        //     fallback: "style-loader",
+        //     use: "css-loader!less-loader"
+        // })
+      },
+      {
         test: /\.svg$/,
         use: "file-loader",
       },
