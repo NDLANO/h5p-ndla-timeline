@@ -7,10 +7,12 @@ export type TimeLineProps = {
   timelineDefinition: TL.ITimelineConfig;
 };
 
-export const TimeLine = (timelineProps: TimeLineProps): JSX.Element => {
+export const TimeLine: React.FC<TimeLineProps> = ({
+  timelineDefinition,
+}: TimeLineProps) => {
   React.useEffect(() => {
     // Update the document title using the browser API
-    new TL.Timeline("timeline-embed", timelineProps.timelineDefinition);
+    new TL.Timeline("timeline-embed", timelineDefinition);
   });
 
   return (
