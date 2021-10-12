@@ -4,6 +4,7 @@ import * as React from "react";
 const TL = require("@knight-lab/timelinejs");
 
 export type TimeLineProps = {
+  // @ts-expect-error TL is defined
   timelineDefinition: TL.ITimelineConfig;
 };
 
