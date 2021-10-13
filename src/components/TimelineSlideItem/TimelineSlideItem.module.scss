@@ -1,0 +1,26 @@
+.topicMapItem {
+  background-color: #2bf;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.bgImage {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.title {
+  padding: 0.5em;
+}

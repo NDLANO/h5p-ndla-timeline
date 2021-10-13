@@ -14,5 +14,5 @@
     "downlevelIteration": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["./src/**/*", "H5P.d.ts"]
+  "include": ["./src/**/*", "H5P.d.ts", "typings.d.ts"]
 }
