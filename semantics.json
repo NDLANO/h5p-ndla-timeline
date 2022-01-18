@@ -3,7 +3,7 @@
     "label": "Timeline editor",
     "name": "timeline",
     "type": "group",
-    
+
     "importance": "high",
     "fields": [
       {
@@ -17,7 +17,7 @@
           "name": "timelineItem",
           "importance": "low",
           "type": "group",
-          
+
           "fields": [
             {
               "label": "Title",
@@ -87,7 +87,6 @@
               "name": "backgroundImage",
               "type": "image"
             }
-            
           ]
         }
       },
@@ -102,7 +101,7 @@
           "name": "category",
           "importance": "low",
           "type": "group",
-          
+
           "fields": [
             {
               "label": "Name",
@@ -128,7 +127,7 @@
           "name": "era",
           "importance": "low",
           "type": "group",
-          
+
           "fields": [
             {
               "label": "Name",
@@ -149,7 +148,6 @@
               "label": "End date",
               "name": "endDate",
               "type": "date"
-
             }
           ]
         }
