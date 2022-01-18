@@ -1,19 +1,24 @@
 {
   "title": "Timeline",
   "machineName": "H5P.Timeline",
-  "majorVersion": 1,
+  "majorVersion": 2,
   "minorVersion": 0,
   "patchVersion": 0,
   "runnable": 1,
   "preloadedJs": [
     {
-      "path": "src/timeline.js"
+      "path": "dist/bundle.js"
     }
   ],
-  "preloadedDependencies": [
+  "preloadedCss": [
+    {
+      "path": "dist/main.css"
+    }
+  ],
+  "editorDependencies": [
     {
       "machineName": "H5PEditor.Timeline",
-      "majorVersion": 1,
+      "majorVersion": 2,
       "minorVersion": 0
     }
   ]

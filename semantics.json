@@ -1,7 +1,171 @@
 [
   {
-    "name": "name",
-    "type": "text",
-    "label": "What is your name?"
+    "label": "Timeline editor",
+    "name": "timeline",
+    "type": "group",
+
+    "importance": "high",
+    "fields": [
+      {
+        "label": "Timeline items",
+        "name": "timelineItems",
+        "type": "list",
+        "entity": "Timeline item",
+        "importance": "low",
+        "field": {
+          "label": "Item",
+          "name": "timelineItem",
+          "importance": "low",
+          "type": "group",
+
+          "fields": [
+            {
+              "label": "Title",
+              "description": "The title shown on in the content.",
+              "name": "label",
+              "type": "text"
+            },
+            {
+              "name": "eventContent",
+              "type": "group",
+              "label": "Event content",
+              "importance": "low",
+              "fields": [
+                {
+                  "name": "id",
+                  "type": "text",
+                  "widget": "none"
+                },
+                {
+                  "name": "xPercentagePosition",
+                  "type": "number",
+                  "widget": "none"
+                },
+                {
+                  "name": "yPercentagePosition",
+                  "type": "number",
+                  "widget": "none"
+                },
+                {
+                  "name": "widthPercentage",
+                  "type": "number",
+                  "widget": "none"
+                },
+                {
+                  "name": "heightPercentage",
+                  "type": "number",
+                  "widget": "none"
+                }
+              ]
+            },
+            {
+              "label": "Layout",
+              "name": "layout",
+              "type": "oneOf",
+              "importance": "low",
+              "options": [
+                {
+                  "label": "Text on right (standard)",
+                  "value": "right"
+                },
+                {
+                  "label": "Text on left",
+                  "value": "left"
+                },
+                {
+                  "label": "Centered (Text only)",
+                  "value": "center"
+                },
+                {
+                  "label": "Custom",
+                  "value": "custom"
+                }
+              ]
+            },
+            {
+              "label": "Image",
+              "name": "backgroundImage",
+              "type": "image"
+            }
+          ]
+        }
+      },
+      {
+        "label": "Categories",
+        "name": "categories",
+        "type": "list",
+        "entity": "Category",
+        "importance": "low",
+        "field": {
+          "label": "Category",
+          "name": "category",
+          "importance": "low",
+          "type": "group",
+
+          "fields": [
+            {
+              "label": "Name",
+              "name": "name",
+              "type": "text"
+            },
+            {
+              "label": "Color",
+              "name": "color",
+              "type": "color"
+            }
+          ]
+        }
+      },
+      {
+        "label": "Eras",
+        "name": "eras",
+        "type": "list",
+        "entity": "Era",
+        "importance": "low",
+        "field": {
+          "label": "Era",
+          "name": "era",
+          "importance": "low",
+          "type": "group",
+
+          "fields": [
+            {
+              "label": "Name",
+              "name": "name",
+              "type": "text"
+            },
+            {
+              "label": "Color",
+              "name": "color",
+              "type": "color"
+            },
+            {
+              "label": "Start date",
+              "name": "startDate",
+              "type": "date"
+            },
+            {
+              "label": "End date",
+              "name": "endDate",
+              "type": "date"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "behaviour",
+    "type": "group",
+    "label": "Behavioral settings",
+    "importance": "low",
+    "fields": []
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "common": true,
+    "label": "Localize",
+    "fields": []
   }
 ]
