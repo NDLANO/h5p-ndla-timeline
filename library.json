@@ -20,6 +20,11 @@
       "machineName": "H5PEditor.NDLATimeline",
       "majorVersion": 0,
       "minorVersion": 0
+    },
+    {
+      "machineName": "H5PEditor.RadioGroup",
+      "majorVersion": 1,
+      "minorVersion": 1
     }
   ]
 }

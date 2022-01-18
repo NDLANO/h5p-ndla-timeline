@@ -61,7 +61,7 @@
             {
               "label": "Layout",
               "name": "layout",
-              "type": "oneOf",
+              "type": "radioGroup",
               "importance": "low",
               "options": [
                 {
