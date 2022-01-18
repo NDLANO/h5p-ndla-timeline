@@ -1,7 +1,7 @@
 [
   {
-    "label": "Timeline editor",
-    "name": "timeline",
+    "label": "NDLA Timeline editor",
+    "name": "ndlaTimeline",
     "type": "group",
 
     "importance": "high",

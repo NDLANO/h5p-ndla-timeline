@@ -3,4 +3,4 @@ import { H5PWrapper } from "./h5p/H5PWrapper";
 import "./styles.css";
 import "./styles.scss";
 
-H5P.Timeline = H5PWrapper;
+H5P.NDLATimeline = H5PWrapper;

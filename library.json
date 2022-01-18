@@ -1,7 +1,7 @@
 {
   "title": "Timeline",
-  "machineName": "H5P.Timeline",
-  "majorVersion": 2,
+  "machineName": "H5P.NDLATimeline",
+  "majorVersion": 0,
   "minorVersion": 0,
   "patchVersion": 0,
   "runnable": 1,
@@ -17,8 +17,8 @@
   ],
   "editorDependencies": [
     {
-      "machineName": "H5PEditor.Timeline",
-      "majorVersion": 2,
+      "machineName": "H5PEditor.NDLATimeline",
+      "majorVersion": 0,
       "minorVersion": 0
     }
   ]
