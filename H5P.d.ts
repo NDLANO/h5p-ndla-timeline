@@ -1,8 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { H5PWrapper } from "./src/H5P/H5PWrapper";
 
 export interface H5PObject {
   EventDispatcher: typeof EventDispatcher;
-  NDLATimeline: typeof H5PWrapper;
+  TopicMap: typeof H5PWrapper;
+  getPath: (path: string, contentId: string) => string;
 }
 
 declare class EventDispatcher {
@@ -18,11 +21,7 @@ declare class EventDispatcher {
    * @param {Object} [thisArg]
    *   Optionally specify the this value when calling listener.
    */
-  on: (
-    type: string,
-    listener: (event: unknown) => void,
-    thisArg?: ThisType<unknown>,
-  ) => void;
+  on: (type: string, listener: any, thisArg?: any) => void;
 
   /**
    * Add new event listener that will be fired only once.
@@ -36,11 +35,7 @@ declare class EventDispatcher {
    * @param {Object} thisArg
    *   Optionally specify the this value when calling listener.
    */
-  once: (
-    type: string,
-    listener: (event: unknown) => void,
-    thisArg?: ThisType<unknown>,
-  ) => void;
+  once: (type: string, listener: any, thisArg: any) => void;
 
   /**
    * Remove event listener.
@@ -53,7 +48,7 @@ declare class EventDispatcher {
    * @param {H5P.EventCallback} listener
    *   Event listener
    */
-  off: (type: string, listener: (event: unknown) => void) => void;
+  off: (type: string, listener: any) => void;
 
   /**
    * Dispatch event.
@@ -68,11 +63,21 @@ declare class EventDispatcher {
    * @param {boolean} [extras.external]
    */
   trigger: (
-    event: string | unknown,
-    eventData?: unknown,
+    event: string | any,
+    eventData?: any,
     extras?: {
       bubbles?: boolean;
       external?: boolean;
     },
   ) => void;
+}
+
+declare interface IH5PWrapper {
+  attach($wrapper: JQuery<HTMLElement>): void;
+}
+
+declare interface IH5PEditorWrapper {
+  appendTo($wrapper: JQuery<HTMLElement>): void;
+  validate(): boolean;
+  remove(): void;
 }
