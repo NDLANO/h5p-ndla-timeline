@@ -1,5 +1,5 @@
-import { H5P } from "./h5p/H5P.util";
-import { H5PWrapper } from "./h5p/H5PWrapper";
+import { H5P } from "./H5P/H5P.util";
+import { H5PWrapper } from "./H5P/H5PWrapper";
 import "./styles.css";
 import "./styles.scss";
 
