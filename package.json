@@ -61,7 +61,7 @@
     "jest": "^27.4.6",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
-    "mini-css-extract-plugin": "^2.5.2",
+    "mini-css-extract-plugin": "^2.5.3",
     "prettier": "^2.5.1",
     "sass": "^1.49.0",
     "sass-loader": "^12.4.0",
