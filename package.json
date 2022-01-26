@@ -18,7 +18,8 @@
     "lint:fix": "npm run format:fix && npm run eslint:fix",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "generate-semantics": "ts-node generate-semantics.ts"
   },
   "dependencies": {
     "@knight-lab/timelinejs": "^3.8.19",
