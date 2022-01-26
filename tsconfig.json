@@ -7,12 +7,18 @@
     "noImplicitAny": true,
     "module": "es6",
     "moduleResolution": "node",
-    "target": "es5",
+    "target": "es2015",
     "allowJs": true,
-    "checkJs": false,
     "jsx": "react",
     "downlevelIteration": true,
-    "allowSyntheticDefaultImports": true
+    "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true
   },
-  "include": ["./src/**/*", "H5P.d.ts", "typings.d.ts"]
+  "include": ["./src/**/*", "H5P.d.ts", "typings.d.ts"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "NodeNext"
+    }
+  }
 }

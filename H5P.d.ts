@@ -4,7 +4,7 @@ import { H5PWrapper } from "./src/H5P/H5PWrapper";
 
 export interface H5PObject {
   EventDispatcher: typeof EventDispatcher;
-  TopicMap: typeof H5PWrapper;
+  NDLATimeline: typeof H5PWrapper;
   getPath: (path: string, contentId: string) => string;
 }
 

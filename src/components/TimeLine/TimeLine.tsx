@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires, no-new */
 import * as React from "react";
-import ReactDOM from "react-dom";
-
-const TL = require("@knight-lab/timelinejs");
+import * as ReactDOM from "react-dom";
+import TL from "@knight-lab/timelinejs";
 
 export type TimeLineProps = {
   timelineDefinition: any;

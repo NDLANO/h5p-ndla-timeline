@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import App from "../App";
+import { App } from "../App";
 import { Params } from "../types/H5P/Params";
 import { H5P } from "./H5P.util";
 

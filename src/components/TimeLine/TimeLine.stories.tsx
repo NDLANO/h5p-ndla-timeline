@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
-import ReactDOMServer from "react-dom/server";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { TimeLine, TimeLineProps } from "./TimeLine";
 import { Grid, GridProps } from "../Grid/Grid";
