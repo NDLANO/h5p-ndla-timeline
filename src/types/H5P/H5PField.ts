@@ -23,7 +23,7 @@ type H5PFieldCommon = {
    *
    * @see https://h5p.org/semantics#attribute-description
    */
-  decription?: string;
+  description?: string;
 
   /**
    * Set to true for optional fields.
@@ -75,8 +75,7 @@ export type H5PField =
   | H5PFieldVideo;
 
 export type H5PFieldText =
-  | H5PFieldCommon
-  | {
+  | H5PFieldCommon & {
       type: H5PFieldType.Text;
       default?: string;
       widget?: string;
@@ -106,14 +105,13 @@ export type H5PFieldText =
     };
 
 export type H5PFieldNumber =
-  | H5PFieldCommon
-  | {
+  | H5PFieldCommon & {
       type: H5PFieldType.Number;
-      default: number;
-      widget: string;
-      min: number;
-      max: number;
-      steps: number;
+      default?: number;
+      widget?: string;
+      min?: number;
+      max?: number;
+      steps?: number;
 
       /**
        * The number of decimal digits allowed. Use 0 for integer values.
@@ -122,20 +120,18 @@ export type H5PFieldNumber =
        *
        * @see https://h5p.org/semantics#attribute-decimals
        */
-      decimals: number;
+      decimals?: number;
     };
 
 export type H5PFieldBoolean =
-  | H5PFieldCommon
-  | {
+  | H5PFieldCommon & {
       type: H5PFieldType.Boolean;
       default: boolean;
       widget: string;
     };
 
 export type H5PFieldGroup =
-  | H5PFieldCommon
-  | {
+  | H5PFieldCommon & {
       type: H5PFieldType.Group;
       widget?: string;
       fields: Array<H5PField>;
@@ -152,8 +148,7 @@ export type H5PFieldGroup =
     };
 
 export type H5PFieldList =
-  | H5PFieldCommon
-  | {
+  | H5PFieldCommon & {
       type: H5PFieldType.List;
 
       /**
@@ -179,7 +174,7 @@ export type H5PFieldList =
        *
        * @see https://h5p.org/semantics#attribute-widgets
        */
-      widgets: Array<{ name: string; label: string }>;
+      widgets?: Array<{ name: string; label: string }>;
       field: H5PField;
       min?: number;
       max?: number;
@@ -193,8 +188,7 @@ export type H5PFieldList =
     };
 
 export type H5PFieldSelect =
-  | H5PFieldCommon
-  | {
+  | H5PFieldCommon & {
       type: H5PFieldType.Select;
       default: string | number | boolean;
       widget?: string;
@@ -202,8 +196,7 @@ export type H5PFieldSelect =
     };
 
 export type H5PFieldLibrary =
-  | H5PFieldCommon
-  | {
+  | H5PFieldCommon & {
       type: H5PFieldType.Library;
       widget?: string;
       default: string;
@@ -211,29 +204,25 @@ export type H5PFieldLibrary =
     };
 
 export type H5PFieldImage =
-  | H5PFieldCommon
-  | {
+  | H5PFieldCommon & {
       type: H5PFieldType.Image;
       widget?: string;
     };
 
 export type H5PFieldVideo =
-  | H5PFieldCommon
-  | {
+  | H5PFieldCommon & {
       type: H5PFieldType.Video;
       widget?: string;
     };
 
 export type H5PFieldAudio =
-  | H5PFieldCommon
-  | {
+  | H5PFieldCommon & {
       type: H5PFieldType.Audio;
       widget?: string;
     };
 
 export type H5PFieldFile =
-  | H5PFieldCommon
-  | {
+  | H5PFieldCommon & {
       type: H5PFieldType.File;
       widget?: string;
     };

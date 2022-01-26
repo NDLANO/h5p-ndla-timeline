@@ -1,12 +1,13 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import App from "../App";
+import { Params } from "../types/H5P/Params";
 import { H5P } from "./H5P.util";
 
 export class H5PWrapper extends H5P.EventDispatcher {
   private wrapper: HTMLElement;
 
-  constructor(params: unknown, contentId: string, extras?: unknown) {
+  constructor(params: Params, contentId: string, extras?: unknown) {
     super();
     this.wrapper = H5PWrapper.createWrapperElement();
 
