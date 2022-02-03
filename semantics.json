@@ -3,7 +3,6 @@
     "label": "NDLA Timeline editor",
     "name": "ndlaTimeline",
     "type": "group",
-    "widget": "ndlaTimeline",
     "importance": "high",
     "fields": [
       {

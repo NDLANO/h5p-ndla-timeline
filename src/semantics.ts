@@ -8,7 +8,6 @@ export const semantics: Readonly<[H5PFieldGroup, H5PBehaviour, H5PL10n]> = [
     label: "NDLA Timeline editor",
     name: "ndlaTimeline",
     type: H5PFieldType.Group,
-    widget: "ndlaTimeline",
     importance: "high",
     fields: [
       {
@@ -35,35 +34,12 @@ export const semantics: Readonly<[H5PFieldGroup, H5PBehaviour, H5PL10n]> = [
               type: H5PFieldType.Group,
               label: "Event content",
               importance: "low",
+              widget: "NDLATimelineEventLayout",
               fields: [
                 {
                   label: "Id",
                   name: "id",
                   type: H5PFieldType.Text,
-                  widget: "none",
-                },
-                {
-                  label: "X-position in percentages",
-                  name: "xPercentagePosition",
-                  type: H5PFieldType.Number,
-                  widget: "none",
-                },
-                {
-                  label: "Y-position in percentages",
-                  name: "yPercentagePosition",
-                  type: H5PFieldType.Number,
-                  widget: "none",
-                },
-                {
-                  label: "Width as a percentage of container width",
-                  name: "widthPercentage",
-                  type: H5PFieldType.Number,
-                  widget: "none",
-                },
-                {
-                  label: "Height as a percentage of container height",
-                  name: "heightPercentage",
-                  type: H5PFieldType.Number,
                   widget: "none",
                 },
               ],
