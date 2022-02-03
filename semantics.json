@@ -30,30 +30,11 @@
               "type": "group",
               "label": "Event content",
               "importance": "low",
+              "widget": "NDLATimelineEventLayout",
               "fields": [
                 {
                   "name": "id",
                   "type": "text",
-                  "widget": "none"
-                },
-                {
-                  "name": "xPercentagePosition",
-                  "type": "number",
-                  "widget": "none"
-                },
-                {
-                  "name": "yPercentagePosition",
-                  "type": "number",
-                  "widget": "none"
-                },
-                {
-                  "name": "widthPercentage",
-                  "type": "number",
-                  "widget": "none"
-                },
-                {
-                  "name": "heightPercentage",
-                  "type": "number",
                   "widget": "none"
                 }
               ]
