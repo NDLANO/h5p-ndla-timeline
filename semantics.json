@@ -3,7 +3,6 @@
     "label": "NDLA Timeline editor",
     "name": "ndlaTimeline",
     "type": "group",
-
     "importance": "high",
     "fields": [
       {
@@ -17,7 +16,6 @@
           "name": "timelineItem",
           "importance": "low",
           "type": "group",
-
           "fields": [
             {
               "label": "Title",
@@ -33,6 +31,7 @@
               "widget": "NDLATimelineEventLayout",
               "fields": [
                 {
+                  "label": "Id",
                   "name": "id",
                   "type": "text",
                   "widget": "none"
@@ -42,8 +41,9 @@
             {
               "label": "Layout",
               "name": "layout",
-              "type": "radioGroup",
+              "type": "select",
               "importance": "low",
+              "default": "right",
               "options": [
                 {
                   "label": "Text on right (standard)",
@@ -82,7 +82,6 @@
           "name": "category",
           "importance": "low",
           "type": "group",
-
           "fields": [
             {
               "label": "Name",
@@ -92,7 +91,8 @@
             {
               "label": "Color",
               "name": "color",
-              "type": "color"
+              "type": "text",
+              "widget": "colorSelector"
             }
           ]
         }
@@ -108,7 +108,6 @@
           "name": "era",
           "importance": "low",
           "type": "group",
-
           "fields": [
             {
               "label": "Name",
@@ -118,17 +117,18 @@
             {
               "label": "Color",
               "name": "color",
-              "type": "color"
+              "type": "text",
+              "widget": "colorSelector"
             },
             {
               "label": "Start date",
               "name": "startDate",
-              "type": "date"
+              "type": "text"
             },
             {
               "label": "End date",
               "name": "endDate",
-              "type": "date"
+              "type": "text"
             }
           ]
         }

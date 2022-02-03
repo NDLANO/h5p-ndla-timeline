@@ -1,7 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { App } from "../App";
+import { LocalizationContext } from "../contexts/LocalizationContext";
 import { Params } from "../types/H5P/Params";
+import { Translations } from "../types/Translations";
 import { H5P } from "./H5P.util";
 
 export class H5PWrapper extends H5P.EventDispatcher {
@@ -11,7 +13,15 @@ export class H5PWrapper extends H5P.EventDispatcher {
     super();
     this.wrapper = H5PWrapper.createWrapperElement();
 
-    ReactDOM.render(<App adjective="beautiful" />, this.wrapper);
+    // eslint-disable-next-line react/jsx-no-constructed-context-values
+    const l10n = params.l10n ?? ({} as Translations);
+
+    ReactDOM.render(
+      <LocalizationContext.Provider value={l10n}>
+        <App adjective="beautiful" />
+      </LocalizationContext.Provider>,
+      this.wrapper,
+    );
   }
 
   attach([containerElement]: JQuery<HTMLElement>): void {

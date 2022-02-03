@@ -1,5 +1,6 @@
 import { DraggableType } from "../DraggableType";
 import { EventItemType } from "../EventItemType";
+import { Translations } from "../Translations";
 
 export type Params = {
   behaviour?: unknown;
@@ -8,4 +9,6 @@ export type Params = {
     draggableItems: Array<DraggableType>;
     eventItems: Array<EventItemType>;
   };
+
+  l10n?: Translations;
 };
