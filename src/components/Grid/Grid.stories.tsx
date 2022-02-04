@@ -2,19 +2,19 @@
 import * as React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import { Grid, GridProps } from "./Grid";
+import { Grid } from "./Grid";
 
 export default {
   title: "Organisms/Grid",
   component: Grid,
 } as ComponentMeta<typeof Grid>;
 
-const defaultArgs: GridProps = {
+const defaultArgs: React.ComponentPropsWithoutRef<typeof Grid> = {
   items: [],
 };
 
 export const WithItems: ComponentStory<typeof Grid> = () => {
-  const args: GridProps = {
+  const args: React.ComponentPropsWithoutRef<typeof Grid> = {
     ...defaultArgs,
     items: [
       {
@@ -61,6 +61,6 @@ export const WithItems: ComponentStory<typeof Grid> = () => {
   return <Grid {...args} />;
 };
 export const WithoutItems: ComponentStory<typeof Grid> = () => {
-  const args: GridProps = { ...defaultArgs };
+  const args: React.ComponentPropsWithoutRef<typeof Grid> = { ...defaultArgs };
   return <Grid {...args} />;
 };
