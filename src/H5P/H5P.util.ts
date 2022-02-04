@@ -12,4 +12,3 @@ export const normalizeAssetPath = (path: string, contentId: string): string => {
   }
   return H5P.getPath(path, contentId);
 };
-

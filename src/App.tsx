@@ -5,9 +5,5 @@ export type AppProps = {
 };
 
 export const App: React.FC<AppProps> = ({ adjective }) => {
-  return (
-    <>
-      <h1>Hi, you&apos;re {adjective}</h1>
-    </>
-  );
+  return <h1>Hi, you&apos;re {adjective}</h1>;
 };
