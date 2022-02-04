@@ -18,7 +18,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     requestAnimationFrame(() => {
       ReactDOM.render(title, document.getElementById("timeline_title_slide"));
     });
-  }, [timelineDefinition]);
+  }, [timelineDefinition, title]);
 
   return <div id="timeline-embed" />;
 };

@@ -2,6 +2,7 @@ import { H5PBehaviour } from "./types/H5P/H5PBehaviour";
 import { H5PFieldGroup } from "./types/H5P/H5PField";
 import { H5PFieldType } from "./types/H5P/H5PFieldType";
 import { H5PL10n } from "./types/H5P/H5PL10n";
+import { layoutOptions } from "./utils/layout.utils";
 
 export const semantics: Readonly<[H5PFieldGroup, H5PBehaviour, H5PL10n]> = [
   {
@@ -50,24 +51,7 @@ export const semantics: Readonly<[H5PFieldGroup, H5PBehaviour, H5PL10n]> = [
               type: H5PFieldType.Select,
               importance: "low",
               default: "right",
-              options: [
-                {
-                  label: "Text on right (standard)",
-                  value: "right",
-                },
-                {
-                  label: "Text on left",
-                  value: "left",
-                },
-                {
-                  label: "Centered (Text only)",
-                  value: "center",
-                },
-                {
-                  label: "Custom",
-                  value: "custom",
-                },
-              ],
+              options: Object.values(layoutOptions),
             },
             {
               label: "Image",

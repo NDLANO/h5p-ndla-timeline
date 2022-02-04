@@ -2,14 +2,14 @@
 import * as React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { TimeLine, TimeLineProps } from "./TimeLine";
-import { Grid, GridProps } from "../Grid/Grid";
+import { Grid } from "../Grid/Grid";
 
 export default {
   title: "Atoms/TimeLine",
   component: TimeLine,
 } as ComponentMeta<typeof TimeLine>;
 
-const gridArgs: GridProps = {
+const gridArgs: React.ComponentPropsWithoutRef<typeof Grid> = {
   items: [
     {
       id: "1",

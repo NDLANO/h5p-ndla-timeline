@@ -2,7 +2,7 @@ import * as React from "react";
 import { TimelineSlideItem } from "../TimelineSlideItem/TimelineSlideItem";
 import styles from "./Grid.module.scss";
 
-export type GridProps = {
+type GridProps = {
   items: Array<any>;
 };
 
