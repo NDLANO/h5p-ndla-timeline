@@ -1,9 +1,4 @@
-import { LayoutOption } from "../types/LayoutOption";
-
-export const layoutOptions: Record<
-  string,
-  { label: string; value: LayoutOption }
-> = {
+export const layoutOptions = {
   textOnRight: {
     label: "Text on right (standard)",
     value: "right",

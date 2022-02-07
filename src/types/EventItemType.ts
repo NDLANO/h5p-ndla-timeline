@@ -1,22 +1,21 @@
+import { EventContent } from "./EventContent";
 import { Image } from "./H5P/Image";
+import { LayoutOption } from "./LayoutOption";
 
 export type EventItemType = {
   id: string;
 
-  /** The x position as a percentage of the container's width */
-  xPercentagePosition: number;
+  title: string;
+  image?: Image | undefined;
 
-  /** The y position as a percentage of the container's height */
-  yPercentagePosition: number;
-
-  /** The width as a percentage of the container's width */
-  widthPercentage: number;
-
-  /** The height as a percentage of the container's height */
-  heightPercentage: number;
-
-  label: string;
-  description?: string | undefined;
-  backgroundImage?: Image | undefined;
-  links?: Array<string> | undefined;
-};
+  startDate?: string;
+  endDate?: string;
+} & (
+  | {
+      layout: "custom";
+      eventContent?: EventContent;
+    }
+  | {
+      layout: Exclude<LayoutOption, "custom">;
+    }
+);

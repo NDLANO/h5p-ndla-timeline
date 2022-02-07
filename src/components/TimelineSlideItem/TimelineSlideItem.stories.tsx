@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { TimelineSlideItem, TimelineSlideItemProps } from "./TimelineSlideItem";
 
 export default {
-  title: "Molecules/TopicMapItem",
+  title: "Molecules/Timeline Slide Item",
   component: TimelineSlideItem,
 } as ComponentMeta<typeof TimelineSlideItem>;
 
