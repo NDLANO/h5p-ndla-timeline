@@ -1,6 +1,60 @@
+type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>;
+
 declare module "*.module.css";
 declare module "*.module.scss";
 declare module "@knight-lab/timelinejs" {
+  declare type TimelineMedia = {
+    url: string;
+    caption?: string;
+    credit?: string;
+    thumbnail?: string;
+    alt?: string;
+    title?: string;
+    link?: string;
+    link_target?: string;
+  };
+
+  declare type TimelineText = {
+    text: string;
+    headline?: string;
+  };
+
+  declare type TimelineDate = {
+    year: number;
+    month?: number;
+    day?: number;
+    hour?: number;
+    minute?: number;
+    second?: number;
+    millisecond?: number;
+  };
+
+  declare type TimelineEra = {
+    start_date: TimelineDate;
+    end_date: TimelineDate;
+    text?: TimelineText;
+  };
+
+  declare type TimelineSlide = {
+    start_date: TimelineDate;
+    end_date?: TimelineDate;
+    text?: TimelineText;
+    media?: TimelineMedia;
+
+    /**
+     * If present, Timeline will organize events with the same
+     * value for group to be in the same row or adjacent rows,
+     * separate from events in other groups. The common value
+     * for the group will be shown as a label at the left edge
+     * of the navigation.
+     */
+    group?: string;
+    display_date?: string;
+    background?: { url?: string; color?: string };
+    autolink?: boolean;
+    unique_id?: string;
+  };
+
   /*
    * path to json/ or link to googlespreadsheet
    * source Should be either the path to the JSON resource to load, or a JavaScript object corresponding to the
@@ -23,18 +77,10 @@ declare module "@knight-lab/timelinejs" {
   declare type TimelineDefinition =
     | string
     | {
-        title: {
-          text: {
-            text: string;
-          };
-        };
-        timeline?: {
-          headline: string;
-          type: string;
-        };
-        events: Array<{
-          start_date: { year: number; month?: number; day?: number };
-        }>;
+        title?: Optional<TimelineSlide, "start_date">;
+        events: Array<TimelineSlide>;
+        eras: Array<TimelineEra>;
+        scale?: "human" | "cosmoligical" = "human";
       };
 
   // Definitions by: Roland Zwaga <https://github.com/rolandzwaga>

@@ -23,23 +23,18 @@ const gridArgs: React.ComponentPropsWithoutRef<typeof Grid> = {
 };
 
 const defaultArgs: TimeLineProps = {
-  timelineDefinition: {
-    events: [
+  title: <Grid {...gridArgs} />,
+  data: {
+    timelineItems: [
       {
-        start_date: { year: 2021 },
+        startDate: "2021",
+        id: "event-1",
+        title: "2021",
       },
     ],
-    title: { text: { text: "<div id='timeline_title_slide'/>" } },
+    categories: [],
+    eras: [],
   },
-  title: <Grid {...gridArgs} />,
-  items: [
-    {
-      startDate: "2021",
-      id: "event-1",
-      layout: "center",
-      title: "2021",
-    },
-  ],
 };
 
 export const Empty: ComponentStory<typeof TimeLine> = () => {
