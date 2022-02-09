@@ -30,33 +30,86 @@ export const semantics: Readonly<[H5PFieldGroup, H5PBehaviour, H5PL10n]> = [
               name: "label",
               type: H5PFieldType.Text,
             },
+
             {
+              label: "Event content",
               name: "eventContent",
               type: H5PFieldType.Group,
-              label: "Event content",
               importance: "low",
-              widget: "NDLATimelineEventLayout",
+              widget: "NDLAShowWhen",
+              showWhen: {
+                rules: [
+                  {
+                    field: "layout",
+                    equals: [layoutOptions.custom.value],
+                  },
+                ],
+                widget: "NDLATimelineEventLayout",
+              },
               fields: [
                 {
-                  label: "Id",
-                  name: "id",
-                  type: H5PFieldType.Text,
-                  widget: "none",
+                  label: "Items",
+                  name: "items",
+                  type: H5PFieldType.Group,
+                  fields: [
+                    {
+                      label: "Id",
+                      name: "id",
+                      type: H5PFieldType.Text,
+                      widget: "none",
+                    },
+                    {
+                      label: "X position",
+                      name: "x",
+                      type: H5PFieldType.Text,
+                      widget: "none",
+                    },
+                    {
+                      label: "Y position",
+                      name: "y",
+                      type: H5PFieldType.Text,
+                      widget: "none",
+                    },
+                    {
+                      label: "Width",
+                      name: "width",
+                      type: H5PFieldType.Text,
+                      widget: "none",
+                    },
+                    {
+                      label: "Height",
+                      name: "height",
+                      type: H5PFieldType.Text,
+                      widget: "none",
+                    },
+                    {
+                      label: "Type",
+                      name: "type",
+                      type: H5PFieldType.Text,
+                      widget: "none",
+                    },
+                  ],
                 },
               ],
             },
             {
-              label: "Layout",
-              name: "layout",
-              type: H5PFieldType.Select,
-              importance: "low",
-              default: "right",
-              options: Object.values(layoutOptions),
+              label: "Image",
+              name: "image",
+              type: H5PFieldType.Image,
             },
             {
-              label: "Image",
-              name: "backgroundImage",
-              type: H5PFieldType.Image,
+              label: "Start date",
+              description:
+                "YYYY-MM-DD — only year is required. Years can be negative.",
+              name: "startDate",
+              type: H5PFieldType.Text,
+            },
+            {
+              label: "End date",
+              description:
+                "YYYY-MM-DD — only year is required. Years can be negative.",
+              name: "endDate",
+              type: H5PFieldType.Text,
             },
           ],
         },

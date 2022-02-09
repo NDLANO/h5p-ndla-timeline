@@ -1,17 +1,13 @@
 import * as React from "react";
 import { FC } from "react";
+import { EventItemType } from "../../types/EventItemType";
 import { LayoutOption } from "../../types/LayoutOption";
 import { Grid } from "../Grid/Grid";
 import styles from "./EventItem.module.scss";
 
-type EventItemProps =
-  | {
-      layout: Exclude<LayoutOption, "custom">;
-    }
-  | {
-      layout: "custom";
-      gridProps: React.ComponentPropsWithoutRef<typeof Grid>;
-    };
+type EventItemProps = {
+  item: EventItemType;
+};
 
 const layoutClassName: Record<Exclude<LayoutOption, "custom">, string> = {
   center: styles.center,
@@ -19,16 +15,14 @@ const layoutClassName: Record<Exclude<LayoutOption, "custom">, string> = {
   right: styles.right,
 };
 
-// @ts-expect-error Destructuring of properties that only _sometimes_ exist comes with TypeScript 4.6 (currently in beta)
-export const EventItem: FC<EventItemProps> = ({ layout, gridProps }) => {
-  const isCustomLayout = layout === "custom";
+export const EventItem: FC<EventItemProps> = ({ item }) => {
+  const isCustomLayout = item.layout === "custom";
 
   if (isCustomLayout) {
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    return <Grid {...gridProps} />;
+    return <Grid items={item.eventContent?.items ?? []} />;
   }
 
-  const layoutClass = layoutClassName[layout];
+  const layoutClass = layoutClassName[item.layout];
 
   return <div className={layoutClass} />;
 };

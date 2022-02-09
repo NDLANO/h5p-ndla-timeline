@@ -1,9 +1,9 @@
 import * as React from "react";
-import { TimelineSlideItem } from "../TimelineSlideItem/TimelineSlideItem";
+import { GridItem } from "../../types/GridItem";
 import styles from "./Grid.module.scss";
 
 type GridProps = {
-  items: Array<any>;
+  items: Array<GridItem>;
 };
 
 export const Grid: React.FC<GridProps> = ({ items }) => {
@@ -11,17 +11,11 @@ export const Grid: React.FC<GridProps> = ({ items }) => {
     return items.map(item => (
       <foreignObject
         key={item.id}
-        x={item.xPercentagePosition}
-        y={item.yPercentagePosition}
-        width={item.widthPercentage}
-        height={item.heightPercentage}
-      >
-        <TimelineSlideItem
-          backgroundImage={item.backgroundImage}
-          title={item.label}
-          editAction={() => console.info("Add edit action")}
-        />
-      </foreignObject>
+        x={item.x}
+        y={item.y}
+        width={item.width}
+        height={item.height}
+      />
     ));
   }, [items]);
   return (

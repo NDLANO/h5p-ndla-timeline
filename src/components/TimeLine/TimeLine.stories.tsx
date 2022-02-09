@@ -5,7 +5,7 @@ import { TimeLine, TimeLineProps } from "./TimeLine";
 import { Grid } from "../Grid/Grid";
 
 export default {
-  title: "Atoms/TimeLine",
+  title: "Organisms/TimeLine",
   component: TimeLine,
 } as ComponentMeta<typeof TimeLine>;
 
@@ -13,29 +13,11 @@ const gridArgs: React.ComponentPropsWithoutRef<typeof Grid> = {
   items: [
     {
       id: "1",
-      backgroundImage: {
-        path: "https://images.unsplash.com/photo-1569587112025-0d460e81a126?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2370&q=80",
-        alt: "",
-      },
-      label: "Sheep in the distance",
-      links: [],
-      widthPercentage: 50,
-      heightPercentage: 75,
-      xPercentagePosition: 3,
-      yPercentagePosition: 5,
-    },
-    {
-      id: "2",
-      backgroundImage: {
-        path: "https://images.unsplash.com/photo-1533415648777-407b626eb0fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=987&q=80",
-        alt: "",
-      },
-      label: "Sheep close up",
-      links: [],
-      widthPercentage: 30,
-      heightPercentage: 60,
-      xPercentagePosition: 50,
-      yPercentagePosition: 30,
+      width: 50,
+      height: 75,
+      x: 3,
+      y: 5,
+      type: "title",
     },
   ],
 };
@@ -50,6 +32,14 @@ const defaultArgs: TimeLineProps = {
     title: { text: { text: "<div id='timeline_title_slide'/>" } },
   },
   title: <Grid {...gridArgs} />,
+  items: [
+    {
+      startDate: "2021",
+      id: "event-1",
+      layout: "center",
+      title: "2021",
+    },
+  ],
 };
 
 export const Empty: ComponentStory<typeof TimeLine> = () => {
