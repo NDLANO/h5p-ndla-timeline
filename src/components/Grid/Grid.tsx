@@ -1,23 +1,39 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
-import { GridItem } from "../../types/GridItem";
+import { EventItemType } from "../../types/EventItemType";
+import { TitleBlock } from "../TitleBlock/TitleBlock";
 import styles from "./Grid.module.scss";
 
 type GridProps = {
-  items: Array<GridItem>;
+  eventItem: EventItemType;
 };
 
-export const Grid: React.FC<GridProps> = ({ items }) => {
-  const children = React.useMemo(() => {
-    return items.map(item => (
-      <foreignObject
-        key={item.id}
-        x={item.x}
-        y={item.y}
-        width={item.width}
-        height={item.height}
-      />
-    ));
-  }, [items]);
+export const Grid: React.FC<GridProps> = ({ eventItem }) => {
+  const items = React.useMemo(
+    () => eventItem.eventContent?.items ?? [],
+    [eventItem.eventContent?.items],
+  );
+
+  const children = React.useMemo(
+    () =>
+      items.map(gridItem => {
+        return (
+          <foreignObject
+            key={gridItem.id}
+            x={gridItem.x}
+            y={gridItem.y}
+            width={gridItem.width}
+            height={gridItem.height}
+          >
+            {gridItem.type === "title" && (
+              <TitleBlock title={eventItem.title} />
+            )}
+          </foreignObject>
+        );
+      }),
+    [eventItem.title, items],
+  );
+
   return (
     <div className={styles.gridWrapper}>
       <svg viewBox="0 0 100 100" className={styles.grid} width={20} height={12}>

@@ -3,6 +3,9 @@ import type {
   TimelineDefinition,
   TimelineSlide,
 } from "@knight-lab/timelinejs";
+import * as React from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import { Grid } from "../components/Grid/Grid";
 import { EventItemType } from "../types/EventItemType";
 import { ParamsData } from "../types/ParamsData";
 
@@ -26,7 +29,7 @@ export const mapEventToTimelineSlide = (
   event: EventItemType,
 ): TimelineSlide | null => {
   const startDate = event.startDate ? parseDate(event.startDate) : null;
-  const endDate = event.endDate ? parseDate(event.endDate) : null;
+  const invalidEndDate = (event.endDate && parseDate(event.endDate)) === null;
 
   if (!startDate) {
     console.error("Invalid start date", event.startDate);
@@ -34,7 +37,7 @@ export const mapEventToTimelineSlide = (
     return null;
   }
 
-  if (!endDate) {
+  if (invalidEndDate) {
     console.error("Invalid end date", event.endDate);
 
     return null;
@@ -42,7 +45,11 @@ export const mapEventToTimelineSlide = (
 
   return {
     start_date: startDate,
-    end_date: endDate,
+    end_date:
+      (event.endDate ? parseDate(event.endDate) : undefined) ?? undefined,
+    text: {
+      text: renderToStaticMarkup(<Grid eventItem={event} />),
+    },
   };
 };
 

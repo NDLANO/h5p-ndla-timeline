@@ -24,7 +24,13 @@ export class H5PWrapper extends H5P.EventDispatcher {
     );
   }
 
-  attach([containerElement]: JQuery<HTMLElement>): void {
+  attach($container: JQuery<HTMLElement>): void {
+    const containerElement = $container.get(0);
+    if (!containerElement) {
+      console.error("Found no containing element to attach `h5p-timeline` to.");
+      return;
+    }
+
     containerElement.appendChild(this.wrapper);
     containerElement.classList.add("h5p-timeline");
   }
