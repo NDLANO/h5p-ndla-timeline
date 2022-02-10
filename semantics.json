@@ -24,6 +24,30 @@
               "type": "text"
             },
             {
+              "label": "Layout",
+              "name": "layout",
+              "type": "select",
+              "default": "right",
+              "options": [
+                {
+                  "label": "Text on right (standard)",
+                  "value": "right"
+                },
+                {
+                  "label": "Text on left",
+                  "value": "left"
+                },
+                {
+                  "label": "Centered (Text only)",
+                  "value": "center"
+                },
+                {
+                  "label": "Custom",
+                  "value": "custom"
+                }
+              ]
+            },
+            {
               "label": "Event content",
               "name": "eventContent",
               "type": "group",

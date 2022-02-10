@@ -7,7 +7,6 @@ import * as React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { Grid } from "../components/Grid/Grid";
 import { EventItemType } from "../types/EventItemType";
-import { GridItem } from "../types/GridItem";
 import { ParamsData } from "../types/ParamsData";
 
 export const parseDate = (dateString: string): TimelineDate | null => {

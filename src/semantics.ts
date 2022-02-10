@@ -30,7 +30,13 @@ export const semantics: Readonly<[H5PFieldGroup, H5PBehaviour, H5PL10n]> = [
               name: "label",
               type: H5PFieldType.Text,
             },
-
+            {
+              label: "Layout",
+              name: "layout",
+              type: H5PFieldType.Select,
+              default: layoutOptions.textOnRight.value,
+              options: Object.values(layoutOptions),
+            },
             {
               label: "Event content",
               name: "eventContent",
