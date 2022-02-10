@@ -1,6 +1,5 @@
 import { EventContent } from "./EventContent";
 import { Image } from "./H5P/Image";
-import { LayoutOption } from "./LayoutOption";
 
 export type EventItemType = {
   id: string;
@@ -10,12 +9,6 @@ export type EventItemType = {
 
   startDate?: string;
   endDate?: string;
-} & (
-  | {
-      layout: "custom";
-      eventContent?: EventContent;
-    }
-  | {
-      layout: Exclude<LayoutOption, "custom">;
-    }
-);
+
+  eventContent?: EventContent;
+};

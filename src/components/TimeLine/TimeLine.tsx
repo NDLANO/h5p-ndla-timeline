@@ -1,19 +1,23 @@
-import type { TimelineDefinition } from "@knight-lab/timelinejs";
 import { Timeline } from "@knight-lab/timelinejs";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { EventItemType } from "../../types/EventItemType";
+import { ParamsData } from "../../types/ParamsData";
+import { createTimelineDefinition } from "../../utils/timeline.utils";
 
 export type TimeLineProps = {
-  timelineDefinition: TimelineDefinition;
+  data: ParamsData;
   title: JSX.Element;
-  items: Array<EventItemType>;
 };
 
 export const TimeLine: React.FC<TimeLineProps> = ({
-  timelineDefinition,
   title,
+  data,
 }: TimeLineProps) => {
+  const timelineDefinition = React.useMemo(
+    () => createTimelineDefinition(data),
+    [data],
+  );
+
   const containerId = "timeline-embed";
 
   React.useEffect(() => {
