@@ -2,6 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { App } from "../App";
 import { LocalizationContext } from "../contexts/LocalizationContext";
+import { H5PExtras } from "../types/H5P/H5PExtras";
 import { Params } from "../types/H5P/Params";
 import { Translations } from "../types/Translations";
 import { H5P } from "./H5P.util";
@@ -9,16 +10,19 @@ import { H5P } from "./H5P.util";
 export class H5PWrapper extends H5P.EventDispatcher {
   private wrapper: HTMLElement;
 
-  constructor(params: Params, contentId: string, extras?: unknown) {
+  constructor(params: Params, contentId: string, extras: H5PExtras) {
     super();
     this.wrapper = H5PWrapper.createWrapperElement();
 
     // eslint-disable-next-line react/jsx-no-constructed-context-values
     const l10n = params.l10n ?? ({} as Translations);
+    const { title } = extras.metadata;
 
     ReactDOM.render(
       <LocalizationContext.Provider value={l10n}>
-        <App adjective="beautiful" />
+        {params.ndlaTimeline ? (
+          <App title={title} timeline={params.ndlaTimeline} />
+        ) : null}
       </LocalizationContext.Provider>,
       this.wrapper,
     );

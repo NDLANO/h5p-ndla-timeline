@@ -54,6 +54,7 @@ export const mapEventToTimelineSlide = (
 };
 
 export const createTimelineDefinition = (
+  title: string,
   data: ParamsData,
 ): TimelineDefinition => {
   const events = data.timelineItems
@@ -63,8 +64,7 @@ export const createTimelineDefinition = (
   return {
     title: {
       text: {
-        // @ts-expect-error Will sooon exist
-        text: data.title,
+        text: title,
       },
     },
     eras: [],

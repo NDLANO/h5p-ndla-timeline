@@ -1,6 +1,7 @@
 import react from "@vitejs/plugin-react";
 import type { OutputAsset, OutputChunk } from "rollup";
 import { defineConfig, PluginOption } from "vite";
+import path from "path";
 
 const isOutputChunk = (
   chunkOrAsset: OutputChunk | OutputAsset,
@@ -47,5 +48,19 @@ export default defineConfig({
     },
 
     target: "esnext",
+  },
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          // We change `icon-path` to something that won't resolve,
+          // because Rollup can't resolve font-files the way timelinejs
+          // is set up. To solve the problem, we would have to add
+          // `resolve.alias["~"]: "node_modules/@knight-labs/timelinejs/src/css/icons"
+          // and change out `@{icon-path}` for `~/` in `node_modules/@knight-lab/timelinejs/src/less/icons/Icons.less`.
+          "icon-path": "empty on purpose",
+        },
+      },
+    },
   },
 });
