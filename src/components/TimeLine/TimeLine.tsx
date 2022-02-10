@@ -6,31 +6,38 @@ import { createTimelineDefinition } from "../../utils/timeline.utils";
 
 export type TimeLineProps = {
   data: ParamsData;
-  title: JSX.Element;
+  timelineTitle: string;
 };
 
 export const TimeLine: React.FC<TimeLineProps> = ({
-  title,
+  timelineTitle,
   data,
 }: TimeLineProps) => {
+  // TODO: Get from semantics (`data`)
+  const titleSlide = <div />;
+
   const timelineDefinition = React.useMemo(
-    () => createTimelineDefinition(data),
-    [data],
+    () => createTimelineDefinition(timelineTitle, data),
+    [data, timelineTitle],
   );
 
   const containerId = "timeline-embed";
 
   React.useEffect(() => {
     // Update the document title using the browser API
-    const timeline = new Timeline(containerId, timelineDefinition, {
+    // eslint-disable-next-line no-new
+    new Timeline(containerId, timelineDefinition, {
       height: "100%",
       width: "100%",
       source: timelineDefinition,
     });
     requestAnimationFrame(() => {
-      ReactDOM.render(title, document.getElementById("timeline_title_slide"));
+      ReactDOM.render(
+        titleSlide,
+        document.getElementById("timeline_title_slide"),
+      );
     });
-  }, [timelineDefinition, title]);
+  }, [timelineDefinition, titleSlide]);
 
   return <div id={containerId} />;
 };
