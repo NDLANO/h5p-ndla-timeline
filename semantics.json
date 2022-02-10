@@ -28,18 +28,7 @@
               "name": "eventContent",
               "type": "group",
               "importance": "low",
-              "widget": "NDLAShowWhen",
-              "showWhen": {
-                "rules": [
-                  {
-                    "field": "layout",
-                    "equals": [
-                      "custom"
-                    ]
-                  }
-                ],
-                "widget": "NDLATimelineEventLayout"
-              },
+              "widget": "NDLATimelineEventLayout",
               "fields": [
                 {
                   "label": "Items",

@@ -36,16 +36,7 @@ export const semantics: Readonly<[H5PFieldGroup, H5PBehaviour, H5PL10n]> = [
               name: "eventContent",
               type: H5PFieldType.Group,
               importance: "low",
-              widget: "NDLAShowWhen",
-              showWhen: {
-                rules: [
-                  {
-                    field: "layout",
-                    equals: [layoutOptions.custom.value],
-                  },
-                ],
-                widget: "NDLATimelineEventLayout",
-              },
+              widget: "NDLATimelineEventLayout",
               fields: [
                 {
                   label: "Items",
