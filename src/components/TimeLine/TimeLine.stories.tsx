@@ -43,8 +43,9 @@ const gridArgs: React.ComponentPropsWithoutRef<typeof Grid> = {
 };
 
 const defaultArgs: TimeLineProps = {
-  title: <Grid {...gridArgs} />,
   data: {
+    // @ts-expect-error On its way
+    titleSlide: <Grid {...gridArgs} />,
     timelineItems: [
       {
         startDate: "2021",
