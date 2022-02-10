@@ -25,8 +25,8 @@ export const TimeLine: React.FC<TimeLineProps> = ({
 
   React.useEffect(() => {
     // Update the document title using the browser API
-    // eslint-disable-next-line no-new
-    new Timeline(containerId, timelineDefinition, {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const timeline = new Timeline(containerId, timelineDefinition, {
       height: "100%",
       width: "100%",
       source: timelineDefinition,
