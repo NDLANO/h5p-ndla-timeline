@@ -5,6 +5,8 @@ export type EventItemType = {
   id: string;
 
   title: string;
+  description?: string;
+
   image?: Image | undefined;
 
   startDate?: string;
