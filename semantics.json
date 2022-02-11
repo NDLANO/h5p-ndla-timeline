@@ -23,6 +23,12 @@
             "type": "text"
           },
           {
+            "label": "Text content",
+            "name": "textContent",
+            "type": "text",
+            "widget": "html"
+          },
+          {
             "label": "Layout",
             "name": "layout",
             "type": "select",
@@ -142,6 +148,12 @@
               "label": "Title",
               "name": "label",
               "type": "text"
+            },
+            {
+              "label": "Text content",
+              "name": "textContent",
+              "type": "text",
+              "widget": "html"
             },
             {
               "label": "Layout",

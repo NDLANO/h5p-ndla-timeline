@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
 import { EventItemType } from "../../types/EventItemType";
+import { TextContentBlock } from "../TextContentBlock/TextContentBlock";
 import { TitleBlock } from "../TitleBlock/TitleBlock";
 import styles from "./Grid.module.scss";
 
@@ -28,10 +29,14 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
             {gridItem.type === "title" && (
               <TitleBlock title={eventItem.title} />
             )}
+
+            {gridItem.type === "textContent" && (
+              <TextContentBlock textContent={eventItem.description ?? ""} />
+            )}
           </foreignObject>
         );
       }),
-    [eventItem.title, items],
+    [eventItem.description, eventItem.title, items],
   );
 
   return (

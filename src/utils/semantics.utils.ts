@@ -9,6 +9,12 @@ export const timelineItemFields: Array<H5PField> = [
     type: H5PFieldType.Text,
   },
   {
+    label: "Text content",
+    name: "textContent",
+    type: H5PFieldType.Text,
+    widget: "html",
+  },
+  {
     label: "Layout",
     name: "layout",
     type: H5PFieldType.Select,
