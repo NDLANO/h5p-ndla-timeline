@@ -6,6 +6,128 @@
     "importance": "high",
     "fields": [
       {
+        "label": "Show title slide",
+        "name": "showTitleSlide",
+        "type": "boolean",
+        "default": true
+      },
+      {
+        "label": "Title slide",
+        "name": "titleSlide",
+        "importance": "low",
+        "type": "group",
+        "fields": [
+          {
+            "label": "Title",
+            "description": "The title shown on in the content.",
+            "name": "label",
+            "type": "text"
+          },
+          {
+            "label": "Layout",
+            "name": "layout",
+            "type": "select",
+            "default": "right",
+            "options": [
+              {
+                "label": "Text on right (standard)",
+                "value": "right"
+              },
+              {
+                "label": "Text on left",
+                "value": "left"
+              },
+              {
+                "label": "Centered (Text only)",
+                "value": "center"
+              },
+              {
+                "label": "Custom",
+                "value": "custom"
+              }
+            ]
+          },
+          {
+            "label": "Event content",
+            "name": "eventContent",
+            "type": "group",
+            "importance": "low",
+            "widget": "NDLATimelineEventLayout",
+            "fields": [
+              {
+                "label": "Items",
+                "name": "items",
+                "type": "group",
+                "fields": [
+                  {
+                    "label": "Id",
+                    "name": "id",
+                    "type": "text",
+                    "widget": "none"
+                  },
+                  {
+                    "label": "X position",
+                    "name": "x",
+                    "type": "text",
+                    "widget": "none"
+                  },
+                  {
+                    "label": "Y position",
+                    "name": "y",
+                    "type": "text",
+                    "widget": "none"
+                  },
+                  {
+                    "label": "Width",
+                    "name": "width",
+                    "type": "text",
+                    "widget": "none"
+                  },
+                  {
+                    "label": "Height",
+                    "name": "height",
+                    "type": "text",
+                    "widget": "none"
+                  },
+                  {
+                    "label": "Type",
+                    "name": "type",
+                    "type": "text",
+                    "widget": "none"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Image",
+            "name": "image",
+            "type": "image"
+          },
+          {
+            "label": "Start date",
+            "description": "YYYY-MM-DD — only year is required. Years can be negative.",
+            "name": "startDate",
+            "type": "text"
+          },
+          {
+            "label": "End date",
+            "description": "YYYY-MM-DD — only year is required. Years can be negative.",
+            "name": "endDate",
+            "type": "text"
+          }
+        ],
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "showTitleSlide",
+              "equals": true
+            }
+          ]
+        }
+      },
+      {
         "label": "Timeline items",
         "name": "timelineItems",
         "type": "list",
