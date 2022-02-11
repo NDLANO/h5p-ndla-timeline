@@ -147,7 +147,7 @@ export type H5PFieldBoolean =
       H5PFieldWidgetExtension & {
         type: H5PFieldType.Boolean;
         default: boolean;
-        widget: string;
+        widget?: string;
       };
 
 export type H5PFieldGroup =

@@ -57,7 +57,9 @@ export const createTimelineDefinition = (
   title: string,
   data: ParamsData,
 ): TimelineDefinition => {
-  const events = data.timelineItems
+  const items = data.timelineItems ?? [];
+
+  const events = items
     .map(mapEventToTimelineSlide)
     .filter(Boolean) as Array<TimelineSlide>;
 
