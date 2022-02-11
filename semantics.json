@@ -19,7 +19,6 @@
         "fields": [
           {
             "label": "Title",
-            "description": "The title shown on in the content.",
             "name": "label",
             "type": "text"
           },
@@ -141,7 +140,6 @@
           "fields": [
             {
               "label": "Title",
-              "description": "The title shown on in the content.",
               "name": "label",
               "type": "text"
             },

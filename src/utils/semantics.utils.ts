@@ -5,7 +5,6 @@ import { layoutOptions } from "./layout.utils";
 export const timelineItemFields: Array<H5PField> = [
   {
     label: "Title",
-    description: "The title shown on in the content.",
     name: "label",
     type: H5PFieldType.Text,
   },
