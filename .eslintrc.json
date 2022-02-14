@@ -24,6 +24,7 @@
     "no-shadow": "off",
     "no-console": ["error", { "allow": ["warn", "error", "info"] }],
     "default-case": "off",
+    "consistent-return": "off",
     "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/explicit-function-return-type": [
       "error",

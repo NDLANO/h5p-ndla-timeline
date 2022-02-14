@@ -74,9 +74,48 @@ export const timelineItemFields: Array<H5PField> = [
     ],
   },
   {
+    label: "Media type",
+    name: "mediaType",
+    type: H5PFieldType.Select,
+    options: [
+      {
+        label: "Image",
+        value: "image",
+      },
+      {
+        label: "Video",
+        value: "video",
+      },
+    ],
+    default: "image",
+  },
+  {
     label: "Image",
     name: "image",
     type: H5PFieldType.Image,
+    widget: "showWhen",
+    showWhen: {
+      rules: [
+        {
+          field: "mediaType",
+          equals: ["image"],
+        },
+      ],
+    },
+  },
+  {
+    label: "Video",
+    name: "video",
+    type: H5PFieldType.Video,
+    widget: "showWhen",
+    showWhen: {
+      rules: [
+        {
+          field: "mediaType",
+          equals: ["video"],
+        },
+      ],
+    },
   },
   {
     label: "Start date",
