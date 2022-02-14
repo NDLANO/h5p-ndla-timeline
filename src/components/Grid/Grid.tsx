@@ -20,12 +20,15 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
     () =>
       items.map(gridItem => {
         return (
-          <foreignObject
+          <div
             key={gridItem.id}
-            x={gridItem.x}
-            y={gridItem.y}
-            width={gridItem.width}
-            height={gridItem.height}
+            className={styles.itemWrapper}
+            style={{
+              left: `${gridItem.x}%`,
+              top: `${gridItem.y}%`,
+              height: `${gridItem.height}%`,
+              width: `${gridItem.width}%`,
+            }}
           >
             {gridItem.type === "title" && (
               <TitleBlock title={eventItem.title} />
@@ -45,7 +48,7 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
                 }
               />
             )}
-          </foreignObject>
+          </div>
         );
       }),
     [
@@ -60,9 +63,7 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
 
   return (
     <div className={styles.gridWrapper}>
-      <svg viewBox="0 0 100 100" className={styles.grid} width={20} height={12}>
-        {children}
-      </svg>
+      <div className={styles.grid}>{children}</div>
     </div>
   );
 };
