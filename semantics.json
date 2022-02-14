@@ -105,9 +105,52 @@
             ]
           },
           {
+            "label": "Media type",
+            "name": "mediaType",
+            "type": "select",
+            "options": [
+              {
+                "label": "Image",
+                "value": "image"
+              },
+              {
+                "label": "Video",
+                "value": "video"
+              }
+            ],
+            "default": "image"
+          },
+          {
             "label": "Image",
             "name": "image",
-            "type": "image"
+            "type": "image",
+            "widget": "showWhen",
+            "showWhen": {
+              "rules": [
+                {
+                  "field": "mediaType",
+                  "equals": [
+                    "image"
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "label": "Video",
+            "name": "video",
+            "type": "video",
+            "widget": "showWhen",
+            "showWhen": {
+              "rules": [
+                {
+                  "field": "mediaType",
+                  "equals": [
+                    "video"
+                  ]
+                }
+              ]
+            }
           },
           {
             "label": "Start date",
@@ -232,9 +275,52 @@
               ]
             },
             {
+              "label": "Media type",
+              "name": "mediaType",
+              "type": "select",
+              "options": [
+                {
+                  "label": "Image",
+                  "value": "image"
+                },
+                {
+                  "label": "Video",
+                  "value": "video"
+                }
+              ],
+              "default": "image"
+            },
+            {
               "label": "Image",
               "name": "image",
-              "type": "image"
+              "type": "image",
+              "widget": "showWhen",
+              "showWhen": {
+                "rules": [
+                  {
+                    "field": "mediaType",
+                    "equals": [
+                      "image"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Video",
+              "name": "video",
+              "type": "video",
+              "widget": "showWhen",
+              "showWhen": {
+                "rules": [
+                  {
+                    "field": "mediaType",
+                    "equals": [
+                      "video"
+                    ]
+                  }
+                ]
+              }
             },
             {
               "label": "Start date",
