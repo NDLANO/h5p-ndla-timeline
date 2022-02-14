@@ -13,6 +13,7 @@ export default {
 const eventItem: EventItemType = {
   id: "1",
   title: "This is the title",
+  mediaType: "image",
   eventContent: {
     items: [],
   },

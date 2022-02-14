@@ -30,27 +30,26 @@ const items: Array<GridItem> = [
   },
 ];
 
-const eventItem: EventItemType = {
+const titleSlide: EventItemType = {
   id: "1",
   title: "This is the title",
   eventContent: {
     items,
   },
-};
-
-const gridArgs: React.ComponentPropsWithoutRef<typeof Grid> = {
-  eventItem,
+  mediaType: "image",
 };
 
 const defaultArgs: TimeLineProps = {
+  timelineTitle: "Timeline title",
   data: {
-    // @ts-expect-error On its way
-    titleSlide: <Grid {...gridArgs} />,
+    titleSlide,
+    showTitleSlide: true,
     timelineItems: [
       {
         startDate: "2021",
         id: "event-1",
         title: "2021",
+        mediaType: "image",
       },
     ],
     categories: [],
