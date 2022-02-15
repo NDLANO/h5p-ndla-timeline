@@ -23,7 +23,7 @@ export const semantics: Readonly<[H5PFieldGroup, H5PBehaviour, H5PL10n]> = [
         importance: "low",
         type: H5PFieldType.Group,
         fields: [...timelineItemFields],
-        widget: "showWhen",
+        widget: "NDLAShowWhen",
         showWhen: {
           rules: [
             {
@@ -44,7 +44,23 @@ export const semantics: Readonly<[H5PFieldGroup, H5PBehaviour, H5PL10n]> = [
           name: "timelineItem",
           importance: "low",
           type: H5PFieldType.Group,
-          fields: [...timelineItemFields],
+          fields: [
+            ...timelineItemFields,
+            {
+              label: "Start date",
+              description:
+                "YYYY-MM-DD — only year is required. Years can be negative.",
+              name: "startDate",
+              type: H5PFieldType.Text,
+            },
+            {
+              label: "End date",
+              description:
+                "YYYY-MM-DD — only year is required. Years can be negative.",
+              name: "endDate",
+              type: H5PFieldType.Text,
+            },
+          ],
         },
       },
       {
@@ -58,7 +74,6 @@ export const semantics: Readonly<[H5PFieldGroup, H5PBehaviour, H5PL10n]> = [
           name: "category",
           importance: "low",
           type: H5PFieldType.Group,
-
           fields: [
             {
               label: "Name",

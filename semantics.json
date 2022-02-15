@@ -124,14 +124,12 @@
             "label": "Image",
             "name": "image",
             "type": "image",
-            "widget": "showWhen",
+            "widget": "NDLAShowWhen",
             "showWhen": {
               "rules": [
                 {
                   "field": "mediaType",
-                  "equals": [
-                    "image"
-                  ]
+                  "equals": "image"
                 }
               ]
             }
@@ -140,32 +138,18 @@
             "label": "Video",
             "name": "video",
             "type": "video",
-            "widget": "showWhen",
+            "widget": "NDLAShowWhen",
             "showWhen": {
               "rules": [
                 {
                   "field": "mediaType",
-                  "equals": [
-                    "video"
-                  ]
+                  "equals": "video"
                 }
               ]
             }
-          },
-          {
-            "label": "Start date",
-            "description": "YYYY-MM-DD — only year is required. Years can be negative.",
-            "name": "startDate",
-            "type": "text"
-          },
-          {
-            "label": "End date",
-            "description": "YYYY-MM-DD — only year is required. Years can be negative.",
-            "name": "endDate",
-            "type": "text"
           }
         ],
-        "widget": "showWhen",
+        "widget": "NDLAShowWhen",
         "showWhen": {
           "rules": [
             {
@@ -294,14 +278,12 @@
               "label": "Image",
               "name": "image",
               "type": "image",
-              "widget": "showWhen",
+              "widget": "NDLAShowWhen",
               "showWhen": {
                 "rules": [
                   {
                     "field": "mediaType",
-                    "equals": [
-                      "image"
-                    ]
+                    "equals": "image"
                   }
                 ]
               }
@@ -310,14 +292,12 @@
               "label": "Video",
               "name": "video",
               "type": "video",
-              "widget": "showWhen",
+              "widget": "NDLAShowWhen",
               "showWhen": {
                 "rules": [
                   {
                     "field": "mediaType",
-                    "equals": [
-                      "video"
-                    ]
+                    "equals": "video"
                   }
                 ]
               }
