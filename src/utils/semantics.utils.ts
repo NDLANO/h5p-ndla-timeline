@@ -93,12 +93,12 @@ export const timelineItemFields: Array<H5PField> = [
     label: "Image",
     name: "image",
     type: H5PFieldType.Image,
-    widget: "showWhen",
+    widget: "NDLAShowWhen",
     showWhen: {
       rules: [
         {
           field: "mediaType",
-          equals: ["image"],
+          equals: "image",
         },
       ],
     },
@@ -107,26 +107,14 @@ export const timelineItemFields: Array<H5PField> = [
     label: "Video",
     name: "video",
     type: H5PFieldType.Video,
-    widget: "showWhen",
+    widget: "NDLAShowWhen",
     showWhen: {
       rules: [
         {
           field: "mediaType",
-          equals: ["video"],
+          equals: "video",
         },
       ],
     },
-  },
-  {
-    label: "Start date",
-    description: "YYYY-MM-DD — only year is required. Years can be negative.",
-    name: "startDate",
-    type: H5PFieldType.Text,
-  },
-  {
-    label: "End date",
-    description: "YYYY-MM-DD — only year is required. Years can be negative.",
-    name: "endDate",
-    type: H5PFieldType.Text,
   },
 ];
