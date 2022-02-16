@@ -19,7 +19,8 @@
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "generate-semantics": "ts-node generate-semantics.ts"
+    "generate-semantics": "ts-node generate-semantics.ts",
+    "watch-semantics": "nodemon generate-semantics.ts"
   },
   "dependencies": {
     "@knight-lab/timelinejs": "^3.8.19",
@@ -59,6 +60,7 @@
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "sass": "^1.49.7",
     "sass-loader": "^12.4.0",
