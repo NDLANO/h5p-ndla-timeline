@@ -6,14 +6,53 @@ import type {
 import * as React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { Grid } from "../components/Grid/Grid";
+import { DateString } from "../types/DateString";
 import { EventItemType } from "../types/EventItemType";
 import { ParamsData } from "../types/ParamsData";
+
+export const isDateString = (str: string): str is DateString => {
+  const matches = str.match(/^-?\d{1,}((-\d{1,2})?(-\d{1,2})?)$/gi);
+
+  return !!matches && matches.length > 0;
+};
+
+export const parseDateString = (dateString: DateString): TimelineDate => {
+  const isNegativeYear = dateString.startsWith("-");
+  let year: string;
+  let month: string;
+  let day: string;
+
+  if (isNegativeYear) {
+    [, year, month, day] = dateString.split("-");
+  } else {
+    [year, month, day] = dateString.split("-");
+  }
+
+  const ret: TimelineDate = {
+    year: Number.parseInt(year, 10) * (isNegativeYear ? -1 : 1),
+  };
+
+  if (month) {
+    ret.month = Number.parseInt(month, 10);
+  }
+
+  if (day) {
+    ret.day = Number.parseInt(day, 10);
+  }
+
+  return ret;
+};
 
 export const parseDate = (dateString: string): TimelineDate | null => {
   const dateMillis = Date.parse(dateString);
   const isValid = !Number.isNaN(dateMillis);
   if (!isValid) {
     return null;
+  }
+
+  const isDateStr = isDateString(dateString);
+  if (isDateStr) {
+    return parseDateString(dateString);
   }
 
   const date = new Date(dateMillis);
