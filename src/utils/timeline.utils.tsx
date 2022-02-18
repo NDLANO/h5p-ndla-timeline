@@ -9,6 +9,7 @@ import { Grid } from "../components/Grid/Grid";
 import { DateString } from "../types/DateString";
 import { EventItemType } from "../types/EventItemType";
 import { ParamsData } from "../types/ParamsData";
+import { isDefined } from "./is-defined.utils";
 
 export const isDateString = (str: string): str is DateString => {
   const matches = str.match(/^-?\d{1,}((-\d{1,2})?(-\d{1,2})?)$/gi);
@@ -82,14 +83,22 @@ export const mapEventToTimelineSlide = (
     return null;
   }
 
-  return {
+  const text = renderToStaticMarkup(<Grid eventItem={event} />);
+
+  const slide: TimelineSlide = {
     start_date: startDate,
-    end_date:
-      (event.endDate ? parseDate(event.endDate) : undefined) ?? undefined,
     text: {
-      text: renderToStaticMarkup(<Grid eventItem={event} />),
+      headline: event.title,
+      text,
     },
   };
+
+  const endDate = event.endDate && parseDate(event.endDate);
+  if (endDate) {
+    slide.end_date = endDate;
+  }
+
+  return slide;
 };
 
 export const createTimelineDefinition = (
@@ -98,9 +107,7 @@ export const createTimelineDefinition = (
 ): TimelineDefinition => {
   const items = data.timelineItems ?? [];
 
-  const events = items
-    .map(mapEventToTimelineSlide)
-    .filter(Boolean) as Array<TimelineSlide>;
+  const events = items.map(mapEventToTimelineSlide).filter(isDefined);
 
   return {
     title: {
