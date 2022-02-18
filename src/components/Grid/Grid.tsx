@@ -1,38 +1,20 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
 import { EventItemType } from "../../types/EventItemType";
-import { MediaBlock } from "../MediaBlock/MediaBlock";
+// import { MediaBlock } from "../MediaBlock/MediaBlock";
 import { TextContentBlock } from "../TextContentBlock/TextContentBlock";
 import { TitleBlock } from "../TitleBlock/TitleBlock";
 import styles from "./Grid.module.scss";
 
 type GridProps = {
   eventItem: EventItemType;
+  mediaHtml?: string;
 };
 
-export const Grid: React.FC<GridProps> = ({ eventItem }) => {
+export const Grid: React.FC<GridProps> = ({ eventItem, mediaHtml }) => {
   const items = React.useMemo(
     () => eventItem.eventContent?.items ?? [],
     [eventItem.eventContent?.items],
   );
-
-  const media = React.useMemo(() => {
-    let m;
-
-    switch (eventItem.mediaType) {
-      case "image":
-        m = eventItem.image;
-        break;
-      case "video":
-        m = eventItem.video;
-        break;
-      case "custom":
-        m = eventItem.customMedia;
-        break;
-    }
-
-    return m;
-  }, [eventItem]);
 
   const children = React.useMemo(
     () =>
@@ -56,14 +38,20 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
               <TextContentBlock textContent={eventItem.description ?? ""} />
             )}
 
-            {gridItem.type === "media" && media && (
-              // @ts-expect-error Sophisticated destructuring will work in TypeScript 4.6
-              <MediaBlock type={eventItem.mediaType} media={media} />
+            {/* {gridItem.type === "media" && media && (
+              // // @ts-expect-error Sophisticated destructuring will work in TypeScript 4.6
+              // <MediaBlock type={eventItem.mediaType} media={media} />
+
+            )} */}
+
+            {mediaHtml && (
+              // eslint-disable-next-line react/no-danger
+              <div dangerouslySetInnerHTML={{ __html: mediaHtml }} />
             )}
           </div>
         );
       }),
-    [eventItem.description, eventItem.mediaType, eventItem.title, items, media],
+    [eventItem.description, eventItem.title, items, mediaHtml],
   );
 
   return (

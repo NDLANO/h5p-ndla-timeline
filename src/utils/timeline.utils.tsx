@@ -8,8 +8,10 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { Grid } from "../components/Grid/Grid";
 import { DateString } from "../types/DateString";
 import { EventItemType } from "../types/EventItemType";
+import { Media } from "../types/H5P/Media";
 import { ParamsData } from "../types/ParamsData";
 import { isDefined } from "./is-defined.utils";
+import { renderMediaBlock } from "./media.utils";
 
 export const isDateString = (str: string): str is DateString => {
   const matches = str.match(/^-?\d{1,}((-\d{1,2})?(-\d{1,2})?)$/gi);
@@ -65,9 +67,27 @@ export const parseDate = (dateString: string): TimelineDate | null => {
   };
 };
 
-export const mapEventToTimelineSlide = (
+const getMedia = (eventItem: EventItemType): string | Media | undefined => {
+  let media;
+
+  switch (eventItem.mediaType) {
+    case "image":
+      media = eventItem.image;
+      break;
+    case "video":
+      media = eventItem.video;
+      break;
+    case "custom":
+      media = eventItem.customMedia;
+      break;
+  }
+
+  return media;
+};
+
+export const mapEventToTimelineSlide = async (
   event: EventItemType,
-): TimelineSlide | null => {
+): Promise<TimelineSlide | null> => {
   const startDate = event.startDate ? parseDate(event.startDate) : null;
   const invalidEndDate = (event.endDate && parseDate(event.endDate)) === null;
 
@@ -83,7 +103,23 @@ export const mapEventToTimelineSlide = (
     return null;
   }
 
-  const text = renderToStaticMarkup(<Grid eventItem={event} />);
+  const mediaContainer = document.createElement("div");
+  const media = getMedia(event);
+  if (media) {
+    await renderMediaBlock(
+      // @ts-expect-error Sophisticated destructuring will work in TypeScript 4.6
+      {
+        type: event.mediaType,
+        media,
+        containerElement: mediaContainer,
+      },
+    );
+  }
+
+  const mediaHtml = media ? mediaContainer.innerHTML : undefined;
+  const text = renderToStaticMarkup(
+    <Grid eventItem={event} mediaHtml={mediaHtml} />,
+  );
 
   const slide: TimelineSlide = {
     start_date: startDate,
@@ -101,13 +137,15 @@ export const mapEventToTimelineSlide = (
   return slide;
 };
 
-export const createTimelineDefinition = (
+export const createTimelineDefinition = async (
   title: string,
   data: ParamsData,
-): TimelineDefinition => {
+): Promise<TimelineDefinition> => {
   const items = data.timelineItems ?? [];
 
-  const events = items.map(mapEventToTimelineSlide).filter(isDefined);
+  const events = (await Promise.all(items.map(mapEventToTimelineSlide))).filter(
+    isDefined,
+  );
 
   return {
     title: {

@@ -192,5 +192,9 @@ declare module "@knight-lab/timelinejs/src/js/media/Media" {
     );
 
     addTo(container: HTMLElement): void;
+
+    on(eventName: string, callback: (event: unknown) => void);
+
+    off(eventName: string, callback: (event: unknown) => void);
   }
 }
