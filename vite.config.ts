@@ -1,7 +1,6 @@
 import react from "@vitejs/plugin-react";
 import type { OutputAsset, OutputChunk } from "rollup";
 import { defineConfig, PluginOption } from "vite";
-import path from "path";
 
 const isOutputChunk = (
   chunkOrAsset: OutputChunk | OutputAsset,

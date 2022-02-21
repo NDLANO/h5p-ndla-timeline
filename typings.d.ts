@@ -1,7 +1,9 @@
+/* eslint-disable max-classes-per-file */
 type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>;
 
 declare module "*.module.css";
 declare module "*.module.scss";
+
 declare module "@knight-lab/timelinejs" {
   declare type TimelineMedia = {
     url: string;
@@ -162,5 +164,33 @@ declare module "@knight-lab/timelinejs" {
       timelineDefinition: TimelineDefinition,
       options: ITimeLineConfiguration,
     );
+  }
+}
+
+declare module "@knight-lab/timelinejs/src/js/media/Media" {
+  declare class Media {
+    constructor(
+      data?: {
+        unique_id?: string;
+        url?: string;
+        credit?: string;
+        caption?: string;
+        credit_alternate?: string;
+        caption_alternate?: string;
+        link?: string;
+        link_target?: string;
+      },
+      options?: {
+        api_key_flickr?: string;
+        api_key_googlemaps?: string;
+        api_key_embedly?: string;
+        credit_height?: number;
+        caption_height?: number;
+        background?: number;
+      },
+      language?: string,
+    );
+
+    addTo(container: HTMLElement): void;
   }
 }

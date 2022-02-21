@@ -86,6 +86,10 @@ export const timelineItemFields: Array<H5PField> = [
         label: "Video",
         value: "video",
       },
+      {
+        label: "External link",
+        value: "custom",
+      },
     ],
     default: "image",
   },
@@ -113,6 +117,22 @@ export const timelineItemFields: Array<H5PField> = [
         {
           field: "mediaType",
           equals: "video",
+        },
+      ],
+    },
+  },
+  {
+    label: "External link",
+    description:
+      'Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href="https://timeline.knightlab.com/docs/media-types.html">Knightlab docs</a>',
+    name: "customMedia",
+    type: H5PFieldType.Text,
+    widget: "NDLAShowWhen",
+    showWhen: {
+      rules: [
+        {
+          field: "mediaType",
+          equals: "custom",
         },
       ],
     },

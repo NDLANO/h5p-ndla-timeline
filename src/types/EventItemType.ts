@@ -1,6 +1,5 @@
 import { EventContent } from "./EventContent";
-import { Image } from "./H5P/Image";
-import { Video } from "./H5P/Video";
+import { MediaType } from "./MediaType";
 
 export type EventItemType = {
   id: string;
@@ -8,12 +7,8 @@ export type EventItemType = {
   title: string;
   description?: string;
 
-  mediaType: "image" | "video";
-  image?: Image;
-  video?: Video;
-
   startDate?: string;
   endDate?: string;
 
   eventContent?: EventContent;
-};
+} & MediaType;

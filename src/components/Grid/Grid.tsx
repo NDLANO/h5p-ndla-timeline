@@ -16,6 +16,24 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
     [eventItem.eventContent?.items],
   );
 
+  const media = React.useMemo(() => {
+    let m;
+
+    switch (eventItem.mediaType) {
+      case "image":
+        m = eventItem.image;
+        break;
+      case "video":
+        m = eventItem.video;
+        break;
+      case "custom":
+        m = eventItem.customMedia;
+        break;
+    }
+
+    return m;
+  }, [eventItem]);
+
   const children = React.useMemo(
     () =>
       items.map(gridItem => {
@@ -38,27 +56,14 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
               <TextContentBlock textContent={eventItem.description ?? ""} />
             )}
 
-            {gridItem.type === "media" && (
-              <MediaBlock
-                type={eventItem.mediaType}
-                media={
-                  eventItem.mediaType === "image"
-                    ? eventItem.image
-                    : eventItem.video
-                }
-              />
+            {gridItem.type === "media" && media && (
+              // @ts-expect-error Sophisticated destructuring will work in TypeScript 4.6
+              <MediaBlock type={eventItem.mediaType} media={media} />
             )}
           </div>
         );
       }),
-    [
-      eventItem.description,
-      eventItem.image,
-      eventItem.mediaType,
-      eventItem.title,
-      eventItem.video,
-      items,
-    ],
+    [eventItem.description, eventItem.mediaType, eventItem.title, items, media],
   );
 
   return (
