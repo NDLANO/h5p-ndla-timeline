@@ -8,7 +8,7 @@ const config: Config.InitialOptions = {
   },
 
   testEnvironment: "jsdom",
-  transformIgnorePatterns: ["/node_modules/(?!(@knight-lab)/)"]
+  transformIgnorePatterns: ["/node_modules/(?!(@knight-lab)/)"],
 };
 
 export default config;
