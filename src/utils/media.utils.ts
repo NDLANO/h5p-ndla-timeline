@@ -1,7 +1,7 @@
-import { Media as KnightLabMedia } from "@knight-lab/timelinejs/src/js/media/Media";
+import { lookupMediaType } from "@knight-lab/timelinejs/src/js/media/MediaType";
 import { Media as H5PMedia } from "../types/H5P/Media";
 
-type MediaBlockProps = {
+type MediaBlockProps = { 
   containerElement: HTMLElement;
 } & (
   | {
@@ -24,37 +24,31 @@ export const renderMediaBlock = ({
   containerElement,
 }: MediaBlockProps): Promise<void> => {
   return new Promise<void>(resolve => {
-    containerElement.addEventListener("media_loaded", () => {
-      console.log("media_loaded")
-      resolve();
-    });
 
-
-    const mediaBlock = new KnightLabMedia({
+    const MediaClass = lookupMediaType({
       // @ts-expect-error Sophisticated destructuring will work in TypeScript 4.6
       url: type === "custom" ? media : media.path,
-    });
-    console.log({mediaBlock})
+    }).cls;
+
+    const mediaBlock = new MediaClass();
+
+    containerElement.addEventListener("media_loaded", () => {console.log("containerelement media_loaded")})
 
     mediaBlock.on("media_loaded", () => {
-      console.log("on media_loaded")
-      resolve();
-    });
-    
-    mediaBlock.on("added", () => {
-      console.log("on added")
+      console.log("on media_loaded");
       resolve();
     });
 
     mediaBlock.on("loaded", () => {
       console.log("on loaded");
-    })
+      resolve();
+    });
 
     mediaBlock.addTo(containerElement);
 
     // Resolve after five seconds if `media_loaded` is never triggered
     setTimeout(() => {
-      mediaBlock.onLoaded();
+      resolve();
     }, 5000);
   });
 };

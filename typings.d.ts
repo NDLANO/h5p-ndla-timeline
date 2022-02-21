@@ -197,4 +197,11 @@ declare module "@knight-lab/timelinejs/src/js/media/Media" {
 
     off(eventName: string, callback: (event: unknown) => void);
   }
+
+  declare module "@knight-lab/timelinejs/src/js/media/MediaType" {
+    declare function lookupMediaType(
+      m: { url: string },
+      image_only: boolean,
+    ): { type: string; name: string; match_str: RegExp; cls: typeof Function };
+  }
 }
