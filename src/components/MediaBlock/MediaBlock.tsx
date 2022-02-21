@@ -1,16 +1,17 @@
-import { Media as KnightLabMedia } from "@knight-lab/timelinejs/src/js/media/Media";
+import { Media } from "@knight-lab/timelinejs/src/js/media/Media";
 import * as React from "react";
 import { FC, useEffect, useMemo, useRef } from "react";
-import { Media as H5PMedia } from "../../types/H5P/Media";
+import { Image } from "../../types/H5P/Image";
+import { Video } from "../../types/H5P/Video";
 
 type MediaBlockProps =
   | {
       type: "image";
-      media: H5PMedia | string;
+      media: Image | string;
     }
   | {
       type: "video";
-      media: H5PMedia;
+      media: Video;
     }
   | {
       type: "custom";
@@ -19,9 +20,9 @@ type MediaBlockProps =
 
 export const MediaBlock: FC<MediaBlockProps> = ({ type, media }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const mediaRef = useMemo<KnightLabMedia>(
+  const mediaRef = useMemo<Media>(
     () =>
-      new KnightLabMedia({
+      new Media({
         // @ts-expect-error Sophisticated destructuring will work in TypeScript 4.6
         url: type === "custom" ? media : media.path,
       }),

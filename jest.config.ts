@@ -1,6 +1,4 @@
 import type { Config } from "@jest/types";
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { defaults } from "jest-config";
 
 const config: Config.InitialOptions = {
   moduleNameMapper: {
@@ -8,8 +6,9 @@ const config: Config.InitialOptions = {
       "<rootDir>/__mocks__/fileMock.js",
     "\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
   },
-  testPathIgnorePatterns: [...defaults.testPathIgnorePatterns, "e2e"],
+
   testEnvironment: "jsdom",
+  transformIgnorePatterns: ["/node_modules/(?!(@knight-lab)/)"]
 };
 
 export default config;
