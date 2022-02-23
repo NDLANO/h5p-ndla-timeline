@@ -134,6 +134,12 @@ export const mapEventToTimelineSlide = async (
     slide.end_date = endDate;
   }
 
+  // if (media) {
+  //   slide.media = {
+  //     url: typeof media === "string" ? media : media.path,
+  //   };
+  // }
+
   return slide;
 };
 

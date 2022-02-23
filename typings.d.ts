@@ -165,12 +165,20 @@ declare module "@knight-lab/timelinejs" {
       options: ITimeLineConfiguration,
     );
   }
+
+  declare type MediaType = {
+    type: string;
+    name: string;
+    match_str: RegExp;
+    cls: typeof import("@knight-lab/timelinejs/src/js/media/Media").Media;
+  };
 }
 
 declare module "@knight-lab/timelinejs/src/js/media/Media" {
   declare class Media {
     constructor(
       data?: {
+        mediatype?: import("@knight-lab/timelinejs").MediaType;
         unique_id?: string;
         url?: string;
         credit?: string;
@@ -188,7 +196,7 @@ declare module "@knight-lab/timelinejs/src/js/media/Media" {
         caption_height?: number;
         background?: number;
       },
-      language?: string,
+      language?: unknown,
     );
 
     addTo(container: HTMLElement): void;
@@ -196,12 +204,14 @@ declare module "@knight-lab/timelinejs/src/js/media/Media" {
     on(eventName: string, callback: (event: unknown) => void);
 
     off(eventName: string, callback: (event: unknown) => void);
-  }
 
-  declare module "@knight-lab/timelinejs/src/js/media/MediaType" {
-    declare function lookupMediaType(
-      m: { url: string },
-      image_only: boolean,
-    ): { type: string; name: string; match_str: RegExp; cls: typeof Function };
+    loadMedia(): void;
   }
+}
+
+declare module "@knight-lab/timelinejs/src/js/media/MediaType" {
+  declare function lookupMediaType(
+    m: { url: string },
+    image_only?: boolean,
+  ): import("@knight-lab/timelinejs").MediaType;
 }

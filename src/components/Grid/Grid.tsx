@@ -44,7 +44,7 @@ export const Grid: React.FC<GridProps> = ({ eventItem, mediaHtml }) => {
 
             )} */}
 
-            {mediaHtml && (
+            {gridItem.type === "media" && mediaHtml && (
               // eslint-disable-next-line react/no-danger
               <div dangerouslySetInnerHTML={{ __html: mediaHtml }} />
             )}
