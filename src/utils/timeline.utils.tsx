@@ -8,6 +8,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { Grid } from "../components/Grid/Grid";
 import { DateString } from "../types/DateString";
 import { EventItemType } from "../types/EventItemType";
+import { Media } from "../types/H5P/Media";
 import { ParamsData } from "../types/ParamsData";
 import { isDefined } from "./is-defined.utils";
 
@@ -65,28 +66,58 @@ export const parseDate = (dateString: string): TimelineDate | null => {
   };
 };
 
+const getMedia = (eventItem: EventItemType): string | Media | undefined => {
+  let media;
+
+  switch (eventItem.mediaType) {
+    case "image":
+      media = eventItem.image;
+      break;
+    case "video":
+      media = eventItem.video;
+      break;
+    case "custom":
+      media = eventItem.customMedia;
+      break;
+  }
+
+  return media;
+};
+
 export const mapEventToTimelineSlide = (
   event: EventItemType,
 ): TimelineSlide | null => {
   const startDate = event.startDate ? parseDate(event.startDate) : null;
-  const invalidEndDate = (event.endDate && parseDate(event.endDate)) === null;
+  // const invalidStartDate = event.
+  // const invalidEndDate = (event.endDate && parseDate(event.endDate)) === null;
 
-  if (!startDate) {
-    console.error("Invalid start date", event.startDate);
+  // if (!startDate) {
+  //   console.error("Invalid start date", event.startDate);
 
-    return null;
+  //   return null;
+  // }
+
+  // if (invalidEndDate) {
+  //   console.error("Invalid end date", event.endDate);
+
+  //   return null;
+  // }
+
+  let text;
+  const eventHasCustomLayout = event.layout === "custom";
+  if (eventHasCustomLayout) {
+    text = renderToStaticMarkup(<Grid eventItem={event} />);
+  } else {
+    text = event.description;
   }
 
-  if (invalidEndDate) {
-    console.error("Invalid end date", event.endDate);
-
-    return null;
-  }
-
-  const text = renderToStaticMarkup(<Grid eventItem={event} />);
+  // The `layout-x` part of this ID is used for styling and must not be removed
+  // before we find another way to change slide layouts
+  const id = `${event.id}_layout-${event.layout}`;
 
   const slide: TimelineSlide = {
-    start_date: startDate,
+    unique_id: id,
+    start_date: startDate ?? undefined,
     text: {
       headline: event.title,
       text,
@@ -96,6 +127,13 @@ export const mapEventToTimelineSlide = (
   const endDate = event.endDate && parseDate(event.endDate);
   if (endDate) {
     slide.end_date = endDate;
+  }
+
+  const media = getMedia(event);
+  if (media) {
+    slide.media = {
+      url: typeof media === "string" ? media : media.path,
+    };
   }
 
   return slide;
