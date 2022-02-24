@@ -1,4 +1,5 @@
 import { EventContent } from "./EventContent";
+import { LayoutOption } from "./LayoutOption";
 import { MediaType } from "./MediaType";
 
 export type EventItemType = {
@@ -10,5 +11,6 @@ export type EventItemType = {
   startDate?: string;
   endDate?: string;
 
+  layout: LayoutOption;
   eventContent?: EventContent;
 } & MediaType;

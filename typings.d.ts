@@ -17,7 +17,7 @@ declare module "@knight-lab/timelinejs" {
   };
 
   declare type TimelineText = {
-    text: string;
+    text?: string;
     headline?: string;
   };
 
@@ -38,7 +38,7 @@ declare module "@knight-lab/timelinejs" {
   };
 
   declare type TimelineSlide = {
-    start_date: TimelineDate;
+    start_date?: TimelineDate;
     end_date?: TimelineDate;
     text?: TimelineText;
     media?: TimelineMedia;

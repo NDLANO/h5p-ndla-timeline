@@ -1,9 +1,9 @@
 import { Timeline } from "@knight-lab/timelinejs";
 import * as React from "react";
-import * as ReactDOM from "react-dom";
 import { ParamsData } from "../../types/ParamsData";
 import { createTimelineDefinition } from "../../utils/timeline.utils";
 import { Grid } from "../Grid/Grid";
+import "./TimeLine.scss";
 
 export type TimeLineProps = {
   data: ParamsData;
@@ -34,15 +34,6 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       width: "100%",
       source: timelineDefinition,
     });
-
-    if (titleSlide) {
-      requestAnimationFrame(() => {
-        ReactDOM.render(
-          titleSlide,
-          document.getElementById("timeline_title_slide"),
-        );
-      });
-    }
   }, [timelineDefinition, titleSlide]);
 
   return <div id={containerId} />;

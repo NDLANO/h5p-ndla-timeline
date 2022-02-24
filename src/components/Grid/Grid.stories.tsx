@@ -31,6 +31,7 @@ const eventItem: EventItemType = {
     width: 2400,
     mime: "image/jpg",
   },
+  layout: "custom",
   eventContent: {
     items: [],
   },
