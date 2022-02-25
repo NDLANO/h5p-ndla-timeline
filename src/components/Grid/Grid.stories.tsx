@@ -10,12 +10,13 @@ export default {
   component: Grid,
 } as ComponentMeta<typeof Grid>;
 
-const eventItem: EventItemType = {
+const eventItem: EventItemType<"regular"> = {
   id: "1",
   title: "Dainty green tree frog",
   description:
     "The dainty green tree frog (Ranoidea gracilenta), also known as the graceful tree frog, is a tree frog native to eastern Queensland, and north-eastern New South Wales, Australia. (Wikipedia)",
   mediaType: "image",
+  slideType: "regular",
   image: {
     path: "https://images.unsplash.com/photo-1502403421222-2ae1f0a65fe2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1779&q=80",
     alt: "Dainty tree frog hiding in a waterlily flower",
@@ -35,6 +36,17 @@ const eventItem: EventItemType = {
   eventContent: {
     items: [],
   },
+  startDate: "2010",
+  tags: [
+    {
+      color: "#93c0a4",
+      name: "Eton blue tag",
+    },
+    {
+      color: "#eabda8",
+      name: "Desert sand tag",
+    },
+  ],
 };
 
 const defaultArgs: React.ComponentPropsWithoutRef<typeof Grid> = {
