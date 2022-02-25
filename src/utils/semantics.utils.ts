@@ -1,12 +1,69 @@
-import { H5PField } from "../types/H5P/H5PField";
+import { H5PField, H5PFieldList } from "../types/H5P/H5PField";
 import { H5PFieldType } from "../types/H5P/H5PFieldType";
+import { isDefined } from "./is-defined.utils";
 import { layoutOptions } from "./layout.utils";
 
-export const timelineItemFields: Array<H5PField> = [
+export const createTagField = (): H5PFieldList => ({
+  label: "Tags",
+  name: "tags",
+  type: H5PFieldType.List,
+  entity: "Tag",
+  importance: "low",
+  field: {
+    label: "Tag",
+    name: "tag",
+    importance: "low",
+    type: H5PFieldType.Group,
+    fields: [
+      {
+        label: "Name",
+        name: "name",
+        type: H5PFieldType.Text,
+      },
+      {
+        label: "Color",
+        name: "color",
+        type: H5PFieldType.Text,
+        widget: "colorSelector",
+      },
+    ],
+  },
+});
+
+export const createTimelineItemFields = (
+  slideType: "title" | "regular",
+): Array<H5PField> => [
+  {
+    label: "Id",
+    name: "id",
+    type: H5PFieldType.Text,
+    widget: "none",
+  },
+  {
+    label: "Slide type",
+    name: "slideType",
+    type: H5PFieldType.Text,
+    default: slideType,
+    widget: "none",
+  },
   {
     label: "Title",
     name: "label",
     type: H5PFieldType.Text,
+  },
+  {
+    label: "Start date",
+    description: "YYYY-MM-DD — only year is required. Years can be negative.",
+    name: "startDate",
+    type: H5PFieldType.Text,
+    optional: slideType === "title",
+  },
+  {
+    label: "End date",
+    description: "YYYY-MM-DD — only year is required. Years can be negative.",
+    name: "endDate",
+    type: H5PFieldType.Text,
+    optional: true,
   },
   {
     label: "Text content",
@@ -137,4 +194,5 @@ export const timelineItemFields: Array<H5PField> = [
       ],
     },
   },
+  ...(slideType === "regular" ? [createTagField()] : []),
 ];
