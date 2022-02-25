@@ -6,10 +6,12 @@ import type {
 import * as React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { Grid } from "../components/Grid/Grid";
+import { Tags } from "../components/Tags/Tags";
 import { DateString } from "../types/DateString";
 import { EventItemType } from "../types/EventItemType";
 import { Media } from "../types/H5P/Media";
 import { ParamsData } from "../types/ParamsData";
+import { SlideType } from "../types/SlideType";
 import { isDefined } from "./is-defined.utils";
 
 export const isDateString = (str: string): str is DateString => {
@@ -66,7 +68,9 @@ export const parseDate = (dateString: string): TimelineDate | null => {
   };
 };
 
-const getMedia = (eventItem: EventItemType): string | Media | undefined => {
+const getMedia = (
+  eventItem: EventItemType<SlideType>,
+): string | Media | undefined => {
   let media;
 
   switch (eventItem.mediaType) {
@@ -85,7 +89,7 @@ const getMedia = (eventItem: EventItemType): string | Media | undefined => {
 };
 
 export const mapEventToTimelineSlide = (
-  event: EventItemType,
+  event: EventItemType<SlideType>,
 ): TimelineSlide | null => {
   const startDate = event.startDate ? parseDate(event.startDate) : null;
   // const invalidStartDate = event.
@@ -108,7 +112,19 @@ export const mapEventToTimelineSlide = (
   if (eventHasCustomLayout) {
     text = renderToStaticMarkup(<Grid eventItem={event} />);
   } else {
-    text = event.description;
+    let tagsMarkup = "";
+
+    // TODO: Make a variable `hasTags` for this ugly if when TypeScript supports it
+    if ("tags" in event && event.tags && event.tags.length > 0) {
+      // Has tags
+      tagsMarkup = renderToStaticMarkup(
+        <div className="h5p-tl-tags-container">
+          <Tags tags={event.tags} />
+        </div>,
+      );
+    }
+
+    text = `${event.description}${tagsMarkup}`;
   }
 
   // The `layout-x` part of this ID is used for styling and must not be removed

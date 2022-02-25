@@ -1,0 +1,11 @@
+/**
+ * {1} Timeline's high specificity overrides this value,
+ *     which makes !important the lesser of all the evils
+ */
+.tags {
+  display: flex;
+  gap: 0.5em;
+  list-style: none;
+  margin: 0;
+  padding: 0 !important; /* {1} */
+}

@@ -18,9 +18,36 @@
         "type": "group",
         "fields": [
           {
+            "label": "Id",
+            "name": "id",
+            "type": "text",
+            "widget": "none"
+          },
+          {
+            "label": "Slide type",
+            "name": "slideType",
+            "type": "text",
+            "default": "title",
+            "widget": "none"
+          },
+          {
             "label": "Title",
             "name": "label",
             "type": "text"
+          },
+          {
+            "label": "Start date",
+            "description": "YYYY-MM-DD — only year is required. Years can be negative.",
+            "name": "startDate",
+            "type": "text",
+            "optional": true
+          },
+          {
+            "label": "End date",
+            "description": "YYYY-MM-DD — only year is required. Years can be negative.",
+            "name": "endDate",
+            "type": "text",
+            "optional": true
           },
           {
             "label": "Text content",
@@ -116,6 +143,10 @@
               {
                 "label": "Video",
                 "value": "video"
+              },
+              {
+                "label": "External link",
+                "value": "custom"
               }
             ],
             "default": "image"
@@ -147,6 +178,21 @@
                 }
               ]
             }
+          },
+          {
+            "label": "External link",
+            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\">Knightlab docs</a>",
+            "name": "customMedia",
+            "type": "text",
+            "widget": "NDLAShowWhen",
+            "showWhen": {
+              "rules": [
+                {
+                  "field": "mediaType",
+                  "equals": "custom"
+                }
+              ]
+            }
           }
         ],
         "widget": "NDLAShowWhen",
@@ -172,9 +218,36 @@
           "type": "group",
           "fields": [
             {
+              "label": "Id",
+              "name": "id",
+              "type": "text",
+              "widget": "none"
+            },
+            {
+              "label": "Slide type",
+              "name": "slideType",
+              "type": "text",
+              "default": "regular",
+              "widget": "none"
+            },
+            {
               "label": "Title",
               "name": "label",
               "type": "text"
+            },
+            {
+              "label": "Start date",
+              "description": "YYYY-MM-DD — only year is required. Years can be negative.",
+              "name": "startDate",
+              "type": "text",
+              "optional": false
+            },
+            {
+              "label": "End date",
+              "description": "YYYY-MM-DD — only year is required. Years can be negative.",
+              "name": "endDate",
+              "type": "text",
+              "optional": true
             },
             {
               "label": "Text content",
@@ -270,6 +343,10 @@
                 {
                   "label": "Video",
                   "value": "video"
+                },
+                {
+                  "label": "External link",
+                  "value": "custom"
                 }
               ],
               "default": "image"
@@ -303,29 +380,58 @@
               }
             },
             {
-              "label": "Start date",
-              "description": "YYYY-MM-DD — only year is required. Years can be negative.",
-              "name": "startDate",
-              "type": "text"
+              "label": "External link",
+              "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\">Knightlab docs</a>",
+              "name": "customMedia",
+              "type": "text",
+              "widget": "NDLAShowWhen",
+              "showWhen": {
+                "rules": [
+                  {
+                    "field": "mediaType",
+                    "equals": "custom"
+                  }
+                ]
+              }
             },
             {
-              "label": "End date",
-              "description": "YYYY-MM-DD — only year is required. Years can be negative.",
-              "name": "endDate",
-              "type": "text"
+              "label": "Tags",
+              "name": "tags",
+              "type": "list",
+              "entity": "Tag",
+              "importance": "low",
+              "field": {
+                "label": "Tag",
+                "name": "tag",
+                "importance": "low",
+                "type": "group",
+                "fields": [
+                  {
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text"
+                  },
+                  {
+                    "label": "Color",
+                    "name": "color",
+                    "type": "text",
+                    "widget": "colorSelector"
+                  }
+                ]
+              }
             }
           ]
         }
       },
       {
-        "label": "Categories",
-        "name": "categories",
+        "label": "Tags",
+        "name": "tags",
         "type": "list",
-        "entity": "Category",
+        "entity": "Tag",
         "importance": "low",
         "field": {
-          "label": "Category",
-          "name": "category",
+          "label": "Tag",
+          "name": "tag",
           "importance": "low",
           "type": "group",
           "fields": [

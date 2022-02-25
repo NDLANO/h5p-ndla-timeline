@@ -41,3 +41,16 @@
 //     order: 2;
 //   }
 // }
+
+.h5p-tl-tags-container {
+  bottom: 0.5rem;
+  left: 0.5rem;
+  position: absolute;
+}
+
+$tags-padding: 5rem;
+
+.tl-slide-content {
+  padding-bottom: $tags-padding;
+  position: relative;
+}

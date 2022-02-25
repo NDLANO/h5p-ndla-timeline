@@ -1,13 +1,14 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
 import { EventItemType } from "../../types/EventItemType";
+import { SlideType } from "../../types/SlideType";
 import { MediaBlock } from "../MediaBlock/MediaBlock";
 import { TextContentBlock } from "../TextContentBlock/TextContentBlock";
 import { TitleBlock } from "../TitleBlock/TitleBlock";
 import styles from "./Grid.module.scss";
 
 type GridProps = {
-  eventItem: EventItemType;
+  eventItem: EventItemType<SlideType>;
 };
 
 export const Grid: React.FC<GridProps> = ({ eventItem }) => {
