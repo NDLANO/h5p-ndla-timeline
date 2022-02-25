@@ -11,8 +11,12 @@ type TagsProps = {
 export const Tags: FC<TagsProps> = ({ tags }) => {
   const children = useMemo(() => tags.map(tag => <Tag tag={tag} />), [tags]);
 
-  // role="list" is added because the element's `display` property
-  // changes the role.
-  // eslint-disable-next-line jsx-a11y/no-redundant-roles
-  return <ul role="list" className={styles.tags}>{children}</ul>;
+  return (
+    // role="list" is added because the element's `display` property
+    // changes the role.
+    // eslint-disable-next-line jsx-a11y/no-redundant-roles
+    <ul role="list" className={styles.tags}>
+      {children}
+    </ul>
+  );
 };

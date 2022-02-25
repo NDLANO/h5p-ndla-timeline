@@ -1,6 +1,5 @@
 import { H5PField, H5PFieldList } from "../types/H5P/H5PField";
 import { H5PFieldType } from "../types/H5P/H5PFieldType";
-import { isDefined } from "./is-defined.utils";
 import { layoutOptions } from "./layout.utils";
 
 export const createTagField = (): H5PFieldList => ({
