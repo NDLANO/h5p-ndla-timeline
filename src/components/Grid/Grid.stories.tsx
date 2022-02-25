@@ -31,6 +31,7 @@ const eventItem: EventItemType = {
     width: 2400,
     mime: "image/jpg",
   },
+  categories: ["Category 1"],
   eventContent: {
     items: [],
   },
@@ -71,6 +72,14 @@ export const WithItems: ComponentStory<typeof Grid> = () => {
             height: 10,
             x: 50,
             y: 30,
+          },
+          {
+            id: "4",
+            type: "categories",
+            width: 50,
+            height: 2,
+            x: 70,
+            y: 10,
           },
         ],
       },

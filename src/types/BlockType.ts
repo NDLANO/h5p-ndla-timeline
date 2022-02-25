@@ -1,1 +1,1 @@
-export type BlockType = "title" | "textContent" | "media";
+export type BlockType = "title" | "textContent" | "media" | "categories";

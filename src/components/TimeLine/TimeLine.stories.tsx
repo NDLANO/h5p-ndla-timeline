@@ -50,9 +50,10 @@ const defaultArgs: TimeLineProps = {
         id: "event-1",
         title: "2021",
         mediaType: "image",
+        categories: ["Category 1"],
       },
     ],
-    categories: [],
+    categories: [{ name: "Category 1", color: "red" },{ name: "Category 2", color: "blue" }],
     eras: [],
   },
 };

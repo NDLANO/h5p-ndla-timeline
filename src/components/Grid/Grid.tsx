@@ -52,18 +52,21 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
         );
       }),
     [
-      eventItem.description,
-      eventItem.image,
-      eventItem.mediaType,
-      eventItem.title,
-      eventItem.video,
-      items,
+     eventItem.description, 
+     eventItem.image, 
+     eventItem.mediaType, 
+     eventItem.title, 
+     eventItem.video, 
+     items
     ],
   );
-
+  
   return (
     <div className={styles.gridWrapper}>
-      <div className={styles.grid}>{children}</div>
+      <div className={styles.grid}>
+        {children}
+
+      </div>
     </div>
   );
 };

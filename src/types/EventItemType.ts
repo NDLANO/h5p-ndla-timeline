@@ -14,6 +14,6 @@ export type EventItemType = {
 
   startDate?: string;
   endDate?: string;
-
+  categories?: Array<string>;
   eventContent?: EventContent;
 };
