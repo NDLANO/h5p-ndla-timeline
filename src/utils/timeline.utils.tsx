@@ -4,7 +4,7 @@ import type {
   TimelineSlide,
 } from "@knight-lab/timelinejs";
 import * as React from "react";
-import { renderToStaticMarkup, renderToString } from "react-dom/server";
+import { renderToStaticMarkup } from "react-dom/server";
 import { Grid } from "../components/Grid/Grid";
 import { Tags } from "../components/Tags/Tags";
 import { DateString } from "../types/DateString";
@@ -117,7 +117,7 @@ export const mapEventToTimelineSlide = (
     // TODO: Make a variable `hasTags` for this ugly if when TypeScript supports it
     if ("tags" in event && event.tags && event.tags.length > 0) {
       // Has tags
-      tagsMarkup = renderToString(
+      tagsMarkup = renderToStaticMarkup(
         <div className="h5p-tl-tags-container">
           <Tags tags={event.tags} />
         </div>,
