@@ -48,6 +48,9 @@
   position: absolute;
 }
 
+$tags-padding: 5rem;
+
 .tl-slide-content {
-  padding-bottom: 5rem;
+  padding-bottom: $tags-padding;
+  position: relative;
 }
