@@ -1,6 +1,13 @@
+/**
+ * {1} The tag elements already have `display: block` set implicitly
+ *     by the parent's `display: flex` property, but this is not
+ *     necessarily obvious to everyone and we can afford the extra
+ *     bytes. Also, it looks nicer in the Story :)
+ */
 .tag {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0.167em;
+  display: block; /* {1} */
   font-size: 0.75rem;
   padding: 0.5em;
 }
