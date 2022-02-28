@@ -17,7 +17,7 @@ type H5PFieldWidgetExtension =
 type H5PTextFieldWidgetExtension =
   | H5PFieldWidgetExtension
   | {
-      widget?: "html";
+      widget: "html";
       tags: Array<H5PTextTags>;
     };
 
