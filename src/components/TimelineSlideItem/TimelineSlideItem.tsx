@@ -2,7 +2,6 @@ import * as React from "react";
 import styles from "./TimelineSlideItem.module.scss";
 
 export type TimelineSlideItemProps = {
-  backgroundImage: string | undefined;
   title: string;
   editAction: React.MouseEventHandler;
 };
