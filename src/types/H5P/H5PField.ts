@@ -18,6 +18,7 @@ type H5PTextFieldWidgetExtension =
   | H5PFieldWidgetExtension
   | {
       widget?: "html";
+      tags: Array<H5PTextTags>;
     };
 
 type H5PFieldCommon = {
@@ -100,7 +101,6 @@ export type H5PFieldText =
         maxLength?: number;
         regexp?: string;
         enterMode?: H5PEnterMode;
-        tags?: Array<H5PTextTags>;
         font?: string;
 
         /**

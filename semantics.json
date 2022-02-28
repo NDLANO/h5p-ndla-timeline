@@ -53,7 +53,14 @@
             "label": "Text content",
             "name": "textContent",
             "type": "text",
-            "widget": "html"
+            "widget": "html",
+            "tags": [
+              "p",
+              "br",
+              "strong",
+              "em",
+              "a"
+            ]
           },
           {
             "label": "Layout",
@@ -253,7 +260,14 @@
               "label": "Text content",
               "name": "textContent",
               "type": "text",
-              "widget": "html"
+              "widget": "html",
+              "tags": [
+                "p",
+                "br",
+                "strong",
+                "em",
+                "a"
+              ]
             },
             {
               "label": "Layout",
