@@ -9,7 +9,6 @@ export default {
 } as ComponentMeta<typeof TimelineSlideItem>;
 
 const defaultArgs: TimelineSlideItemProps = {
-  backgroundImage: "",
   title: "Title",
   editAction: console.info,
 };
