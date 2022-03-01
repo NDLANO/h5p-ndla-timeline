@@ -69,6 +69,7 @@ export const createTimelineItemFields = (
     name: "textContent",
     type: H5PFieldType.Text,
     widget: "html",
+    tags: ["p", "br", "strong", "em", "a"],
   },
   {
     label: "Layout",
