@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
 import { EventItemType } from "../../types/EventItemType";
+import { Media } from "../../types/H5P/Media";
 import { SlideType } from "../../types/SlideType";
 import { MediaBlock } from "../MediaBlock/MediaBlock";
 import { TextContentBlock } from "../TextContentBlock/TextContentBlock";
@@ -18,21 +19,16 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
   );
 
   const media = React.useMemo(() => {
-    let m;
-
     switch (eventItem.mediaType) {
       case "image":
-        m = eventItem.image;
-        break;
-      case "video":
-        m = eventItem.video;
-        break;
-      case "custom":
-        m = eventItem.customMedia;
-        break;
-    }
+        return eventItem.image;
 
-    return m;
+      case "video":
+        return eventItem.video;
+
+      case "custom":
+        return eventItem.customMedia;
+    }
   }, [eventItem]);
 
   const children = React.useMemo(
@@ -58,7 +54,7 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
             )}
 
             {gridItem.type === "media" && media && (
-              // @ts-expect-error Sophisticated destructuring will work in TypeScript 4.6
+              // @ts-expect-error `media` gets its type depending on `eventItem.mediaType`
               <MediaBlock type={eventItem.mediaType} media={media} />
             )}
           </div>
