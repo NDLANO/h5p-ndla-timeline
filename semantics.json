@@ -419,6 +419,7 @@
                 "name": "tag",
                 "importance": "low",
                 "type": "group",
+                "widget": "NDLATagsPicker",
                 "fields": [
                   {
                     "label": "Name",
@@ -428,8 +429,12 @@
                   {
                     "label": "Color",
                     "name": "color",
-                    "type": "text",
-                    "widget": "colorSelector"
+                    "type": "text"
+                  },
+                  {
+                    "label": "Is active",
+                    "name": "isActive",
+                    "type": "text"
                   }
                 ]
               }
@@ -448,7 +453,13 @@
           "name": "tag",
           "importance": "low",
           "type": "group",
+          "widget": "NDLATagsEditor",
           "fields": [
+            {
+              "label": "Id",
+              "name": "id",
+              "type": "text"
+            },
             {
               "label": "Name",
               "name": "name",
