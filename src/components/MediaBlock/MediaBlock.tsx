@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import { Media } from "@knight-lab/timelinejs/src/js/media/Media";
 import * as React from "react";
 import { FC, useEffect, useMemo, useRef } from "react";
@@ -7,7 +8,7 @@ import { Video } from "../../types/H5P/Video";
 type MediaBlockProps =
   | {
       type: "image";
-      media: Image | string;
+      media: Image;
     }
   | {
       type: "video";
@@ -18,15 +19,16 @@ type MediaBlockProps =
       media: string;
     };
 
-export const MediaBlock: FC<MediaBlockProps> = ({ type, media }) => {
+export const MediaBlock: FC<MediaBlockProps> = props => {
+  const { media } = props;
+
   const containerRef = useRef<HTMLDivElement>(null);
   const mediaRef = useMemo<Media>(
     () =>
       new Media({
-        // @ts-expect-error Sophisticated destructuring will work in TypeScript 4.6
-        url: type === "custom" ? media : media.path,
+        url: props.type === "custom" ? props.media : props.media.path,
       }),
-    [media, type],
+    [props.media, props.type],
   );
 
   useEffect(() => {
