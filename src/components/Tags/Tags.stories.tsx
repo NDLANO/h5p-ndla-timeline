@@ -14,10 +14,12 @@ export const Default: ComponentStory<typeof Tags> = () => {
   const args: TagsProps = {
     tags: [
       {
+        id: "tag-1",
         color: "darkgreen",
         name: "Dark green tag",
       },
       {
+        id: "tag-2",
         color: "lightgreen",
         name: "Light green tag",
       },

@@ -3,7 +3,7 @@ import { H5PFieldGroup } from "./types/H5P/H5PField";
 import { H5PFieldType } from "./types/H5P/H5PFieldType";
 import { H5PL10n } from "./types/H5P/H5PL10n";
 import {
-  createTagField,
+  createTagEditorField,
   createTimelineItemFields,
 } from "./utils/semantics.utils";
 
@@ -50,7 +50,7 @@ export const semantics: Readonly<[H5PFieldGroup, H5PBehaviour, H5PL10n]> = [
           fields: [...createTimelineItemFields("regular")],
         },
       },
-      createTagField(),
+      createTagEditorField(),
       {
         label: "Eras",
         name: "eras",

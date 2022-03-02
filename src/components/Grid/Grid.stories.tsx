@@ -39,10 +39,12 @@ const eventItem: EventItemType<"regular"> = {
   startDate: "2010",
   tags: [
     {
+      id: "tag-1",
       color: "#93c0a4",
       name: "Eton blue tag",
     },
     {
+      id: "tag-2",
       color: "#eabda8",
       name: "Desert sand tag",
     },

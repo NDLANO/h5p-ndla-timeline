@@ -2,7 +2,7 @@ import { H5PField, H5PFieldList } from "../types/H5P/H5PField";
 import { H5PFieldType } from "../types/H5P/H5PFieldType";
 import { layoutOptions } from "./layout.utils";
 
-export const createTagField = (): H5PFieldList => ({
+export const createTagEditorField = (): H5PFieldList => ({
   label: "Tags",
   name: "tags",
   type: H5PFieldType.List,
@@ -13,7 +13,13 @@ export const createTagField = (): H5PFieldList => ({
     name: "tag",
     importance: "low",
     type: H5PFieldType.Group,
+    widget: "NDLATagsEditor",
     fields: [
+      {
+        label: "Id",
+        name: "id",
+        type: H5PFieldType.Text,
+      },
       {
         label: "Name",
         name: "name",
@@ -24,6 +30,38 @@ export const createTagField = (): H5PFieldList => ({
         name: "color",
         type: H5PFieldType.Text,
         widget: "colorSelector",
+      },
+    ],
+  },
+});
+
+export const createTagPickerField = (): H5PFieldList => ({
+  label: "Tags",
+  name: "tags",
+  type: H5PFieldType.List,
+  entity: "Tag",
+  importance: "low",
+  field: {
+    label: "Tag",
+    name: "tag",
+    importance: "low",
+    type: H5PFieldType.Group,
+    widget: "NDLATagsPicker",
+    fields: [
+      {
+        label: "Name",
+        name: "name",
+        type: H5PFieldType.Text,
+      },
+      {
+        label: "Color",
+        name: "color",
+        type: H5PFieldType.Text,
+      },
+      {
+        label: "Is active",
+        name: "isActive",
+        type: H5PFieldType.Text,
       },
     ],
   },
@@ -194,5 +232,5 @@ export const createTimelineItemFields = (
       ],
     },
   },
-  ...(slideType === "regular" ? [createTagField()] : []),
+  ...(slideType === "regular" ? [createTagPickerField()] : []),
 ];

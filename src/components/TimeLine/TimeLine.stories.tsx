@@ -82,14 +82,17 @@ const titleSlide: EventItemType<"title"> = {
 
 const tags: Record<string, Tag> = {
   tag1: {
+    id: "tag-1",
     color: "#93c0a4",
     name: "Eton blue tag",
   },
   tag2: {
+    id: "tag-2",
     color: "#eabda8",
     name: "Desert sand tag",
   },
   tag3: {
+    id: "tag-3",
     color: "#5f00ba",
     name: "Purple tag",
   },
