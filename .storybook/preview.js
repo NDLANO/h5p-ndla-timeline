@@ -18,12 +18,16 @@ export const parameters = {
   },
 };
 
-const translations = Object.fromEntries(
-  semantics[2].fields.map(field => {
-    const defaultValue = field["default"] ?? field.name;
-    return [field.name, defaultValue];
-  }),
-);
+const translationField = semantics.find(field => field.name === "l10n");
+
+const translations = translationField
+  ? Object.fromEntries(
+      translationField.fields.map(field => {
+        const defaultValue = field["default"] ?? field.name;
+        return [field.name, defaultValue];
+      }),
+    )
+  : {};
 
 export const decorators = [
   Story => (

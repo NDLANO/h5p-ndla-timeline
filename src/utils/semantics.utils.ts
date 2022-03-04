@@ -8,6 +8,7 @@ export const createTagEditorField = (): H5PFieldList => ({
   type: H5PFieldType.List,
   entity: "Tag",
   importance: "low",
+  optional: true,
   field: {
     label: "Tag",
     name: "tag",
@@ -47,6 +48,7 @@ export const createTagPickerField = (): H5PFieldList => ({
     importance: "low",
     type: H5PFieldType.Group,
     widget: "NDLATagsPicker",
+    fieldNameToWatch: "tags",
     fields: [
       {
         label: "Name",
@@ -116,58 +118,58 @@ export const createTimelineItemFields = (
     default: layoutOptions.textOnRight.value,
     options: Object.values(layoutOptions),
   },
-  {
-    label: "Event content",
-    name: "eventContent",
-    type: H5PFieldType.Group,
-    importance: "low",
-    widget: "NDLATimelineEventLayout",
-    fields: [
-      {
-        label: "Items",
-        name: "items",
-        type: H5PFieldType.Group,
-        fields: [
-          {
-            label: "Id",
-            name: "id",
-            type: H5PFieldType.Text,
-            widget: "none",
-          },
-          {
-            label: "X position",
-            name: "x",
-            type: H5PFieldType.Text,
-            widget: "none",
-          },
-          {
-            label: "Y position",
-            name: "y",
-            type: H5PFieldType.Text,
-            widget: "none",
-          },
-          {
-            label: "Width",
-            name: "width",
-            type: H5PFieldType.Text,
-            widget: "none",
-          },
-          {
-            label: "Height",
-            name: "height",
-            type: H5PFieldType.Text,
-            widget: "none",
-          },
-          {
-            label: "Type",
-            name: "type",
-            type: H5PFieldType.Text,
-            widget: "none",
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   label: "Event content",
+  //   name: "eventContent",
+  //   type: H5PFieldType.Group,
+  //   importance: "low",
+  //   widget: "NDLATimelineEventLayout",
+  //   fields: [
+  //     {
+  //       label: "Items",
+  //       name: "items",
+  //       type: H5PFieldType.Group,
+  //       fields: [
+  //         {
+  //           label: "Id",
+  //           name: "id",
+  //           type: H5PFieldType.Text,
+  //           widget: "none",
+  //         },
+  //         {
+  //           label: "X position",
+  //           name: "x",
+  //           type: H5PFieldType.Text,
+  //           widget: "none",
+  //         },
+  //         {
+  //           label: "Y position",
+  //           name: "y",
+  //           type: H5PFieldType.Text,
+  //           widget: "none",
+  //         },
+  //         {
+  //           label: "Width",
+  //           name: "width",
+  //           type: H5PFieldType.Text,
+  //           widget: "none",
+  //         },
+  //         {
+  //           label: "Height",
+  //           name: "height",
+  //           type: H5PFieldType.Text,
+  //           widget: "none",
+  //         },
+  //         {
+  //           label: "Type",
+  //           name: "type",
+  //           type: H5PFieldType.Text,
+  //           widget: "none",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   {
     label: "Media type",
     name: "mediaType",

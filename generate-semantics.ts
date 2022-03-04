@@ -1,5 +1,8 @@
 import * as fs from "fs";
 import { semantics } from "./src/semantics";
+import { H5PBehaviour } from "./src/types/H5P/H5PBehaviour";
+import { H5PField } from "./src/types/H5P/H5PField";
+import { H5PL10n } from "./src/types/H5P/H5PL10n";
 import { findDuplicates } from "./src/utils/array.utils";
 
 const semanticsPath = "semantics.json";
@@ -10,8 +13,25 @@ async function createSemanticsJson(): Promise<void> {
   await fs.promises.writeFile(semanticsPath, textContent);
 }
 
+const isH5PL10n = (obj: H5PField | H5PBehaviour | H5PL10n): obj is H5PL10n => {
+  return obj.name === "l10n";
+};
+
+async function deleteTranslationKeysFile(): Promise<void> {
+  await fs.promises.rm(translationKeyPath);
+}
+
 async function createTranslationKeys(): Promise<void> {
-  const translationKeys = semantics[2].fields.map(({ name }) => name);
+  const translationField = semantics.find(field =>
+    isH5PL10n(field),
+  ) as H5PL10n | null;
+
+  if (!translationField) {
+    await deleteTranslationKeysFile();
+    return;
+  }
+
+  const translationKeys = translationField.fields.map(({ name }) => name);
 
   const duplicates = findDuplicates(translationKeys);
   const duplicateKeysExist = duplicates.length > 0;
