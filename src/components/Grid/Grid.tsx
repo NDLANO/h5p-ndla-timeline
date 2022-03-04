@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import * as React from "react";
 import { EventItemType } from "../../types/EventItemType";
-import { Media } from "../../types/H5P/Media";
 import { SlideType } from "../../types/SlideType";
 import { MediaBlock } from "../MediaBlock/MediaBlock";
 import { TextContentBlock } from "../TextContentBlock/TextContentBlock";
