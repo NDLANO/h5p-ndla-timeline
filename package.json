@@ -62,7 +62,7 @@
     "jest": "^27.5.1",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
-    "mini-css-extract-plugin": "^2.5.3",
+    "mini-css-extract-plugin": "^2.6.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "sass": "^1.49.9",
