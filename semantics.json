@@ -3,7 +3,7 @@
     "label": "Show title slide",
     "name": "showTitleSlide",
     "type": "boolean",
-    "default": true
+    "default": false
   },
   {
     "label": "Title slide",
@@ -96,6 +96,10 @@
           {
             "label": "External link",
             "value": "custom"
+          },
+          {
+            "label": "None",
+            "value": "none"
           }
         ],
         "default": "image"
@@ -251,6 +255,10 @@
             {
               "label": "External link",
               "value": "custom"
+            },
+            {
+              "label": "None",
+              "value": "none"
             }
           ],
           "default": "image"
@@ -304,6 +312,7 @@
           "type": "list",
           "entity": "Tag",
           "importance": "low",
+          "optional": true,
           "field": {
             "label": "Tag",
             "name": "tag",

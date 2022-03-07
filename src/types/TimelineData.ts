@@ -1,8 +1,8 @@
-import { Tag } from "./Tag";
 import { Era } from "./Era";
 import { EventItemType } from "./EventItemType";
+import { Tag } from "./Tag";
 
-export type ParamsData = {
+export type TimelineData = {
   showTitleSlide: boolean;
   titleSlide?: EventItemType<"title">;
   timelineItems?: Array<EventItemType<"regular">>;

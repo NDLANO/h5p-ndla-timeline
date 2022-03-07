@@ -1,12 +1,12 @@
 import { Timeline } from "@knight-lab/timelinejs";
 import * as React from "react";
-import { ParamsData } from "../../types/ParamsData";
+import { TimelineData } from "../../types/TimelineData";
 import { createTimelineDefinition } from "../../utils/timeline.utils";
 import { Grid } from "../Grid/Grid";
 import "./TimeLine.scss";
 
 export type TimeLineProps = {
-  data: ParamsData;
+  data: TimelineData;
   timelineTitle: string;
 };
 

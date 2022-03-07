@@ -42,6 +42,7 @@ export const createTagPickerField = (): H5PFieldList => ({
   type: H5PFieldType.List,
   entity: "Tag",
   importance: "low",
+  optional: true,
   field: {
     label: "Tag",
     name: "tag",
@@ -186,6 +187,10 @@ export const createTimelineItemFields = (
       {
         label: "External link",
         value: "custom",
+      },
+      {
+        label: "None",
+        value: "none",
       },
     ],
     default: "image",

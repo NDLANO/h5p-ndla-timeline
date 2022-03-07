@@ -10,8 +10,8 @@ import { Tags } from "../components/Tags/Tags";
 import { DateString } from "../types/DateString";
 import { EventItemType } from "../types/EventItemType";
 import { Media } from "../types/H5P/Media";
-import { ParamsData } from "../types/ParamsData";
 import { SlideType } from "../types/SlideType";
+import { TimelineData } from "../types/TimelineData";
 import { isDefined } from "./is-defined.utils";
 
 export const isDateString = (str: string): str is DateString => {
@@ -77,11 +77,17 @@ const getMedia = (
     case "image":
       media = eventItem.image;
       break;
+
     case "video":
       media = eventItem.video;
       break;
+
     case "custom":
       media = eventItem.customMedia;
+      break;
+
+    case "none":
+      media = undefined;
       break;
   }
 
@@ -157,7 +163,7 @@ export const mapEventToTimelineSlide = (
 
 export const createTimelineDefinition = (
   title: string,
-  data: ParamsData,
+  data: TimelineData,
 ): TimelineDefinition => {
   const items = data.timelineItems ?? [];
 

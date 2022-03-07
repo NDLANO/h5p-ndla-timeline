@@ -20,9 +20,7 @@ export class H5PWrapper extends H5P.EventDispatcher {
 
     ReactDOM.render(
       <LocalizationContext.Provider value={l10n}>
-        {params.ndlaTimeline ? (
-          <App title={title} timeline={params.ndlaTimeline} />
-        ) : null}
+        {params ? <App title={title} params={params} /> : null}
       </LocalizationContext.Provider>,
       this.wrapper,
     );

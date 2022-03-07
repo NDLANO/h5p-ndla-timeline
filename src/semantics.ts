@@ -12,7 +12,7 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
     label: "Show title slide",
     name: "showTitleSlide",
     type: H5PFieldType.Boolean,
-    default: true,
+    default: false,
   },
   {
     label: "Title slide",

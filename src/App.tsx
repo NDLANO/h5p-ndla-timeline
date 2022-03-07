@@ -1,12 +1,12 @@
 import * as React from "react";
 import { TimeLine } from "./components/TimeLine/TimeLine";
-import { ParamsData } from "./types/ParamsData";
+import { TimelineData } from "./types/TimelineData";
 
 export type AppProps = {
   title: string;
-  timeline: ParamsData;
+  params: TimelineData;
 };
 
-export const App: React.FC<AppProps> = ({ title, timeline }) => {
-  return <TimeLine data={timeline} timelineTitle={title} />;
+export const App: React.FC<AppProps> = ({ title, params }) => {
+  return <TimeLine data={params} timelineTitle={title} />;
 };
