@@ -3,7 +3,7 @@
   "machineName": "H5P.NDLATimeline",
   "majorVersion": 0,
   "minorVersion": 0,
-  "patchVersion": 12,
+  "patchVersion": 13,
   "runnable": 1,
   "preloadedJs": [
     {
@@ -12,7 +12,7 @@
   ],
   "preloadedCss": [
     {
-      "path": "dist/main.css"
+      "path": "dist/bundle.css"
     }
   ],
   "editorDependencies": [
