@@ -13,4 +13,7 @@ export type MediaType =
   | {
       mediaType: "custom";
       customMedia?: string;
+    }
+  | {
+      mediaType: "none";
     };

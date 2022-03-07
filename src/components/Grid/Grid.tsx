@@ -27,6 +27,9 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
 
       case "custom":
         return eventItem.customMedia;
+
+      case "none":
+        return null;
     }
   }, [eventItem]);
 

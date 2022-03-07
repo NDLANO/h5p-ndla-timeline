@@ -1,8 +1,7 @@
-import { ParamsData } from "../ParamsData";
+import { TimelineData } from "../TimelineData";
 import { Translations } from "../Translations";
 
-export type Params = {
+export type Params = TimelineData & {
   behaviour?: unknown;
-  ndlaTimeline?: ParamsData;
   l10n?: Translations;
 };
