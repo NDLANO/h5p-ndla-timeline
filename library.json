@@ -12,7 +12,7 @@
   ],
   "preloadedCss": [
     {
-      "path": "dist/bundle.css"
+      "path": "dist/main.css"
     }
   ],
   "editorDependencies": [
