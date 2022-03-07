@@ -1,6 +1,20 @@
-$primary-color: white;
-$bg: black;
-h1 {
-  color: $primary-color;
-  background-color: $bg;
+@font-face {
+  font-family: "tl-icons";
+  src: url("tl-icons.eot?url");
+  src: url("tl-icons.eot?#iefix&url") format("embedded-opentype"),
+    url("tl-icons.ttf?url") format("truetype"),
+    url("tl-icons.woff?url") format("woff"),
+    url("tl-icons.svg#tl-icons?url") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.h5p-timeline {
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 }

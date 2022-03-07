@@ -57,7 +57,7 @@ export default defineConfig({
           // is set up. To solve the problem, we would have to add
           // `resolve.alias["~"]: "node_modules/@knight-labs/timelinejs/src/css/icons"
           // and change out `@{icon-path}` for `~/` in `node_modules/@knight-lab/timelinejs/src/less/icons/Icons.less`.
-          "icon-path": "empty on purpose",
+          "icon-path": "invalid on purpose",
         },
       },
     },

@@ -9,7 +9,10 @@ type TagsProps = {
 };
 
 export const Tags: FC<TagsProps> = ({ tags }) => {
-  const children = useMemo(() => tags.map(tag => <Tag tag={tag} />), [tags]);
+  const children = useMemo(
+    () => tags.map(tag => <Tag key={tag.id} tag={tag} />),
+    [tags],
+  );
 
   return (
     // role="list" is added because the element's `display` property
