@@ -26,7 +26,7 @@
       },
       {
         "label": "Title",
-        "name": "label",
+        "name": "title",
         "type": "text"
       },
       {
@@ -44,8 +44,8 @@
         "optional": true
       },
       {
-        "label": "Text content",
-        "name": "textContent",
+        "label": "Description",
+        "name": "description",
         "type": "text",
         "widget": "html",
         "tags": [
@@ -134,7 +134,7 @@
       },
       {
         "label": "External link",
-        "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\">Knightlab docs</a>",
+        "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>",
         "name": "customMedia",
         "type": "text",
         "widget": "NDLAShowWhen",
@@ -164,6 +164,12 @@
     "type": "list",
     "entity": "Timeline item",
     "importance": "low",
+    "widgets": [
+      {
+        "name": "VerticalTabs",
+        "label": "Default"
+      }
+    ],
     "field": {
       "label": "Item",
       "name": "timelineItem",
@@ -185,7 +191,7 @@
         },
         {
           "label": "Title",
-          "name": "label",
+          "name": "title",
           "type": "text"
         },
         {
@@ -203,8 +209,8 @@
           "optional": true
         },
         {
-          "label": "Text content",
-          "name": "textContent",
+          "label": "Description",
+          "name": "description",
           "type": "text",
           "widget": "html",
           "tags": [
@@ -293,7 +299,7 @@
         },
         {
           "label": "External link",
-          "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\">Knightlab docs</a>",
+          "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>",
           "name": "customMedia",
           "type": "text",
           "widget": "NDLAShowWhen",
@@ -322,6 +328,12 @@
             "type": "group",
             "fields": [
               {
+                "label": "Id",
+                "name": "id",
+                "type": "text",
+                "widget": "none"
+              },
+              {
                 "label": "Name",
                 "name": "name",
                 "type": "text"
@@ -349,7 +361,6 @@
     "entity": "Tag",
     "importance": "low",
     "optional": true,
-    "widget": "NDLATagsEditor",
     "field": {
       "label": "Tag",
       "name": "tag",
@@ -359,7 +370,8 @@
         {
           "label": "Id",
           "name": "id",
-          "type": "text"
+          "type": "text",
+          "widget": "none"
         },
         {
           "label": "Name",

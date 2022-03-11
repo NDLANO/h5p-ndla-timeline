@@ -18,6 +18,9 @@ export class H5PWrapper extends H5P.EventDispatcher {
     const l10n = params.l10n ?? ({} as Translations);
     const { title } = extras.metadata;
 
+    console.log({ params });
+    // params?.timelineItems?.[0]?.tags
+    
     ReactDOM.render(
       <LocalizationContext.Provider value={l10n}>
         {params ? <App title={title} params={params} /> : null}
