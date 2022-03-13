@@ -9,7 +9,6 @@ export const createTagEditorField = (): H5PFieldList => ({
   entity: "Tag",
   importance: "low",
   optional: true,
-  widget: "NDLATagsEditor",
   field: {
     label: "Tag",
     name: "tag",
@@ -20,6 +19,7 @@ export const createTagEditorField = (): H5PFieldList => ({
         label: "Id",
         name: "id",
         type: H5PFieldType.Text,
+        widget: "none",
       },
       {
         label: "Name",
@@ -51,6 +51,12 @@ export const createTagPickerField = (): H5PFieldList => ({
     importance: "low",
     type: H5PFieldType.Group,
     fields: [
+      {
+        label: "Id",
+        name: "id",
+        type: H5PFieldType.Text,
+        widget: "none",
+      },
       {
         label: "Name",
         name: "name",
@@ -88,7 +94,7 @@ export const createTimelineItemFields = (
   },
   {
     label: "Title",
-    name: "label",
+    name: "title",
     type: H5PFieldType.Text,
   },
   {
@@ -106,8 +112,8 @@ export const createTimelineItemFields = (
     optional: true,
   },
   {
-    label: "Text content",
-    name: "textContent",
+    label: "Description",
+    name: "description",
     type: H5PFieldType.Text,
     widget: "html",
     tags: ["p", "br", "strong", "em", "a"],
@@ -226,7 +232,7 @@ export const createTimelineItemFields = (
   {
     label: "External link",
     description:
-      'Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href="https://timeline.knightlab.com/docs/media-types.html">Knightlab docs</a>',
+      'Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href="https://timeline.knightlab.com/docs/media-types.html" target="_blank" rel="noopener noreferrer">Knightlab docs</a>',
     name: "customMedia",
     type: H5PFieldType.Text,
     widget: "NDLAShowWhen",

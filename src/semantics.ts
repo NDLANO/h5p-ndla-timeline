@@ -36,6 +36,12 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
     type: H5PFieldType.List,
     entity: "Timeline item",
     importance: "low",
+    widgets: [
+      {
+        name: "VerticalTabs",
+        label: "Default",
+      },
+    ],
     field: {
       label: "Item",
       name: "timelineItem",
