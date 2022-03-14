@@ -9,7 +9,6 @@ export type EventItemType<S extends SlideType> = {
 
   slideType: S;
 
-  title: string;
   description?: string;
 
   endDate?: string;
@@ -19,10 +18,12 @@ export type EventItemType<S extends SlideType> = {
 } & MediaType &
   (
     | {
+        title?: string;
         slideType: "title";
         startDate?: string;
       }
     | {
+        title: string;
         slideType: "regular";
         startDate: string;
         tags?: Array<Tag>;
