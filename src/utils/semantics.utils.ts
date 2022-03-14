@@ -19,7 +19,7 @@ export const createTagEditorField = (): H5PFieldList => ({
         label: "Id",
         name: "id",
         type: H5PFieldType.Text,
-        widget: "none",
+        widget: "uuid",
       },
       {
         label: "Name",
@@ -55,7 +55,7 @@ export const createTagPickerField = (): H5PFieldList => ({
         label: "Id",
         name: "id",
         type: H5PFieldType.Text,
-        widget: "none",
+        widget: "uuid",
       },
       {
         label: "Name",
@@ -83,7 +83,7 @@ export const createTimelineItemFields = (
     label: "Id",
     name: "id",
     type: H5PFieldType.Text,
-    widget: "none",
+    widget: "uuid",
   },
   {
     label: "Slide type",
@@ -141,12 +141,12 @@ export const createTimelineItemFields = (
   //           label: "Id",
   //           name: "id",
   //           type: H5PFieldType.Text,
-  //           widget: "none",
+  //           widget: "uuid",
   //         },
   //         {
   //           label: "X position",
   //           name: "x",
-  //           type: H5PFieldType.Text,
+  //           type: H5PFieldType.Text,dET
   //           widget: "none",
   //         },
   //         {
