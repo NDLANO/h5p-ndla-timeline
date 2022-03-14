@@ -15,7 +15,7 @@
         "label": "Id",
         "name": "id",
         "type": "text",
-        "widget": "none"
+        "widget": "uuid"
       },
       {
         "label": "Slide type",
@@ -180,7 +180,7 @@
           "label": "Id",
           "name": "id",
           "type": "text",
-          "widget": "none"
+          "widget": "uuid"
         },
         {
           "label": "Slide type",
@@ -331,7 +331,7 @@
                 "label": "Id",
                 "name": "id",
                 "type": "text",
-                "widget": "none"
+                "widget": "uuid"
               },
               {
                 "label": "Name",
@@ -371,7 +371,7 @@
           "label": "Id",
           "name": "id",
           "type": "text",
-          "widget": "none"
+          "widget": "uuid"
         },
         {
           "label": "Name",
