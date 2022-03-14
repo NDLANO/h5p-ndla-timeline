@@ -96,22 +96,8 @@ const getMedia = (
 
 export const mapEventToTimelineSlide = (
   event: EventItemType<SlideType>,
-): TimelineSlide | null => {
+): TimelineSlide => {
   const startDate = event.startDate ? parseDate(event.startDate) : null;
-  // const invalidStartDate = event.
-  // const invalidEndDate = (event.endDate && parseDate(event.endDate)) === null;
-
-  // if (!startDate) {
-  //   console.error("Invalid start date", event.startDate);
-
-  //   return null;
-  // }
-
-  // if (invalidEndDate) {
-  //   console.error("Invalid end date", event.endDate);
-
-  //   return null;
-  // }
 
   let text;
   const eventHasCustomLayout = event.layout === "custom";
@@ -166,16 +152,19 @@ export const createTimelineDefinition = (
   data: TimelineData,
 ): TimelineDefinition => {
   const items = data.timelineItems ?? [];
-
   const events = items.map(mapEventToTimelineSlide).filter(isDefined);
 
-  return {
-    title: {
-      text: {
-        text: title,
-      },
-    },
+  const timeline: TimelineDefinition = {
     eras: [],
     events,
   };
+
+  if (data.showTitleSlide && data.titleSlide) {
+    // eslint-disable-next-line no-param-reassign
+    data.titleSlide.title = data.titleSlide.title ?? title;
+    timeline.title =
+      data.titleSlide && mapEventToTimelineSlide(data.titleSlide);
+  }
+
+  return timeline;
 };
