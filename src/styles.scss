@@ -5,4 +5,9 @@
   .h5p-content-controls {
     z-index: 10; /* {1} */
   }
+
+  .tl-slide-content {
+    margin: 0 auto;
+    max-width: 80rem;
+  }
 }
