@@ -1,40 +1,75 @@
 import { Timeline } from "@knight-lab/timelinejs";
 import * as React from "react";
-import { TimelineData } from "../../types/TimelineData";
+import { useEffect, useRef, useState } from "react";
+import { useEffectOnce } from "react-use";
+import { Params } from "../../types/H5P/Params";
 import { createTimelineDefinition } from "../../utils/timeline.utils";
-import { Grid } from "../Grid/Grid";
 import "./TimeLine.scss";
 
-export type TimeLineProps = {
-  data: TimelineData;
+type TimeLineProps = {
+  data: Params;
   timelineTitle: string;
 };
 
 export const TimeLine: React.FC<TimeLineProps> = ({
-  timelineTitle,
   data,
+  timelineTitle,
 }: TimeLineProps) => {
-  const titleSlide = React.useMemo(
-    () => (data.titleSlide ? <Grid eventItem={data.titleSlide} /> : null),
-    [data.titleSlide],
-  );
-
-  const timelineDefinition = React.useMemo(
+  const [timelineDefinition, classNames] = React.useMemo(
     () => createTimelineDefinition(timelineTitle, data),
     [data, timelineTitle],
   );
+  const [height, setHeight] = useState<number>(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const containerId = "timeline-embed";
 
-  React.useEffect(() => {
+  const aspectRatio = 16 / 9;
+
+  useEffectOnce(() => {
     // Update the document title using the browser API
     // eslint-disable-next-line no-new
-    new Timeline(containerId, timelineDefinition, {
-      height: "100%",
-      width: "100%",
-      source: timelineDefinition,
-    });
-  }, [timelineDefinition, titleSlide]);
+    new Timeline(containerId, timelineDefinition, {});
+  });
 
-  return <div id={containerId} />;
+  useEffect(() => {
+    if (!containerRef.current) {
+      return;
+    }
+
+    const container = containerRef.current;
+
+    const { width } = container.getBoundingClientRect();
+    setHeight(width / aspectRatio);
+
+    const observer = new ResizeObserver(entries => {
+      // eslint-disable-next-line no-restricted-syntax
+      for (const entry of entries) {
+        const borderBoxSize: ResizeObserverSize = Array.isArray(
+          entry.borderBoxSize,
+        )
+          ? entry.borderBoxSize[0]
+          : entry.borderBoxSize;
+
+        const newWidth = borderBoxSize.inlineSize;
+        setHeight(newWidth / aspectRatio);
+      }
+    });
+
+    observer.observe(container);
+
+    return () => {
+      observer.unobserve(container);
+    };
+  }, [aspectRatio]);
+
+  return (
+    <div
+      ref={containerRef}
+      className={`h5p-timeline-wrapper ${classNames ?? ""}`}
+      style={{ height }}
+    >
+      <div id={containerId} />
+    </div>
+  );
 };

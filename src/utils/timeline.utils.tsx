@@ -10,8 +10,8 @@ import { Tags } from "../components/Tags/Tags";
 import { DateString } from "../types/DateString";
 import { EventItemType } from "../types/EventItemType";
 import { Media } from "../types/H5P/Media";
+import { Params } from "../types/H5P/Params";
 import { SlideType } from "../types/SlideType";
-import { TimelineData } from "../types/TimelineData";
 import { isDefined } from "./is-defined.utils";
 
 export const isDateString = (str: string): str is DateString => {
@@ -116,7 +116,7 @@ export const mapEventToTimelineSlide = (
       );
     }
 
-    text = `${event.description}${tagsMarkup}`;
+    text = `${event.description ?? ""}${tagsMarkup}`;
   }
 
   // The `layout-x` part of this ID is used for styling and must not be removed
@@ -149,8 +149,8 @@ export const mapEventToTimelineSlide = (
 
 export const createTimelineDefinition = (
   title: string,
-  data: TimelineData,
-): TimelineDefinition => {
+  data: Params,
+): [TimelineDefinition, string | undefined] => {
   const items = data.timelineItems ?? [];
   const events = items.map(mapEventToTimelineSlide).filter(isDefined);
 
@@ -166,5 +166,16 @@ export const createTimelineDefinition = (
       data.titleSlide && mapEventToTimelineSlide(data.titleSlide);
   }
 
-  return timeline;
+  let classNames: string | undefined;
+
+  const scalingMode = data.behaviour?.scalingMode ?? "human";
+  const eventsAreIndexed = scalingMode === "index";
+
+  if (eventsAreIndexed) {
+    classNames = "h5p-timeline--indexed";
+  } else {
+    timeline.scale = scalingMode;
+  }
+
+  return [timeline, classNames];
 };
