@@ -2,6 +2,21 @@ import { H5PField, H5PFieldList } from "../types/H5P/H5PField";
 import { H5PFieldType } from "../types/H5P/H5PFieldType";
 import { layoutOptions } from "./layout.utils";
 
+export const scaleValues = {
+  human: {
+    label: "Human time",
+    value: "human",
+  },
+  cosmological: {
+    label: "Cosmological time",
+    value: "cosmological",
+  },
+  indexed: {
+    label: "Indexed",
+    value: "index",
+  },
+};
+
 export const createTagEditorField = (): H5PFieldList => ({
   label: "Tags",
   name: "tags",

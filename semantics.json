@@ -429,7 +429,37 @@
     "type": "group",
     "label": "Behavioral settings",
     "importance": "low",
-    "fields": []
+    "fields": [
+      {
+        "label": "",
+        "name": "unused",
+        "type": "select",
+        "options": [],
+        "default": "",
+        "widget": "none"
+      },
+      {
+        "label": "Scaling mode",
+        "description": "Choose between scaling modes. \"Human time\" shows date in years before and after the Common Era using regular notation, while \"Cosmological time\" shows dates using scientific notation. \"Indexed\" is useful when you want to skew timeframes and make all events seem equally far apart.",
+        "type": "select",
+        "name": "scalingMode",
+        "options": [
+          {
+            "label": "Human time",
+            "value": "human"
+          },
+          {
+            "label": "Cosmological time",
+            "value": "cosmological"
+          },
+          {
+            "label": "Indexed",
+            "value": "index"
+          }
+        ],
+        "default": "human"
+      }
+    ]
   },
   {
     "name": "l10n",

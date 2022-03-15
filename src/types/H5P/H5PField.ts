@@ -217,9 +217,12 @@ export type H5PFieldSelect =
   | H5PFieldCommon &
       H5PFieldWidgetExtension & {
         type: H5PFieldType.Select;
-        default: string | number | boolean;
         widget?: string;
-        options: Array<{ value: string | number | boolean; label: string }>;
+        options: ReadonlyArray<{
+          value: string | number | boolean;
+          label: string;
+        }>;
+        default: string | number | boolean;
       };
 
 export type H5PFieldLibrary =

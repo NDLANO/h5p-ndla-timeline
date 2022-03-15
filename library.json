@@ -3,8 +3,9 @@
   "machineName": "H5P.NDLATimeline",
   "majorVersion": 0,
   "minorVersion": 0,
-  "patchVersion": 13,
+  "patchVersion": 14,
   "runnable": 1,
+  "fullscreen": 1,
   "preloadedJs": [
     {
       "path": "dist/bundle.js"

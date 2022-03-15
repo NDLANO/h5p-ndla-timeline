@@ -82,17 +82,17 @@ declare module "@knight-lab/timelinejs" {
         title?: Optional<TimelineSlide, "start_date">;
         events: Array<TimelineSlide>;
         eras: Array<TimelineEra>;
-        scale?: "human" | "cosmoligical" = "human";
+        scale?: "human" | "cosmological" = "human";
       };
 
   // Definitions by: Roland Zwaga <https://github.com/rolandzwaga>
   // https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/timelinejs/index.d.ts
 
   declare interface ITimeLineConfiguration {
-    width: string;
-    height: string;
+    width?: string;
+    height?: string;
 
-    source: TimelineDefinition;
+    source?: TimelineDefinition;
     type?: string | undefined;
     /*
      * Optional use a different div id for embed

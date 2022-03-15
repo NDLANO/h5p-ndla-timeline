@@ -1,6 +1,8 @@
-$primary-color: white;
-$bg: black;
-h1 {
-  color: $primary-color;
-  background-color: $bg;
+.h5p-timeline {
+  /**
+   * {1} The content controls need a z-index above the z-index of the timeline
+   */
+  .h5p-content-controls {
+    z-index: 10; /* {1} */
+  }
 }

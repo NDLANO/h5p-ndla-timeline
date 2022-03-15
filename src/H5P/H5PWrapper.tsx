@@ -5,7 +5,7 @@ import { LocalizationContext } from "../contexts/LocalizationContext";
 import { H5PExtras } from "../types/H5P/H5PExtras";
 import { Params } from "../types/H5P/Params";
 import { Translations } from "../types/Translations";
-import { H5P } from "./H5P.util";
+import { H5P, updatePaths } from "./H5P.util";
 
 export class H5PWrapper extends H5P.EventDispatcher {
   private wrapper: HTMLElement;
@@ -13,6 +13,8 @@ export class H5PWrapper extends H5P.EventDispatcher {
   constructor(params: Params, contentId: string, extras: H5PExtras) {
     super();
     this.wrapper = H5PWrapper.createWrapperElement();
+
+    updatePaths(params, contentId);
 
     // eslint-disable-next-line react/jsx-no-constructed-context-values
     const l10n = params.l10n ?? ({} as Translations);
