@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { H5PObject } from "../../H5P";
+import { EventItemType } from "../types/EventItemType";
 import { Params } from "../types/H5P/Params";
+import { SlideType } from "../types/SlideType";
 
 export const H5P: H5PObject = (window as any).H5P ?? {};
 
@@ -14,20 +16,29 @@ export const normalizeAssetPath = (path: string, contentId: string): string => {
   return H5P.getPath(path, contentId);
 };
 
+function updateEventPaths(
+  item: EventItemType<SlideType>,
+  contentId: string,
+): void {
+  if (item.mediaType === "image" && item.image) {
+    // Item has uploaded image
+
+    // eslint-disable-next-line no-param-reassign
+    item.image.path = normalizeAssetPath(item.image.path, contentId);
+  }
+
+  if (item.mediaType === "video" && item.video != null) {
+    // Item has uploaded video
+
+    // eslint-disable-next-line no-param-reassign
+    item.video.path = normalizeAssetPath(item.video.path, contentId);
+  }
+}
+
 export function updatePaths(params: Params, contentId: string): void {
-  params.timelineItems?.forEach(item => {
-    if (item.mediaType === "image" && item.image) {
-      // Item has uploaded image
+  if (params.titleSlide) {
+    updateEventPaths(params.titleSlide, contentId);
+  }
 
-      // eslint-disable-next-line no-param-reassign
-      item.image.path = normalizeAssetPath(item.image.path, contentId);
-    }
-
-    if (item.mediaType === "video" && item.video != null) {
-      // Item has uploaded video
-
-      // eslint-disable-next-line no-param-reassign
-      item.video.path = normalizeAssetPath(item.video.path, contentId);
-    }
-  });
+  params.timelineItems?.forEach(item => updateEventPaths(item, contentId));
 }
