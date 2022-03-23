@@ -1,6 +1,7 @@
 import type {
   TimelineDate,
   TimelineDefinition,
+  TimelineEra,
   TimelineSlide,
 } from "@knight-lab/timelinejs";
 import * as React from "react";
@@ -8,6 +9,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { Grid } from "../components/Grid/Grid";
 import { Tags } from "../components/Tags/Tags";
 import { DateString } from "../types/DateString";
+import { Era } from "../types/Era";
 import { EventItemType } from "../types/EventItemType";
 import { Media } from "../types/H5P/Media";
 import { Params } from "../types/H5P/Params";
@@ -147,15 +149,33 @@ export const mapEventToTimelineSlide = (
   return slide;
 };
 
+export const mapEraToTimelineEra = (era: Era): TimelineEra | null => {
+  const startDate = parseDate(era.startDate);
+  const endDate = parseDate(era.endDate);
+
+  if (!startDate || !endDate) {
+    return null;
+  }
+
+  return {
+    start_date: startDate,
+    end_date: endDate,
+    text: {
+      headline: era.name,
+    },
+  };
+};
+
 export const createTimelineDefinition = (
   title: string,
   data: Params,
 ): [TimelineDefinition, string | undefined] => {
   const items = data.timelineItems ?? [];
   const events = items.map(mapEventToTimelineSlide).filter(isDefined);
+  const eras = (data.eras ?? []).map(mapEraToTimelineEra).filter(isDefined);
 
   const timeline: TimelineDefinition = {
-    eras: [],
+    eras,
     events,
   };
 

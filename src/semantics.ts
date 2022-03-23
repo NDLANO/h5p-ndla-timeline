@@ -5,6 +5,7 @@ import { H5PL10n } from "./types/H5P/H5PL10n";
 import {
   createTagEditorField,
   createTimelineItemFields,
+  dateDescription,
   scaleValues,
 } from "./utils/semantics.utils";
 
@@ -71,19 +72,21 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
           name: "name",
           type: H5PFieldType.Text,
         },
-        {
-          label: "Color",
-          name: "color",
-          type: H5PFieldType.Text,
-          widget: "colorSelector",
-        },
+        // {
+        //   label: "Color",
+        //   name: "color",
+        //   type: H5PFieldType.Text,
+        //   widget: "colorSelector",
+        // },
         {
           label: "Start date",
+          description: dateDescription,
           name: "startDate",
           type: H5PFieldType.Text,
         },
         {
           label: "End date",
+          description: dateDescription,
           name: "endDate",
           type: H5PFieldType.Text,
         },

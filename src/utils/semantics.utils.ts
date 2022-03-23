@@ -2,6 +2,8 @@ import { H5PField, H5PFieldList } from "../types/H5P/H5PField";
 import { H5PFieldType } from "../types/H5P/H5PFieldType";
 import { layoutOptions } from "./layout.utils";
 
+export const dateDescription = "YYYY-MM-DD — only year is required. Years can be negative.";
+
 export const scaleValues = {
   human: {
     label: "Human time",
@@ -114,14 +116,14 @@ export const createTimelineItemFields = (
   },
   {
     label: "Start date",
-    description: "YYYY-MM-DD — only year is required. Years can be negative.",
+    description: dateDescription,
     name: "startDate",
     type: H5PFieldType.Text,
     optional: slideType === "title",
   },
   {
     label: "End date",
-    description: "YYYY-MM-DD — only year is required. Years can be negative.",
+    description: dateDescription,
     name: "endDate",
     type: H5PFieldType.Text,
     optional: true,
