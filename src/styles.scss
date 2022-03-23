@@ -6,8 +6,11 @@
     z-index: 10; /* {1} */
   }
 
-  .tl-slide-content {
+  .tl-slide .tl-slide-scrollable-container {
     margin: 0 auto;
-    max-width: 80rem;
+  }
+
+  .tl-slide-content {
+    max-width: 80rem !important;
   }
 }
