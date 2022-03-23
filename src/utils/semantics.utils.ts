@@ -2,7 +2,8 @@ import { H5PField, H5PFieldList } from "../types/H5P/H5PField";
 import { H5PFieldType } from "../types/H5P/H5PFieldType";
 import { layoutOptions } from "./layout.utils";
 
-export const dateDescription = "YYYY-MM-DD — only year is required. Years can be negative.";
+export const dateDescription =
+  "YYYY-MM-DD — only year is required. Years can be negative.";
 
 export const scaleValues = {
   human: {
