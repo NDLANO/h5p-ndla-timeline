@@ -406,18 +406,14 @@
           "type": "text"
         },
         {
-          "label": "Color",
-          "name": "color",
-          "type": "text",
-          "widget": "colorSelector"
-        },
-        {
           "label": "Start date",
+          "description": "YYYY-MM-DD — only year is required. Years can be negative.",
           "name": "startDate",
           "type": "text"
         },
         {
           "label": "End date",
+          "description": "YYYY-MM-DD — only year is required. Years can be negative.",
           "name": "endDate",
           "type": "text"
         }

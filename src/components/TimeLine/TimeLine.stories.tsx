@@ -260,7 +260,18 @@ const defaultArgs: TimeLineProps = {
       },
     ],
     categories: [],
-    eras: [],
+    eras: [
+      {
+        name: "World war 1",
+        startDate: "1914-07-28",
+        endDate: "1918-11-11",
+      },
+      {
+        name: "World war 2",
+        startDate: "1939-09-01",
+        endDate: "1945-09-02",
+      },
+    ],
   },
 };
 
