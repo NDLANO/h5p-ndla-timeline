@@ -60,6 +60,7 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
     entity: "Era",
     importance: "low",
     optional: true,
+    min: 0,
     field: {
       label: "Era",
       name: "era",

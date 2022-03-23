@@ -24,6 +24,7 @@ export const createTagEditorField = (): H5PFieldList => ({
   label: "Tags",
   name: "tags",
   type: H5PFieldType.List,
+  min: 0,
   entity: "Tag",
   importance: "low",
   optional: true,
@@ -61,6 +62,7 @@ export const createTagPickerField = (): H5PFieldList => ({
   entity: "Tag",
   importance: "low",
   optional: true,
+  min: 0,
   widget: "NDLATagsPicker",
   fieldNameToWatch: "tags",
   field: {

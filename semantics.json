@@ -319,6 +319,7 @@
           "entity": "Tag",
           "importance": "low",
           "optional": true,
+          "min": 0,
           "widget": "NDLATagsPicker",
           "fieldNameToWatch": "tags",
           "field": {
@@ -358,6 +359,7 @@
     "label": "Tags",
     "name": "tags",
     "type": "list",
+    "min": 0,
     "entity": "Tag",
     "importance": "low",
     "optional": true,
@@ -394,6 +396,7 @@
     "entity": "Era",
     "importance": "low",
     "optional": true,
+    "min": 0,
     "field": {
       "label": "Era",
       "name": "era",
