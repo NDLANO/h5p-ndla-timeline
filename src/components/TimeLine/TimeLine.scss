@@ -44,16 +44,7 @@
 // }
 
 .h5p-tl-tags-container {
-  bottom: 0.5rem;
-  left: 0.5rem;
-  position: absolute;
-}
-
-$tags-padding: 5rem;
-
-.tl-slide-content {
-  padding-bottom: $tags-padding;
-  position: relative;
+  margin-top: 1.5rem;
 }
 
 .h5p-timeline--indexed {
