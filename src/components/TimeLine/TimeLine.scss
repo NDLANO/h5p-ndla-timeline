@@ -44,17 +44,9 @@
 // }
 
 .h5p-tl-tags-container {
-  bottom: 0.5rem;
-  left: 0.5rem;
-  position: absolute;
+  margin-top: 1.5rem;
 }
 
-$tags-padding: 5rem;
-
-.tl-slide-content {
-  padding-bottom: $tags-padding;
-  position: relative;
-}
 
 .h5p-timeline--indexed {
   .tl-headline-date,
