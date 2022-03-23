@@ -202,6 +202,11 @@ export type H5PFieldList =
          */
         widgets?: Array<{ name: string; label: string }>;
         field: H5PField;
+
+        /**
+         * The least amount of entities allowed in this list.
+         * If it's not set, the list will always contain at least one element.
+         */
         min?: number;
         max?: number;
 
