@@ -13,6 +13,7 @@ export const normalizeAssetPath = (path: string, contentId: string): string => {
   if (pathAlreadyAbsolute) {
     return path;
   }
+
   return H5P.getPath(path, contentId);
 };
 
@@ -27,11 +28,17 @@ function updateEventPaths(
     item.image.path = normalizeAssetPath(item.image.path, contentId);
   }
 
-  if (item.mediaType === "video" && item.video != null) {
+  if (
+    item.mediaType === "video" &&
+    item.video != null &&
+    item.video.length > 0
+  ) {
     // Item has uploaded video
 
-    // eslint-disable-next-line no-param-reassign
-    item.video.path = normalizeAssetPath(item.video.path, contentId);
+    item.video.forEach(video => {
+      // eslint-disable-next-line no-param-reassign
+      video.path = normalizeAssetPath(video.path, contentId);
+    });
   }
 }
 

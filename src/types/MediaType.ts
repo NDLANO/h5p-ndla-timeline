@@ -8,7 +8,7 @@ export type MediaType =
     }
   | {
       mediaType: "video";
-      video?: Video;
+      video?: Array<Video>;
     }
   | {
       mediaType: "custom";
