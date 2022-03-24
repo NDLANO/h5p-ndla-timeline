@@ -146,6 +146,69 @@
             }
           ]
         }
+      },
+      {
+        "label": "Appearance",
+        "name": "appearance",
+        "type": "group",
+        "importance": "low",
+        "fields": [
+          {
+            "label": "Background",
+            "name": "backgroundType",
+            "type": "select",
+            "default": "none",
+            "options": [
+              {
+                "label": "Color",
+                "value": "color"
+              },
+              {
+                "label": "Image",
+                "value": "image"
+              },
+              {
+                "label": "None",
+                "value": "none"
+              }
+            ]
+          },
+          {
+            "label": "",
+            "name": "unused_field",
+            "type": "text",
+            "widget": "none"
+          },
+          {
+            "label": "Background color",
+            "name": "backgroundColor",
+            "type": "text",
+            "widget": "NDLAShowWhen",
+            "showWhen": {
+              "rules": [
+                {
+                  "field": "backgroundType",
+                  "equals": "color"
+                }
+              ],
+              "widget": "colorSelector"
+            }
+          },
+          {
+            "label": "Background image",
+            "name": "backgroundImage",
+            "type": "image",
+            "widget": "NDLAShowWhen",
+            "showWhen": {
+              "rules": [
+                {
+                  "field": "backgroundType",
+                  "equals": "image"
+                }
+              ]
+            }
+          }
+        ]
       }
     ],
     "widget": "NDLAShowWhen",
@@ -351,6 +414,69 @@
               }
             ]
           }
+        },
+        {
+          "label": "Appearance",
+          "name": "appearance",
+          "type": "group",
+          "importance": "low",
+          "fields": [
+            {
+              "label": "Background",
+              "name": "backgroundType",
+              "type": "select",
+              "default": "none",
+              "options": [
+                {
+                  "label": "Color",
+                  "value": "color"
+                },
+                {
+                  "label": "Image",
+                  "value": "image"
+                },
+                {
+                  "label": "None",
+                  "value": "none"
+                }
+              ]
+            },
+            {
+              "label": "",
+              "name": "unused_field",
+              "type": "text",
+              "widget": "none"
+            },
+            {
+              "label": "Background color",
+              "name": "backgroundColor",
+              "type": "text",
+              "widget": "NDLAShowWhen",
+              "showWhen": {
+                "rules": [
+                  {
+                    "field": "backgroundType",
+                    "equals": "color"
+                  }
+                ],
+                "widget": "colorSelector"
+              }
+            },
+            {
+              "label": "Background image",
+              "name": "backgroundImage",
+              "type": "image",
+              "widget": "NDLAShowWhen",
+              "showWhen": {
+                "rules": [
+                  {
+                    "field": "backgroundType",
+                    "equals": "image"
+                  }
+                ]
+              }
+            }
+          ]
         }
       ]
     }

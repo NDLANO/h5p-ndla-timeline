@@ -146,6 +146,16 @@ export const mapEventToTimelineSlide = (
     };
   }
 
+  if (event.appearance.backgroundType === "color") {
+    slide.background = {
+      color: event.appearance.backgroundColor,
+    };
+  } else if (event.appearance.backgroundType === "image") {
+    slide.background = {
+      url: event.appearance.backgroundImage?.path,
+    };
+  }
+
   return slide;
 };
 

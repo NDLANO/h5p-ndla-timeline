@@ -26,9 +26,7 @@ function updateEventPaths(
 
     // eslint-disable-next-line no-param-reassign
     item.image.path = normalizeAssetPath(item.image.path, contentId);
-  }
-
-  if (
+  } else if (
     item.mediaType === "video" &&
     item.video != null &&
     item.video.length > 0
@@ -39,6 +37,17 @@ function updateEventPaths(
       // eslint-disable-next-line no-param-reassign
       video.path = normalizeAssetPath(video.path, contentId);
     });
+  }
+
+  if (
+    item.appearance.backgroundType === "image" &&
+    item.appearance.backgroundImage != null
+  ) {
+    // eslint-disable-next-line no-param-reassign
+    item.appearance.backgroundImage.path = normalizeAssetPath(
+      item.appearance.backgroundImage.path,
+      contentId,
+    );
   }
 }
 
