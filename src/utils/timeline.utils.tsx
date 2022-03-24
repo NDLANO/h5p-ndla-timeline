@@ -81,7 +81,7 @@ const getMedia = (
       break;
 
     case "video":
-      media = eventItem.video;
+      media = eventItem.video?.[0];
       break;
 
     case "custom":
