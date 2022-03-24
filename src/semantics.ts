@@ -56,45 +56,53 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
   {
     label: "Eras",
     name: "eras",
-    type: H5PFieldType.List,
-    entity: "Era",
+    type: H5PFieldType.Group,
+    expanded: false,
     importance: "low",
-    optional: true,
-    min: 0,
-    field: {
-      label: "Era",
-      name: "era",
-      importance: "low",
-      type: H5PFieldType.Group,
+    fields: [
+      {
+        label: "Eras",
+        name: "eras",
+        type: H5PFieldType.List,
+        entity: "Era",
+        importance: "low",
+        optional: true,
+        min: 0,
+        field: {
+          label: "Era",
+          name: "era",
+          importance: "low",
+          type: H5PFieldType.Group,
 
-      fields: [
-        {
-          label: "Name",
-          name: "name",
-          type: H5PFieldType.Text,
+          fields: [
+            {
+              label: "Name",
+              name: "name",
+              type: H5PFieldType.Text,
+            },
+            // {
+            //   label: "Color",
+            //   name: "color",
+            //   type: H5PFieldType.Text,
+            //   widget: "colorSelector",
+            // },
+            {
+              label: "Start date",
+              description: dateDescription,
+              name: "startDate",
+              type: H5PFieldType.Text,
+            },
+            {
+              label: "End date",
+              description: dateDescription,
+              name: "endDate",
+              type: H5PFieldType.Text,
+            },
+          ],
         },
-        // {
-        //   label: "Color",
-        //   name: "color",
-        //   type: H5PFieldType.Text,
-        //   widget: "colorSelector",
-        // },
-        {
-          label: "Start date",
-          description: dateDescription,
-          name: "startDate",
-          type: H5PFieldType.Text,
-        },
-        {
-          label: "End date",
-          description: dateDescription,
-          name: "endDate",
-          type: H5PFieldType.Text,
-        },
-      ],
-    },
+      },
+    ],
   },
-
   {
     name: "behaviour",
     type: H5PFieldType.Group,
