@@ -1,4 +1,4 @@
-import { H5PField, H5PFieldList } from "../types/H5P/H5PField";
+import { H5PField, H5PFieldGroup, H5PFieldList } from "../types/H5P/H5PField";
 import { H5PFieldType } from "../types/H5P/H5PFieldType";
 import { layoutOptions } from "./layout.utils";
 
@@ -20,39 +20,48 @@ export const scaleValues = {
   },
 };
 
-export const createTagEditorField = (): H5PFieldList => ({
+export const createTagEditorField = (): H5PFieldGroup => ({
   label: "Tags",
   name: "tags",
-  type: H5PFieldType.List,
-  min: 0,
-  entity: "Tag",
+  type: H5PFieldType.Group,
+  expanded: false,
   importance: "low",
-  optional: true,
-  field: {
-    label: "Tag",
-    name: "tag",
-    importance: "low",
-    type: H5PFieldType.Group,
-    fields: [
-      {
-        label: "Id",
-        name: "id",
-        type: H5PFieldType.Text,
-        widget: "uuid",
+  fields: [
+    {
+      label: "Tags",
+      name: "tags",
+      type: H5PFieldType.List,
+      min: 0,
+      entity: "Tag",
+      importance: "low",
+      optional: true,
+      field: {
+        label: "Tag",
+        name: "tag",
+        importance: "low",
+        type: H5PFieldType.Group,
+        fields: [
+          {
+            label: "Id",
+            name: "id",
+            type: H5PFieldType.Text,
+            widget: "uuid",
+          },
+          {
+            label: "Name",
+            name: "name",
+            type: H5PFieldType.Text,
+          },
+          {
+            label: "Color",
+            name: "color",
+            type: H5PFieldType.Text,
+            widget: "colorSelector",
+          },
+        ],
       },
-      {
-        label: "Name",
-        name: "name",
-        type: H5PFieldType.Text,
-      },
-      {
-        label: "Color",
-        name: "color",
-        type: H5PFieldType.Text,
-        widget: "colorSelector",
-      },
-    ],
-  },
+    },
+  ],
 });
 
 export const createTagPickerField = (): H5PFieldList => ({

@@ -358,70 +358,88 @@
   {
     "label": "Tags",
     "name": "tags",
-    "type": "list",
-    "min": 0,
-    "entity": "Tag",
+    "type": "group",
+    "expanded": false,
     "importance": "low",
-    "optional": true,
-    "field": {
-      "label": "Tag",
-      "name": "tag",
-      "importance": "low",
-      "type": "group",
-      "fields": [
-        {
-          "label": "Id",
-          "name": "id",
-          "type": "text",
-          "widget": "uuid"
-        },
-        {
-          "label": "Name",
-          "name": "name",
-          "type": "text"
-        },
-        {
-          "label": "Color",
-          "name": "color",
-          "type": "text",
-          "widget": "colorSelector"
+    "fields": [
+      {
+        "label": "Tags",
+        "name": "tags",
+        "type": "list",
+        "min": 0,
+        "entity": "Tag",
+        "importance": "low",
+        "optional": true,
+        "field": {
+          "label": "Tag",
+          "name": "tag",
+          "importance": "low",
+          "type": "group",
+          "fields": [
+            {
+              "label": "Id",
+              "name": "id",
+              "type": "text",
+              "widget": "uuid"
+            },
+            {
+              "label": "Name",
+              "name": "name",
+              "type": "text"
+            },
+            {
+              "label": "Color",
+              "name": "color",
+              "type": "text",
+              "widget": "colorSelector"
+            }
+          ]
         }
-      ]
-    }
+      }
+    ]
   },
   {
     "label": "Eras",
     "name": "eras",
-    "type": "list",
-    "entity": "Era",
+    "type": "group",
+    "expanded": false,
     "importance": "low",
-    "optional": true,
-    "min": 0,
-    "field": {
-      "label": "Era",
-      "name": "era",
-      "importance": "low",
-      "type": "group",
-      "fields": [
-        {
-          "label": "Name",
-          "name": "name",
-          "type": "text"
-        },
-        {
-          "label": "Start date",
-          "description": "YYYY-MM-DD — only year is required. Years can be negative.",
-          "name": "startDate",
-          "type": "text"
-        },
-        {
-          "label": "End date",
-          "description": "YYYY-MM-DD — only year is required. Years can be negative.",
-          "name": "endDate",
-          "type": "text"
+    "fields": [
+      {
+        "label": "Eras",
+        "name": "eras",
+        "type": "list",
+        "entity": "Era",
+        "importance": "low",
+        "optional": true,
+        "min": 0,
+        "field": {
+          "label": "Era",
+          "name": "era",
+          "importance": "low",
+          "type": "group",
+          "fields": [
+            {
+              "label": "Name",
+              "name": "name",
+              "type": "text"
+            },
+            {
+              "label": "Start date",
+              "description": "YYYY-MM-DD — only year is required. Years can be negative.",
+              "name": "startDate",
+              "type": "text"
+            },
+            {
+              "label": "End date",
+              "description": "YYYY-MM-DD — only year is required. Years can be negative.",
+              "name": "endDate",
+              "type": "text"
+            }
+          ]
         }
-      ]
-    }
+      }
+    ]
   },
   {
     "name": "behaviour",
