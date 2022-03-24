@@ -1,4 +1,5 @@
 import { EventContent } from "./EventContent";
+import { Image } from "./H5P/Image";
 import { LayoutOption } from "./LayoutOption";
 import { MediaType } from "./MediaType";
 import { SlideType } from "./SlideType";
@@ -15,6 +16,19 @@ export type EventItemType<S extends SlideType> = {
 
   layout: LayoutOption;
   eventContent?: EventContent;
+
+  appearance:
+    | {
+        backgroundType: "none";
+      }
+    | {
+        backgroundType: "color";
+        backgroundColor?: string;
+      }
+    | {
+        backgroundType: "image";
+        backgroundImage?: Image;
+      };
 } & MediaType &
   (
     | {

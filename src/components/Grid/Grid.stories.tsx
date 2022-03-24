@@ -49,6 +49,7 @@ const eventItem: EventItemType<"regular"> = {
       name: "Desert sand tag",
     },
   ],
+  appearance: { backgroundType: "none" },
 };
 
 const defaultArgs: React.ComponentPropsWithoutRef<typeof Grid> = {

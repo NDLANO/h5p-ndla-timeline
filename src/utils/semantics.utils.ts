@@ -275,4 +275,68 @@ export const createTimelineItemFields = (
     },
   },
   ...(slideType === "regular" ? [createTagPickerField()] : []),
+  {
+    label: "Appearance",
+    name: "appearance",
+    type: H5PFieldType.Group,
+    importance: "low",
+    fields: [
+      {
+        label: "Background",
+        name: "backgroundType",
+        type: H5PFieldType.Select,
+        default: "none",
+        options: [
+          {
+            label: "Color",
+            value: "color",
+          },
+          {
+            label: "Image",
+            value: "image",
+          },
+          {
+            label: "None",
+            value: "none",
+          },
+        ],
+      },
+      {
+        // Only used to keep the number of fields within this group to more than 1
+        label: "",
+        name: "unused_field",
+        type: H5PFieldType.Text,
+        widget: "none",
+      },
+      {
+        label: "Background color",
+        name: "backgroundColor",
+        type: H5PFieldType.Text,
+        widget: "NDLAShowWhen",
+        showWhen: {
+          rules: [
+            {
+              field: "backgroundType",
+              equals: "color",
+            },
+          ],
+          widget: "colorSelector",
+        },
+      },
+      {
+        label: "Background image",
+        name: "backgroundImage",
+        type: H5PFieldType.Image,
+        widget: "NDLAShowWhen",
+        showWhen: {
+          rules: [
+            {
+              field: "backgroundType",
+              equals: "image",
+            },
+          ],
+        },
+      },
+    ],
+  },
 ];

@@ -80,6 +80,7 @@ const titleSlide: EventItemType<"title"> = {
   },
   mediaType: "image",
   layout: "right",
+  appearance: { backgroundType: "none" },
 };
 
 const tags: Record<string, Tag> = {
@@ -125,6 +126,7 @@ const defaultArgs: TimeLineProps = {
         },
         layout: "left",
         tags: [tags.tag1, tags.tag2, tags.tag3],
+        appearance: { backgroundType: "none" },
       },
       {
         id: "slide-3",
@@ -139,6 +141,7 @@ const defaultArgs: TimeLineProps = {
         },
         layout: "right",
         tags: [tags.tag2],
+        appearance: { backgroundType: "none" },
       },
       {
         id: "slide-4",
@@ -155,6 +158,7 @@ const defaultArgs: TimeLineProps = {
         },
         layout: "left",
         tags: [tags.tag1],
+        appearance: { backgroundType: "none" },
       },
       {
         id: "slide-5",
@@ -171,6 +175,7 @@ const defaultArgs: TimeLineProps = {
           items: textRightItems,
         },
         layout: "left",
+        appearance: { backgroundType: "none" },
       },
       {
         id: "slide-6",
@@ -185,6 +190,7 @@ const defaultArgs: TimeLineProps = {
           items: textRightItems,
         },
         layout: "left",
+        appearance: { backgroundType: "none" },
       },
       {
         id: "slide-7",
@@ -200,6 +206,7 @@ const defaultArgs: TimeLineProps = {
         },
         layout: "left",
         tags: [tags.tag3, tags.tag2],
+        appearance: { backgroundType: "none" },
       },
       {
         id: "slide-8",
@@ -215,6 +222,7 @@ const defaultArgs: TimeLineProps = {
         },
         layout: "right",
         tags: [tags.tag3, tags.tag1],
+        appearance: { backgroundType: "none" },
       },
       {
         id: "slide-9",
@@ -230,6 +238,7 @@ const defaultArgs: TimeLineProps = {
         },
         layout: "left",
         tags: [tags.tag2, tags.tag3],
+        appearance: { backgroundType: "none" },
       },
       {
         id: "slide-10 layout-right",
@@ -243,6 +252,7 @@ const defaultArgs: TimeLineProps = {
           items: textRightItems,
         },
         layout: "right",
+        appearance: { backgroundType: "none" },
       },
       {
         id: "slide-11",
@@ -257,6 +267,7 @@ const defaultArgs: TimeLineProps = {
         },
         layout: "right",
         tags: [],
+        appearance: { backgroundType: "none" },
       },
     ],
     categories: [],
@@ -331,6 +342,12 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           "https://raw.githubusercontent.com/baohouse/labs.baohouse.net/master/images/au-lac/au-lac.jpg",
         title: "Tales of Âu Lạc:<br/>Zhong Shi ❤ ︎Mỵ Châu",
         description: "<p>Star-crossed lovers from feuding kingdoms.</p>",
+        appearance: {
+          backgroundType: "image",
+          backgroundImage: {
+            path: "https://images.unsplash.com/photo-1635226467167-66912cbe1715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80&jpg",
+          },
+        },
       },
       timelineItems: [
         {
@@ -344,6 +361,10 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           description:
             "<p>By this time, <a target='_blank' href='https://en.wikipedia.org/wiki/Shu_(state)'>Shu</a> is already conquered by <a target='_blank' href='https://en.wikipedia.org/wiki/Qin_(state)'>Qin</a> during the <a target='_blank' href='https://en.wikipedia.org/wiki/Warring_States_period'>Warring States period</a> in ancient China. The Kaiming dynasty's final king, Wan, was put to death. According to the legends of the <a target='_blank' href='https://en.wikipedia.org/wiki/Tay_people'>Tay peoples</a>, <a target='_blank' href='https://vi.wikipedia.org/wiki/Th%E1%BB%A5c_Ch%E1%BA%BF'>Thục Chế</a> (蜀制; Shǔ Zhì), who is rumored to be a member of the Kaiming dynasty, leads the remaining important members of the dynasty southward, and integrate with the <a target='_blank' href='https://en.wikipedia.org/wiki/%C3%82u_Vi%E1%BB%87t'>Âu Việt</a> (甌越; Ōuyuè) peoples.</p>",
           startDate: "-285",
+          appearance: {
+            backgroundType: "color",
+            backgroundColor: "#8FCB9B",
+          },
         },
         {
           id: "slide-3",
@@ -356,6 +377,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           description:
             "<p>According to the legends of the Tay peoples, Thục Chế (蜀制; Shǔ Zhì) sires <a target='_blank' href='https://en.wikipedia.org/wiki/An_D%C6%B0%C6%A1ng_V%C6%B0%C6%A1ng'>Thục Phán</a> (蜀泮; Shǔ Pàn) while living among the <a target='_blank' href='https://en.wikipedia.org/wiki/%C3%82u_Vi%E1%BB%87t'>Âu Việt</a> (甌越; Ōuyuè) peoples.</p>",
           startDate: "-275",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-4",
@@ -370,6 +392,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
             "<p>A military campaign that concluded with a decisive victory by <a target='_blank' href='https://en.wikipedia.org/wiki/Qin_(state)'>Qin</a> over <a target='_blank' href='https://en.wikipedia.org/wiki/Zhao_(state)'>Zhao</a>. Despite the Zhao military surrendering, an estimated 450,000 captured soldiers were executed en masse by live burial. Zhao suffers a devastating loss that it could not not recover from.</p>",
           startDate: "-262",
           endDate: "-260",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-5",
@@ -382,6 +405,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           description:
             "<p>Thục Phán (18), along with an alliance of Âu Việt tribes, conquer the <a target='_blank' href='https://en.wikipedia.org/wiki/H%E1%BB%93ng_B%C3%A0ng_dynasty'>Hồng Bàng dynasty</a> of the <a target='_blank' href='https://en.wikipedia.org/wiki/L%E1%BA%A1c_Vi%E1%BB%87t'>Lạc Việt</a> (雒越; Luòyuè) peoples and establishes the kingdom of <a target='_blank' href='https://en.wikipedia.org/wiki/%C3%82u_L%E1%BA%A1c'>Âu Lạc</a>.</p>",
           startDate: "-257",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-6",
@@ -395,6 +419,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
             "<p><a target='_blank' href='https://en.wikipedia.org/wiki/C%E1%BB%95_Loa_Citadel'>Cổ Loa Citadel</a> serves as the administrative center for Âu Lạc. The official date of completion is not known, but a hypothesis of 25 years after Âu Lạc was established seems reasonable. An estimated 2 million cubic meters of material were moved for the structure, roughly the volume of the <a target='_blank' href='https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza'>Great Pyramid of Giza</a> (which itself took 20 years and 100,000 slaves to complete).</p>",
           startDate: "-257",
           endDate: "-232",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-7",
@@ -407,6 +432,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           description:
             "<p>Zhao Tuo is born in Zhao, in what is present-day <a target='_blank' href='https://en.wikipedia.org/wiki/Zhengding_County'>Zhengding County</a>, Hebei Province, China.</p>",
           startDate: "-240",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-8",
@@ -418,6 +444,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           title: "Han falls to Qin",
           description: "&nbsp;",
           startDate: "-230",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-9",
@@ -430,6 +457,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           description:
             "Zhao Tuo (12) would bear witness to the fall of his country to Qin. Within a few years, he will enlist (or will be drafted) and serve in the Qin military.",
           startDate: "-228",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-10",
@@ -441,6 +469,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           title: "Wei falls to Qin",
           description: "&nbsp;",
           startDate: "-225",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-11",
@@ -452,6 +481,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           title: "Chu falls to Qin",
           description: "&nbsp;",
           startDate: "-223",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-12",
@@ -463,6 +493,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           title: "Yan falls to Qin",
           description: "&nbsp;",
           startDate: "-222",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-13",
@@ -475,6 +506,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           description:
             "<p>Qi surrenders to the Qin war machine. <a target='_blank' href='https://en.wikipedia.org/wiki/Qin_Shi_Huang'>Qin Shi Huang</a>, establishing the Qin dynasty, becomes the first emperor of a unified China. The Qin leadership direct efforts to dismantle the walls that divided the former countries. Like Qin, however, the <a target='_blank' href='https://en.wikipedia.org/wiki/Xiongnu'>Xiongnu</a> nomadic peoples of the north are also consolidating in power, and so efforts are made to reinforce the northern border through walls and 100,000 troops.</p>",
           startDate: "-221",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-14",
@@ -488,6 +520,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
             "<p>With the Yue/Việt lands south of the nascent Qin dynasty being lucrative with resources and fertile land, as well as to prevent possible conflicts should the Yue/Việt tribes unite, Qin Shi Huang directs General Tu Sui to lead 500,000 troops divided into five corps in multiple waves southward to conquer the tribes.</p>",
           startDate: "-221",
           endDate: "-214",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-15",
@@ -500,6 +533,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           description:
             "<p>To support the &ldquo;pacification of the south&rdquo;, the Chinese complete the 36-km <a target='_blank' href='https://en.wikipedia.org/wiki/Lingqu'>Ling Canal</a>, connecting the Xiang and Li rivers, facilitating material and troop logistics from Qin dynasty China to the southern frontier.</p>",
           startDate: "-214",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-16",
@@ -512,6 +546,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           description:
             "<p>After defeating the Nanyue/Nam Việt tribes, the Chinese military establish an administrative center at <a target='_blank' href='https://en.wikipedia.org/wiki/Panyu_District'>Panyu</a>, in present-day <a target='_blank' href='https://en.wikipedia.org/wiki/Guangzhou'>Guangzhou</a>, presiding over the Nanhai Commandery. While launching a successive offensive against the Xi&rsquo;ou/Âu Tây tribes to the west, General Tu Sui is killed. The Qin court appoint Ren Xiao and Zhao Tuo (26) to lead another offensive. They successfully defeat the Xi&rsquo;ou/Âu Tây, and Ren Xiao becomes Viceroy of Nanhai. The Guilin and Xiang Commanderies are also established to reinforce Chinese presence in the Xi&rsquo;ou/Âu Tây lands.</p>",
           startDate: "-214",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-17",
@@ -524,6 +559,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           description:
             "<p>The first Chinese emperor dies while on tour in eastern China, and is succeeded by Ying Huhai who becomes <a target='_blank' href='https://en.wikipedia.org/wiki/Qin_Er_Shi'>Qin Er Shi</a>, the second Chinese emperor. Soon thereafter, Ren Xiao succumbs to a fatal illness. In his deathbed, he names Zhao Tuo (30) the new Viceroy of Nanhai.</p>",
           startDate: "-210-09-10",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-18",
@@ -536,6 +572,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           description:
             "<p>The Qin leadership quickly lose control of all the conquered territories, as locals begin to assert more sovereignty. Qin Er Shi, being inept, is forced to commit suicide by the chief eunuch Zhao Gao. Ziying, nephew of Qin Er Shi, has Zhao Gao executed. Chu rebels led by <a target='_blank' href='https://en.wikipedia.org/wiki/Emperor_Gaozu_of_Han'>Liu Bang</a> defeat Ziying at a battle in Wei, and Chu leader Xiang Yu executes Ziying. Liu Bang then betrays and defeats Xiang Yu.</p>",
           startDate: "-206",
+          appearance: { backgroundType: "none" },
         },
         {
           id: "slide-19",
@@ -548,6 +585,7 @@ export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
           description:
             "<p>With the demise of the Qin dynasty, Zhao Tuo (36), still overseeing the Nanhai, Guilin, and Xiang commanderies, declares an independent kingdom of Nanyue / Nam Việt.</p>",
           startDate: "-204",
+          appearance: { backgroundType: "none" },
         },
       ],
     },
