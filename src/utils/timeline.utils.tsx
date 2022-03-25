@@ -2,7 +2,7 @@ import type {
   TimelineDate,
   TimelineDefinition,
   TimelineEra,
-  TimelineSlide
+  TimelineSlide,
 } from "@knight-lab/timelinejs";
 import { Media } from "h5p-types";
 import * as React from "react";
