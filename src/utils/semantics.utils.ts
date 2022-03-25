@@ -1,5 +1,4 @@
-import { H5PField, H5PFieldGroup, H5PFieldList } from "../types/H5P/H5PField";
-import { H5PFieldType } from "../types/H5P/H5PFieldType";
+import { H5PField, H5PFieldGroup, H5PFieldList } from "h5p-types";
 import { layoutOptions } from "./layout.utils";
 
 export const dateDescription =
@@ -23,14 +22,14 @@ export const scaleValues = {
 export const createTagEditorField = (): H5PFieldGroup => ({
   label: "Tags",
   name: "tags",
-  type: H5PFieldType.Group,
+  type: "group",
   expanded: false,
   importance: "low",
   fields: [
     {
       label: "Tags",
       name: "tags",
-      type: H5PFieldType.List,
+      type: "list",
       min: 0,
       entity: "Tag",
       importance: "low",
@@ -39,23 +38,23 @@ export const createTagEditorField = (): H5PFieldGroup => ({
         label: "Tag",
         name: "tag",
         importance: "low",
-        type: H5PFieldType.Group,
+        type: "group",
         fields: [
           {
             label: "Id",
             name: "id",
-            type: H5PFieldType.Text,
+            type: "text",
             widget: "uuid",
           },
           {
             label: "Name",
             name: "name",
-            type: H5PFieldType.Text,
+            type: "text",
           },
           {
             label: "Color",
             name: "color",
-            type: H5PFieldType.Text,
+            type: "text",
             widget: "colorSelector",
           },
         ],
@@ -67,7 +66,7 @@ export const createTagEditorField = (): H5PFieldGroup => ({
 export const createTagPickerField = (): H5PFieldList => ({
   label: "Tags",
   name: "tags",
-  type: H5PFieldType.List,
+  type: "list",
   entity: "Tag",
   importance: "low",
   optional: true,
@@ -78,28 +77,28 @@ export const createTagPickerField = (): H5PFieldList => ({
     label: "Tag",
     name: "tag",
     importance: "low",
-    type: H5PFieldType.Group,
+    type: "group",
     fields: [
       {
         label: "Id",
         name: "id",
-        type: H5PFieldType.Text,
+        type: "text",
         widget: "uuid",
       },
       {
         label: "Name",
         name: "name",
-        type: H5PFieldType.Text,
+        type: "text",
       },
       {
         label: "Color",
         name: "color",
-        type: H5PFieldType.Text,
+        type: "text",
       },
       {
         label: "Is active",
         name: "isActive",
-        type: H5PFieldType.Text,
+        type: "text",
       },
     ],
   },
@@ -111,95 +110,95 @@ export const createTimelineItemFields = (
   {
     label: "Id",
     name: "id",
-    type: H5PFieldType.Text,
+    type: "text",
     widget: "uuid",
   },
   {
     label: "Slide type",
     name: "slideType",
-    type: H5PFieldType.Text,
+    type: "text",
     default: slideType,
     widget: "none",
   },
   {
     label: "Title",
     name: "title",
-    type: H5PFieldType.Text,
+    type: "text",
   },
   {
     label: "Start date",
     description: dateDescription,
     name: "startDate",
-    type: H5PFieldType.Text,
+    type: "text",
     optional: slideType === "title",
   },
   {
     label: "End date",
     description: dateDescription,
     name: "endDate",
-    type: H5PFieldType.Text,
+    type: "text",
     optional: true,
   },
   {
     label: "Description",
     name: "description",
-    type: H5PFieldType.Text,
+    type: "text",
     widget: "html",
     tags: ["p", "br", "strong", "em", "a"],
   },
   {
     label: "Layout",
     name: "layout",
-    type: H5PFieldType.Select,
+    type: "select",
     default: layoutOptions.textOnRight.value,
     options: Object.values(layoutOptions),
   },
   // {
   //   label: "Event content",
   //   name: "eventContent",
-  //   type: H5PFieldType.Group,
+  //   type: "group",
   //   importance: "low",
   //   widget: "NDLATimelineEventLayout",
   //   fields: [
   //     {
   //       label: "Items",
   //       name: "items",
-  //       type: H5PFieldType.Group,
+  //       type: "group",
   //       fields: [
   //         {
   //           label: "Id",
   //           name: "id",
-  //           type: H5PFieldType.Text,
+  //           type: "text",
   //           widget: "uuid",
   //         },
   //         {
   //           label: "X position",
   //           name: "x",
-  //           type: H5PFieldType.Text,dET
+  //           type: "text",dET
   //           widget: "none",
   //         },
   //         {
   //           label: "Y position",
   //           name: "y",
-  //           type: H5PFieldType.Text,
+  //           type: "text",
   //           widget: "none",
   //         },
   //         {
   //           label: "Width",
   //           name: "width",
-  //           type: H5PFieldType.Text,
+  //           type: "text",
   //           widget: "none",
   //         },
   //         {
   //           label: "Height",
   //           name: "height",
-  //           type: H5PFieldType.Text,
+  //           type: "text",
   //           widget: "none",
   //         },
   //         {
   //           label: "Type",
   //           name: "type",
-  //           type: H5PFieldType.Text,
+  //           type: "text",
   //           widget: "none",
   //         },
   //       ],
@@ -209,7 +208,7 @@ export const createTimelineItemFields = (
   {
     label: "Media type",
     name: "mediaType",
-    type: H5PFieldType.Select,
+    type: "select",
     options: [
       {
         label: "Image",
@@ -233,7 +232,7 @@ export const createTimelineItemFields = (
   {
     label: "Image",
     name: "image",
-    type: H5PFieldType.Image,
+    type: "image",
     widget: "NDLAShowWhen",
     showWhen: {
       rules: [
@@ -247,7 +246,7 @@ export const createTimelineItemFields = (
   {
     label: "Video",
     name: "video",
-    type: H5PFieldType.Video,
+    type: "video",
     widget: "NDLAShowWhen",
     showWhen: {
       rules: [
@@ -263,7 +262,7 @@ export const createTimelineItemFields = (
     description:
       'Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href="https://timeline.knightlab.com/docs/media-types.html" target="_blank" rel="noopener noreferrer">Knightlab docs</a>',
     name: "customMedia",
-    type: H5PFieldType.Text,
+    type: "text",
     widget: "NDLAShowWhen",
     showWhen: {
       rules: [
@@ -278,13 +277,13 @@ export const createTimelineItemFields = (
   {
     label: "Appearance",
     name: "appearance",
-    type: H5PFieldType.Group,
+    type: "group",
     importance: "low",
     fields: [
       {
         label: "Background",
         name: "backgroundType",
-        type: H5PFieldType.Select,
+        type: "select",
         default: "none",
         options: [
           {
@@ -305,13 +304,13 @@ export const createTimelineItemFields = (
         // Only used to keep the number of fields within this group to more than 1
         label: "",
         name: "unused_field",
-        type: H5PFieldType.Text,
+        type: "text",
         widget: "none",
       },
       {
         label: "Background color",
         name: "backgroundColor",
-        type: H5PFieldType.Text,
+        type: "text",
         widget: "NDLAShowWhen",
         showWhen: {
           rules: [
@@ -326,7 +325,7 @@ export const createTimelineItemFields = (
       {
         label: "Background image",
         name: "backgroundImage",
-        type: H5PFieldType.Image,
+        type: "image",
         widget: "NDLAShowWhen",
         showWhen: {
           rules: [

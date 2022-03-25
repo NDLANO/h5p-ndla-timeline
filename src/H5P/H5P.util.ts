@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { H5PObject } from "../../H5P";
 import { EventItemType } from "../types/EventItemType";
-import { Params } from "../types/H5P/Params";
+import { Params } from "../types/Params";
 import { SlideType } from "../types/SlideType";
 
 export const H5P: H5PObject = (window as any).H5P ?? {};

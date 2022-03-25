@@ -1,9 +1,9 @@
+import { H5PExtras } from "h5p-types";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { App } from "../App";
 import { LocalizationContext } from "../contexts/LocalizationContext";
-import { H5PExtras } from "../types/H5P/H5PExtras";
-import { Params } from "../types/H5P/Params";
+import { Params } from "../types/Params";
 import { Translations } from "../types/Translations";
 import { H5P, updatePaths } from "./H5P.util";
 

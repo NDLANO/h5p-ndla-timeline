@@ -2,7 +2,7 @@ import { Timeline } from "@knight-lab/timelinejs";
 import * as React from "react";
 import { useEffect, useRef, useState } from "react";
 import { useEffectOnce } from "react-use";
-import { Params } from "../../types/H5P/Params";
+import { Params } from "../../types/Params";
 import { createTimelineDefinition } from "../../utils/timeline.utils";
 import "./TimeLine.scss";
 
