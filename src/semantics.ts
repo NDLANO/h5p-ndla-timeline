@@ -1,7 +1,4 @@
-import { H5PBehaviour } from "./types/H5P/H5PBehaviour";
-import { H5PField } from "./types/H5P/H5PField";
-import { H5PFieldType } from "./types/H5P/H5PFieldType";
-import { H5PL10n } from "./types/H5P/H5PL10n";
+import { H5PBehaviour, H5PField, H5PL10n } from "h5p-types";
 import {
   createTagEditorField,
   createTimelineItemFields,
@@ -13,14 +10,14 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
   {
     label: "Show title slide",
     name: "showTitleSlide",
-    type: H5PFieldType.Boolean,
+    type: "boolean",
     default: false,
   },
   {
     label: "Title slide",
     name: "titleSlide",
     importance: "low",
-    type: H5PFieldType.Group,
+    type: "group",
     fields: [...createTimelineItemFields("title")],
     widget: "NDLAShowWhen",
     showWhen: {
@@ -35,7 +32,7 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
   {
     label: "Timeline items",
     name: "timelineItems",
-    type: H5PFieldType.List,
+    type: "list",
     entity: "Timeline item",
     importance: "low",
     widgets: [
@@ -48,7 +45,7 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
       label: "Item",
       name: "timelineItem",
       importance: "low",
-      type: H5PFieldType.Group,
+      type: "group",
       fields: [...createTimelineItemFields("regular")],
     },
   },
@@ -56,14 +53,14 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
   {
     label: "Eras",
     name: "eras",
-    type: H5PFieldType.Group,
+    type: "group",
     expanded: false,
     importance: "low",
     fields: [
       {
         label: "Eras",
         name: "eras",
-        type: H5PFieldType.List,
+        type: "list",
         entity: "Era",
         importance: "low",
         optional: true,
@@ -72,31 +69,31 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
           label: "Era",
           name: "era",
           importance: "low",
-          type: H5PFieldType.Group,
+          type: "group",
 
           fields: [
             {
               label: "Name",
               name: "name",
-              type: H5PFieldType.Text,
+              type: "text",
             },
             // {
             //   label: "Color",
             //   name: "color",
-            //   type: H5PFieldType.Text,
+            //   type: "text",
             //   widget: "colorSelector",
             // },
             {
               label: "Start date",
               description: dateDescription,
               name: "startDate",
-              type: H5PFieldType.Text,
+              type: "text",
             },
             {
               label: "End date",
               description: dateDescription,
               name: "endDate",
-              type: H5PFieldType.Text,
+              type: "text",
             },
           ],
         },
@@ -105,7 +102,7 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
   },
   {
     name: "behaviour",
-    type: H5PFieldType.Group,
+    type: "group",
     label: "Behavioral settings",
     importance: "low",
     fields: [
@@ -113,7 +110,7 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
         // Unused field, therefore no label. It is only here because behavioral settings needs at least two items.
         label: "",
         name: "unused",
-        type: H5PFieldType.Select,
+        type: "select",
         options: [],
         default: "",
         widget: "none",
@@ -121,7 +118,7 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
       {
         label: "Scaling mode",
         description: `Choose between scaling modes. "Human time" shows date in years before and after the Common Era using regular notation, while "Cosmological time" shows dates using scientific notation. "Indexed" is useful when you want to skew timeframes and make all events seem equally far apart.`,
-        type: H5PFieldType.Select,
+        type: "select",
         name: "scalingMode",
         options: Object.values(scaleValues),
         default: scaleValues.human.value,
@@ -130,7 +127,7 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
   },
   {
     name: "l10n",
-    type: H5PFieldType.Group,
+    type: "group",
     common: true,
     label: "Localize",
     fields: [],

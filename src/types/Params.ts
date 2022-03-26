@@ -1,5 +1,5 @@
-import { TimelineData } from "../TimelineData";
-import { Translations } from "../Translations";
+import { TimelineData } from "./TimelineData";
+import { Translations } from "./Translations";
 
 export type Params = TimelineData & {
   behaviour?: {

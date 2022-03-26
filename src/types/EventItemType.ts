@@ -1,5 +1,5 @@
+import { Image } from "h5p-types";
 import { EventContent } from "./EventContent";
-import { Image } from "./H5P/Image";
 import { LayoutOption } from "./LayoutOption";
 import { MediaType } from "./MediaType";
 import { SlideType } from "./SlideType";

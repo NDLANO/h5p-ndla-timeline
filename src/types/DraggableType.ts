@@ -1,4 +1,4 @@
-import { Image } from "./H5P/Image";
+import { Image } from "h5p-types";
 
 export type DraggableType = {
   id: string;

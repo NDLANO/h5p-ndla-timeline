@@ -1,5 +1,4 @@
-import { Image } from "./H5P/Image";
-import { Video } from "./H5P/Video";
+import { Image, Video } from "h5p-types";
 
 export type MediaType =
   | {

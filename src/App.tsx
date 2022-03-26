@@ -1,7 +1,7 @@
 import * as React from "react";
 import { hot } from "react-hot-loader/root";
 import { TimeLine } from "./components/TimeLine/TimeLine";
-import { Params } from "./types/H5P/Params";
+import { Params } from "./types/Params";
 
 export type AppProps = {
   title: string;

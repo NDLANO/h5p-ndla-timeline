@@ -1,8 +1,6 @@
 import * as fs from "fs";
+import { H5PField, H5PBehaviour, H5PL10n } from "h5p-types";
 import { semantics } from "./src/semantics";
-import { H5PBehaviour } from "./src/types/H5P/H5PBehaviour";
-import { H5PField } from "./src/types/H5P/H5PField";
-import { H5PL10n } from "./src/types/H5P/H5PL10n";
 import { findDuplicates } from "./src/utils/array.utils";
 
 const semanticsPath = "semantics.json";

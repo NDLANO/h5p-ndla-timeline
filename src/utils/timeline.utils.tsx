@@ -4,6 +4,7 @@ import type {
   TimelineEra,
   TimelineSlide,
 } from "@knight-lab/timelinejs";
+import { Media } from "h5p-types";
 import * as React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { Grid } from "../components/Grid/Grid";
@@ -11,8 +12,7 @@ import { Tags } from "../components/Tags/Tags";
 import { DateString } from "../types/DateString";
 import { Era } from "../types/Era";
 import { EventItemType } from "../types/EventItemType";
-import { Media } from "../types/H5P/Media";
-import { Params } from "../types/H5P/Params";
+import { Params } from "../types/Params";
 import { SlideType } from "../types/SlideType";
 import { isDefined } from "./is-defined.utils";
 

@@ -1,4 +1,4 @@
-import { H5PFieldGroup, H5PFieldText } from "./H5PField";
+import { H5PFieldGroup, H5PFieldText } from "h5p-types";
 
 export type H5PL10n =
   | H5PFieldGroup & {
