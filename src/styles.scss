@@ -13,4 +13,33 @@
   .tl-slide-content {
     max-width: 80rem !important;
   }
+
+  /**
+ * Fade fullscreen button in after the timeline has settled.
+ * Only then, it can handle being resized to fullscreen.
+ */
+  .h5p-enable-fullscreen {
+    animation: h5p-timeline-fade-in 0.15s 2s ease-in-out forwards;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @keyframes h5p-timeline-fade-in {
+    100% {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  /**
+   * {1} We want to keep the content controls rendered, but hidden to not
+   *     re-trigger the fullscreen button fade-in animation any time fullscreen
+   *     mode is turned off
+   */
+  &.h5p-fullscreen {
+    .h5p-content-controls {
+      display: block; /* {1} */
+      z-index: 1;
+    }
+  }
 }
