@@ -19,6 +19,14 @@ export const scaleValues = {
   },
 };
 
+export const paletteValues = [
+  ["#1d5cff", "#981b1e", "seagreen", "gold"],
+  ["#02bfe7", "#e31c3d", "#94bfa2", "#fad980"],
+  ["lightblue", "pink", "#e7f4e4", "lightsalmon"],
+  ["saddlebrown", "peru", "tan", "linen"],
+  ["black", "gray", "#e4e2e0", "white"],
+];
+
 export const createTagEditorField = (): H5PFieldGroup => ({
   label: "Tags",
   name: "tags",
@@ -56,6 +64,11 @@ export const createTagEditorField = (): H5PFieldGroup => ({
             name: "color",
             type: "text",
             widget: "colorSelector",
+            default: "#1d5cff",
+            spectrum: {
+              showPalette: true,
+              palette: paletteValues,
+            },
           },
         ],
       },
@@ -320,6 +333,11 @@ export const createTimelineItemFields = (
             },
           ],
           widget: "colorSelector",
+        },
+        default: "#1d5cff",
+        spectrum: {
+          showPalette: true,
+          palette: paletteValues,
         },
       },
       {
