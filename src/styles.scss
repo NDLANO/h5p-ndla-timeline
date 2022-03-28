@@ -14,3 +14,20 @@
     max-width: 80rem !important;
   }
 }
+
+/**
+ * Fade fullscreen button in after the timeline has settled.
+ * Only then, it can handle being resized to fullscreen.
+ */
+.h5p-enable-fullscreen {
+  animation: h5p-timeline-fade-in 0.15s 2s ease-in-out forwards;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes h5p-timeline-fade-in {
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
