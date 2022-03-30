@@ -118,7 +118,7 @@ export const mapEventToTimelineSlide = (
       );
     }
 
-    text = `${event.description ?? ""}${tagsMarkup}`;
+    text = `${tagsMarkup}${event.description ?? ""}`;
   }
 
   // The `layout-x` part of this ID is used for styling and must not be removed
