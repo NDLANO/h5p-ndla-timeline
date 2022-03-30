@@ -69,3 +69,54 @@
   margin-bottom: auto !important;
   margin-top: auto !important;
 }
+
+.tl-slide-content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.tl-timeaxis
+  .tl-timeaxis-content-container
+  .tl-timeaxis-minor
+  .tl-timeaxis-tick {
+  color: #545454;
+}
+
+.tl-timeaxis
+  .tl-timeaxis-content-container
+  .tl-timeaxis-major
+  .tl-timeaxis-tick {
+  color: #333;
+}
+
+.tl-timeera
+  .tl-timeera-content-container
+  .tl-timeera-content
+  .tl-timeera-text
+  h2.tl-headline {
+  color: #333;
+}
+
+.tl-timeera.tl-timeera-color0 .tl-timeera-background {
+  background-color: #b4d0b9;
+}
+
+.tl-timeera.tl-timeera-color1 .tl-timeera-background {
+  background-color: #adcfdc;
+}
+
+.tl-timeera.tl-timeera-color2 .tl-timeera-background {
+  background-color: #f5e6af;
+}
+
+.tl-timeera.tl-timeera-color3 .tl-timeera-background {
+  background-color: #ecc0a7;
+}
+
+.tl-timeera.tl-timeera-color4 .tl-timeera-background {
+  background-color: #e4e2e0;
+}
+
+.tl-timeera.tl-timeera-color5 .tl-timeera-background {
+  background-color: #dec69a;
+}
