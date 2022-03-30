@@ -70,26 +70,53 @@
   margin-top: auto !important;
 }
 
+.tl-slide-content {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.tl-timeaxis
+  .tl-timeaxis-content-container
+  .tl-timeaxis-minor
+  .tl-timeaxis-tick {
+  color: #545454;
+}
+
+.tl-timeaxis
+  .tl-timeaxis-content-container
+  .tl-timeaxis-major
+  .tl-timeaxis-tick {
+  color: #333;
+}
+
+.tl-timeera
+  .tl-timeera-content-container
+  .tl-timeera-content
+  .tl-timeera-text
+  h2.tl-headline {
+  color: #333;
+}
+
 .tl-timeera.tl-timeera-color0 .tl-timeera-background {
-  background-color: gainsboro;
+  background-color: #efece5;
 }
 
 .tl-timeera.tl-timeera-color1 .tl-timeera-background {
-  background-color: #cb997e;
+  background-color: #cfc7ba;
 }
 
 .tl-timeera.tl-timeera-color2 .tl-timeera-background {
-  background-color: #b7b7a4;
+  background-color: #e4e1da;
 }
 
 .tl-timeera.tl-timeera-color3 .tl-timeera-background {
-  background-color: #a5a58d;
+  background-color: #cac9c5;
 }
 
 .tl-timeera.tl-timeera-color4 .tl-timeera-background {
-  background-color: #6b705c;
+  background-color: #eeeadf;
 }
 
 .tl-timeera.tl-timeera-color5 .tl-timeera-background {
-  background-color: beige;
+  background-color: #d8cfbe;
 }
