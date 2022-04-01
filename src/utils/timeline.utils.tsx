@@ -102,14 +102,6 @@ export const mapEventToTimelineSlide = (
 ): TimelineSlide => {
   const startDate = event.startDate ? parseDate(event.startDate) : null;
 
-  let textColor = "#000";
-  if (
-    event.appearance.backgroundType === "color" &&
-    event.appearance.backgroundColor
-  ) {
-    textColor = fontColorContrast(event.appearance.backgroundColor);
-  }
-
   let text;
   const eventHasCustomLayout = event.layout === "custom";
   if (eventHasCustomLayout) {
@@ -134,7 +126,12 @@ export const mapEventToTimelineSlide = (
   // before we find another way to change slide layouts
   let id = `${event.id}_layout-${event.layout}`;
 
-  if (event.appearance.backgroundType === "color") {
+  if (
+    event.appearance.backgroundType === "color" &&
+    event.appearance.backgroundColor
+  ) {
+    const contrastColor = fontColorContrast(event.appearance.backgroundColor);
+    const textColor = contrastColor === "#000000" ? "black" : "white";
     id = `${id}_color-${textColor}`;
   }
 
