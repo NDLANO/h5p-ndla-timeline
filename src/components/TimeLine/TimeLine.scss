@@ -65,6 +65,11 @@
   height: 45rem;
   max-height: 95vh;
   max-width: 100%;
+
+  .h5p-fullscreen & {
+    height: 100vh !important;
+    max-height: none;
+  }
 }
 
 .tl-timeline {
