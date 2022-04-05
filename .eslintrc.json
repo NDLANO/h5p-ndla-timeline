@@ -23,6 +23,8 @@
     "no-use-before-define": "off",
     "no-shadow": "off",
     "no-console": ["error", { "allow": ["warn", "error", "info"] }],
+    "no-restricted-syntax": "off",
+    "no-continue": "off",
     "default-case": "off",
     "consistent-return": "off",
     "@typescript-eslint/no-shadow": ["error"],

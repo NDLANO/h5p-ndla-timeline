@@ -2,6 +2,7 @@ import { Timeline } from "@knight-lab/timelinejs";
 import * as React from "react";
 import { useEffect, useRef, useState } from "react";
 import { useEffectOnce } from "react-use";
+import { useH5PFullscreenChange } from "../../hooks/useH5PFullscreenChange";
 import { Params } from "../../types/Params";
 import { createTimelineDefinition } from "../../utils/timeline.utils";
 import "./TimeLine.scss";
@@ -43,7 +44,6 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     setHeight(width / aspectRatio);
 
     const observer = new ResizeObserver(entries => {
-      // eslint-disable-next-line no-restricted-syntax
       for (const entry of entries) {
         const borderBoxSize: ResizeObserverSize = Array.isArray(
           entry.borderBoxSize,
@@ -62,6 +62,29 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       observer.unobserve(container);
     };
   }, [aspectRatio]);
+
+  useH5PFullscreenChange(isFullscreen => {
+    if (isFullscreen) {
+      return;
+    }
+
+    // When fullscreen is turned off, we need to trigger Timeline.js'
+    // `_updateDisplay` method (https://github.com/NUKnightLab/TimelineJS3/blob/3.8.20/src/js/timeline/Timeline.js#L549).
+    // It needs to be updated twice, with a whole frame inbetween, therefore the
+    // two double rAFs.
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        window.dispatchEvent(new Event("resize"));
+      });
+    });
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        window.dispatchEvent(new Event("resize"));
+      });
+    });
+  });
 
   return (
     <div

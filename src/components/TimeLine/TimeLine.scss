@@ -61,13 +61,16 @@
   }
 }
 
+/**
+ * {1} Override inline height style set by Timeline.js
+ */
 .h5p-timeline-wrapper {
   height: 45rem;
   max-height: 95vh;
   max-width: 100%;
 
   .h5p-fullscreen & {
-    height: 100vh !important;
+    height: 100vh !important; /* {1} */
     max-height: none;
   }
 }
