@@ -1,4 +1,4 @@
-import { Image, Video } from "h5p-types";
+import { Audio, Image, Video } from "h5p-types";
 
 export type MediaType =
   | {
@@ -8,6 +8,10 @@ export type MediaType =
   | {
       mediaType: "video";
       video?: Array<Video>;
+    }
+  | {
+      mediaType: "audio";
+      audio?: Array<Audio>;
     }
   | {
       mediaType: "custom";

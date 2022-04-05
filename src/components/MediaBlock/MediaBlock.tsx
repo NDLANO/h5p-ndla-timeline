@@ -1,6 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import { Media } from "@knight-lab/timelinejs/src/js/media/Media";
-import { Image, Video } from "h5p-types";
+import { Audio, Image, Video } from "h5p-types";
 import * as React from "react";
 import { FC, useEffect, useMemo, useRef } from "react";
 
@@ -12,6 +12,10 @@ type MediaBlockProps =
   | {
       type: "video";
       media: Video;
+    }
+  | {
+      type: "audio";
+      media: Audio;
     }
   | {
       type: "custom";

@@ -232,6 +232,10 @@ export const createTimelineItemFields = (
         value: "video",
       },
       {
+        label: "Audio",
+        value: "audio",
+      },
+      {
         label: "External link",
         value: "custom",
       },
@@ -266,6 +270,20 @@ export const createTimelineItemFields = (
         {
           field: "mediaType",
           equals: "video",
+        },
+      ],
+    },
+  },
+  {
+    label: "Audio",
+    name: "audio",
+    type: "audio",
+    widget: "NDLAShowWhen",
+    showWhen: {
+      rules: [
+        {
+          field: "mediaType",
+          equals: "audio",
         },
       ],
     },
