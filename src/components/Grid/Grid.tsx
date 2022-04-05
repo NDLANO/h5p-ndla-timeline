@@ -25,6 +25,9 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
       case "video":
         return eventItem.video;
 
+      case "audio":
+        return eventItem.audio;
+
       case "custom":
         return eventItem.customMedia;
 

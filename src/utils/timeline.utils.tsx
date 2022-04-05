@@ -85,6 +85,10 @@ const getMedia = (
       media = eventItem.video?.[0];
       break;
 
+    case "audio":
+      media = eventItem.audio?.[0];
+      break;
+
     case "custom":
       media = eventItem.customMedia;
       break;

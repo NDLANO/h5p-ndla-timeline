@@ -37,6 +37,17 @@ function updateEventPaths(
       // eslint-disable-next-line no-param-reassign
       video.path = normalizeAssetPath(video.path, contentId);
     });
+  } else if (
+    item.mediaType === "audio" &&
+    item.audio != null &&
+    item.audio.length > 0
+  ) {
+    // Item has uploaded audio
+
+    item.audio.forEach(audio => {
+      // eslint-disable-next-line no-param-reassign
+      audio.path = normalizeAssetPath(audio.path, contentId);
+    });
   }
 
   if (
