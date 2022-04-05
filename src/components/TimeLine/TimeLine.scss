@@ -1,27 +1,27 @@
 // [id$="layout-center"],
-[id$="layout-left"],
-[id$="layout-right"] {
+[id*="layout-left"],
+[id*="layout-right"] {
   .tl-slide-content {
     display: flex !important;
   }
 }
 
-[id$="layout-right"] {
-  .tl-text {
+[id*="layout-right"] {
+  .tl-media {
     order: 1;
   }
 
-  .tl-media {
+  .tl-text {
     order: 2;
   }
 }
 
-[id$="layout-left"] {
-  .tl-media {
+[id*="layout-left"] {
+  .tl-text {
     order: 1;
   }
 
-  .tl-text {
+  .tl-media {
     order: 2;
   }
 }
@@ -38,16 +38,12 @@
 //   }
 // }
 
-[id$="color-black"] {
+[id*="color-black"] {
   .tl-text p,
-  &.tl-full-color-background h2 {
-    color: #000 !important;
-    text-shadow: none !important;
-  }
-
+  &.tl-full-color-background h2,
   &.tl-full-color-background .tl-text .tl-headline-date,
   &.tl-full-color-background .tl-text h3.tl-headline-date {
-    color: #737373 !important;
+    color: #000 !important;
     text-shadow: none !important;
   }
 }
