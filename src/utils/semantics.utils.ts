@@ -169,7 +169,6 @@ export const createTagEditorField = (): H5PFieldGroup => ({
             default: "#1d5cff",
             spectrum: {
               showPalette: true,
-              // @ts-expect-error `h5p-types` is missing `showPaletteOnly`, which is used with the `colorSelector` widget
               showPaletteOnly: true,
               palette: tagPaletteValues,
             },
@@ -459,7 +458,6 @@ export const createTimelineItemFields = (
         default: "#757575",
         spectrum: {
           showPalette: true,
-          // @ts-expect-error `h5p-types` is missing `showPaletteOnly`, which is used with the `colorSelector` widget
           showPaletteOnly: true,
           palette: backgroundPaletteValues,
         },
