@@ -125,4 +125,11 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
       },
     ],
   },
+  {
+    name: "l10n",
+    type: "group",
+    common: true,
+    label: "Localize",
+    fields: [],
+  },
 ];
