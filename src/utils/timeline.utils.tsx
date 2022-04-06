@@ -4,7 +4,6 @@ import type {
   TimelineEra,
   TimelineSlide,
 } from "@knight-lab/timelinejs";
-import fontColorContrast from "font-color-contrast";
 import { Media } from "h5p-types";
 import * as React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
@@ -128,16 +127,7 @@ export const mapEventToTimelineSlide = (
 
   // The `layout-x` part of this ID is used for styling and must not be removed
   // before we find another way to change slide layouts
-  let id = `${event.id}_layout-${event.layout}`;
-
-  if (
-    event.appearance.backgroundType === "color" &&
-    event.appearance.backgroundColor
-  ) {
-    const contrastColor = fontColorContrast(event.appearance.backgroundColor);
-    const textColor = contrastColor === "#000000" ? "black" : "white";
-    id = `${id}_color-${textColor}`;
-  }
+  const id = `${event.id}_layout-${event.layout}`;
 
   const slide: TimelineSlide = {
     unique_id: id,

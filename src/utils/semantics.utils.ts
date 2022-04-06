@@ -19,12 +19,59 @@ export const scaleValues = {
   },
 };
 
-export const paletteValues = [
+export const tagPaletteValues = [
   ["#1d5cff", "#981b1e", "seagreen", "gold"],
   ["#02bfe7", "#e31c3d", "#94bfa2", "#fad980"],
   ["lightblue", "pink", "#e7f4e4", "lightsalmon"],
   ["saddlebrown", "peru", "tan", "linen"],
   ["black", "gray", "#e4e2e0", "white"],
+];
+
+export const backgroundPaletteValues = [
+  [
+    "#757575",
+    "#cd2026",
+    "#B45918",
+    "#3D854D",
+    "#1d5cff",
+    "#2869B8",
+    "#057CB3",
+    "#674ea7",
+    "#a64d79",
+  ],
+  [
+    "#5c5c5c",
+    "#B01C21",
+    "#8b4513",
+    "#337040",
+    "#003ACC",
+    "#205493",
+    "#04608B",
+    "#56418B",
+    "#8C4066",
+  ],
+  [
+    "#2e2e2e",
+    "#8D161A",
+    "#6C350F",
+    "#275430",
+    "#002EA3",
+    "#1A4375",
+    "#034563",
+    "#351c75",
+    "#741b47",
+  ],
+  [
+    "#000000",
+    "#6A1114",
+    "#48240A",
+    "#1A3820",
+    "#00237A",
+    "#123054",
+    "#02293B",
+    "#20124d",
+    "#4c1130",
+  ],
 ];
 
 export const createTagEditorField = (): H5PFieldGroup => ({
@@ -67,7 +114,7 @@ export const createTagEditorField = (): H5PFieldGroup => ({
             default: "#1d5cff",
             spectrum: {
               showPalette: true,
-              palette: paletteValues,
+              palette: tagPaletteValues,
             },
           },
         ],
@@ -352,10 +399,12 @@ export const createTimelineItemFields = (
           ],
           widget: "colorSelector",
         },
-        default: "#1d5cff",
+        default: "#757575",
         spectrum: {
           showPalette: true,
-          palette: paletteValues,
+          // @ts-expect-error `h5p-types` is missing `showPaletteOnly`, which is used with the `colorSelector` widget
+          showPaletteOnly: true,
+          palette: backgroundPaletteValues,
         },
       },
       {
