@@ -1,6 +1,11 @@
 import type { TimelineDate } from "@knight-lab/timelinejs";
 import { DateString } from "../types/DateString";
-import { isDateString, parseDateString } from "./timeline.utils";
+import {
+  fallbackLocale,
+  getClosestLocaleCode,
+  isDateString,
+  parseDateString,
+} from "./timeline.utils";
 
 describe("Timeline utils", () => {
   describe(isDateString.name, () => {
@@ -104,6 +109,63 @@ describe("Timeline utils", () => {
       const actual = parseDateString(dateString);
 
       expect(actual).toStrictEqual(expected);
+    });
+  });
+
+  describe(getClosestLocaleCode.name, () => {
+    let containerElement: HTMLDivElement;
+    let testingElement: HTMLDivElement;
+
+    beforeEach(() => {
+      containerElement = document.createElement("div");
+      testingElement = document.createElement("div");
+    });
+
+    it("should return locale code of the closest element with a locale code", () => {
+      const locale = "nb";
+
+      containerElement.lang = locale;
+      containerElement.appendChild(testingElement);
+
+      const expected = locale;
+      const actual = getClosestLocaleCode(testingElement);
+
+      expect(actual).toBe(expected);
+    });
+
+    it("should return locale code of the closest element with a locale code, if the language is set on the element itself", () => {
+      const locale1 = "en";
+      const locale2 = "nb";
+
+      containerElement.lang = locale1;
+      testingElement.lang = locale2;
+      containerElement.appendChild(testingElement);
+
+      const expected = locale2;
+      const actual = getClosestLocaleCode(testingElement);
+
+      expect(actual).toBe(expected);
+    });
+
+    it("should work with xml:lang", () => {
+      const locale = "en";
+
+      containerElement.setAttribute("xml:lang", locale);
+      containerElement.appendChild(testingElement);
+
+      const expected = locale;
+      const actual = getClosestLocaleCode(testingElement);
+
+      expect(actual).toBe(expected);
+    });
+
+    it("should return the fallback language if no lang attribute is set in the element's branch", () => {
+      containerElement.appendChild(testingElement);
+
+      const expected = fallbackLocale;
+      const actual = getClosestLocaleCode(testingElement);
+
+      expect(actual).toBe(expected);
     });
   });
 });

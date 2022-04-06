@@ -1,0 +1,316 @@
+{
+  "semantics": [
+    {
+      "label": "Vis tittel-lysbilete"
+    },
+    {
+      "label": "Tittel-lysbilete",
+      "fields": [
+        {
+          "label": "Id"
+        },
+        {
+          "label": "Lysbilete-type",
+          "default": "title"
+        },
+        {
+          "label": "Tittel"
+        },
+        {
+          "label": "Startdato",
+          "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
+        },
+        {
+          "label": "Sluttdato",
+          "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
+        },
+        {
+          "label": "Skildring"
+        },
+        {
+          "label": "Oppsett",
+          "options": [
+            {
+              "label": "Tekst på høgre side (standard)"
+            },
+            {
+              "label": "Tekst på venstre side"
+            },
+            {
+              "label": "Midtstilt (kun tekst)"
+            }
+          ]
+        },
+        {
+          "label": "Mediatype",
+          "options": [
+            {
+              "label": "Bilete"
+            },
+            {
+              "label": "Video"
+            },
+            {
+              "label": "Lyd"
+            },
+            {
+              "label": "Ekstern lenkje"
+            },
+            {
+              "label": "Ingen"
+            }
+          ]
+        },
+        {
+          "label": "Bilete"
+        },
+        {
+          "label": "Video"
+        },
+        {
+          "label": "Lyd"
+        },
+        {
+          "label": "Ekstern lenkje",
+          "description": "Sett inn ei lenkje til eksterne ressursar. Visse nettsider vil få ein spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med fleire. Sjå heile lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+        },
+        {
+          "label": "Utsjånad",
+          "fields": [
+            {
+              "label": "Bakgrunn",
+              "options": [
+                {
+                  "label": "Farge"
+                },
+                {
+                  "label": "Bilete"
+                },
+                {
+                  "label": "Ingen"
+                }
+              ]
+            },
+            {
+              "label": ""
+            },
+            {
+              "label": "Bakgrunnsfarge",
+              "default": "#1d5cff"
+            },
+            {
+              "label": "Bakgrunnsbilete"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Tidslinje-lysbileter",
+      "entity": "Tidslinje-lysbilete",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "field": {
+        "label": "Lysbilete",
+        "fields": [
+          {
+            "label": "Id"
+          },
+          {
+            "label": "Lysbilete-type",
+            "default": "regular"
+          },
+          {
+            "label": "Tittel"
+          },
+          {
+            "label": "Startdato",
+            "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
+          },
+          {
+            "label": "Sluttdato",
+            "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
+          },
+          {
+            "label": "Skildring"
+          },
+          {
+            "label": "Oppsett",
+            "options": [
+              {
+                "label": "Tekst på høgre side (standard)"
+              },
+              {
+                "label": "Tekst på venstre side"
+              },
+              {
+                "label": "Midtstilt (kun tekst)"
+              }
+            ]
+          },
+          {
+            "label": "Mediatype",
+            "options": [
+              {
+                "label": "Bilete"
+              },
+              {
+                "label": "Video"
+              },
+              {
+                "label": "Lyd"
+              },
+              {
+                "label": "Ekstern lenkje"
+              },
+              {
+                "label": "Ingen"
+              }
+            ]
+          },
+          {
+            "label": "Bilete"
+          },
+          {
+            "label": "Video"
+          },
+          {
+            "label": "Lyd"
+          },
+          {
+            "label": "Ekstern lenke",
+            "description": "Sett inn ei lenkje til eksterne ressursar. Visse nettsider vil få ein spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med fleire. Sjå heile lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+          },
+          {
+            "label": "Tag-er",
+            "entity": "Tag",
+            "field": {
+              "label": "Tag",
+              "fields": [
+                {
+                  "label": "Id"
+                },
+                {
+                  "label": "Namn"
+                },
+                {
+                  "label": "Farge"
+                },
+                {
+                  "label": "Er aktiv"
+                }
+              ]
+            }
+          },
+          {
+            "label": "Utsjånad",
+            "fields": [
+              {
+                "label": "Bakgrunn",
+                "options": [
+                  {
+                    "label": "Farge"
+                  },
+                  {
+                    "label": "Bilete"
+                  },
+                  {
+                    "label": "Ingen"
+                  }
+                ]
+              },
+              {
+                "label": ""
+              },
+              {
+                "label": "Bakgrunnsfarge",
+                "default": "#1d5cff"
+              },
+              {
+                "label": "Bakgrunnsbilete"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tag-er",
+      "fields": [
+        {
+          "label": "Tag-er",
+          "entity": "Tag",
+          "field": {
+            "label": "Tag",
+            "fields": [
+              {
+                "label": "Id"
+              },
+              {
+                "label": "Namn"
+              },
+              {
+                "label": "Farge",
+                "default": "#1d5cff"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tidsperiodar",
+      "fields": [
+        {
+          "label": "Tidsperiodar",
+          "entity": "Tidsperiode",
+          "field": {
+            "label": "Tidsperiode",
+            "fields": [
+              {
+                "label": "Namn"
+              },
+              {
+                "label": "Startdato",
+                "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
+              },
+              {
+                "label": "Sluttdato",
+                "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Innstillingar for oppførsel",
+      "fields": [
+        {
+          "label": ""
+        },
+        {
+          "label": "Tidsskala",
+          "description": "Velg mellom ulike tidsskalaar. \"Vanleg tid\" viser datoer i år før og etter vår tidsregning, mens \"Kosmologisk tid\" brukar vitenskapelig notasjon for å vise årstall. \"Indeksert\" er nyttig viss ein ynskjer å skjule årstall og heller ha likt mellomrom mellom kvar hendelse i tidslinjen.",
+          "options": [
+            {
+              "label": "Vanleg tid"
+            },
+            {
+              "label": "Kosmologisk tid"
+            },
+            {
+              "label": "Indeksert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Oversett"
+    }
+  ]
+}

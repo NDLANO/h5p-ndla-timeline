@@ -1,0 +1,316 @@
+{
+  "semantics": [
+    {
+      "label": "Vis tittel-slide"
+    },
+    {
+      "label": "Tittel-slide",
+      "fields": [
+        {
+          "label": "Id"
+        },
+        {
+          "label": "Slide-type",
+          "default": "title"
+        },
+        {
+          "label": "Tittel"
+        },
+        {
+          "label": "Startdato",
+          "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+        },
+        {
+          "label": "Sluttdato",
+          "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+        },
+        {
+          "label": "Beskrivelse"
+        },
+        {
+          "label": "Layout",
+          "options": [
+            {
+              "label": "Tekst på høyre side (standard)"
+            },
+            {
+              "label": "Tekst på venstre side"
+            },
+            {
+              "label": "Midtstilt (kun tekst)"
+            }
+          ]
+        },
+        {
+          "label": "Mediatype",
+          "options": [
+            {
+              "label": "Bilde"
+            },
+            {
+              "label": "Video"
+            },
+            {
+              "label": "Lyd"
+            },
+            {
+              "label": "Ekstern lenke"
+            },
+            {
+              "label": "Ingen"
+            }
+          ]
+        },
+        {
+          "label": "Bilde"
+        },
+        {
+          "label": "Video"
+        },
+        {
+          "label": "Lyd"
+        },
+        {
+          "label": "Ekstern lenke",
+          "description": "Sett inn en lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med flere. Se hele listen i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+        },
+        {
+          "label": "Utseende",
+          "fields": [
+            {
+              "label": "Bakgrunn",
+              "options": [
+                {
+                  "label": "Farge"
+                },
+                {
+                  "label": "Bilde"
+                },
+                {
+                  "label": "Ingen"
+                }
+              ]
+            },
+            {
+              "label": ""
+            },
+            {
+              "label": "Bakgrunnsfarge",
+              "default": "#1d5cff"
+            },
+            {
+              "label": "Bakgrunnsbilde"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Tidslinje-slides",
+      "entity": "Tidslinje-slide",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "field": {
+        "label": "Slide",
+        "fields": [
+          {
+            "label": "Id"
+          },
+          {
+            "label": "Slide-type",
+            "default": "regular"
+          },
+          {
+            "label": "Tittel"
+          },
+          {
+            "label": "Startdato",
+            "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+          },
+          {
+            "label": "Sluttdato",
+            "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+          },
+          {
+            "label": "Beskrivelse"
+          },
+          {
+            "label": "Layout",
+            "options": [
+              {
+                "label": "Tekst på høyre side (standard)"
+              },
+              {
+                "label": "Tekst på venstre side"
+              },
+              {
+                "label": "Midtstilt (kun tekst)"
+              }
+            ]
+          },
+          {
+            "label": "Mediatype",
+            "options": [
+              {
+                "label": "Bilde"
+              },
+              {
+                "label": "Video"
+              },
+              {
+                "label": "Lyd"
+              },
+              {
+                "label": "Ekstern lenke"
+              },
+              {
+                "label": "Ingen"
+              }
+            ]
+          },
+          {
+            "label": "Bilde"
+          },
+          {
+            "label": "Video"
+          },
+          {
+            "label": "Lyd"
+          },
+          {
+            "label": "Ekstern lenke",
+            "description": "Sett inn en lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med flere. Se hele listen i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+          },
+          {
+            "label": "Tag-er",
+            "entity": "Tag",
+            "field": {
+              "label": "Tag",
+              "fields": [
+                {
+                  "label": "Id"
+                },
+                {
+                  "label": "Navn"
+                },
+                {
+                  "label": "Farge"
+                },
+                {
+                  "label": "Er aktiv"
+                }
+              ]
+            }
+          },
+          {
+            "label": "Utseende",
+            "fields": [
+              {
+                "label": "Bakgrunn",
+                "options": [
+                  {
+                    "label": "Farge"
+                  },
+                  {
+                    "label": "Bilde"
+                  },
+                  {
+                    "label": "Ingen"
+                  }
+                ]
+              },
+              {
+                "label": ""
+              },
+              {
+                "label": "Bakgrunnsfarge",
+                "default": "#1d5cff"
+              },
+              {
+                "label": "Bakgrunnsbilde"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tag-er",
+      "fields": [
+        {
+          "label": "Tag-er",
+          "entity": "Tag",
+          "field": {
+            "label": "Tag",
+            "fields": [
+              {
+                "label": "Id"
+              },
+              {
+                "label": "Navn"
+              },
+              {
+                "label": "Farge",
+                "default": "#1d5cff"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tidsperioder",
+      "fields": [
+        {
+          "label": "Tidsperioder",
+          "entity": "Tidsperiode",
+          "field": {
+            "label": "Tidsperiode",
+            "fields": [
+              {
+                "label": "Navn"
+              },
+              {
+                "label": "Startdato",
+                "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+              },
+              {
+                "label": "Sluttdato",
+                "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Innstillinger for oppførsel",
+      "fields": [
+        {
+          "label": ""
+        },
+        {
+          "label": "Tidsskala",
+          "description": "Velg mellom ulike tidsskalaer. \"Vanlig tid\" viser datoer i år før og etter vår tidsregning, mens \"Kosmologisk tid\" bruker vitenskapelig notasjon for å vise årstall. \"Indeksert\" er nyttig hvis en ønsker å skjule årstall og heller ha likt mellomrom mellom hver hendelse i tidslinjen.",
+          "options": [
+            {
+              "label": "Vanlig tid"
+            },
+            {
+              "label": "Kosmologisk tid"
+            },
+            {
+              "label": "Indeksert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Oversett"
+    }
+  ]
+}

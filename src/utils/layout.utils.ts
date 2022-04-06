@@ -11,8 +11,8 @@ export const layoutOptions = {
     label: "Centered (Text only)",
     value: "center",
   },
-  custom: {
-    label: "Custom",
-    value: "custom",
-  },
+  // custom: {
+  //   label: "Custom",
+  //   value: "custom",
+  // },
 } as const;

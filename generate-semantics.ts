@@ -16,7 +16,10 @@ const isH5PL10n = (obj: H5PField | H5PBehaviour | H5PL10n): obj is H5PL10n => {
 };
 
 async function deleteTranslationKeysFile(): Promise<void> {
-  await fs.promises.rm(translationKeyPath);
+  const hasTranslationKeyFile = fs.existsSync(translationKeyPath);
+  if (hasTranslationKeyFile) {
+    await fs.promises.rm(translationKeyPath);
+  }
 }
 
 async function createTranslationKeys(): Promise<void> {
