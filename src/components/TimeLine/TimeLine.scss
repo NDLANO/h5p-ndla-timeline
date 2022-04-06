@@ -148,7 +148,7 @@
   $padding-top: 16px;
   $padding-bottom: 16px;
 
-  height: calc(
+  max-height: calc(
     var(--h5p-timeline-slide-height) - (#{$padding-top} + #{$padding-bottom})
   );
   overflow: auto;
