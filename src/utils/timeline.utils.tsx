@@ -223,3 +223,18 @@ export const createTimelineDefinition = (
 
   return [timeline, classNames];
 };
+
+export const fallbackLocale = "en";
+
+export const getClosestLocaleCode = (element: Element | null): string => {
+  const closestElementWithLanguageAttribute = element?.closest(
+    "[lang], [xml\\:lang]",
+  );
+
+  const activeLocaleCode =
+    closestElementWithLanguageAttribute?.getAttribute("lang") ??
+    closestElementWithLanguageAttribute?.getAttribute("xml:lang") ??
+    fallbackLocale;
+
+  return activeLocaleCode;
+};

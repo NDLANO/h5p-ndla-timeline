@@ -73,10 +73,6 @@
           {
             "label": "Centered (Text only)",
             "value": "center"
-          },
-          {
-            "label": "Custom",
-            "value": "custom"
           }
         ]
       },
@@ -355,10 +351,6 @@
             {
               "label": "Centered (Text only)",
               "value": "center"
-            },
-            {
-              "label": "Custom",
-              "value": "custom"
             }
           ]
         },

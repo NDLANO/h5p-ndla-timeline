@@ -125,7 +125,7 @@ declare module "@knight-lab/timelinejs" {
     /*
      * Optional language
      */
-    lang?: string | undefined;
+    language?: string | undefined;
     /*
      * Optional path to css
      */

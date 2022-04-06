@@ -2,9 +2,13 @@ import { Timeline } from "@knight-lab/timelinejs";
 import * as React from "react";
 import { useEffect, useRef, useState } from "react";
 import { useEffectOnce } from "react-use";
+import { H5P } from "../../H5P/H5P.util";
 import { useH5PFullscreenChange } from "../../hooks/useH5PFullscreenChange";
 import { Params } from "../../types/Params";
-import { createTimelineDefinition } from "../../utils/timeline.utils";
+import {
+  createTimelineDefinition,
+  getClosestLocaleCode,
+} from "../../utils/timeline.utils";
 import "./TimeLine.scss";
 
 type TimeLineProps = {
@@ -21,16 +25,17 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     [data, timelineTitle],
   );
   const [height, setHeight] = useState<number>(0);
-  const containerRef = useRef<HTMLDivElement>(null);
 
-  const containerId = "timeline-embed";
+  const containerRef = useRef<HTMLDivElement>(null);
+  const containerId = `timeline-embed-${H5P.createUUID()}`;
 
   const aspectRatio = 16 / 9;
 
   useEffectOnce(() => {
-    // Update the document title using the browser API
     // eslint-disable-next-line no-new
-    new Timeline(containerId, timelineDefinition, {});
+    new Timeline(containerId, timelineDefinition, {
+      language: getClosestLocaleCode(containerRef.current),
+    });
   });
 
   useEffect(() => {
