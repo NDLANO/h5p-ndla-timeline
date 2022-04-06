@@ -143,3 +143,13 @@
 .tl-media-audio {
   max-width: 100%;
 }
+
+.tl-text {
+  $padding-top: 16px;
+  $padding-bottom: 16px;
+
+  height: calc(
+    var(--h5p-timeline-slide-height) - (#{$padding-top} + #{$padding-bottom})
+  );
+  overflow: auto;
+}
