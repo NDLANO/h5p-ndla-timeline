@@ -24,7 +24,9 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     () => createTimelineDefinition(timelineTitle, data),
     [data, timelineTitle],
   );
-  const [height, setHeight] = useState<number>(0);
+  const [height, setHeight] = useState(0);
+  const [slideHeight, setSlideHeight] = useState(0);
+  const [timelineIsRendered, setTimelineIsRendered] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const containerId = `timeline-embed-${H5P.createUUID()}`;
@@ -35,6 +37,10 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     // eslint-disable-next-line no-new
     new Timeline(containerId, timelineDefinition, {
       language: getClosestLocaleCode(containerRef.current),
+    });
+
+    window.requestAnimationFrame(() => {
+      setTimelineIsRendered(true);
     });
   });
 
@@ -64,7 +70,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     observer.observe(container);
 
     return () => {
-      observer.unobserve(container);
+      observer.disconnect();
     };
   }, [aspectRatio]);
 
@@ -91,11 +97,50 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     });
   });
 
+  useEffect(() => {
+    if (!containerRef.current || !timelineIsRendered) {
+      return;
+    }
+
+    const slideContainer =
+      containerRef.current.querySelector<HTMLDivElement>(".tl-storyslider");
+
+    if (!slideContainer) {
+      return;
+    }
+
+    const setSlideContainerHeight = (): void => {
+      const { height: newSlideHeight } = slideContainer.getBoundingClientRect();
+      setSlideHeight(newSlideHeight);
+    };
+
+    setSlideContainerHeight();
+
+    const observer = new ResizeObserver(() => {
+      setSlideContainerHeight();
+    });
+
+    observer.observe(slideContainer);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [timelineIsRendered]);
+
+  const style: React.CSSProperties = {
+    height,
+  };
+
+  if (slideHeight > 0) {
+    // @ts-expect-error CSS custom properties should be allowed
+    style["--h5p-timeline-slide-height"] = `${slideHeight}px`;
+  }
+
   return (
     <div
       ref={containerRef}
       className={`h5p-timeline-wrapper ${classNames ?? ""}`}
-      style={{ height }}
+      style={style}
     >
       <div id={containerId} />
     </div>
