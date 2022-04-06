@@ -166,7 +166,7 @@ export const createTagEditorField = (): H5PFieldGroup => ({
             name: "color",
             type: "text",
             widget: "colorSelector",
-            default: "#1d5cff",
+            default: tagPaletteValues[0][0],
             spectrum: {
               showPalette: true,
               showPaletteOnly: true,
@@ -455,7 +455,7 @@ export const createTimelineItemFields = (
           ],
           widget: "colorSelector",
         },
-        default: "#757575",
+        default: backgroundPaletteValues[0][0],
         spectrum: {
           showPalette: true,
           showPaletteOnly: true,

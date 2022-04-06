@@ -69,10 +69,6 @@
           {
             "label": "Text on left",
             "value": "left"
-          },
-          {
-            "label": "Centered (Text only)",
-            "value": "center"
           }
         ]
       },
@@ -362,10 +358,6 @@
             {
               "label": "Text on left",
               "value": "left"
-            },
-            {
-              "label": "Centered (Text only)",
-              "value": "center"
             }
           ]
         },
@@ -648,7 +640,7 @@
               "name": "color",
               "type": "text",
               "widget": "colorSelector",
-              "default": "#1d5cff",
+              "default": "#E0E0E0",
               "spectrum": {
                 "showPalette": true,
                 "showPaletteOnly": true,
