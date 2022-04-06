@@ -1,9 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { H5PObject } from "h5p-types";
 import { EventItemType } from "../types/EventItemType";
 import { Params } from "../types/Params";
 import { SlideType } from "../types/SlideType";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const H5P: H5PObject = (window as any).H5P ?? {};
 
 export const normalizeAssetPath = (path: string, contentId: string): string => {
