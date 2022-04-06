@@ -739,12 +739,5 @@
         "default": "human"
       }
     ]
-  },
-  {
-    "name": "l10n",
-    "type": "group",
-    "common": true,
-    "label": "Localize",
-    "fields": []
   }
 ]

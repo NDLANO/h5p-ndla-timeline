@@ -253,7 +253,8 @@
                 "label": "Name"
               },
               {
-                "label": "Color"
+                "label": "Color",
+                "default": "#1d5cff"
               }
             ]
           }
@@ -307,9 +308,6 @@
           ]
         }
       ]
-    },
-    {
-      "label": "Localize"
     }
   ]
 }

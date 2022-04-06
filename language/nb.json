@@ -253,7 +253,8 @@
                 "label": "Navn"
               },
               {
-                "label": "Farge"
+                "label": "Farge",
+                "default": "#1d5cff"
               }
             ]
           }
@@ -307,9 +308,6 @@
           ]
         }
       ]
-    },
-    {
-      "label": "Oversett"
     }
   ]
 }
