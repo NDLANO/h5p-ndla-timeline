@@ -7,10 +7,6 @@ export const layoutOptions = {
     label: "Text on left",
     value: "left",
   },
-  centered: {
-    label: "Centered (Text only)",
-    value: "center",
-  },
   // custom: {
   //   label: "Custom",
   //   value: "custom",
