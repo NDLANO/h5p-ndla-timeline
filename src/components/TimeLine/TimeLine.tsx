@@ -39,9 +39,29 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       language: getClosestLocaleCode(containerRef.current),
     });
 
-    window.requestAnimationFrame(() => {
-      setTimelineIsRendered(true);
-    });
+    const timelineContainer = containerRef.current?.querySelector(
+      `#${containerId}`,
+    );
+
+    if (timelineContainer) {
+      const mutationObserver = new MutationObserver(changes => {
+        changes.forEach(() => {
+          if (!timelineContainer) {
+            return;
+          }
+
+          const nodeNowHasElements = timelineContainer.childElementCount > 0;
+          if (nodeNowHasElements) {
+            setTimelineIsRendered(true);
+            mutationObserver.disconnect();
+          }
+        });
+      });
+
+      mutationObserver.observe(timelineContainer, {
+        childList: true,
+      });
+    }
   });
 
   useEffect(() => {
