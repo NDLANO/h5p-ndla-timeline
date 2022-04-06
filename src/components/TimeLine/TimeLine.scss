@@ -149,7 +149,7 @@
   $padding-bottom: 16px;
 
   max-height: calc(
-    var(--h5p-timeline-slide-height) - (#{$padding-top} + #{$padding-bottom})
+    var(--h5p-timeline-slide-height) - #{$padding-top + $padding-bottom}
   );
   overflow: auto;
 }
