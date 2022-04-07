@@ -133,3 +133,26 @@
 .tl-full-image-background {
   background-color: rgba(0, 0, 0, 0.25) !important;
 }
+
+.timeline-large-text {
+  .tl-headline,
+  .tl-medium .tl-text h2.tl-headline-title,
+  .tl-medium .tl-text h2.tl-headline {
+    line-height: 1.4;
+  }
+  .tl-text .tl-headline-date,
+  .tl-text h3.tl-headline-date {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+  .tl-slidenav-next,
+  .tl-slidenav-previous {
+    .tl-slidenav-title,
+    .tl-slidenav-description {
+      font-size: 1.25rem;
+    }
+    .tl-slidenav-description {
+      line-height: 1.3;
+    }
+  }
+}

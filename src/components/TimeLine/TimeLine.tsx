@@ -25,6 +25,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     [data, timelineTitle],
   );
   const [height, setHeight] = useState(0);
+  const [slideWidth, setSlideWidth] = useState(0);
   const [slideHeight, setSlideHeight] = useState(0);
   const [timelineIsRendered, setTimelineIsRendered] = useState(false);
 
@@ -130,8 +131,10 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     }
 
     const setSlideContainerHeight = (): void => {
-      const { height: newSlideHeight } = slideContainer.getBoundingClientRect();
+      const { height: newSlideHeight, width: newSlideWidth } =
+        slideContainer.getBoundingClientRect();
       setSlideHeight(newSlideHeight);
+      setSlideWidth(newSlideWidth);
     };
 
     setSlideContainerHeight();
@@ -159,7 +162,9 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`h5p-timeline-wrapper ${classNames ?? ""}`}
+      className={`h5p-timeline-wrapper ${classNames ?? ""} ${
+        slideWidth > 800 ? `timeline-large-text` : ""
+      }`}
       style={style}
     >
       <div id={containerId} />
