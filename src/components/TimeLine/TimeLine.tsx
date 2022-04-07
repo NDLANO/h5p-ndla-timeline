@@ -163,7 +163,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     <div
       ref={containerRef}
       className={`h5p-timeline-wrapper ${classNames ?? ""} ${
-        slideWidth > 800 ? `timeline-large-text` : ""
+        slideWidth > 1180 ? `timeline-large-text` : ""
       }`}
       style={style}
     >
