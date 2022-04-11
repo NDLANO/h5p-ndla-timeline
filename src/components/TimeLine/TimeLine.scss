@@ -51,8 +51,17 @@
   }
 }
 
+/**
+ * {1} Override absolute font size values, using relative ones
+ *     instead. The root font size is expected to be 16 px.
+ */
 .tl-timeline {
+  font-size: 1rem !important; /* {1} */
   height: 100%;
+
+  p {
+    font-size: 1rem !important; /* {1} */
+  }
 }
 
 .tl-slide .tl-slide-content-container .tl-slide-content .tl-media {
@@ -70,50 +79,56 @@
   padding-bottom: 1rem;
 }
 
-.tl-timeaxis
-  .tl-timeaxis-content-container
-  .tl-timeaxis-minor
-  .tl-timeaxis-tick {
-  color: #545454;
+.tl-timeaxis {
+  .tl-timeaxis-content-container {
+    .tl-timeaxis-major {
+      .tl-timeaxis-tick {
+        color: #333;
+      }
+    }
+  }
 }
 
-.tl-timeaxis
-  .tl-timeaxis-content-container
-  .tl-timeaxis-major
-  .tl-timeaxis-tick {
-  color: #333;
+.tl-timeaxis {
+  .tl-timeaxis-content-container {
+    .tl-timeaxis-minor {
+      .tl-timeaxis-tick {
+        color: #545454;
+      }
+    }
+  }
 }
 
-.tl-timeera
-  .tl-timeera-content-container
-  .tl-timeera-content
-  .tl-timeera-text
-  h2.tl-headline {
-  color: #333;
-}
+.tl-timeera {
+  /**
+   * There are six era indices. The first one starts with color 1, 
+   * the sixth one will get color 0. (index of n = n % 6).
+   */
+  $timeera-colors: (
+    0: #b4d0b9,
+    1: #adcfdc,
+    2: #f5e6af,
+    3: #ecc0a7,
+    4: #e4e2e0,
+    5: #dec69a,
+  );
+  @each $era-index, $color in $timeera-colors {
+    &.tl-timeera-color#{$era-index} {
+      .tl-timeera-background {
+        background-color: $color;
+      }
+    }
+  }
 
-.tl-timeera.tl-timeera-color0 .tl-timeera-background {
-  background-color: #b4d0b9;
-}
-
-.tl-timeera.tl-timeera-color1 .tl-timeera-background {
-  background-color: #adcfdc;
-}
-
-.tl-timeera.tl-timeera-color2 .tl-timeera-background {
-  background-color: #f5e6af;
-}
-
-.tl-timeera.tl-timeera-color3 .tl-timeera-background {
-  background-color: #ecc0a7;
-}
-
-.tl-timeera.tl-timeera-color4 .tl-timeera-background {
-  background-color: #e4e2e0;
-}
-
-.tl-timeera.tl-timeera-color5 .tl-timeera-background {
-  background-color: #dec69a;
+  .tl-timeera-content-container {
+    .tl-timeera-content {
+      .tl-timeera-text {
+        h2.tl-headline {
+          color: #333;
+        }
+      }
+    }
+  }
 }
 
 .tl-media-audio {
@@ -140,17 +155,20 @@
   .tl-medium .tl-text h2.tl-headline {
     line-height: 1.4;
   }
+
   .tl-text .tl-headline-date,
   .tl-text h3.tl-headline-date {
     font-size: 1.125rem;
     line-height: 1.2;
   }
+
   .tl-slidenav-next,
   .tl-slidenav-previous {
     .tl-slidenav-title,
     .tl-slidenav-description {
       font-size: 1rem;
     }
+
     .tl-slidenav-description {
       line-height: 1;
     }
