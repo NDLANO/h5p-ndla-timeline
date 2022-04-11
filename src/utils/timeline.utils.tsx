@@ -228,3 +228,12 @@ export const getClosestLocaleCode = (element: Element | null): string => {
 
   return activeLocaleCode;
 };
+
+export const addTabIndexToScrollableElements = (
+  elements: ArrayLike<HTMLElement>,
+): void => {
+  Array.from(elements).forEach(element => {
+    const existingTabindex = element.getAttribute("tabindex");
+    element.setAttribute("tabindex", existingTabindex || "0");
+  });
+};
