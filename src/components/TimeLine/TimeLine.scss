@@ -51,8 +51,17 @@
   }
 }
 
+/**
+ * {1} Override absolute font size values, using relative ones
+ *     instead. The root font size is expected to be 16 px.
+ */
 .tl-timeline {
+  font-size: 1rem !important; /* {1} */
   height: 100%;
+
+  p {
+    font-size: 1rem !important; /* {1} */
+  }
 }
 
 .tl-slide .tl-slide-content-container .tl-slide-content .tl-media {
@@ -70,50 +79,56 @@
   padding-bottom: 1rem;
 }
 
-.tl-timeaxis
-  .tl-timeaxis-content-container
-  .tl-timeaxis-minor
-  .tl-timeaxis-tick {
-  color: #545454;
+.tl-timeaxis {
+  .tl-timeaxis-content-container {
+    .tl-timeaxis-major {
+      .tl-timeaxis-tick {
+        color: #333;
+      }
+    }
+  }
 }
 
-.tl-timeaxis
-  .tl-timeaxis-content-container
-  .tl-timeaxis-major
-  .tl-timeaxis-tick {
-  color: #333;
+.tl-timeaxis {
+  .tl-timeaxis-content-container {
+    .tl-timeaxis-minor {
+      .tl-timeaxis-tick {
+        color: #545454;
+      }
+    }
+  }
 }
 
-.tl-timeera
-  .tl-timeera-content-container
-  .tl-timeera-content
-  .tl-timeera-text
-  h2.tl-headline {
-  color: #333;
-}
+.tl-timeera {
+  /**
+   * There are six era indices. The first one starts with color 1, 
+   * the sixth one will get color 0. (index of n = n % 6).
+   */
+  $timeera-colors: (
+    0: #b4d0b9,
+    1: #adcfdc,
+    2: #f5e6af,
+    3: #ecc0a7,
+    4: #e4e2e0,
+    5: #dec69a,
+  );
+  @each $era-index, $color in $timeera-colors {
+    &.tl-timeera-color#{$era-index} {
+      .tl-timeera-background {
+        background-color: $color;
+      }
+    }
+  }
 
-.tl-timeera.tl-timeera-color0 .tl-timeera-background {
-  background-color: #b4d0b9;
-}
-
-.tl-timeera.tl-timeera-color1 .tl-timeera-background {
-  background-color: #adcfdc;
-}
-
-.tl-timeera.tl-timeera-color2 .tl-timeera-background {
-  background-color: #f5e6af;
-}
-
-.tl-timeera.tl-timeera-color3 .tl-timeera-background {
-  background-color: #ecc0a7;
-}
-
-.tl-timeera.tl-timeera-color4 .tl-timeera-background {
-  background-color: #e4e2e0;
-}
-
-.tl-timeera.tl-timeera-color5 .tl-timeera-background {
-  background-color: #dec69a;
+  .tl-timeera-content-container {
+    .tl-timeera-content {
+      .tl-timeera-text {
+        h2.tl-headline {
+          color: #333;
+        }
+      }
+    }
+  }
 }
 
 .tl-media-audio {
@@ -128,31 +143,76 @@
     var(--h5p-timeline-slide-height) - #{$padding-top + $padding-bottom}
   );
   overflow: auto;
+
+  .tl-headline-date,
+  h3.tl-headline-date {
+    .timeline-large-text & {
+      font-size: 1.125rem;
+      line-height: 1.2;
+    }
+  }
 }
 
 .tl-full-image-background {
   background-color: rgba(0, 0, 0, 0.25) !important;
 }
 
-.timeline-large-text {
-  .tl-headline,
-  .tl-medium .tl-text h2.tl-headline-title,
-  .tl-medium .tl-text h2.tl-headline {
+.tl-headline,
+.tl-medium .tl-text h2.tl-headline-title,
+.tl-medium .tl-text h2.tl-headline {
+  .timeline-large-text & {
     line-height: 1.4;
   }
-  .tl-text .tl-headline-date,
-  .tl-text h3.tl-headline-date {
-    font-size: 1.125rem;
-    line-height: 1.2;
-  }
-  .tl-slidenav-next,
-  .tl-slidenav-previous {
-    .tl-slidenav-title,
-    .tl-slidenav-description {
-      font-size: 1rem;
+}
+
+/**
+ * {1} Override absolute font size values, using relative ones
+ *     instead. The root font size is expected to be 16 px.
+ *
+ * {2} Overrides {1} when contained by a `.timeline-large-text`
+ */
+.tl-slidenav-previous,
+.tl-slidenav-next {
+  .tl-slidenav-title,
+  .tl-slidenav-description {
+    font-size: 0.6875rem !important; /* {1} */
+
+    .timeline-large-text & {
+      font-size: 1rem !important; /* {2} */
     }
-    .tl-slidenav-description {
+  }
+
+  .tl-slidenav-description {
+    .timeline-large-text & {
       line-height: 1;
     }
+  }
+}
+
+/**
+ * {1} Move slidenav icon less to the left than initially to fix an overflow issue on Android tablets
+ */
+.tl-slidenav-previous {
+  .tl-slidenav-icon {
+    margin-left: 0; /* {1} */
+  }
+}
+
+/**
+ * {1} Move slidenav icon less to the right than initially to fix an overflow issue on Android tablets
+ */
+.tl-slidenav-next {
+  .tl-slidenav-icon {
+    margin-left: 3.75rem; /* {1} */
+  }
+}
+
+/**
+ * {1} Override absolute font size values, using relative ones
+ *     instead. The root font size is expected to be 16 px.
+ */
+.tl-timenav {
+  .tl-attribution {
+    font-size: 0.625rem !important /* {1} */;
   }
 }
