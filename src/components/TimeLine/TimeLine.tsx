@@ -6,6 +6,7 @@ import { H5P } from "../../H5P/H5P.util";
 import { useH5PFullscreenChange } from "../../hooks/useH5PFullscreenChange";
 import { Params } from "../../types/Params";
 import {
+  addTabIndexToScrollableElements,
   createTimelineDefinition,
   getClosestLocaleCode,
 } from "../../utils/timeline.utils";
@@ -123,8 +124,14 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       return;
     }
 
+    const container = containerRef.current;
+
+    const slideTextElements =
+      container.querySelectorAll<HTMLDivElement>(".tl-text");
+    addTabIndexToScrollableElements(slideTextElements);
+
     const slideContainer =
-      containerRef.current.querySelector<HTMLDivElement>(".tl-storyslider");
+      container.querySelector<HTMLDivElement>(".tl-storyslider");
 
     if (!slideContainer) {
       return;
