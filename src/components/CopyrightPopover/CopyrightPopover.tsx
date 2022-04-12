@@ -2,7 +2,6 @@ import { Copyright } from "h5p-types";
 import * as React from "react";
 import { FC } from "react";
 import { useL10n } from "../../hooks/useLocalization";
-import { CopyrightIcon } from "../CopyrightIcon/CopyrightIcon";
 import { Popover } from "../Popover/Popover";
 import styles from "./CopyrightPopover.module.scss";
 
@@ -19,8 +18,7 @@ export const CopyrightPopover: FC<Params> = ({
 }) => {
   const { title, author, source, year, license, version } = copyright;
 
-  const copyrightLabel = useL10n("copyright");
-
+  const copyrightLabel = useL10n("copyrightLabel");
   const titleLabel = useL10n("copyrightTitle");
   const authorLabel = useL10n("copyrightAuthor");
   const sourceLabel = useL10n("copyrightSource");
@@ -28,54 +26,56 @@ export const CopyrightPopover: FC<Params> = ({
   const licenseLabel = useL10n("copyrightLicense");
   const versionLabel = useL10n("copyrightVersion");
 
+  const isUrl = source?.startsWith("http://") || source?.startsWith("https://");
+
   return (
     <Popover
       isOpen={isOpen}
       onOpenChange={onOpenChange}
       triggerProps={{
-        children: <CopyrightIcon />,
+        children: <span className={styles.trigger}>{copyrightLabel}</span>,
         "aria-label": copyrightLabel,
       }}
     >
       <div className={styles.content}>
         {title && (
           <div className={styles.row}>
-            <span>{titleLabel}</span>
+            <span className={styles.label}>{titleLabel}</span>
             <span>{title}</span>
           </div>
         )}
 
         {author && (
           <div className={styles.row}>
-            <span>{authorLabel}</span>
+            <span className={styles.label}>{authorLabel}</span>
             <span>{author}</span>
           </div>
         )}
 
         {source && (
           <div className={styles.row}>
-            <span>{sourceLabel}</span>
-            <span>{source}</span>
+            <span className={styles.label}>{sourceLabel}</span>
+            {isUrl ? <a href={source}>{source}</a> : <span>{source}</span>}
           </div>
         )}
 
         {year && (
           <div className={styles.row}>
-            <span>{yearLabel}</span>
+            <span className={styles.label}>{yearLabel}</span>
             <span>{year}</span>
           </div>
         )}
 
         {license && (
           <div className={styles.row}>
-            <span>{licenseLabel}</span>
+            <span className={styles.label}>{licenseLabel}</span>
             <span>{license}</span>
           </div>
         )}
 
         {version && (
           <div className={styles.row}>
-            <span>{versionLabel}</span>
+            <span className={styles.label}>{versionLabel}</span>
             <span>{version}</span>
           </div>
         )}

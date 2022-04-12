@@ -1164,9 +1164,9 @@
     "label": "Localize",
     "fields": [
       {
-        "label": "Copyright",
-        "name": "copyright",
-        "default": "Copyright",
+        "label": "Rights of use",
+        "name": "copyrightLabel",
+        "default": "Rights of use",
         "type": "text"
       },
       {
