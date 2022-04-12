@@ -1,6 +1,7 @@
 import { Copyright } from "h5p-types";
 import * as React from "react";
-import { FC } from "react";
+import { FC, useState } from "react";
+import { useEffectOnce } from "react-use";
 import { useL10n } from "../../hooks/useLocalization";
 import { Popover } from "../Popover/Popover";
 import styles from "./CopyrightPopover.module.scss";
@@ -16,6 +17,8 @@ export const CopyrightPopover: FC<Params> = ({
   isOpen,
   onOpenChange,
 }) => {
+  const [isClient, setIsClient] = useState(false);
+
   const { title, author, source, year, license, version } = copyright;
 
   const copyrightLabel = useL10n("copyrightLabel");
@@ -28,7 +31,11 @@ export const CopyrightPopover: FC<Params> = ({
 
   const isUrl = source?.startsWith("http://") || source?.startsWith("https://");
 
-  return (
+  useEffectOnce(() => {
+    setIsClient(true);
+  });
+
+  return isClient ? (
     <Popover
       isOpen={isOpen}
       onOpenChange={onOpenChange}
@@ -81,5 +88,5 @@ export const CopyrightPopover: FC<Params> = ({
         )}
       </div>
     </Popover>
-  );
+  ) : null;
 };
