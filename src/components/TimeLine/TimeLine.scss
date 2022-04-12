@@ -216,3 +216,15 @@
     font-size: 0.625rem !important /* {1} */;
   }
 }
+
+.tl-timemarker {
+  .tl-timemarker-content-container
+    .tl-timemarker-content
+    .tl-timemarker-text
+    h2.tl-headline {
+    &,
+    p {
+      color: #666;
+    }
+  }
+}
