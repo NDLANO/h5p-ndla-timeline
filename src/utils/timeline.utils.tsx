@@ -17,6 +17,8 @@ import { Params } from "../types/Params";
 import { SlideType } from "../types/SlideType";
 import { isDefined } from "./is-defined.utils";
 
+const html = String.raw;
+
 export const isDateString = (str: string): str is DateString => {
   const matches = str.match(/^-?\d{1,}((-\d{1,2})?(-\d{1,2})?)$/gi);
 
@@ -134,12 +136,12 @@ export const mapEventToTimelineSlide = (
         const copyrightInformation = renderToString(
           <CopyrightInformation copyright={event.descriptionCopyright} />,
         );
-        text += `<div class="h5p-tl-slide-description">
-          <div>${copyrightInformation}</div>
+        text += html`<div class="h5p-tl-slide-description">
           ${event.description}
+          <div>${copyrightInformation}</div>
         </div>`;
       } else {
-        text += `<div class="h5p-tl-slide-description">
+        text += html`<div class="h5p-tl-slide-description">
           ${event.description}
         </div>`;
       }
