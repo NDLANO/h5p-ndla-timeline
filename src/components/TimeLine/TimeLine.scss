@@ -135,6 +135,9 @@
   max-width: 100%;
 }
 
+/**
+ * {1} Override `.tl-timeline p { line-height: 1.3em }`
+ */
 .tl-text {
   $padding-top: 16px;
   $padding-bottom: 16px;
@@ -150,6 +153,10 @@
       font-size: 1.125rem;
       line-height: 1.2;
     }
+  }
+
+  p {
+    line-height: 1.5 !important /* {1} */;
   }
 }
 
