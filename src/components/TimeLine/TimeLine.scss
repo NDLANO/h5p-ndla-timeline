@@ -81,16 +81,16 @@
 
 .tl-timeaxis {
   .tl-timeaxis-content-container {
+    .tl-timeaxis-tick-hidden {
+      content-visibility: hidden;
+    }
+    
     .tl-timeaxis-major {
       .tl-timeaxis-tick {
         color: #333;
       }
     }
-  }
-}
 
-.tl-timeaxis {
-  .tl-timeaxis-content-container {
     .tl-timeaxis-minor {
       .tl-timeaxis-tick {
         color: #545454;
