@@ -1,4 +1,4 @@
-import { H5PField, H5PFieldGroup, H5PFieldList } from "h5p-types";
+import { H5PField, H5PFieldGroup, H5PFieldList, H5PFieldText } from "h5p-types";
 import { layoutOptions } from "./layout.utils";
 
 export const dateDescription =
@@ -18,6 +18,185 @@ export const scaleValues = {
     value: "index",
   },
 };
+
+const createCopyrightField = (name: string): H5PFieldGroup => ({
+  label: "Copyright",
+  name,
+  type: "group",
+  widget: "copyright",
+  fields: [
+    {
+      label: "Title",
+      name: "title",
+      type: "text",
+    },
+    {
+      label: "Author",
+      type: "text",
+      name: "author",
+    },
+    {
+      label: "Year(s)",
+      name: "year",
+      type: "text",
+    },
+    {
+      label: "Source",
+      name: "source",
+      type: "text",
+    },
+    {
+      label: "License",
+      type: "select",
+      options: [
+        {
+          label: "Undisclosed",
+          value: "U",
+        },
+        {
+          label: "Attribution",
+          value: "CC BY",
+        },
+        {
+          label: "Attribution-ShareAlike",
+          value: "CC BY-SA",
+        },
+        {
+          label: "Attribution-NoDerivs",
+          value: "CC BY-ND",
+        },
+        {
+          label: "Attribution-NonCommercial",
+          value: "CC BY-NC",
+        },
+        {
+          label: "Attribution-NonCommercial-ShareAlike",
+          value: "CC BY-NC-SA",
+        },
+        {
+          label: "Attribution-NonCommercial-NoDerivs",
+          value: "CC BY-NC-ND",
+        },
+        {
+          label: "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+          value: "CC0 1.0",
+        },
+        {
+          label: "General Public License",
+          value: "GNU GPL",
+        },
+        {
+          label: "Public Domain",
+          value: "PD",
+        },
+        {
+          label: "Copyright",
+          value: "C",
+        },
+      ],
+      default: "U",
+      name: "license",
+    },
+    {
+      label: "License Version",
+      name: "version",
+      type: "select",
+      options: [
+        {
+          label: "4.0 International",
+          value: "4.0",
+        },
+        {
+          label: "3.0 Unported",
+          value: "3.0",
+        },
+        {
+          label: "2.5 Generic",
+          value: "2.5",
+        },
+        {
+          label: "2.0 Generic",
+          value: "2.0",
+        },
+        {
+          label: "1.0 Generic",
+          value: "1.0",
+        },
+      ],
+      default: "4.0",
+      widget: "NDLAShowWhen",
+      showWhen: {
+        rules: [
+          {
+            field: "license",
+            equals: [
+              "CC BY",
+              "CC BY-SA",
+              "CC BY-ND",
+              "CC BY-NC",
+              "CC BY-NC-SA",
+              "CC BY-NC-ND",
+            ],
+          },
+        ],
+      },
+    },
+    {
+      label: "License Version",
+      name: "version",
+      type: "select",
+      options: [
+        {
+          label: "Version 3",
+          value: "v3",
+        },
+        {
+          label: "Version 2",
+          value: "v2",
+        },
+        {
+          label: "Version 1",
+          value: "v1",
+        },
+      ],
+      default: "v3",
+      widget: "NDLAShowWhen",
+      showWhen: {
+        rules: [
+          {
+            field: "license",
+            equals: ["GNU GPL"],
+          },
+        ],
+      },
+    },
+    {
+      label: "License Version",
+      name: "version",
+      type: "select",
+      options: [
+        {
+          label: "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+          value: "CC0 1.0",
+        },
+        {
+          label: "Public Domain Mark",
+          value: "CC PDM",
+        },
+      ],
+      default: "CC0 1.0",
+      widget: "NDLAShowWhen",
+      showWhen: {
+        rules: [
+          {
+            field: "license",
+            equals: ["PD"],
+          },
+        ],
+      },
+    },
+  ],
+});
 
 export const tagPaletteValues = [
   [
@@ -262,6 +441,7 @@ export const createTimelineItemFields = (
     widget: "html",
     tags: ["p", "br", "strong", "em", "a"],
   },
+  createCopyrightField("descriptionCopyright"),
   {
     label: "Layout",
     name: "layout",
@@ -479,3 +659,23 @@ export const createTimelineItemFields = (
     ],
   },
 ];
+
+export const createL10nField = (
+  label: string,
+  name: string,
+  defaultValue: string,
+  description?: string,
+): H5PFieldText => {
+  const field: H5PFieldText = {
+    label,
+    name,
+    default: defaultValue,
+    type: "text",
+  };
+
+  if (description) {
+    field.description = description;
+  }
+
+  return field;
+};

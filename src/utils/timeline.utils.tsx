@@ -4,9 +4,10 @@ import type {
   TimelineEra,
   TimelineSlide,
 } from "@knight-lab/timelinejs";
-import { Media } from "h5p-types";
+import { Copyright, Media } from "h5p-types";
 import * as React from "react";
-import { renderToStaticMarkup } from "react-dom/server";
+import { renderToStaticMarkup, renderToString } from "react-dom/server";
+import { CopyrightInformation } from "../components/CopyrightInformation/CopyrightInformation";
 import { Grid } from "../components/Grid/Grid";
 import { Tags } from "../components/Tags/Tags";
 import { DateString } from "../types/DateString";
@@ -100,6 +101,10 @@ const getMedia = (
   return media;
 };
 
+const copyrightIsDefined = (copyright: Copyright | undefined): boolean => {
+  return !!copyright && !!copyright.license;
+};
+
 export const mapEventToTimelineSlide = (
   event: EventItemType<SlideType>,
 ): TimelineSlide => {
@@ -121,8 +126,24 @@ export const mapEventToTimelineSlide = (
         </div>,
       );
     }
+    text = tagsMarkup;
 
-    text = `${tagsMarkup}${event.description ?? ""}`;
+    if (event.description) {
+      const showCopyright = copyrightIsDefined(event.descriptionCopyright);
+      if (event.descriptionCopyright && showCopyright) {
+        const copyrightInformation = renderToString(
+          <CopyrightInformation copyright={event.descriptionCopyright} />,
+        );
+        text += `<div class="h5p-tl-slide-description">
+          <div>${copyrightInformation}</div>
+          ${event.description}
+        </div>`;
+      } else {
+        text += `<div class="h5p-tl-slide-description">
+          ${event.description}
+        </div>`;
+      }
+    }
   }
 
   // The `layout-x` part of this ID is used for styling and must not be removed
