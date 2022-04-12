@@ -1,9 +1,9 @@
 {
-  "title": "Timeline",
+  "title": "NDLA Timeline",
   "machineName": "H5P.NDLATimeline",
   "majorVersion": 0,
   "minorVersion": 0,
-  "patchVersion": 44,
+  "patchVersion": 45,
   "runnable": 1,
   "fullscreen": 1,
   "preloadedJs": [
