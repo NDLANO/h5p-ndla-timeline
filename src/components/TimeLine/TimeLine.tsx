@@ -1,7 +1,9 @@
 import { Timeline } from "@knight-lab/timelinejs";
 import * as React from "react";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { hydrate } from "react-dom";
 import { useEffectOnce } from "react-use";
+import { L10nContext } from "../../contexts/LocalizationContext";
 import { H5P } from "../../H5P/H5P.util";
 import { useH5PFullscreenChange } from "../../hooks/useH5PFullscreenChange";
 import { Params } from "../../types/Params";
@@ -10,6 +12,7 @@ import {
   createTimelineDefinition,
   getClosestLocaleCode,
 } from "../../utils/timeline.utils";
+import { CopyrightInformation } from "../CopyrightInformation/CopyrightInformation";
 import "./TimeLine.scss";
 
 type TimeLineProps = {
@@ -29,6 +32,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   const [slideWidth, setSlideWidth] = useState(0);
   const [slideHeight, setSlideHeight] = useState(0);
   const [timelineIsRendered, setTimelineIsRendered] = useState(false);
+  const translations = useContext(L10nContext);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const containerId = `timeline-embed-${H5P.createUUID()}`;
@@ -126,6 +130,19 @@ export const TimeLine: React.FC<TimeLineProps> = ({
 
     const container = containerRef.current;
 
+    Array.from(
+      container.querySelectorAll<HTMLElement>(".h5p-tl-copyright-information"),
+    ).forEach(element => {
+      const copyright = JSON.parse(element.dataset.copyright ?? "{}");
+
+      hydrate(
+        <L10nContext.Provider value={translations}>
+          <CopyrightInformation copyright={copyright} />
+        </L10nContext.Provider>,
+        element.parentElement,
+      );
+    });
+
     const slideTextElements =
       container.querySelectorAll<HTMLDivElement>(".tl-text");
     addTabIndexToScrollableElements(slideTextElements);
@@ -155,7 +172,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     return () => {
       observer.disconnect();
     };
-  }, [timelineIsRendered]);
+  }, [timelineIsRendered, translations]);
 
   const style: React.CSSProperties = {
     height,

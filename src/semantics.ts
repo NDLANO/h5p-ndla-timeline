@@ -1,5 +1,6 @@
 import { H5PBehaviour, H5PField, H5PL10n } from "h5p-types";
 import {
+  createL10nField,
   createTagEditorField,
   createTimelineItemFields,
   dateDescription,
@@ -130,6 +131,14 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
     type: "group",
     common: true,
     label: "Localize",
-    fields: [],
+    fields: [
+      createL10nField("Copyright", "copyright", "Copyright"),
+      createL10nField("Copyright - Title", "copyrightTitle", "Title"),
+      createL10nField("Copyright - Author", "copyrightAuthor", "Author"),
+      createL10nField("Copyright - Year", "copyrightYear", "Year"),
+      createL10nField("Copyright - Source", "copyrightSource", "Source"),
+      createL10nField("Copyright - License", "copyrightLicense", "License"),
+      createL10nField("Copyright - Version", "copyrightVersion", "Version"),
+    ],
   },
 ];

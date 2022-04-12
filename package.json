@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@knight-lab/timelinejs": "^3.8.20",
+    "@radix-ui/react-popover": "^0.1.6",
     "font-color-contrast": "^11.1.0",
     "h5p-types": "github:boyum/h5p-types",
     "react": "^17.0.2",

@@ -58,7 +58,7 @@
       },
       {
         "label": "Copyright",
-        "name": "copyright",
+        "name": "descriptionCopyright",
         "type": "group",
         "widget": "copyright",
         "fields": [
@@ -529,7 +529,7 @@
         },
         {
           "label": "Copyright",
-          "name": "copyright",
+          "name": "descriptionCopyright",
           "type": "group",
           "widget": "copyright",
           "fields": [
@@ -1162,6 +1162,49 @@
     "type": "group",
     "common": true,
     "label": "Localize",
-    "fields": []
+    "fields": [
+      {
+        "label": "Copyright",
+        "name": "copyright",
+        "default": "Copyright",
+        "type": "text"
+      },
+      {
+        "label": "Copyright - Title",
+        "name": "copyrightTitle",
+        "default": "Title",
+        "type": "text"
+      },
+      {
+        "label": "Copyright - Author",
+        "name": "copyrightAuthor",
+        "default": "Author",
+        "type": "text"
+      },
+      {
+        "label": "Copyright - Year",
+        "name": "copyrightYear",
+        "default": "Year",
+        "type": "text"
+      },
+      {
+        "label": "Copyright - Source",
+        "name": "copyrightSource",
+        "default": "Source",
+        "type": "text"
+      },
+      {
+        "label": "Copyright - License",
+        "name": "copyrightLicense",
+        "default": "License",
+        "type": "text"
+      },
+      {
+        "label": "Copyright - Version",
+        "name": "copyrightVersion",
+        "default": "Version",
+        "type": "text"
+      }
+    ]
   }
 ]

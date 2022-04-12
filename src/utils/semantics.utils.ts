@@ -1,4 +1,4 @@
-import { H5PField, H5PFieldGroup, H5PFieldList } from "h5p-types";
+import { H5PField, H5PFieldGroup, H5PFieldList, H5PFieldText } from "h5p-types";
 import { layoutOptions } from "./layout.utils";
 
 export const dateDescription =
@@ -19,9 +19,9 @@ export const scaleValues = {
   },
 };
 
-const copyrightField: H5PFieldGroup = {
+const createCopyrightField = (name: string): H5PFieldGroup => ({
   label: "Copyright",
-  name: "copyright",
+  name,
   type: "group",
   widget: "copyright",
   fields: [
@@ -196,7 +196,7 @@ const copyrightField: H5PFieldGroup = {
       },
     },
   ],
-};
+});
 
 export const tagPaletteValues = [
   [
@@ -441,7 +441,7 @@ export const createTimelineItemFields = (
     widget: "html",
     tags: ["p", "br", "strong", "em", "a"],
   },
-  copyrightField,
+  createCopyrightField("descriptionCopyright"),
   {
     label: "Layout",
     name: "layout",
@@ -659,3 +659,23 @@ export const createTimelineItemFields = (
     ],
   },
 ];
+
+export const createL10nField = (
+  label: string,
+  name: string,
+  defaultValue: string,
+  description?: string,
+): H5PFieldText => {
+  const field: H5PFieldText = {
+    label,
+    name,
+    default: defaultValue,
+    type: "text",
+  };
+
+  if (description) {
+    field.description = description;
+  }
+
+  return field;
+};
