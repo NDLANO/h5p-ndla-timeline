@@ -28,6 +28,106 @@
           "label": "Beskrivelse"
         },
         {
+          "label": "Bruksrettigheter",
+          "fields": [
+            {
+              "label": "Tittel"
+            },
+            {
+              "label": "Forfatter"
+            },
+            {
+              "label": "År"
+            },
+            {
+              "label": "Kilde"
+            },
+            {
+              "label": "Lisens",
+              "options": [
+                {
+                  "label": "Undisclosed"
+                },
+                {
+                  "label": "Attribution"
+                },
+                {
+                  "label": "Attribution-ShareAlike"
+                },
+                {
+                  "label": "Attribution-NoDerivs"
+                },
+                {
+                  "label": "Attribution-NonCommercial"
+                },
+                {
+                  "label": "Attribution-NonCommercial-ShareAlike"
+                },
+                {
+                  "label": "Attribution-NonCommercial-NoDerivs"
+                },
+                {
+                  "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                },
+                {
+                  "label": "General Public License"
+                },
+                {
+                  "label": "Public Domain"
+                },
+                {
+                  "label": "Copyright"
+                }
+              ]
+            },
+            {
+              "label": "Lisensversjon",
+              "options": [
+                {
+                  "label": "4.0 International"
+                },
+                {
+                  "label": "3.0 Unported"
+                },
+                {
+                  "label": "2.5 Generic"
+                },
+                {
+                  "label": "2.0 Generic"
+                },
+                {
+                  "label": "1.0 Generic"
+                }
+              ]
+            },
+            {
+              "label": "Lisensversjon",
+              "options": [
+                {
+                  "label": "Version 3"
+                },
+                {
+                  "label": "Version 2"
+                },
+                {
+                  "label": "Version 1"
+                }
+              ]
+            },
+            {
+              "label": "Lisensversjon",
+              "options": [
+                {
+                  "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                },
+                {
+                  "label": "Public Domain Mark"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "label": "Layout",
           "options": [
             {
@@ -96,7 +196,7 @@
             },
             {
               "label": "Bakgrunnsfarge",
-              "default": "#1d5cff"
+              "default": "#757575"
             },
             {
               "label": "Bakgrunnsbilde"
@@ -136,6 +236,106 @@
           },
           {
             "label": "Beskrivelse"
+          },
+          {
+            "label": "Bruksrettigheter",
+            "fields": [
+              {
+                "label": "Title"
+              },
+              {
+                "label": "Author"
+              },
+              {
+                "label": "Year(s)"
+              },
+              {
+                "label": "Source"
+              },
+              {
+                "label": "License",
+                "options": [
+                  {
+                    "label": "Undisclosed"
+                  },
+                  {
+                    "label": "Attribution"
+                  },
+                  {
+                    "label": "Attribution-ShareAlike"
+                  },
+                  {
+                    "label": "Attribution-NoDerivs"
+                  },
+                  {
+                    "label": "Attribution-NonCommercial"
+                  },
+                  {
+                    "label": "Attribution-NonCommercial-ShareAlike"
+                  },
+                  {
+                    "label": "Attribution-NonCommercial-NoDerivs"
+                  },
+                  {
+                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                  },
+                  {
+                    "label": "General Public License"
+                  },
+                  {
+                    "label": "Public Domain"
+                  },
+                  {
+                    "label": "Copyright"
+                  }
+                ]
+              },
+              {
+                "label": "License Version",
+                "options": [
+                  {
+                    "label": "4.0 International"
+                  },
+                  {
+                    "label": "3.0 Unported"
+                  },
+                  {
+                    "label": "2.5 Generic"
+                  },
+                  {
+                    "label": "2.0 Generic"
+                  },
+                  {
+                    "label": "1.0 Generic"
+                  }
+                ]
+              },
+              {
+                "label": "License Version",
+                "options": [
+                  {
+                    "label": "Version 3"
+                  },
+                  {
+                    "label": "Version 2"
+                  },
+                  {
+                    "label": "Version 1"
+                  }
+                ]
+              },
+              {
+                "label": "License Version",
+                "options": [
+                  {
+                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                  },
+                  {
+                    "label": "Public Domain Mark"
+                  }
+                ]
+              }
+            ]
           },
           {
             "label": "Layout",
@@ -227,7 +427,7 @@
               },
               {
                 "label": "Bakgrunnsfarge",
-                "default": "#1d5cff"
+                "default": "#757575"
               },
               {
                 "label": "Bakgrunnsbilde"
@@ -254,7 +454,7 @@
               },
               {
                 "label": "Farge",
-                "default": "#1d5cff"
+                "default": "#757575"
               }
             ]
           }
@@ -310,7 +510,37 @@
       ]
     },
     {
-      "label": "Oversett"
+      "label": "Oversett",
+      "fields": [
+        {
+          "label": "Bruksrett",
+          "default": "Bruksrett"
+        },
+        {
+          "label": "Bruksrettigheter - Tittel",
+          "default": "Tittel"
+        },
+        {
+          "label": "Bruksrettigheter - Forfatter",
+          "default": "Forfatter"
+        },
+        {
+          "label": "Bruksrettigheter - År",
+          "default": "År"
+        },
+        {
+          "label": "Bruksrettigheter - Kilde",
+          "default": "Kilde"
+        },
+        {
+          "label": "Bruksrettigheter - Lisens",
+          "default": "Lisens"
+        },
+        {
+          "label": "Bruksrettigheter - Versjon",
+          "default": "Versjon"
+        }
+      ]
     }
   ]
 }

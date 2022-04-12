@@ -132,7 +132,7 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
     common: true,
     label: "Localize",
     fields: [
-      createL10nField("Copyright", "copyright", "Copyright"),
+      createL10nField("Rights of use", "copyrightLabel", "Rights of use"),
       createL10nField("Copyright - Title", "copyrightTitle", "Title"),
       createL10nField("Copyright - Author", "copyrightAuthor", "Author"),
       createL10nField("Copyright - Year", "copyrightYear", "Year"),

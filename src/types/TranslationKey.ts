@@ -5,7 +5,7 @@
 // -----------------------------------
 
 export type TranslationKey =
-  | "copyright"
+  | "copyrightLabel"
   | "copyrightTitle"
   | "copyrightAuthor"
   | "copyrightYear"
