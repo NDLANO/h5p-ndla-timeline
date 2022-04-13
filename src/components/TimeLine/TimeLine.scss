@@ -160,6 +160,14 @@
   }
 }
 
+.tl-full-image-background,
+.tl-full-color-background {
+  .h5p-tl-copyright-popover-trigger {
+    color: #fff !important;
+    text-shadow: 1px 1px 1px #000 !important;
+  }
+}
+
 .tl-full-image-background {
   background-color: rgba(0, 0, 0, 0.25) !important;
 }

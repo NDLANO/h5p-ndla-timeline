@@ -40,7 +40,13 @@ export const CopyrightPopover: FC<Params> = ({
       isOpen={isOpen}
       onOpenChange={onOpenChange}
       triggerProps={{
-        children: <span className={styles.trigger}>{copyrightLabel}</span>,
+        children: (
+          <span
+            className={`${styles.trigger} h5p-tl-copyright-popover-trigger`}
+          >
+            {copyrightLabel}
+          </span>
+        ),
         "aria-label": copyrightLabel,
       }}
     >
