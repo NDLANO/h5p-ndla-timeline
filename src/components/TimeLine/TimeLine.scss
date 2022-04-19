@@ -207,18 +207,22 @@
 .tl-slidenav-previous {
   &:hover {
     @media (hover: none) {
-      margin-left: 0 !important;
+      .tl-slidenav-icon {
+        margin-left: 0 !important;
+      }
     }
   }
 }
 
 .tl-slidenav-next {
+  // On hover, the value is set to `5rem` (or rather 80px)
   $margin-left__default: 4.75rem;
-  $margin-left__hover: 5rem;
 
   &:hover {
     @media (hover: none) {
-      margin-left: $margin-left__default !important;
+      .tl-slidenav-icon {
+        margin-left: $margin-left__default !important;
+      }
     }
   }
 }
