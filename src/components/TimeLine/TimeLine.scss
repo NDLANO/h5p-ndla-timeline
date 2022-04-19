@@ -64,19 +64,29 @@
   }
 }
 
-.tl-slide .tl-slide-content-container .tl-slide-content .tl-media {
-  margin-bottom: 0 !important;
-  margin-top: 0 !important;
-}
+.tl-slide {
+  .tl-slide-content-container {
+    .tl-slide-content {
+      padding-bottom: 1rem;
+      padding-top: 1rem;
 
-.tl-slide .tl-slide-content-container .tl-slide-content .tl-text {
-  margin-bottom: auto !important;
-  margin-top: auto !important;
-}
+      .tl-skinny & {
+        box-sizing: border-box;
+        padding-left: 3.125rem !important;
+        padding-right: 3.125rem !important;
+      }
 
-.tl-slide-content {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+      .tl-media {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+      }
+
+      .tl-text {
+        margin-bottom: auto !important;
+        margin-top: auto !important;
+      }
+    }
+  }
 }
 
 .tl-timeaxis {
@@ -217,11 +227,16 @@
 .tl-slidenav-next {
   // On hover, the value is set to `5rem` (or rather 80px)
   $margin-left__default: 4.75rem;
+  $margin-left__skinny: 0.75rem;
 
   &:hover {
     @media (hover: none) {
       .tl-slidenav-icon {
         margin-left: $margin-left__default !important;
+
+        .tl-skinny & {
+          margin-left: $margin-left__skinny !important;
+        }
       }
     }
   }
