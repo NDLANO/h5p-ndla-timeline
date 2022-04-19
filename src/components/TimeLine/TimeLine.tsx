@@ -1,4 +1,5 @@
 import { Timeline } from "@knight-lab/timelinejs";
+import { Copyright } from "h5p-types";
 import * as React from "react";
 import { useContext, useEffect, useRef, useState } from "react";
 import { hydrate } from "react-dom";
@@ -133,7 +134,18 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     Array.from(
       container.querySelectorAll<HTMLElement>(".h5p-tl-copyright-information"),
     ).forEach(element => {
-      const copyright = JSON.parse(element.dataset.copyright ?? "{}");
+      let copyright: Copyright = {};
+
+      try {
+        copyright = JSON.parse(element.dataset.copyright ?? "{}");
+
+        if (copyright.source) {
+          // See `CopyrightInformation.tsx`
+          copyright.source = copyright.source.replace("h_t_t_p", "http");
+        }
+      } catch (error) {
+        console.error(error);
+      }
 
       hydrate(
         <L10nContext.Provider value={translations}>
