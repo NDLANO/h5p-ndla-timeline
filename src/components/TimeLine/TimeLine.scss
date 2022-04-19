@@ -204,21 +204,22 @@
   }
 }
 
-/**
- * {1} Move slidenav icon less to the left than initially to fix an overflow issue on Android tablets
- */
 .tl-slidenav-previous {
-  .tl-slidenav-icon {
-    margin-left: 0; /* {1} */
+  &:hover {
+    @media (hover: none) {
+      margin-left: 0 !important;
+    }
   }
 }
 
-/**
- * {1} Move slidenav icon less to the right than initially to fix an overflow issue on Android tablets
- */
 .tl-slidenav-next {
-  .tl-slidenav-icon {
-    margin-left: 3.75rem; /* {1} */
+  $margin-left__default: 4.75rem;
+  $margin-left__hover: 5rem;
+
+  &:hover {
+    @media (hover: none) {
+      margin-left: $margin-left__default !important;
+    }
   }
 }
 
