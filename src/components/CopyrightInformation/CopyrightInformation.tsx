@@ -8,10 +8,25 @@ type Params = { copyright: Copyright };
 export const CopyrightInformation: FC<Params> = ({ copyright }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const encodedCopyright: Copyright = {
+    ...copyright,
+  };
+
+  if (encodedCopyright.source) {
+    // TimelineJS will replace any url with a `<a href="{link}">{link}</a>`.
+    // We don't want that to happen with our serialized copyright.
+    encodedCopyright.source = encodedCopyright.source.replace(
+      "http",
+      "h_t_t_p",
+    );
+  }
+
+  const serializedCopyright = JSON.stringify(encodedCopyright);
+
   return (
     <div
       className="h5p-tl-copyright-information"
-      data-copyright={JSON.stringify(copyright)}
+      data-copyright={serializedCopyright}
     >
       <CopyrightPopover
         isOpen={isOpen}

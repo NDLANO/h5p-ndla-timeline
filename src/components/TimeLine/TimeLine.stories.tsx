@@ -113,6 +113,10 @@ const defaultArgs: TimeLineProps = {
         slideType: "regular",
         title: "Ada Lovelace",
         description: `<p>Women have been programming since before it was a thing. Take <a href="https://en.wikipedia.org/wiki/Ada_Lovelace">Ada Lovelace</a>: Daughter of Lord Byron, she's often credited as the first computer programmer. Her work on <a href="https://en.wikipedia.org/wiki/Analytical_Engine">Charles Babbage's Analytical Engine</a> contains notes of the first machine-implemented algorithm.</p><span class="tl-note">This slide demonstrates a simple "image" media type.</span>`,
+        descriptionCopyright: {
+          author: "Wikimedia Common",
+          license: "ISC",
+        },
         startDate: "1815-12-10",
         endDate: "1852-11-27",
         image: {
@@ -150,6 +154,14 @@ const defaultArgs: TimeLineProps = {
         title: "...And the women who made it work",
         description: `<p>The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth "Betty" Holberton. Despite their groundbreaking work, the Army never released the names of the women who worked on the ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.</p> <span class="tl-note">You can add a YouTube URL like this video on the ENIAC Women.
         .</span>`,
+        descriptionCopyright: {
+          author: "Lorem Ipsum",
+          license: "ISC",
+          source: "https://www.youtube.com/watch?v=aPweFhhXFvY",
+          title: "Title",
+          version: "2.0",
+          year: "1950",
+        },
         startDate: "1943-7",
         endDate: "1946",
         customMedia: "https://www.youtube.com/watch?v=aPweFhhXFvY",
