@@ -64,19 +64,29 @@
   }
 }
 
-.tl-slide .tl-slide-content-container .tl-slide-content .tl-media {
-  margin-bottom: 0 !important;
-  margin-top: 0 !important;
-}
+.tl-slide {
+  .tl-slide-content-container {
+    .tl-slide-content {
+      padding-bottom: 1rem;
+      padding-top: 1rem;
 
-.tl-slide .tl-slide-content-container .tl-slide-content .tl-text {
-  margin-bottom: auto !important;
-  margin-top: auto !important;
-}
+      .tl-skinny & {
+        box-sizing: border-box;
+        padding-left: 3.125rem !important;
+        padding-right: 3.125rem !important;
+      }
 
-.tl-slide-content {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+      .tl-media {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+      }
+
+      .tl-text {
+        margin-bottom: auto !important;
+        margin-top: auto !important;
+      }
+    }
+  }
 }
 
 .tl-timeaxis {
@@ -188,6 +198,8 @@
  */
 .tl-slidenav-previous,
 .tl-slidenav-next {
+  display: block !important;
+
   .tl-slidenav-title,
   .tl-slidenav-description {
     font-size: 0.6875rem !important; /* {1} */
@@ -204,21 +216,39 @@
   }
 }
 
-/**
- * {1} Move slidenav icon less to the left than initially to fix an overflow issue on Android tablets
- */
 .tl-slidenav-previous {
-  .tl-slidenav-icon {
-    margin-left: 0; /* {1} */
+  &:hover {
+    @media (hover: none) {
+      .tl-slidenav-icon {
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  .h5p-tl-slide-is-start & {
+    display: none !important;
   }
 }
 
-/**
- * {1} Move slidenav icon less to the right than initially to fix an overflow issue on Android tablets
- */
 .tl-slidenav-next {
-  .tl-slidenav-icon {
-    margin-left: 3.75rem; /* {1} */
+  // On hover, the value is set to `5rem` (or rather 80px)
+  $margin-left__default: 4.75rem;
+  $margin-left__skinny: 0.5rem;
+
+  &:hover {
+    @media (hover: none) {
+      .tl-slidenav-icon {
+        margin-left: $margin-left__default !important;
+
+        .tl-skinny & {
+          margin-left: $margin-left__skinny !important;
+        }
+      }
+    }
+  }
+
+  .h5p-tl-slide-is-end & {
+    display: none !important;
   }
 }
 

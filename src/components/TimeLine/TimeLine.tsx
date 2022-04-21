@@ -155,6 +155,61 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       );
     });
 
+    const startClass = "h5p-tl-slide-is-start";
+    const endClass = "h5p-tl-slide-is-end";
+
+    const timelineElement =
+      container.querySelector<HTMLElement>(".tl-timeline");
+
+    const timeMarkers = Array.from(
+      container.querySelectorAll<HTMLDivElement>(".tl-timemarker"),
+    );
+
+    const timeMarkerObservers = timeMarkers.map(
+      (timeMarker, index): MutationObserver => {
+        const observer = new MutationObserver(changes => {
+          for (const change of changes) {
+            const classListWasChanged = change.attributeName === "class";
+            if (!classListWasChanged) {
+              continue;
+            }
+
+            const isStartTimeMarker = index === 0;
+            if (isStartTimeMarker) {
+              const timelineIsAtStart = timeMarker.classList.contains(
+                "tl-timemarker-active",
+              );
+
+              if (timelineIsAtStart) {
+                timelineElement?.classList.add(startClass);
+              } else {
+                timelineElement?.classList.remove(startClass);
+              }
+            }
+
+            const isEndTimeMarker = index === timeMarkers.length - 1;
+            if (isEndTimeMarker) {
+              const timelineIsAtEnd = timeMarker.classList.contains(
+                "tl-timemarker-active",
+              );
+
+              if (timelineIsAtEnd) {
+                timelineElement?.classList.add(endClass);
+              } else {
+                timelineElement?.classList.remove(endClass);
+              }
+            }
+          }
+        });
+
+        observer.observe(timeMarker, {
+          attributes: true,
+        });
+
+        return observer;
+      },
+    );
+
     const slideTextElements =
       container.querySelectorAll<HTMLDivElement>(".tl-text");
     addTabIndexToScrollableElements(slideTextElements);
@@ -182,6 +237,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     observer.observe(slideContainer);
 
     return () => {
+      timeMarkerObservers.forEach(obs => obs.disconnect());
       observer.disconnect();
     };
   }, [timelineIsRendered, translations]);
@@ -195,14 +251,16 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     style["--h5p-timeline-slide-height"] = `${slideHeight}px`;
   }
 
+  const className = [
+    "h5p-timeline-wrapper",
+    classNames,
+    slideWidth > 1180 ? `timeline-large-text` : undefined,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <div
-      ref={containerRef}
-      className={`h5p-timeline-wrapper ${classNames ?? ""} ${
-        slideWidth > 1180 ? `timeline-large-text` : ""
-      }`}
-      style={style}
-    >
+    <div ref={containerRef} className={className} style={style}>
       <div id={containerId} />
     </div>
   );

@@ -331,6 +331,11 @@ export const WomenInComputingIndexed: ComponentStory<typeof TimeLine> = () => {
         startDate: index.toString(),
         endDate: undefined,
       })),
+      eras: defaultArgs.data.eras?.map((era, index) => ({
+        ...era,
+        startDate: index.toString(),
+        endDate: (index + 1).toString(),
+      })),
       behaviour: {
         ...defaultArgs.data.behaviour,
         scalingMode: "index",
