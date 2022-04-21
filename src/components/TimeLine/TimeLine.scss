@@ -198,6 +198,8 @@
  */
 .tl-slidenav-previous,
 .tl-slidenav-next {
+  display: block !important;
+
   .tl-slidenav-title,
   .tl-slidenav-description {
     font-size: 0.6875rem !important; /* {1} */
@@ -222,12 +224,16 @@
       }
     }
   }
+
+  .h5p-tl-slide-is-start & {
+    display: none !important;
+  }
 }
 
 .tl-slidenav-next {
   // On hover, the value is set to `5rem` (or rather 80px)
   $margin-left__default: 4.75rem;
-  $margin-left__skinny: 0.75rem;
+  $margin-left__skinny: 0.5rem;
 
   &:hover {
     @media (hover: none) {
@@ -239,6 +245,10 @@
         }
       }
     }
+  }
+
+  .h5p-tl-slide-is-end & {
+    display: none !important;
   }
 }
 
