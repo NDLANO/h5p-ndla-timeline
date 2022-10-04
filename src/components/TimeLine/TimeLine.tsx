@@ -155,6 +155,25 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       );
     });
 
+    /*
+     * TimelineJS replaces strings that hold a URL with everything but the
+     * protocol and wraps it into an anchor tag. That behavior is not desired
+     * here. When TimelineJS is done, the DOM elements are replaced.
+     */
+    Array.from(
+      container.querySelectorAll<HTMLAnchorElement>(
+        ".h5p-tl-slide-description p a.tl-makelink",
+      ),
+    ).forEach(element => {
+      const parent: HTMLElement | null = element.parentElement;
+      if (parent) {
+        parent.innerHTML = parent.innerHTML.replace(
+          element.outerHTML,
+          element.href,
+        );
+      }
+    });
+
     const startClass = "h5p-tl-slide-is-start";
     const endClass = "h5p-tl-slide-is-end";
 
