@@ -24,7 +24,7 @@
     "watch-semantics": "nodemon generate-semantics.ts"
   },
   "dependencies": {
-    "@knight-lab/timelinejs": "^3.8.21",
+    "@knight-lab/timelinejs": "^3.9.0",
     "@radix-ui/react-popover": "^0.1.6",
     "font-color-contrast": "^11.1.0",
     "h5p-types": "github:boyum/h5p-types",
