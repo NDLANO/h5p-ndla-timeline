@@ -4,6 +4,7 @@ export type MediaType =
   | {
       mediaType: "image";
       image?: Image;
+      imageAlt?: string;
     }
   | {
       mediaType: "video";

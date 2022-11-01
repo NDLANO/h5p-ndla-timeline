@@ -170,6 +170,7 @@ export const mapEventToTimelineSlide = (
   if (media) {
     slide.media = {
       url: typeof media === "string" ? media : media.path,
+      alt: event.mediaType === "image" ? event.imageAlt : undefined,
     };
   }
 
