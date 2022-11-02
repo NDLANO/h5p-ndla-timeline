@@ -165,6 +165,10 @@
           "label": "Image"
         },
         {
+          "label": "Alternative text",
+          "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
+        },
+        {
           "label": "Video"
         },
         {
@@ -373,6 +377,10 @@
           },
           {
             "label": "Image"
+          },
+          {
+            "label": "Alternative text",
+            "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
           },
           {
             "label": "Video"

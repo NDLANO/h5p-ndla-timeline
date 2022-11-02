@@ -297,6 +297,21 @@
         }
       },
       {
+        "label": "Alternative text",
+        "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers.",
+        "name": "imageAlt",
+        "type": "text",
+        "widget": "NDLAShowWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "mediaType",
+              "equals": "image"
+            }
+          ]
+        }
+      },
+      {
         "label": "Video",
         "name": "video",
         "type": "video",
@@ -757,6 +772,21 @@
           "label": "Image",
           "name": "image",
           "type": "image",
+          "widget": "NDLAShowWhen",
+          "showWhen": {
+            "rules": [
+              {
+                "field": "mediaType",
+                "equals": "image"
+              }
+            ]
+          }
+        },
+        {
+          "label": "Alternative text",
+          "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers.",
+          "name": "imageAlt",
+          "type": "text",
           "widget": "NDLAShowWhen",
           "showWhen": {
             "rules": [

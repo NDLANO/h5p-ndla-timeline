@@ -165,6 +165,10 @@
           "label": "Bilete"
         },
         {
+          "label": "Alternativ tekst",
+          "description": "Viss biletet ikkje kan lastast, blir denne teksten vist i istadenfor. Denne blir og nytta ved talesyntese."
+        },
+        {
           "label": "Video"
         },
         {
@@ -373,6 +377,10 @@
           },
           {
             "label": "Bilete"
+          },
+          {
+            "label": "Alternativ tekst",
+            "description": "Viss biletet ikkje kan lastast, blir denne teksten vist i istadenfor. Denne blir og nytta ved talesyntese."
           },
           {
             "label": "Video"

@@ -165,6 +165,10 @@
           "label": "Bilde"
         },
         {
+          "label": "Alternativ tekst",
+          "description": "Påkrevd. Hvis bildet ikke kan lastes vises denne teksten istedenfor. Denne blir også brukt ved talesyntese."
+        },
+        {
           "label": "Video"
         },
         {
@@ -373,6 +377,10 @@
           },
           {
             "label": "Bilde"
+          },
+          {
+            "label": "Alternativ tekst",
+            "description": "Påkrevd. Hvis bildet ikke kan lastes vises denne teksten istedenfor. Denne blir også brukt ved talesyntese."
           },
           {
             "label": "Video"
