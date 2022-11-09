@@ -32,7 +32,11 @@
   
   .tl-text .tl-headline-date, .tl-text h3.tl-headline-date {
     color: #000 !important;
-}
+  }
+
+  .tl-icon-image, .tl-slidenav-title, .tl-slidenav-description {
+    display:none !important;
+  }
 
   /**
  * Fade fullscreen button in after the timeline has settled.
