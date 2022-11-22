@@ -37,6 +37,10 @@
   .tl-icon-image, .tl-slidenav-title, .tl-slidenav-description {
     display:none !important;
   }
+  
+  .tl-slide {
+    overflow-y: hidden !important;
+  }
 
   /**
  * Fade fullscreen button in after the timeline has settled.
