@@ -13,29 +13,51 @@
   .tl-slide-content {
     max-width: 80rem !important;
   }
-  
+
   .tl-menubar-button {
-      color: #000 !important;
-  }
-  
-  .tl-timenav .tl-attribution a {
-    color: #000 !important;
-  }
-  
-  .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container [class^="tl-icon-"], .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container [class*=" tl-icon-"] {
-    color: #000 !important;
-  }
-  
-  .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline, .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline p {
-    color: #000 !important;
-  }
-  
-  .tl-text .tl-headline-date, .tl-text h3.tl-headline-date {
     color: #000 !important;
   }
 
-  .tl-icon-image, .tl-slidenav-title, .tl-slidenav-description {
-    display:none !important;
+  .tl-timenav .tl-attribution a {
+    color: #000 !important;
+  }
+
+  .tl-timemarker
+    .tl-timemarker-content-container
+    .tl-timemarker-content
+    .tl-timemarker-media-container
+    [class^="tl-icon-"],
+  .tl-timemarker
+    .tl-timemarker-content-container
+    .tl-timemarker-content
+    .tl-timemarker-media-container
+    [class*=" tl-icon-"] {
+    color: #000 !important;
+  }
+
+  .tl-timemarker
+    .tl-timemarker-content-container
+    .tl-timemarker-content
+    .tl-timemarker-text
+    h2.tl-headline,
+  .tl-timemarker
+    .tl-timemarker-content-container
+    .tl-timemarker-content
+    .tl-timemarker-text
+    h2.tl-headline
+    p {
+    color: #000 !important;
+  }
+
+  .tl-text .tl-headline-date,
+  .tl-text h3.tl-headline-date {
+    color: #000 !important;
+  }
+
+  .tl-icon-image,
+  .tl-slidenav-title,
+  .tl-slidenav-description {
+    display: none !important;
   }
 
   @media (min-width: 667px) {
