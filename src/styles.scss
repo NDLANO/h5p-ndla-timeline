@@ -37,9 +37,17 @@
   .tl-icon-image, .tl-slidenav-title, .tl-slidenav-description {
     display:none !important;
   }
-  
-  .tl-slide {
-    overflow-y: hidden !important;
+
+  @media (min-width: 667px) {
+    .tl-slide {
+      overflow-y: hidden !important;
+    }
+  }
+
+  @media (max-width: 666px) {
+    .tl-text {
+      overflow: hidden;
+    }
   }
 
   /**
