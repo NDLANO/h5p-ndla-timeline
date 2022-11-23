@@ -1,4 +1,4 @@
-import { H5PExtras } from "h5p-types";
+import { H5PExtras, H5PContentId } from "h5p-types";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { App } from "../App";
@@ -13,6 +13,8 @@ export class H5PWrapper extends H5P.EventDispatcher {
 
   private params: Params;
 
+  private contentId: H5PContentId;
+
   private extras: H5PExtras;
 
   constructor(params: Params, contentId: string, extras: H5PExtras) {
@@ -22,6 +24,7 @@ export class H5PWrapper extends H5P.EventDispatcher {
     updatePaths(params, contentId);
 
     this.params = params;
+    this.contentId = contentId;
     this.extras = extras;
   }
 
@@ -42,7 +45,13 @@ export class H5PWrapper extends H5P.EventDispatcher {
     ReactDOM.render(
       <H5PContainerContext.Provider value={containerElement}>
         <LocalizationContext.Provider value={l10n}>
-          {this.params ? <App title={title} params={this.params} /> : null}
+          {this.params ? (
+            <App
+              title={title}
+              params={this.params}
+              contentId={this.contentId}
+            />
+          ) : null}
         </LocalizationContext.Provider>
       </H5PContainerContext.Provider>,
       this.wrapper,

@@ -13,9 +13,11 @@
     "downlevelIteration": true,
     "strictNullChecks": true,
     "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["./src/**/*", "typings.d.ts"],
+  "include": ["./src/**/*", "typings.d.ts", "library.json"],
   "ts-node": {
     "compilerOptions": {
       "module": "NodeNext"

@@ -102,6 +102,7 @@ const tags: Record<string, Tag> = {
 };
 
 const defaultArgs: TimeLineProps = {
+  contentId: "1",
   timelineTitle: "Women in Computing",
   data: {
     titleSlide,
@@ -347,6 +348,7 @@ export const WomenInComputingIndexed: ComponentStory<typeof TimeLine> = () => {
 
 export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
   const args: TimeLineProps = {
+    contentId: "1",
     timelineTitle: "Tales of Âu Lạc",
     data: {
       showTitleSlide: true,
