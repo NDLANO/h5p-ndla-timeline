@@ -164,6 +164,20 @@ declare module "@knight-lab/timelinejs" {
       timelineDefinition: TimelineDefinition,
       options: ITimeLineConfiguration,
     );
+
+    _storyslider: {
+      _slides: [
+        {
+          data: { unique_id: string };
+          _media: {
+            _el: { content: HTMLElement };
+            on: (type: string, callback: () => void, context?: object) => void;
+          } | null;
+        },
+      ];
+    };
+
+    on: (type: string, callback: () => void, context?: object) => void;
   }
 }
 

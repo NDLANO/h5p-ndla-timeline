@@ -1,11 +1,13 @@
+/* TimelineJS uses dangling underscore */
+/* eslint-disable no-underscore-dangle */
+import { H5PContentId, Copyright, IH5PContentType, Media } from "h5p-types";
 import { Timeline } from "@knight-lab/timelinejs";
-import { Copyright } from "h5p-types";
 import * as React from "react";
 import { useContext, useEffect, useRef, useState } from "react";
 import { hydrate } from "react-dom";
 import { useEffectOnce } from "react-use";
 import { L10nContext } from "../../contexts/LocalizationContext";
-import { H5P } from "../../H5P/H5P.util";
+import { H5P, buildH5PMediaInstance } from "../../H5P/H5P.util";
 import { useH5PFullscreenChange } from "../../hooks/useH5PFullscreenChange";
 import { Params } from "../../types/Params";
 import {
@@ -19,11 +21,13 @@ import "./TimeLine.scss";
 type TimeLineProps = {
   data: Params;
   timelineTitle: string;
+  contentId: H5PContentId;
 };
 
 export const TimeLine: React.FC<TimeLineProps> = ({
   data,
   timelineTitle,
+  contentId,
 }: TimeLineProps) => {
   const [timelineDefinition, classNames] = React.useMemo(
     () => createTimelineDefinition(timelineTitle, data),
@@ -40,9 +44,29 @@ export const TimeLine: React.FC<TimeLineProps> = ({
 
   const aspectRatio = 16 / 9;
 
+  const h5pMediaInstances: { [index: string]: IH5PContentType | null } = {};
+
+  useEffectOnce(() => {
+    // Build lookup table for slide id => H5P media instance
+    [data?.titleSlide, ...(data.timelineItems || [])].forEach(item => {
+      if (!item) {
+        return;
+      }
+
+      const medium: Array<Media> | null =
+        item.mediaType === "video" && item.video?.[0].path ? item.video : null;
+
+      h5pMediaInstances[item.id] = buildH5PMediaInstance(
+        contentId,
+        medium,
+        "H5P.Video",
+      );
+    });
+  });
+
   useEffectOnce(() => {
     // eslint-disable-next-line no-new
-    new Timeline(containerId, timelineDefinition, {
+    const timeline = new Timeline(containerId, timelineDefinition, {
       language: getClosestLocaleCode(containerRef.current),
     });
 
@@ -50,25 +74,39 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       `#${containerId}`,
     );
 
-    if (timelineContainer) {
-      const mutationObserver = new MutationObserver(changes => {
-        changes.forEach(() => {
-          if (!timelineContainer) {
+    // Timeline sends out events. No need for Mutation observers.
+    timeline.on("loaded", () => {
+      if (!timelineContainer) {
+        return;
+      }
+
+      /*
+       * Wait for each slide to be loaded to replace original medium
+       * with H5P media instance
+       */
+      timeline._storyslider._slides.forEach(slide => {
+        if (!slide._media || !h5pMediaInstances[slide.data.unique_id]) {
+          return; // No medium or no H5P override, skip
+        }
+
+        slide._media.on("loaded", () => {
+          const mediaContentDOM = slide._media?._el?.content;
+          if (!mediaContentDOM) {
             return;
           }
 
-          const nodeNowHasElements = timelineContainer.childElementCount > 0;
-          if (nodeNowHasElements) {
-            setTimelineIsRendered(true);
-            mutationObserver.disconnect();
+          while (mediaContentDOM.firstChild) {
+            mediaContentDOM.removeChild(mediaContentDOM.firstChild);
           }
+
+          h5pMediaInstances[slide.data.unique_id]?.attach(
+            H5P.jQuery(mediaContentDOM),
+          );
         });
       });
 
-      mutationObserver.observe(timelineContainer, {
-        childList: true,
-      });
-    }
+      setTimelineIsRendered(true);
+    });
   });
 
   useEffect(() => {

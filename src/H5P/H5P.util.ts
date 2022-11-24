@@ -1,7 +1,8 @@
-import { H5PObject } from "h5p-types";
+import { H5PObject, IH5PContentType, Media, H5PContentId } from "h5p-types";
 import { EventItemType } from "../types/EventItemType";
 import { Params } from "../types/Params";
 import { SlideType } from "../types/SlideType";
+import libraryJSON from "../../library.json";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const H5P: H5PObject = (window as any).H5P ?? {};
@@ -68,4 +69,58 @@ export function updatePaths(params: Params, contentId: string): void {
   }
 
   params.timelineItems?.forEach(item => updateEventPaths(item, contentId));
+}
+
+/* Retrieve full machine name incl. version number from library dependency */
+export function getFullMachineName(machineName: string): string | null {
+  if (!libraryJSON?.preloadedDependencies) {
+    return null;
+  }
+
+  const finding = libraryJSON.preloadedDependencies.find(
+    dependency => dependency.machineName === machineName,
+  );
+  if (
+    !finding ||
+    !finding.machineName ||
+    !finding.majorVersion ||
+    !finding.minorVersion
+  ) {
+    return null;
+  }
+
+  return `${finding.machineName} ${finding.majorVersion}.${finding.minorVersion}`;
+}
+
+/* Build H5P media instance from parameters */
+export function buildH5PMediaInstance(
+  contentId: H5PContentId,
+  media: Array<Media> | null,
+  machineName: string,
+): IH5PContentType | null {
+  if (media === null) {
+    return null;
+  }
+
+  if (machineName === "H5P.Video") {
+    return H5P.newRunnable(
+      {
+        library: getFullMachineName(machineName) || machineName, // Last resort
+        params: {
+          sources: media,
+          visuals: {
+            fit: !(media[0].mime === "video/YouTube"),
+            controls: true,
+          },
+          playback: {
+            autoplay: false,
+            loop: false,
+          },
+        },
+      },
+      contentId,
+    );
+  }
+
+  return null;
 }
