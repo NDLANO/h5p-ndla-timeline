@@ -2,6 +2,7 @@
 /* eslint-disable no-underscore-dangle */
 import { H5PContentId, Copyright, IH5PContentType, Media } from "h5p-types";
 import { Timeline } from "@knight-lab/timelinejs";
+import type { TimelineSlide } from "@knight-lab/timelinejs";
 import * as React from "react";
 import { useContext, useEffect, useRef, useState } from "react";
 import { hydrate } from "react-dom";
@@ -47,8 +48,23 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   const h5pMediaInstances: { [index: string]: IH5PContentType | null } = {};
 
   useEffectOnce(() => {
+    if (typeof timelineDefinition === "string") {
+      return; // Edge case
+    }
+
+    /*
+     * Retrieve modified IDs - hack of a hack that should have been cleaned up
+     * cmp. mapEventToTimelineSlide in timeline.utils.tsx
+     */
+    const modifiedIds: Array<string> = [
+      timelineDefinition?.title?.unique_id ?? "",
+      ...timelineDefinition.events.map(
+        (event: TimelineSlide) => event.unique_id ?? "",
+      ),
+    ];
+
     // Build lookup table for slide id => H5P media instance
-    [data?.titleSlide, ...(data.timelineItems || [])].forEach(item => {
+    [data?.titleSlide, ...(data.timelineItems || [])].forEach((item, index) => {
       if (!item) {
         return;
       }
@@ -56,7 +72,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       const medium: Array<Media> | null =
         item.mediaType === "video" && item.video?.[0].path ? item.video : null;
 
-      h5pMediaInstances[item.id] = buildH5PMediaInstance(
+      h5pMediaInstances[modifiedIds[index]] = buildH5PMediaInstance(
         contentId,
         medium,
         "H5P.Video",
