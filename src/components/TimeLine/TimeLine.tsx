@@ -1,6 +1,12 @@
 /* TimelineJS uses dangling underscore */
 /* eslint-disable no-underscore-dangle */
-import { H5PContentId, Copyright, IH5PContentType, Media } from "h5p-types";
+import {
+  H5PContentId,
+  Copyright,
+  IH5PContentType,
+  Media,
+  EventDispatcher,
+} from "h5p-types";
 import { Timeline } from "@knight-lab/timelinejs";
 import type { TimelineSlide } from "@knight-lab/timelinejs";
 import * as React from "react";
@@ -23,12 +29,14 @@ type TimeLineProps = {
   data: Params;
   timelineTitle: string;
   contentId: H5PContentId;
+  onMediaInstanceBuilt: (instance: EventDispatcher) => void;
 };
 
 export const TimeLine: React.FC<TimeLineProps> = ({
   data,
   timelineTitle,
   contentId,
+  onMediaInstanceBuilt,
 }: TimeLineProps) => {
   const [timelineDefinition, classNames] = React.useMemo(
     () => createTimelineDefinition(timelineTitle, data),
@@ -72,11 +80,16 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       const medium: Array<Media> | null =
         item.mediaType === "video" && item.video?.[0].path ? item.video : null;
 
-      h5pMediaInstances[modifiedIds[index]] = buildH5PMediaInstance(
+      const h5pMediaInstance: IH5PContentType | null = buildH5PMediaInstance(
         contentId,
         medium,
         "H5P.Video",
       );
+
+      if (h5pMediaInstance !== null) {
+        h5pMediaInstances[modifiedIds[index]] = h5pMediaInstance;
+        onMediaInstanceBuilt(h5pMediaInstance);
+      }
     });
   });
 
