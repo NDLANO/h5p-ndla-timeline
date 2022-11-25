@@ -102,6 +102,9 @@ const tags: Record<string, Tag> = {
 };
 
 const defaultArgs: TimeLineProps = {
+  onMediaInstanceBuilt: () => {
+    // Intentionally left blank
+  },
   contentId: "1",
   timelineTitle: "Women in Computing",
   data: {
@@ -348,6 +351,9 @@ export const WomenInComputingIndexed: ComponentStory<typeof TimeLine> = () => {
 
 export const TalesOfAuLac: ComponentStory<typeof TimeLine> = () => {
   const args: TimeLineProps = {
+    onMediaInstanceBuilt: () => {
+      // Intentionally left blank
+    },
     contentId: "1",
     timelineTitle: "Tales of Âu Lạc",
     data: {

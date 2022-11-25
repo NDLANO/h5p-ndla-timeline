@@ -109,7 +109,7 @@ export function buildH5PMediaInstance(
         params: {
           sources: media,
           visuals: {
-            fit: !(media[0].mime === "video/YouTube"),
+            fit: false,
             controls: true,
           },
           playback: {
