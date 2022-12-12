@@ -7,3 +7,7 @@ package.json
 package-lock.json
 README.md
 webpack.config.js
+storybook-static
+babel.config.js
+nodemon.json
+tsconfig.json
