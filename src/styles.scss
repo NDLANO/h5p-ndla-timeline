@@ -4,6 +4,10 @@
    */
   .h5p-content-controls {
     z-index: 10; /* {1} */
+
+    .h5p-enable-fullscreen {
+      background: #737373;
+    }
   }
 
   .tl-slide .tl-slide-scrollable-container {
@@ -14,39 +18,64 @@
     max-width: 80rem !important;
   }
 
-  .tl-menubar-button {
-    color: #000 !important;
+  .tl-menubar-button:not(:disabled) {
+    color: #000;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .tl-menubar-button:disabled {
+    color: #666;
+    opacity: 1;
   }
 
   .tl-timenav .tl-attribution a {
     color: #000 !important;
   }
 
-  .tl-timemarker
-    .tl-timemarker-content-container
-    .tl-timemarker-content
-    .tl-timemarker-media-container
-    [class^="tl-icon-"],
-  .tl-timemarker
-    .tl-timemarker-content-container
-    .tl-timemarker-content
-    .tl-timemarker-media-container
-    [class*=" tl-icon-"] {
-    color: #000 !important;
+  .tl-timemarker:not(:hover),
+  .tl-timemarker.tl-timemarker-active {
+    .tl-timemarker-content-container .tl-timemarker-content {
+      .tl-timemarker-media-container {
+        [class^="tl-icon-"],
+        [class*=" tl-icon-"] {
+          color: #000;
+        }
+      }
+
+      .tl-timemarker-text {
+        h2.tl-headline {
+          color: #000;
+
+          p {
+            color: #000;
+          }
+        }
+      }
+    }
   }
 
-  .tl-timemarker
-    .tl-timemarker-content-container
-    .tl-timemarker-content
-    .tl-timemarker-text
-    h2.tl-headline,
-  .tl-timemarker
-    .tl-timemarker-content-container
-    .tl-timemarker-content
-    .tl-timemarker-text
-    h2.tl-headline
-    p {
-    color: #000 !important;
+  .tl-timemarker:not(.tl-timemarker-active):hover {
+    .tl-timemarker-content-container .tl-timemarker-content {
+      .tl-timemarker-media-container {
+        [class^="tl-icon-"],
+        [class*=" tl-icon-"] {
+          color: #fff;
+        }
+      }
+
+      .tl-timemarker-text {
+        h2.tl-headline {
+          color: #fff;
+
+          p {
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 
   .tl-text .tl-headline-date,
@@ -58,6 +87,17 @@
   .tl-slidenav-title,
   .tl-slidenav-description {
     display: none !important;
+  }
+
+  .tl-timeaxis
+    .tl-timeaxis-content-container
+    .tl-timeaxis-minor
+    .tl-timeaxis-tick {
+    color: #404040;
+  }
+
+  .tl-timeline .tl-attribution a {
+    color: #666;
   }
 
   @media (min-width: 667px) {
