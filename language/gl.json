@@ -1,0 +1,548 @@
+{
+  "semantics": [
+    {
+      "label": "Mostrar a diapositiva do título"
+    },
+    {
+      "fields": [
+        {
+          "label": "Id"
+        },
+        {
+          "label": "Tipo de diapositiva",
+          "default": "título"
+        },
+        {
+          "label": "Título"
+        },
+        {
+          "label": "Data de inicio",
+          "description": "AAAA-MM-DD: só é necesario o ano. Os anos poden ser negativos."
+        },
+        {
+          "label": "Data de fin",
+          "description": "AAAA-MM-DD: só é necesario o ano. Os anos poden ser negativos."
+        },
+        {
+          "label": "Descrición"
+        },
+        {
+          "label": "Dereitos de uso",
+          "fields": [
+            {
+              "label": "Título"
+            },
+            {
+              "label": "Autor"
+            },
+            {
+              "label": "Ano(s)"
+            },
+            {
+              "label": "Fonte"
+            },
+            {
+              "label": "Licenza",
+              "options": [
+                {
+                  "label": "Non revelado"
+                },
+                {
+                  "label": "Recoñecemento"
+                },
+                {
+                  "label": "Recoñecemento-Compartir igual"
+                },
+                {
+                  "label": "Recoñecement-Sen derivados"
+                },
+                {
+                  "label": "Recoñecemento-Non comercial"
+                },
+                {
+                  "label": "Recoñecemento-Non comercial-Compartir igual"
+                },
+                {
+                  "label": "Recoñecemento-Non comercial-Sen derivados"
+                },
+                {
+                  "label": "CC0 1.0 Universal (CC0 1.0) Dedicación de dominio público"
+                },
+                {
+                  "label": "Licenza Pública Xeral"
+                },
+                {
+                  "label": "Dominio público"
+                },
+                {
+                  "label": "Copyright"
+                }
+              ]
+            },
+            {
+              "label": "Versión da licenza",
+              "options": [
+                {
+                  "label": "4.0 internacional"
+                },
+                {
+                  "label": "3.0 Non adaptado"
+                },
+                {
+                  "label": "2.5 Xenérico"
+                },
+                {
+                  "label": "2.0 Xenérico"
+                },
+                {
+                  "label": "1.0 Xenérico"
+                }
+              ]
+            },
+            {
+              "label": "Versión da licenza",
+              "options": [
+                {
+                  "label": "Versión 3"
+                },
+                {
+                  "label": "Versión 2"
+                },
+                {
+                  "label": "Versión 1"
+                }
+              ]
+            },
+            {
+              "label": "Versión da licenza",
+              "options": [
+                {
+                  "label": "CC0 1.0 Universal (CC0 1.0) Dedicación de dominio público"
+                },
+                {
+                  "label": "Marca de dominio público"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Deseño",
+          "options": [
+            {
+              "label": "Texto á dereita (estándar)"
+            },
+            {
+              "label": "Texto á esquerda"
+            },
+            {
+              "label": "Centrado (só texto)"
+            }
+          ]
+        },
+        {
+          "label": "Tipo de medio",
+          "options": [
+            {
+              "label": "Imaxe"
+            },
+            {
+              "label": "Vídeo"
+            },
+            {
+              "label": "Son"
+            },
+            {
+              "label": "Ligazón externa"
+            },
+            {
+              "label": "Ningún"
+            }
+          ]
+        },
+        {
+          "label": "Imaxe"
+        },
+        {
+          "label": "Texto alternativo",
+          "description": "Requirido. Se o navegador non pode cargar a imaxe, amosarase este texto no seu lugar. Úsase tamén para os lectores de pantalla."
+        },
+        {
+          "label": "Vídeo"
+        },
+        {
+          "label": "Son"
+        },
+        {
+          "label": "Ligazón externa",
+          "description": "Insira unha ligazón a recursos externos. Algúns sitios web amosaranse como insercións especializadas, como Twitter, YouTube, Wikipedia e Google Maps. Consulta a lista completa nos documentos de <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab</a>"
+        },
+        {
+          "label": "Aparencia",
+          "fields": [
+            {
+              "label": "Fondo",
+              "options": [
+                {
+                  "label": "Cor"
+                },
+                {
+                  "label": "Imaxe"
+                },
+                {
+                  "label": "Ningún"
+                }
+              ]
+            },
+            {},
+            {
+              "label": "Cor de fondo",
+              "default": "#757575"
+            },
+            {
+              "label": "Imaxe de fondo"
+            }
+          ]
+        }
+      ],
+      "label": "Diapositiva do título"
+    },
+    {
+      "field": {
+        "fields": [
+          {
+            "label": "Id"
+          },
+          {
+            "label": "Tipo de diapositiva",
+            "default": "normal"
+          },
+          {
+            "label": "Título"
+          },
+          {
+            "label": "Data de inicio",
+            "description": "AAAA-MM-DD: só é necesario o ano. Os anos poden ser negativos."
+          },
+          {
+            "label": "Data de remate",
+            "description": "AAAA-MM-DD: só é necesario o ano. Os anos poden ser negativos."
+          },
+          {
+            "label": "Descrición"
+          },
+          {
+            "label": "Deseño",
+            "fields": [
+              {
+                "label": "Título"
+              },
+              {
+                "label": "Autor"
+              },
+              {
+                "label": "Ano(s)"
+              },
+              {
+                "label": "Fonte"
+              },
+              {
+                "label": "Licenza",
+                "options": [
+                  {
+                    "label": "Non revelado"
+                  },
+                  {
+                    "label": "Recoñecemento"
+                  },
+                  {
+                    "label": "Recoñecemento-Compartir igual"
+                  },
+                  {
+                    "label": "Recoñecemento-Sen derivados"
+                  },
+                  {
+                    "label": "Recoñecemento-Non comercial"
+                  },
+                  {
+                    "label": "Recoñecemento-Non comercial-Compartir igual"
+                  },
+                  {
+                    "label": "Recoñecemento-Non comercial-Sen derivados"
+                  },
+                  {
+                    "label": "CC0 1.0 Universal (CC0 1.0) Dedicación de dominio público"
+                  },
+                  {
+                    "label": "Licenza Pública Xeral"
+                  },
+                  {
+                    "label": "Dominio público"
+                  },
+                  {
+                    "label": "Copyright"
+                  }
+                ]
+              },
+              {
+                "label": "Versión da licenza",
+                "options": [
+                  {
+                    "label": "4.0 internacional"
+                  },
+                  {
+                    "label": "3.0 Non adaptado"
+                  },
+                  {
+                    "label": "2.5 Xenérico"
+                  },
+                  {
+                    "label": "2.0 Xenérico"
+                  },
+                  {
+                    "label": "1.0 Xenérico"
+                  }
+                ]
+              },
+              {
+                "label": "Versión da licenza",
+                "options": [
+                  {
+                    "label": "Versión 3"
+                  },
+                  {
+                    "label": "Versión 2"
+                  },
+                  {
+                    "label": "Versión 1"
+                  }
+                ]
+              },
+              {
+                "label": "Versión da licenza",
+                "options": [
+                  {
+                    "label": "CC0 1.0 Universal (CC0 1.0) Dedicación de dominio público"
+                  },
+                  {
+                    "label": "Marca de dominio público"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Deseño",
+            "options": [
+              {
+                "label": "Texto á dereita (estándar)"
+              },
+              {
+                "label": "Texto á esquerda"
+              },
+              {
+                "label": "Centrado (só texto)"
+              }
+            ]
+          },
+          {
+            "options": [
+              {
+                "label": "Imaxe"
+              },
+              {
+                "label": "Vídeo"
+              },
+              {
+                "label": "Son"
+              },
+              {
+                "label": "Ligazón externa"
+              },
+              {
+                "label": "Ningún"
+              }
+            ],
+            "label": "Tipo de medio"
+          },
+          {
+            "label": "Imaxe"
+          },
+          {
+            "label": "Texto alternativo",
+            "description": "Requirido. Se o navegador non pode cargar a imaxe, amosarase este texto no seu lugar. Úsase tamén para os lectores de pantalla."
+          },
+          {
+            "label": "Vídeo"
+          },
+          {
+            "label": "Son"
+          },
+          {
+            "label": "Ligazón externa",
+            "description": "Insire unha ligazón a recursos externos. Algúns sitios web amosaranse como insercións especializadas, como Twitter, YouTube, Wikipedia e Google Maps. Consulta a lista completa nos documentos de <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab</a>"
+          },
+          {
+            "label": "Etiquetas",
+            "entity": "Etiqueta",
+            "field": {
+              "label": "Etiqueta",
+              "fields": [
+                {
+                  "label": "Id"
+                },
+                {
+                  "label": "Nome"
+                },
+                {
+                  "label": "Cor"
+                },
+                {
+                  "label": "Está activo"
+                }
+              ]
+            }
+          },
+          {
+            "label": "Aparencia",
+            "fields": [
+              {
+                "label": "Fondo",
+                "options": [
+                  {
+                    "label": "Cor"
+                  },
+                  {
+                    "label": "Imaxe"
+                  },
+                  {
+                    "label": "Ningún"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Cor de fondo",
+                "default": "#757575"
+              },
+              {
+                "label": "Imaxe de fondo"
+              }
+            ]
+          }
+        ],
+        "label": "Elemento"
+      },
+      "label": "Elementos da cronoloxía",
+      "entity": "Elemento da cronoloxía",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ]
+    },
+    {
+      "label": "Etiquetas",
+      "fields": [
+        {
+          "label": "Etiquetas",
+          "entity": "Etiqueta",
+          "field": {
+            "label": "Etiqueta",
+            "fields": [
+              {
+                "label": "Id"
+              },
+              {
+                "label": "Nome"
+              },
+              {
+                "label": "Cor",
+                "default": "#757575"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Eras",
+      "fields": [
+        {
+          "label": "Eras",
+          "entity": "Era",
+          "field": {
+            "label": "Era",
+            "fields": [
+              {
+                "label": "Nome"
+              },
+              {
+                "label": "Data de inicio",
+                "description": "AAAA-MM-DD: só é necesario o ano. Os anos poden ser negativos."
+              },
+              {
+                "label": "Data de remate",
+                "description": "AAAA-MM-DD: só é necesario o ano. Os anos poden ser negativos."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "fields": [
+        {},
+        {
+          "label": "Modo de escalado",
+          "description": "Escolla entre os modos de escala. \"Tempo humano\" amosa datas en anos anteriores e posteriores á Era Común usando notación regular, mentres que \"Tempo cosmolóxico\" amosa datas usando notación científica. \"Indexado\" é útil cando queres sesgar os períodos de tempo e facer que todos os eventos parezan igual de afastados.",
+          "options": [
+            {
+              "label": "Tempo humano"
+            },
+            {
+              "label": "Tempo cosmolóxico"
+            },
+            {
+              "label": "Indexado"
+            }
+          ]
+        }
+      ],
+      "label": "Configuración do comportamento"
+    },
+    {
+      "label": "Adaptación local",
+      "fields": [
+        {
+          "label": "Dereitos de uso",
+          "default": "Dereitos de uso"
+        },
+        {
+          "label": "Copyright - Título",
+          "default": "Título"
+        },
+        {
+          "label": "Copyright - Autor",
+          "default": "Autor"
+        },
+        {
+          "label": "Copyright - Ano",
+          "default": "Ano"
+        },
+        {
+          "label": "Copyright - Fonte",
+          "default": "Fonte"
+        },
+        {
+          "label": "Copyright - Licenza",
+          "default": "Licenza"
+        },
+        {
+          "label": "Copyright - Versión",
+          "default": "Versión"
+        }
+      ]
+    }
+  ]
+}
