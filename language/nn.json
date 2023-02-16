@@ -1,554 +1,548 @@
 {
-  "semantics": [
-    {
-      "label": "Vis tittel-lysbilete"
-    },
-    {
-      "label": "Tittel-lysbilete",
-      "fields": [
+    "semantics": [
         {
-          "label": "Id"
+            "label": "Vis tittel-lysbilete"
         },
         {
-          "label": "Lysbilete-type",
-          "default": "title"
-        },
-        {
-          "label": "Tittel"
-        },
-        {
-          "label": "Startdato",
-          "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
-        },
-        {
-          "label": "Sluttdato",
-          "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
-        },
-        {
-          "label": "Skildring"
-        },
-        {
-          "label": "Bruksrettar",
-          "fields": [
-            {
-              "label": "Tittel"
-            },
-            {
-              "label": "Forfatter"
-            },
-            {
-              "label": "År"
-            },
-            {
-              "label": "Kjelde"
-            },
-            {
-              "label": "Lisens",
-              "options": [
-                {
-                  "label": "Undisclosed"
-                },
-                {
-                  "label": "Attribution"
-                },
-                {
-                  "label": "Attribution-ShareAlike"
-                },
-                {
-                  "label": "Attribution-NoDerivs"
-                },
-                {
-                  "label": "Attribution-NonCommercial"
-                },
-                {
-                  "label": "Attribution-NonCommercial-ShareAlike"
-                },
-                {
-                  "label": "Attribution-NonCommercial-NoDerivs"
-                },
-                {
-                  "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                },
-                {
-                  "label": "General Public License"
-                },
-                {
-                  "label": "Public Domain"
-                },
-                {
-                  "label": "Copyright"
-                }
-              ]
-            },
-            {
-              "label": "Lisensversjon",
-              "options": [
-                {
-                  "label": "4.0 International"
-                },
-                {
-                  "label": "3.0 Unported"
-                },
-                {
-                  "label": "2.5 Generic"
-                },
-                {
-                  "label": "2.0 Generic"
-                },
-                {
-                  "label": "1.0 Generic"
-                }
-              ]
-            },
-            {
-              "label": "Lisensversjon",
-              "options": [
-                {
-                  "label": "Version 3"
-                },
-                {
-                  "label": "Version 2"
-                },
-                {
-                  "label": "Version 1"
-                }
-              ]
-            },
-            {
-              "label": "Lisensversjon",
-              "options": [
-                {
-                  "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                },
-                {
-                  "label": "Public Domain Mark"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "Oppsett",
-          "options": [
-            {
-              "label": "Tekst på høgre side (standard)"
-            },
-            {
-              "label": "Tekst på venstre side"
-            },
-            {
-              "label": "Midtstilt (kun tekst)"
-            }
-          ]
-        },
-        {
-          "label": "Mediatype",
-          "options": [
-            {
-              "label": "Bilete"
-            },
-            {
-              "label": "Video"
-            },
-            {
-              "label": "Lyd"
-            },
-            {
-              "label": "Ekstern lenkje"
-            },
-            {
-              "label": "Ingen"
-            }
-          ]
-        },
-        {
-          "label": "Bilete"
-        },
-        {
-          "label": "Alternativ tekst",
-          "description": "Viss biletet ikkje kan lastast, blir denne teksten vist i istadenfor. Denne blir og nytta ved talesyntese."
-        },
-        {
-          "label": "Video"
-        },
-        {
-          "label": "Lyd"
-        },
-        {
-          "label": "Ekstern lenkje",
-          "description": "Sett inn ei lenkje til eksterne ressursar. Visse nettsider vil få ein spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med fleire. Sjå heile lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
-        },
-        {
-          "label": "Utsjånad",
-          "fields": [
-            {
-              "label": "Bakgrunn",
-              "options": [
-                {
-                  "label": "Farge"
-                },
-                {
-                  "label": "Bilete"
-                },
-                {
-                  "label": "Ingen"
-                }
-              ]
-            },
-            {
-              "label": ""
-            },
-            {
-              "label": "Bakgrunnsfarge",
-              "default": "#757575"
-            },
-            {
-              "label": "Bakgrunnsbilete"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Tidslinje-lysbileter",
-      "entity": "Tidslinje-lysbilete",
-      "widgets": [
-        {
-          "label": "Default"
-        }
-      ],
-      "field": {
-        "label": "Lysbilete",
-        "fields": [
-          {
-            "label": "Id"
-          },
-          {
-            "label": "Lysbilete-type",
-            "default": "regular"
-          },
-          {
-            "label": "Tittel"
-          },
-          {
-            "label": "Startdato",
-            "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
-          },
-          {
-            "label": "Sluttdato",
-            "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
-          },
-          {
-            "label": "Skildring"
-          },
-          {
-            "label": "Bruksrettar",
+            "label": "Tittel-lysbilete",
             "fields": [
-              {
-                "label": "Tittel"
-              },
-              {
-                "label": "Forfatter"
-              },
-              {
-                "label": "År"
-              },
-              {
-                "label": "Kjelde"
-              },
-              {
-                "label": "Lisens",
-                "options": [
-                  {
-                    "label": "Undisclosed"
-                  },
-                  {
-                    "label": "Attribution"
-                  },
-                  {
-                    "label": "Attribution-ShareAlike"
-                  },
-                  {
-                    "label": "Attribution-NoDerivs"
-                  },
-                  {
-                    "label": "Attribution-NonCommercial"
-                  },
-                  {
-                    "label": "Attribution-NonCommercial-ShareAlike"
-                  },
-                  {
-                    "label": "Attribution-NonCommercial-NoDerivs"
-                  },
-                  {
-                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                  },
-                  {
-                    "label": "General Public License"
-                  },
-                  {
-                    "label": "Public Domain"
-                  },
-                  {
-                    "label": "Copyright"
-                  }
-                ]
-              },
-              {
-                "label": "License Version",
-                "options": [
-                  {
-                    "label": "4.0 International"
-                  },
-                  {
-                    "label": "3.0 Unported"
-                  },
-                  {
-                    "label": "2.5 Generic"
-                  },
-                  {
-                    "label": "2.0 Generic"
-                  },
-                  {
-                    "label": "1.0 Generic"
-                  }
-                ]
-              },
-              {
-                "label": "License Version",
-                "options": [
-                  {
-                    "label": "Version 3"
-                  },
-                  {
-                    "label": "Version 2"
-                  },
-                  {
-                    "label": "Version 1"
-                  }
-                ]
-              },
-              {
-                "label": "License Version",
-                "options": [
-                  {
-                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                  },
-                  {
-                    "label": "Public Domain Mark"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "label": "Oppsett",
-            "options": [
-              {
-                "label": "Tekst på høgre side (standard)"
-              },
-              {
-                "label": "Tekst på venstre side"
-              },
-              {
-                "label": "Midtstilt (kun tekst)"
-              }
-            ]
-          },
-          {
-            "label": "Mediatype",
-            "options": [
-              {
-                "label": "Bilete"
-              },
-              {
-                "label": "Video"
-              },
-              {
-                "label": "Lyd"
-              },
-              {
-                "label": "Ekstern lenkje"
-              },
-              {
-                "label": "Ingen"
-              }
-            ]
-          },
-          {
-            "label": "Bilete"
-          },
-          {
-            "label": "Alternativ tekst",
-            "description": "Viss biletet ikkje kan lastast, blir denne teksten vist i istadenfor. Denne blir og nytta ved talesyntese."
-          },
-          {
-            "label": "Video"
-          },
-          {
-            "label": "Lyd"
-          },
-          {
-            "label": "Ekstern lenke",
-            "description": "Sett inn ei lenkje til eksterne ressursar. Visse nettsider vil få ein spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med fleire. Sjå heile lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
-          },
-          {
-            "label": "Tag-er",
-            "entity": "Tag",
-            "field": {
-              "label": "Tag",
-              "fields": [
                 {
-                  "label": "Id"
+                    "label": "Id"
                 },
                 {
-                  "label": "Namn"
+                    "label": "Lysbilete-type",
+                    "default": "title"
                 },
                 {
-                  "label": "Farge"
+                    "label": "Tittel"
                 },
                 {
-                  "label": "Er aktiv"
-                }
-              ]
-            }
-          },
-          {
-            "label": "Utsjånad",
-            "fields": [
-              {
-                "label": "Bakgrunn",
-                "options": [
-                  {
-                    "label": "Farge"
-                  },
-                  {
+                    "label": "Startdato",
+                    "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
+                },
+                {
+                    "label": "Sluttdato",
+                    "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
+                },
+                {
+                    "label": "Skildring"
+                },
+                {
+                    "label": "Bruksrettar",
+                    "fields": [
+                        {
+                            "label": "Tittel"
+                        },
+                        {
+                            "label": "Forfatter"
+                        },
+                        {
+                            "label": "År"
+                        },
+                        {
+                            "label": "Kjelde"
+                        },
+                        {
+                            "label": "Lisens",
+                            "options": [
+                                {
+                                    "label": "Undisclosed"
+                                },
+                                {
+                                    "label": "Attribution"
+                                },
+                                {
+                                    "label": "Attribution-ShareAlike"
+                                },
+                                {
+                                    "label": "Attribution-NoDerivs"
+                                },
+                                {
+                                    "label": "Attribution-NonCommercial"
+                                },
+                                {
+                                    "label": "Attribution-NonCommercial-ShareAlike"
+                                },
+                                {
+                                    "label": "Attribution-NonCommercial-NoDerivs"
+                                },
+                                {
+                                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                                },
+                                {
+                                    "label": "General Public License"
+                                },
+                                {
+                                    "label": "Public Domain"
+                                },
+                                {
+                                    "label": "Copyright"
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Lisensversjon",
+                            "options": [
+                                {
+                                    "label": "4.0 International"
+                                },
+                                {
+                                    "label": "3.0 Unported"
+                                },
+                                {
+                                    "label": "2.5 Generic"
+                                },
+                                {
+                                    "label": "2.0 Generic"
+                                },
+                                {
+                                    "label": "1.0 Generic"
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Lisensversjon",
+                            "options": [
+                                {
+                                    "label": "Version 3"
+                                },
+                                {
+                                    "label": "Version 2"
+                                },
+                                {
+                                    "label": "Version 1"
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Lisensversjon",
+                            "options": [
+                                {
+                                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                                },
+                                {
+                                    "label": "Public Domain Mark"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "label": "Oppsett",
+                    "options": [
+                        {
+                            "label": "Tekst på høgre side (standard)"
+                        },
+                        {
+                            "label": "Tekst på venstre side"
+                        },
+                        {
+                            "label": "Midtstilt (kun tekst)"
+                        }
+                    ]
+                },
+                {
+                    "label": "Mediatype",
+                    "options": [
+                        {
+                            "label": "Bilete"
+                        },
+                        {
+                            "label": "Video"
+                        },
+                        {
+                            "label": "Lyd"
+                        },
+                        {
+                            "label": "Ekstern lenkje"
+                        },
+                        {
+                            "label": "Ingen"
+                        }
+                    ]
+                },
+                {
                     "label": "Bilete"
-                  },
-                  {
-                    "label": "Ingen"
-                  }
+                },
+                {
+                    "label": "Alternativ tekst",
+                    "description": "Viss biletet ikkje kan lastast, blir denne teksten vist i istadenfor. Denne blir og nytta ved talesyntese."
+                },
+                {
+                    "label": "Video"
+                },
+                {
+                    "label": "Lyd"
+                },
+                {
+                    "label": "Ekstern lenkje",
+                    "description": "Sett inn ei lenkje til eksterne ressursar. Visse nettsider vil få ein spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med fleire. Sjå heile lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+                },
+                {
+                    "label": "Utsjånad",
+                    "fields": [
+                        {
+                            "label": "Bakgrunn",
+                            "options": [
+                                {
+                                    "label": "Farge"
+                                },
+                                {
+                                    "label": "Bilete"
+                                },
+                                {
+                                    "label": "Ingen"
+                                }
+                            ]
+                        },
+                        {},
+                        {
+                            "label": "Bakgrunnsfarge",
+                            "default": "#757575"
+                        },
+                        {
+                            "label": "Bakgrunnsbilete"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Tidslinje-lysbileter",
+            "entity": "Tidslinje-lysbilete",
+            "widgets": [
+                {
+                    "label": "Default"
+                }
+            ],
+            "field": {
+                "label": "Lysbilete",
+                "fields": [
+                    {
+                        "label": "Id"
+                    },
+                    {
+                        "label": "Lysbilete-type",
+                        "default": "regular"
+                    },
+                    {
+                        "label": "Tittel"
+                    },
+                    {
+                        "label": "Startdato",
+                        "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
+                    },
+                    {
+                        "label": "Sluttdato",
+                        "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
+                    },
+                    {
+                        "label": "Skildring"
+                    },
+                    {
+                        "label": "Bruksrettar",
+                        "fields": [
+                            {
+                                "label": "Tittel"
+                            },
+                            {
+                                "label": "Forfatter"
+                            },
+                            {
+                                "label": "År"
+                            },
+                            {
+                                "label": "Kjelde"
+                            },
+                            {
+                                "label": "Lisens",
+                                "options": [
+                                    {
+                                        "label": "Undisclosed"
+                                    },
+                                    {
+                                        "label": "Attribution"
+                                    },
+                                    {
+                                        "label": "Attribution-ShareAlike"
+                                    },
+                                    {
+                                        "label": "Attribution-NoDerivs"
+                                    },
+                                    {
+                                        "label": "Attribution-NonCommercial"
+                                    },
+                                    {
+                                        "label": "Attribution-NonCommercial-ShareAlike"
+                                    },
+                                    {
+                                        "label": "Attribution-NonCommercial-NoDerivs"
+                                    },
+                                    {
+                                        "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                                    },
+                                    {
+                                        "label": "General Public License"
+                                    },
+                                    {
+                                        "label": "Public Domain"
+                                    },
+                                    {
+                                        "label": "Copyright"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "License Version",
+                                "options": [
+                                    {
+                                        "label": "4.0 International"
+                                    },
+                                    {
+                                        "label": "3.0 Unported"
+                                    },
+                                    {
+                                        "label": "2.5 Generic"
+                                    },
+                                    {
+                                        "label": "2.0 Generic"
+                                    },
+                                    {
+                                        "label": "1.0 Generic"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "License Version",
+                                "options": [
+                                    {
+                                        "label": "Version 3"
+                                    },
+                                    {
+                                        "label": "Version 2"
+                                    },
+                                    {
+                                        "label": "Version 1"
+                                    }
+                                ]
+                            },
+                            {
+                                "label": "License Version",
+                                "options": [
+                                    {
+                                        "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                                    },
+                                    {
+                                        "label": "Public Domain Mark"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Oppsett",
+                        "options": [
+                            {
+                                "label": "Tekst på høgre side (standard)"
+                            },
+                            {
+                                "label": "Tekst på venstre side"
+                            },
+                            {
+                                "label": "Midtstilt (kun tekst)"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Mediatype",
+                        "options": [
+                            {
+                                "label": "Bilete"
+                            },
+                            {
+                                "label": "Video"
+                            },
+                            {
+                                "label": "Lyd"
+                            },
+                            {
+                                "label": "Ekstern lenkje"
+                            },
+                            {
+                                "label": "Ingen"
+                            }
+                        ]
+                    },
+                    {
+                        "label": "Bilete"
+                    },
+                    {
+                        "label": "Alternativ tekst",
+                        "description": "Viss biletet ikkje kan lastast, blir denne teksten vist i istadenfor. Denne blir og nytta ved talesyntese."
+                    },
+                    {
+                        "label": "Video"
+                    },
+                    {
+                        "label": "Lyd"
+                    },
+                    {
+                        "label": "Ekstern lenke",
+                        "description": "Sett inn ei lenkje til eksterne ressursar. Visse nettsider vil få ein spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med fleire. Sjå heile lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+                    },
+                    {
+                        "label": "Tag-er",
+                        "entity": "Tag",
+                        "field": {
+                            "label": "Tag",
+                            "fields": [
+                                {
+                                    "label": "Id"
+                                },
+                                {
+                                    "label": "Namn"
+                                },
+                                {
+                                    "label": "Farge"
+                                },
+                                {
+                                    "label": "Er aktiv"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "label": "Utsjånad",
+                        "fields": [
+                            {
+                                "label": "Bakgrunn",
+                                "options": [
+                                    {
+                                        "label": "Farge"
+                                    },
+                                    {
+                                        "label": "Bilete"
+                                    },
+                                    {
+                                        "label": "Ingen"
+                                    }
+                                ]
+                            },
+                            {},
+                            {
+                                "label": "Bakgrunnsfarge",
+                                "default": "#757575"
+                            },
+                            {
+                                "label": "Bakgrunnsbilete"
+                            }
+                        ]
+                    }
                 ]
-              },
-              {
-                "label": ""
-              },
-              {
-                "label": "Bakgrunnsfarge",
-                "default": "#757575"
-              },
-              {
-                "label": "Bakgrunnsbilete"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "label": "Tag-er",
-      "fields": [
-        {
-          "label": "Tag-er",
-          "entity": "Tag",
-          "field": {
-            "label": "Tag",
-            "fields": [
-              {
-                "label": "Id"
-              },
-              {
-                "label": "Namn"
-              },
-              {
-                "label": "Farge",
-                "default": "#757575"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "label": "Tidsperiodar",
-      "fields": [
-        {
-          "label": "Tidsperiodar",
-          "entity": "Tidsperiode",
-          "field": {
-            "label": "Tidsperiode",
-            "fields": [
-              {
-                "label": "Namn"
-              },
-              {
-                "label": "Startdato",
-                "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
-              },
-              {
-                "label": "Sluttdato",
-                "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "label": "Innstillingar for oppførsel",
-      "fields": [
-        {
-          "label": ""
-        },
-        {
-          "label": "Tidsskala",
-          "description": "Velg mellom ulike tidsskalaar. \"Vanleg tid\" viser datoer i år før og etter vår tidsregning, mens \"Kosmologisk tid\" brukar vitenskapelig notasjon for å vise årstall. \"Indeksert\" er nyttig viss ein ynskjer å skjule årstall og heller ha likt mellomrom mellom kvar hendelse i tidslinjen.",
-          "options": [
-            {
-              "label": "Vanleg tid"
-            },
-            {
-              "label": "Kosmologisk tid"
-            },
-            {
-              "label": "Indeksert"
             }
-          ]
+        },
+        {
+            "label": "Tag-er",
+            "fields": [
+                {
+                    "label": "Tag-er",
+                    "entity": "Tag",
+                    "field": {
+                        "label": "Tag",
+                        "fields": [
+                            {
+                                "label": "Id"
+                            },
+                            {
+                                "label": "Namn"
+                            },
+                            {
+                                "label": "Farge",
+                                "default": "#757575"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Tidsperiodar",
+            "fields": [
+                {
+                    "label": "Tidsperiodar",
+                    "entity": "Tidsperiode",
+                    "field": {
+                        "label": "Tidsperiode",
+                        "fields": [
+                            {
+                                "label": "Namn"
+                            },
+                            {
+                                "label": "Startdato",
+                                "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
+                            },
+                            {
+                                "label": "Sluttdato",
+                                "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Innstillingar for oppførsel",
+            "fields": [
+                {},
+                {
+                    "label": "Tidsskala",
+                    "description": "Velg mellom ulike tidsskalaar. \"Vanleg tid\" viser datoer i år før og etter vår tidsregning, mens \"Kosmologisk tid\" brukar vitenskapelig notasjon for å vise årstall. \"Indeksert\" er nyttig viss ein ynskjer å skjule årstall og heller ha likt mellomrom mellom kvar hendelse i tidslinjen.",
+                    "options": [
+                        {
+                            "label": "Vanleg tid"
+                        },
+                        {
+                            "label": "Kosmologisk tid"
+                        },
+                        {
+                            "label": "Indeksert"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Oversett",
+            "fields": [
+                {
+                    "label": "Bruksrettar",
+                    "default": "Bruksrettar"
+                },
+                {
+                    "label": "Bruksrettar - Tittel",
+                    "default": "Tittel"
+                },
+                {
+                    "label": "Bruksrettar - Forfatter",
+                    "default": "Forfatter"
+                },
+                {
+                    "label": "Bruksrettar - År",
+                    "default": "År"
+                },
+                {
+                    "label": "Bruksrettar - Kjelde",
+                    "default": "Kjelde"
+                },
+                {
+                    "label": "Bruksrettar - Lisens",
+                    "default": "Lisens"
+                },
+                {
+                    "label": "Bruksrettar - Versjon",
+                    "default": "Versjon"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "label": "Oversett",
-      "fields": [
-        {
-          "label": "Bruksrettar",
-          "default": "Bruksrettar"
-        },
-        {
-          "label": "Bruksrettar - Tittel",
-          "default": "Tittel"
-        },
-        {
-          "label": "Bruksrettar - Forfatter",
-          "default": "Forfatter"
-        },
-        {
-          "label": "Bruksrettar - År",
-          "default": "År"
-        },
-        {
-          "label": "Bruksrettar - Kjelde",
-          "default": "Kjelde"
-        },
-        {
-          "label": "Bruksrettar - Lisens",
-          "default": "Lisens"
-        },
-        {
-          "label": "Bruksrettar - Versjon",
-          "default": "Versjon"
-        }
-      ]
-    }
-  ]
+    ]
 }

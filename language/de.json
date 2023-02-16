@@ -1,0 +1,548 @@
+{
+  "semantics": [
+    {
+      "label": "Zeige Titelschaubild"
+    },
+    {
+      "label": "Titelschaubild",
+      "fields": [
+        {
+          "label": "Id"
+        },
+        {
+          "label": "Schaubildtyp",
+          "default": "Titel"
+        },
+        {
+          "label": "Titel"
+        },
+        {
+          "label": "Startdatum",
+          "description": "JJJJ-MM-TT — nur das Jahr ist erforderlich. Jahreszahlen können negativ sein."
+        },
+        {
+          "label": "Enddatum",
+          "description": "JJJJ-MM-TT — nur das Jahr ist erforderlich. Jahreszahlen können negativ sein."
+        },
+        {
+          "label": "Beschreibung"
+        },
+        {
+          "label": "Nutzungsrechte",
+          "fields": [
+            {
+              "label": "Titel"
+            },
+            {
+              "label": "Autor"
+            },
+            {
+              "label": "Jahr(e)"
+            },
+            {
+              "label": "Quelle"
+            },
+            {
+              "label": "Lizenz",
+              "options": [
+                {
+                  "label": "Unbestimmt"
+                },
+                {
+                  "label": "Namensnennung"
+                },
+                {
+                  "label": "Namensnennung-Weitergabe unter gleichen Bedingungen"
+                },
+                {
+                  "label": "Namensnennung-Keine Bearbeitungen"
+                },
+                {
+                  "label": "Namensnennung-Nichtkommerziell"
+                },
+                {
+                  "label": "Namensnennung-Nichtkommerziell-Weitergabe unter gleichen Bedingungen"
+                },
+                {
+                  "label": "Namensnennung-Nichtkommerziell-Keine Bearbeitung"
+                },
+                {
+                  "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                },
+                {
+                  "label": "General Public License"
+                },
+                {
+                  "label": "Gemeinfrei"
+                },
+                {
+                  "label": "Copyright"
+                }
+              ]
+            },
+            {
+              "label": "Lizenzversion",
+              "options": [
+                {
+                  "label": "4.0 International"
+                },
+                {
+                  "label": "3.0 Unportiert"
+                },
+                {
+                  "label": "2.5 Generic"
+                },
+                {
+                  "label": "2.0 Generic"
+                },
+                {
+                  "label": "1.0 Generic"
+                }
+              ]
+            },
+            {
+              "label": "Lizenzversion",
+              "options": [
+                {
+                  "label": "Version 3"
+                },
+                {
+                  "label": "Version 2"
+                },
+                {
+                  "label": "Version 1"
+                }
+              ]
+            },
+            {
+              "label": "Lizenzversion",
+              "options": [
+                {
+                  "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                },
+                {
+                  "label": "Public Domain Mark"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Layout",
+          "options": [
+            {
+              "label": "Text rechts (Standard)"
+            },
+            {
+              "label": "Text links"
+            },
+            {
+              "label": "Zentriert (nur Text)"
+            }
+          ]
+        },
+        {
+          "label": "Medientyp",
+          "options": [
+            {
+              "label": "Bild"
+            },
+            {
+              "label": "Video"
+            },
+            {
+              "label": "Tondatei"
+            },
+            {
+              "label": "Externer Link"
+            },
+            {
+              "label": "Nichts"
+            }
+          ]
+        },
+        {
+          "label": "Bild"
+        },
+        {
+          "label": "Alternativtext",
+          "description": "Erforderlich. Falls der Browser das Bild nicht laden kann, wird dieser Text stattdessen dargestellt. Wird auch von Vorlesewerkzeugen benutzt."
+        },
+        {
+          "label": "Video"
+        },
+        {
+          "label": "Tondatei"
+        },
+        {
+          "label": "Externer Link",
+          "description": "Füge einen Link zu einer externen Ressource ein. Bestimmte Websites werden speziell eingebettet dargestellt, beispielsweise Twitter, YouTube, Wikipedia, und Google Maps. Siehe für eine vollständige Liste die <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+        },
+        {
+          "label": "Darstellung",
+          "fields": [
+            {
+              "label": "Hintergrund",
+              "options": [
+                {
+                  "label": "Farbe"
+                },
+                {
+                  "label": "Bild"
+                },
+                {
+                  "label": "Nichts"
+                }
+              ]
+            },
+            {},
+            {
+              "label": "Hintergrundfarbe",
+              "default": "#757575"
+            },
+            {
+              "label": "Hintergrundbild"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "field": {
+        "label": "Item",
+        "fields": [
+          {
+            "label": "Id"
+          },
+          {
+            "label": "Slide type",
+            "default": "regular"
+          },
+          {
+            "label": "Title"
+          },
+          {
+            "label": "Start date",
+            "description": "YYYY-MM-DD — only year is required. Years can be negative."
+          },
+          {
+            "label": "End date",
+            "description": "YYYY-MM-DD — only year is required. Years can be negative."
+          },
+          {
+            "label": "Description"
+          },
+          {
+            "label": "Layout",
+            "fields": [
+              {
+                "label": "Title"
+              },
+              {
+                "label": "Author"
+              },
+              {
+                "label": "Year(s)"
+              },
+              {
+                "label": "Source"
+              },
+              {
+                "label": "License",
+                "options": [
+                  {
+                    "label": "Undisclosed"
+                  },
+                  {
+                    "label": "Attribution"
+                  },
+                  {
+                    "label": "Attribution-ShareAlike"
+                  },
+                  {
+                    "label": "Attribution-NoDerivs"
+                  },
+                  {
+                    "label": "Attribution-NonCommercial"
+                  },
+                  {
+                    "label": "Attribution-NonCommercial-ShareAlike"
+                  },
+                  {
+                    "label": "Attribution-NonCommercial-NoDerivs"
+                  },
+                  {
+                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                  },
+                  {
+                    "label": "General Public License"
+                  },
+                  {
+                    "label": "Public Domain"
+                  },
+                  {
+                    "label": "Copyright"
+                  }
+                ]
+              },
+              {
+                "label": "License Version",
+                "options": [
+                  {
+                    "label": "4.0 International"
+                  },
+                  {
+                    "label": "3.0 Unported"
+                  },
+                  {
+                    "label": "2.5 Generic"
+                  },
+                  {
+                    "label": "2.0 Generic"
+                  },
+                  {
+                    "label": "1.0 Generic"
+                  }
+                ]
+              },
+              {
+                "label": "License Version",
+                "options": [
+                  {
+                    "label": "Version 3"
+                  },
+                  {
+                    "label": "Version 2"
+                  },
+                  {
+                    "label": "Version 1"
+                  }
+                ]
+              },
+              {
+                "label": "License Version",
+                "options": [
+                  {
+                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+                  },
+                  {
+                    "label": "Public Domain Mark"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Layout",
+            "options": [
+              {
+                "label": "Text on right (standard)"
+              },
+              {
+                "label": "Text on left"
+              },
+              {
+                "label": "Centered (Text only)"
+              }
+            ]
+          },
+          {
+            "label": "Media type",
+            "options": [
+              {
+                "label": "Image"
+              },
+              {
+                "label": "Video"
+              },
+              {
+                "label": "Audio"
+              },
+              {
+                "label": "External link"
+              },
+              {
+                "label": "None"
+              }
+            ]
+          },
+          {
+            "label": "Image"
+          },
+          {
+            "label": "Alternative text",
+            "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
+          },
+          {
+            "label": "Video"
+          },
+          {
+            "label": "Audio"
+          },
+          {
+            "label": "External link",
+            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+          },
+          {
+            "label": "Tags",
+            "entity": "Tag",
+            "field": {
+              "label": "Tag",
+              "fields": [
+                {
+                  "label": "Id"
+                },
+                {
+                  "label": "Name"
+                },
+                {
+                  "label": "Color"
+                },
+                {
+                  "label": "Is active"
+                }
+              ]
+            }
+          },
+          {
+            "label": "Appearance",
+            "fields": [
+              {
+                "label": "Background",
+                "options": [
+                  {
+                    "label": "Color"
+                  },
+                  {
+                    "label": "Image"
+                  },
+                  {
+                    "label": "None"
+                  }
+                ]
+              },
+              {},
+              {
+                "label": "Background color",
+                "default": "#757575"
+              },
+              {
+                "label": "Background image"
+              }
+            ]
+          }
+        ]
+      },
+      "label": "Timeline-Elemente",
+      "entity": "Timeline-Element",
+      "widgets": [
+        {
+          "label": "Vorgabe"
+        }
+      ]
+    },
+    {
+      "label": "Tags",
+      "fields": [
+        {
+          "label": "Tags",
+          "entity": "Tag",
+          "field": {
+            "label": "Tag",
+            "fields": [
+              {
+                "label": "Id"
+              },
+              {
+                "label": "Name"
+              },
+              {
+                "label": "Color",
+                "default": "#757575"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Eras",
+      "fields": [
+        {
+          "label": "Eras",
+          "entity": "Era",
+          "field": {
+            "label": "Era",
+            "fields": [
+              {
+                "label": "Name"
+              },
+              {
+                "label": "Start date",
+                "description": "YYYY-MM-DD — only year is required. Years can be negative."
+              },
+              {
+                "label": "End date",
+                "description": "YYYY-MM-DD — only year is required. Years can be negative."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Behavioral settings",
+      "fields": [
+        {},
+        {
+          "label": "Scaling mode",
+          "description": "Choose between scaling modes. \"Human time\" shows date in years before and after the Common Era using regular notation, while \"Cosmological time\" shows dates using scientific notation. \"Indexed\" is useful when you want to skew timeframes and make all events seem equally far apart.",
+          "options": [
+            {
+              "label": "Human time"
+            },
+            {
+              "label": "Cosmological time"
+            },
+            {
+              "label": "Indexed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Localize",
+      "fields": [
+        {
+          "label": "Rights of use",
+          "default": "Rights of use"
+        },
+        {
+          "label": "Copyright - Title",
+          "default": "Title"
+        },
+        {
+          "label": "Copyright - Author",
+          "default": "Author"
+        },
+        {
+          "label": "Copyright - Year",
+          "default": "Year"
+        },
+        {
+          "label": "Copyright - Source",
+          "default": "Source"
+        },
+        {
+          "label": "Copyright - License",
+          "default": "License"
+        },
+        {
+          "label": "Copyright - Version",
+          "default": "Version"
+        }
+      ]
+    }
+  ]
+}
