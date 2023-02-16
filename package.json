@@ -30,7 +30,7 @@
     "h5p-types": "github:boyum/h5p-types",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hot-loader": "^4.13.0",
+    "react-hot-loader": "^4.13.1",
     "react-use": "^17.4.0"
   },
   "devDependencies": {
