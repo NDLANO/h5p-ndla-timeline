@@ -161,7 +161,7 @@
               }
             ],
             "default": "4.0",
-            "widget": "NDLAShowWhen",
+            "widget": "showWhen",
             "showWhen": {
               "rules": [
                 {
@@ -197,7 +197,7 @@
               }
             ],
             "default": "v3",
-            "widget": "NDLAShowWhen",
+            "widget": "showWhen",
             "showWhen": {
               "rules": [
                 {
@@ -224,7 +224,7 @@
               }
             ],
             "default": "CC0 1.0",
-            "widget": "NDLAShowWhen",
+            "widget": "showWhen",
             "showWhen": {
               "rules": [
                 {
@@ -286,7 +286,7 @@
         "label": "Image",
         "name": "image",
         "type": "image",
-        "widget": "NDLAShowWhen",
+        "widget": "showWhen",
         "showWhen": {
           "rules": [
             {
@@ -301,7 +301,7 @@
         "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers.",
         "name": "imageAlt",
         "type": "text",
-        "widget": "NDLAShowWhen",
+        "widget": "showWhen",
         "showWhen": {
           "rules": [
             {
@@ -315,7 +315,7 @@
         "label": "Video",
         "name": "video",
         "type": "video",
-        "widget": "NDLAShowWhen",
+        "widget": "showWhen",
         "showWhen": {
           "rules": [
             {
@@ -329,7 +329,7 @@
         "label": "Audio",
         "name": "audio",
         "type": "audio",
-        "widget": "NDLAShowWhen",
+        "widget": "showWhen",
         "showWhen": {
           "rules": [
             {
@@ -344,7 +344,7 @@
         "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>",
         "name": "customMedia",
         "type": "text",
-        "widget": "NDLAShowWhen",
+        "widget": "showWhen",
         "showWhen": {
           "rules": [
             {
@@ -390,7 +390,7 @@
             "label": "Background color",
             "name": "backgroundColor",
             "type": "text",
-            "widget": "NDLAShowWhen",
+            "widget": "showWhen",
             "showWhen": {
               "rules": [
                 {
@@ -456,7 +456,7 @@
             "label": "Background image",
             "name": "backgroundImage",
             "type": "image",
-            "widget": "NDLAShowWhen",
+            "widget": "showWhen",
             "showWhen": {
               "rules": [
                 {
@@ -469,7 +469,7 @@
         ]
       }
     ],
-    "widget": "NDLAShowWhen",
+    "widget": "showWhen",
     "showWhen": {
       "rules": [
         {
@@ -647,7 +647,7 @@
                 }
               ],
               "default": "4.0",
-              "widget": "NDLAShowWhen",
+              "widget": "showWhen",
               "showWhen": {
                 "rules": [
                   {
@@ -683,7 +683,7 @@
                 }
               ],
               "default": "v3",
-              "widget": "NDLAShowWhen",
+              "widget": "showWhen",
               "showWhen": {
                 "rules": [
                   {
@@ -710,7 +710,7 @@
                 }
               ],
               "default": "CC0 1.0",
-              "widget": "NDLAShowWhen",
+              "widget": "showWhen",
               "showWhen": {
                 "rules": [
                   {
@@ -772,7 +772,7 @@
           "label": "Image",
           "name": "image",
           "type": "image",
-          "widget": "NDLAShowWhen",
+          "widget": "showWhen",
           "showWhen": {
             "rules": [
               {
@@ -787,7 +787,7 @@
           "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers.",
           "name": "imageAlt",
           "type": "text",
-          "widget": "NDLAShowWhen",
+          "widget": "showWhen",
           "showWhen": {
             "rules": [
               {
@@ -801,7 +801,7 @@
           "label": "Video",
           "name": "video",
           "type": "video",
-          "widget": "NDLAShowWhen",
+          "widget": "showWhen",
           "showWhen": {
             "rules": [
               {
@@ -815,7 +815,7 @@
           "label": "Audio",
           "name": "audio",
           "type": "audio",
-          "widget": "NDLAShowWhen",
+          "widget": "showWhen",
           "showWhen": {
             "rules": [
               {
@@ -830,7 +830,7 @@
           "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>",
           "name": "customMedia",
           "type": "text",
-          "widget": "NDLAShowWhen",
+          "widget": "showWhen",
           "showWhen": {
             "rules": [
               {
@@ -916,7 +916,7 @@
               "label": "Background color",
               "name": "backgroundColor",
               "type": "text",
-              "widget": "NDLAShowWhen",
+              "widget": "showWhen",
               "showWhen": {
                 "rules": [
                   {
@@ -982,7 +982,7 @@
               "label": "Background image",
               "name": "backgroundImage",
               "type": "image",
-              "widget": "NDLAShowWhen",
+              "widget": "showWhen",
               "showWhen": {
                 "rules": [
                   {

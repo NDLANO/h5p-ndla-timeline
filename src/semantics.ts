@@ -20,7 +20,7 @@ export const semantics: Readonly<Array<H5PField | H5PBehaviour | H5PL10n>> = [
     importance: "low",
     type: "group",
     fields: [...createTimelineItemFields("title")],
-    widget: "NDLAShowWhen",
+    widget: "showWhen",
     showWhen: {
       rules: [
         {

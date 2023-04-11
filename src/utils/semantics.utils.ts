@@ -124,7 +124,7 @@ const createCopyrightField = (name: string): H5PFieldGroup => ({
         },
       ],
       default: "4.0",
-      widget: "NDLAShowWhen",
+      widget: "showWhen",
       showWhen: {
         rules: [
           {
@@ -160,7 +160,7 @@ const createCopyrightField = (name: string): H5PFieldGroup => ({
         },
       ],
       default: "v3",
-      widget: "NDLAShowWhen",
+      widget: "showWhen",
       showWhen: {
         rules: [
           {
@@ -185,7 +185,7 @@ const createCopyrightField = (name: string): H5PFieldGroup => ({
         },
       ],
       default: "CC0 1.0",
-      widget: "NDLAShowWhen",
+      widget: "showWhen",
       showWhen: {
         rules: [
           {
@@ -533,7 +533,7 @@ export const createTimelineItemFields = (
     label: "Image",
     name: "image",
     type: "image",
-    widget: "NDLAShowWhen",
+    widget: "showWhen",
     showWhen: {
       rules: [
         {
@@ -547,7 +547,7 @@ export const createTimelineItemFields = (
     label: "Video",
     name: "video",
     type: "video",
-    widget: "NDLAShowWhen",
+    widget: "showWhen",
     showWhen: {
       rules: [
         {
@@ -561,7 +561,7 @@ export const createTimelineItemFields = (
     label: "Audio",
     name: "audio",
     type: "audio",
-    widget: "NDLAShowWhen",
+    widget: "showWhen",
     showWhen: {
       rules: [
         {
@@ -577,7 +577,7 @@ export const createTimelineItemFields = (
       'Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href="https://timeline.knightlab.com/docs/media-types.html" target="_blank" rel="noopener noreferrer">Knightlab docs</a>',
     name: "customMedia",
     type: "text",
-    widget: "NDLAShowWhen",
+    widget: "showWhen",
     showWhen: {
       rules: [
         {
@@ -625,7 +625,7 @@ export const createTimelineItemFields = (
         label: "Background color",
         name: "backgroundColor",
         type: "text",
-        widget: "NDLAShowWhen",
+        widget: "showWhen",
         showWhen: {
           rules: [
             {
@@ -646,7 +646,7 @@ export const createTimelineItemFields = (
         label: "Background image",
         name: "backgroundImage",
         type: "image",
-        widget: "NDLAShowWhen",
+        widget: "showWhen",
         showWhen: {
           rules: [
             {
