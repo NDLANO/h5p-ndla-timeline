@@ -53,18 +53,12 @@ export const parseDateString = (dateString: DateString): TimelineDate => {
 };
 
 export const parseDate = (dateString: string): TimelineDate | null => {
-  const dateMillis = Date.parse(dateString);
-  const isValid = !Number.isNaN(dateMillis);
-  if (!isValid) {
-    return null;
-  }
-
   const isDateStr = isDateString(dateString);
   if (isDateStr) {
     return parseDateString(dateString);
   }
-
-  const date = new Date(dateMillis);
+  // Returns current date, but this should never happen!
+  const date = new Date();
 
   return {
     year: date.getFullYear(),
