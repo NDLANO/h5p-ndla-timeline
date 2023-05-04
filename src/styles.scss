@@ -20,15 +20,17 @@
 
   .tl-menubar-button:not(:disabled) {
     color: #000;
+    opacity: 0.25;
 
     &:hover {
       color: #fff;
+      opacity: 1;
     }
   }
 
   .tl-menubar-button:disabled {
     color: #666;
-    opacity: 1;
+    opacity: 0.1;
   }
 
   .tl-timenav .tl-attribution a {
@@ -48,14 +50,39 @@
       .tl-timemarker-text {
         h2.tl-headline {
           color: #000;
+          font-size: 12px;
 
           p {
             color: #000;
+            font-size: 12px;
           }
         }
       }
     }
   }
+
+
+  .tl-timemarker:not(.tl-timemarker-active) {
+    .tl-timemarker-content-container .tl-timemarker-content {
+      .tl-timemarker-media-container {
+        [class^="tl-icon-"],
+        [class*=" tl-icon-"] {
+          color: #C0C0C0;
+        }
+      }
+
+      .tl-timemarker-text {
+        h2.tl-headline {
+          color: #C0C0C0;
+
+          p {
+            color: #C0C0C0;
+          }
+        }
+      }
+    }
+  }
+
 
   .tl-timemarker:not(.tl-timemarker-active):hover {
     .tl-timemarker-content-container .tl-timemarker-content {
@@ -77,16 +104,9 @@
       }
     }
   }
-
-  .tl-text .tl-headline-date,
-  .tl-text h3.tl-headline-date {
-    color: #000 !important;
-  }
-
-  .tl-icon-image,
-  .tl-slidenav-title,
-  .tl-slidenav-description {
-    display: none !important;
+  
+  .tl-slidenav-content-container .tl-slidenav-inverted {
+    display: none;
   }
 
   .tl-timeaxis
@@ -140,4 +160,39 @@
       z-index: 1;
     }
   }
+ 
+  .tl-slidenav-title {
+		opacity: 0.25;
+	}
+  
+  .tl-slidenav-next .tl-slidenav-title {
+    margin-top: -25px;
+  }
+  
+	.tl-slidenav-description {
+		opacity: 0;
+  }
+		
+  .tl-slidenav-previous, .tl-slidenav-next {
+    &:hover, &:focus-visible {
+        .tl-slidenav-title {
+            filter: alpha(opacity=0);
+            -khtml-opacity: 0;
+            -moz-opacity: 0;
+            opacity: 100;
+        }
+        .tl-slidenav-description {
+            opacity: 0.5;
+        }
+    }
+  }
+  .tl-slidenav-next .tl-slidenav-icon {
+    margin-bottom: 40px;
+  }
+  
+  .tl-media {
+    width: 50%!important;
+  }
+
 }
+  

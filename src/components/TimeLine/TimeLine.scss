@@ -7,21 +7,21 @@
 
 [id*="layout-right"] {
   .tl-media {
-    order: 1;
+    order: 2;
   }
 
   .tl-text {
-    order: 2;
+    order: 1;
   }
 }
 
 [id*="layout-left"] {
   .tl-text {
-    order: 1;
+    order: 2;
   }
 
   .tl-media {
-    order: 2;
+    order: 1;
   }
 }
 
@@ -196,7 +196,7 @@
  *
  * {2} Overrides {1} when contained by a `.timeline-large-text`
  */
-.tl-slidenav-previous,
+
 .tl-slidenav-next {
   display: block !important;
   font-family: "PT Sans Narrow", sans-serif !important;
@@ -228,9 +228,15 @@
     }
   }
 
-  .h5p-tl-slide-is-start & {
-    display: none !important;
+  .tl-slidenav-title,
+  .tl-slidenav-description {
+    font-size: 0.6875rem !important; /* {1} */
+
+    .timeline-large-text & {
+      font-size: 1rem !important; /* {2} */
+    }
   }
+
 }
 
 .tl-slidenav-next {
