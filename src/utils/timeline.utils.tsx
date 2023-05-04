@@ -164,6 +164,38 @@ export const mapEventToTimelineSlide = (
   const endDate = event.endDate && parseDate(event.endDate);
   if (endDate) {
     slide.end_date = endDate;
+    
+    // Check that end date if later than start date and issue alert if incorrect.
+    if (slide.start_date !== undefined) {
+      const startYear = (slide.start_date['year'] !== undefined) ? slide.start_date['year'] : undefined;
+      const endYear = (slide.end_date['year'] !== undefined) ? slide.end_date['year'] : undefined;
+      const startMonth = (slide.start_date['month'] !== undefined) ? slide.start_date['month'] : undefined;
+      const endMonth = (slide.end_date['month'] !== undefined) ? slide.end_date['month'] : undefined;
+      const startDay = (slide.start_date['day'] !== undefined) ? slide.start_date['day'] : undefined;
+      const endDay = (slide.end_date['day'] !== undefined) ? slide.end_date['day'] : undefined;
+      
+      if (startYear !== undefined 
+        && endYear !== undefined && startYear > endYear) {
+          alert('End date (' + endYear + ') should be LATER than start date (' 
+            + startYear + ') in Slide ' + event.title);
+      }
+      else if (
+        startYear === endYear
+        && startMonth !== undefined
+        && endMonth !== undefined 
+        && startMonth > endMonth) {
+          alert('End date (' + endYear + '-' + endMonth 
+            + ') should be LATER than start date (' + startYear + '-' + startMonth + ') in Slide ' + event.title);
+        }      
+      else if (
+        startYear === endYear
+        && startMonth === endMonth
+        && startDay !== undefined         
+        && endDay !== undefined 
+        && startDay > endDay ) {
+          alert('End date (' + endYear + '-' + endMonth + '-' + endDay + ') should be LATER than start date ('  + startYear + '-' + startMonth + '-' + startDay + ') in Slide ' + event.title);
+      }
+    };
   }
 
   const media = getMedia(event);
