@@ -280,7 +280,7 @@
             "value": "none"
           }
         ],
-        "default": "image"
+        "default": "none"
       },
       {
         "label": "Image",
@@ -766,7 +766,7 @@
               "value": "none"
             }
           ],
-          "default": "image"
+          "default": "none"
         },
         {
           "label": "Image",
