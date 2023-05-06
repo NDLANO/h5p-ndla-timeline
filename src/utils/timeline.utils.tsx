@@ -52,19 +52,32 @@ export const parseDateString = (dateString: DateString): TimelineDate => {
   return ret;
 };
 
-export const parseDate = (dateString: string): TimelineDate | null => {
-  const isDateStr = isDateString(dateString);
-  if (isDateStr) {
-    return parseDateString(dateString);
-  }
-  // Returns current date, but this should never happen!
-  const date = new Date();
+/*
+ * Firefox cannot handle negative years in Date.parse unless the argument uses
+ * ISO 8601 format with expanded years.
+ * @see https://tc39.es/ecma262/#sec-expanded-years
+ */
+const isDateValid = (dateString: DateString): boolean => {
+  const date = parseDateString(dateString);
+  const year =
+    date.year < 0
+      ? `-${(-1 * date.year).toString().padStart(6, "0")}`
+      : `+${date.year.toString().padStart(6, "0")}`;
+  const month = (date.month ?? 1).toString().padStart(2, "0");
+  const day = (date.day ?? 1).toString().padStart(2, "0");
+  return !Number.isNaN(Date.parse(`${year}-${month}-${day}T00:00:00Z`));
+};
 
-  return {
-    year: date.getFullYear(),
-    month: date.getMonth(),
-    day: date.getDate(),
-  };
+export const parseDate = (dateString: string): TimelineDate | null => {
+  if (!isDateString(dateString)) {
+    return null;
+  }
+
+  if (!isDateValid(dateString)) {
+    return null;
+  }
+
+  return parseDateString(dateString);
 };
 
 const getMedia = (
