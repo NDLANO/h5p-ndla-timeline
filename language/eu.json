@@ -1,7 +1,7 @@
 {
   "semantics": [
     {
-      "label": "Show title slide"
+      "label": "Erakutsi izenburuko diapositiba"
     },
     {
       "fields": [
@@ -9,34 +9,34 @@
           "label": "Id"
         },
         {
-          "label": "Slide type",
-          "default": "title"
+          "label": "Diapositiba mota",
+          "default": "Izenburua"
         },
         {
-          "label": "Title"
+          "label": "Izenburua"
         },
         {
-          "label": "Start date",
-          "description": "YYYY-MM-DD — only year is required. Years can be negative."
+          "label": "Hasiera data",
+          "description": "YYYY-MM-DD — urtea bakarrik da beharrezkoa. Urteak negatiboak izan daitezke."
         },
         {
-          "label": "End date",
-          "description": "YYYY-MM-DD — only year is required. Years can be negative."
+          "label": "Amaiera data",
+          "description": "YYYY-MM-DD — urtea bakarrik da beharrezkoa. Urteak negatiboak izan daitezke."
         },
         {
-          "label": "Description"
+          "label": "Deskribapena"
         },
         {
-          "label": "Rights of use",
+          "label": "Erabilera-eskubideak",
           "fields": [
             {
-              "label": "Title"
+              "label": "Izenburua"
             },
             {
-              "label": "Author"
+              "label": "Egilea"
             },
             {
-              "label": "Year(s)"
+              "label": "Urtea(k)"
             },
             {
               "label": "Source"
@@ -205,7 +205,7 @@
           ]
         }
       ],
-      "label": "Title slide"
+      "label": "Izenburuko diapositiba"
     },
     {
       "field": {
