@@ -196,7 +196,6 @@
  *
  * {2} Overrides {1} when contained by a `.timeline-large-text`
  */
-.tl-slidenav-previous,
 .tl-slidenav-next {
   display: block !important;
   font-family: "PT Sans Narrow", sans-serif !important;
@@ -227,9 +226,13 @@
       }
     }
   }
+  .tl-slidenav-title,
+  .tl-slidenav-description {
+    font-size: 0.6875rem !important; /* {1} */
 
-  .h5p-tl-slide-is-start & {
-    display: none !important;
+    .timeline-large-text & {
+      font-size: 1rem !important; /* {2} */
+    }
   }
 }
 
