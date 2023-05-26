@@ -5,7 +5,7 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "MPL",
   "scripts": {
     "watch": "webpack serve --hot --mode=development",
     "build:dev": "webpack --mode=development",
