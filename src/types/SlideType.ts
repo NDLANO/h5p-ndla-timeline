@@ -1,1 +1,1 @@
-export type SlideType = "title" | "regular";
+export type SlideType = 'title' | 'regular';

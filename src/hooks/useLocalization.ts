@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import { L10nContext } from "../contexts/LocalizationContext";
-import { TranslationKey } from "../types/TranslationKey";
+import { useContext } from 'react';
+import { L10nContext } from '../contexts/LocalizationContext';
+import { TranslationKey } from '../types/TranslationKey';
 
 export const useLocalization = (translationKey: TranslationKey): string => {
   const translations = useContext(L10nContext);

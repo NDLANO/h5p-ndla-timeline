@@ -1,30 +1,28 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
-const webpack = require("webpack");
-const middleware = require("webpack-dev-middleware");
-const path = require("path");
-const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const webpack = require('webpack');
+const middleware = require('webpack-dev-middleware');
+const path = require('path');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const config = {
   entry: {
-    bundle: ["react-hot-loader/patch", "./src/index.tsx"],
+    bundle: ['react-hot-loader/patch', './src/index.tsx'],
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "[name].js",
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].js',
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: "babel-loader",
+        use: 'babel-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.ts(x)?$/,
-        loader: "ts-loader",
+        loader: 'ts-loader',
         exclude: /node_modules/,
       },
       {
@@ -32,17 +30,17 @@ const config = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               modules: true,
             },
           },
-          "sass-loader",
+          'sass-loader',
         ],
       },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
         exclude: /\.module\.scss$/,
       },
       {
@@ -50,7 +48,7 @@ const config = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               importLoaders: 1,
               modules: true,
@@ -60,12 +58,12 @@ const config = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
         exclude: /\.module\.css$/,
       },
       {
         test: /\.less$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
         // use: ExtractTextPlugin.extract({
         //     fallback: "style-loader",
         //     use: "css-loader!less-loader"
@@ -73,15 +71,15 @@ const config = {
       },
       {
         test: /\.svg$/,
-        use: "file-loader",
+        use: 'file-loader',
       },
       {
         test: /\.png$/,
         use: [
           {
-            loader: "url-loader",
+            loader: 'url-loader',
             options: {
-              mimetype: "image/png",
+              mimetype: 'image/png',
             },
           },
         ],
@@ -89,9 +87,9 @@ const config = {
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx", ".tsx", ".ts", ".scss"],
+    extensions: ['.js', '.jsx', '.tsx', '.ts', '.scss'],
     alias: {
-      "react-dom": "@hot-loader/react-dom",
+      'react-dom': '@hot-loader/react-dom',
     },
   },
   devServer: {
@@ -99,7 +97,7 @@ const config = {
   },
   plugins: [
     new BundleAnalyzerPlugin({
-      analyzerMode: "static",
+      analyzerMode: 'static',
       openAnalyzer: false,
     }),
     new MiniCssExtractPlugin(),
@@ -108,9 +106,9 @@ const config = {
 };
 
 module.exports = (env, argv) => {
-  const isProduction = argv.mode === "production";
+  const isProduction = argv.mode === 'production';
   if (!isProduction) {
-    const compiler = webpack({ ...config, mode: "development" });
+    const compiler = webpack({ ...config, mode: 'development' });
 
     middleware(compiler, {
       writeToDisk: true,

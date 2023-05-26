@@ -1,7 +1,7 @@
-import { Root, Trigger, Content, Close, Arrow } from "@radix-ui/react-popover";
-import * as React from "react";
-import { FC, ReactElement } from "react";
-import styles from "./Popover.module.scss";
+import { Root, Trigger, Content, Close, Arrow } from '@radix-ui/react-popover';
+import * as React from 'react';
+import { FC, ReactElement } from 'react';
+import styles from './Popover.module.scss';
 
 type Params = {
   isOpen: boolean;
@@ -18,7 +18,6 @@ export const Popover: FC<Params> = ({
 }) => {
   return (
     <Root open={isOpen} onOpenChange={onOpenChange}>
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <Trigger className={styles.trigger} {...triggerProps} />
       <Content className={styles.content}>
         <Close className={styles.close} />
