@@ -1,4 +1,4 @@
-import { Copyright, Image } from 'h5p-types';
+import { H5PCopyright, H5PImage } from 'h5p-types';
 import { EventContent } from './EventContent';
 import { LayoutOption } from './LayoutOption';
 import { MediaType } from './MediaType';
@@ -11,7 +11,7 @@ export type EventItemType<S extends SlideType> = {
   slideType: S;
 
   description?: string;
-  descriptionCopyright?: Copyright;
+  descriptionCopyright?: H5PCopyright;
 
   endDate?: string;
 
@@ -28,7 +28,7 @@ export type EventItemType<S extends SlideType> = {
       }
     | {
         backgroundType: 'image';
-        backgroundImage?: Image;
+        backgroundImage?: H5PImage;
       };
 } & MediaType &
   (

@@ -1,20 +1,21 @@
 /* TimelineJS uses dangling underscore */
 /* eslint-disable no-underscore-dangle */
+import type { TimelineSlide } from '@knight-lab/timelinejs';
+import { Timeline } from '@knight-lab/timelinejs';
 import {
+  EventDispatcher,
   H5PContentId,
-  Copyright,
+  H5PCopyright,
   IH5PContentType,
   Media,
-  EventDispatcher,
 } from 'h5p-types';
-import { Timeline } from '@knight-lab/timelinejs';
-import type { TimelineSlide } from '@knight-lab/timelinejs';
+import { H5P } from 'h5p-utils';
 import * as React from 'react';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { hydrate } from 'react-dom';
 import { useEffectOnce } from 'react-use';
+import { buildH5PMediaInstance } from '../../H5P/H5P.util';
 import { L10nContext } from '../../contexts/LocalizationContext';
-import { H5P, buildH5PMediaInstance } from '../../H5P/H5P.util';
 import { useH5PFullscreenChange } from '../../hooks/useH5PFullscreenChange';
 import { Params } from '../../types/Params';
 import {
@@ -201,7 +202,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     Array.from(
       container.querySelectorAll<HTMLElement>('.h5p-tl-copyright-information'),
     ).forEach((element) => {
-      let copyright: Copyright = {};
+      let copyright: H5PCopyright = {};
 
       try {
         copyright = JSON.parse(element.dataset.copyright ?? '{}');

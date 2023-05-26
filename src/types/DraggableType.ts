@@ -1,4 +1,4 @@
-import { Image } from 'h5p-types';
+import { H5PImage } from 'h5p-types';
 
 export type DraggableType = {
   id: string;
@@ -17,6 +17,6 @@ export type DraggableType = {
 
   label: string;
   description?: string | undefined;
-  backgroundImage?: Image | undefined;
+  backgroundImage?: H5PImage | undefined;
   links?: Array<string> | undefined;
 };

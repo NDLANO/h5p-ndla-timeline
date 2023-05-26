@@ -1,4 +1,4 @@
-import { Copyright } from 'h5p-types';
+import { H5PCopyright } from 'h5p-types';
 import * as React from 'react';
 import { FC, useState } from 'react';
 import { useEffectOnce } from 'react-use';
@@ -7,7 +7,7 @@ import { Popover } from '../Popover/Popover';
 import styles from './CopyrightPopover.module.scss';
 
 type Params = {
-  copyright: Copyright;
+  copyright: H5PCopyright;
   isOpen: boolean;
   onOpenChange: (isOpen: boolean) => void;
 };

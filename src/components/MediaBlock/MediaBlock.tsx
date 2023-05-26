@@ -1,20 +1,20 @@
 import { Media } from '@knight-lab/timelinejs/src/js/media/Media';
-import { Audio, Image, Video } from 'h5p-types';
+import { H5PAudio, H5PImage, H5PVideo } from 'h5p-types';
 import * as React from 'react';
 import { FC, useEffect, useMemo, useRef } from 'react';
 
 type MediaBlockProps =
   | {
       type: 'image';
-      media: Image;
+      media: H5PImage;
     }
   | {
       type: 'video';
-      media: Video;
+      media: H5PVideo;
     }
   | {
       type: 'audio';
-      media: Audio;
+      media: H5PAudio;
     }
   | {
       type: 'custom';

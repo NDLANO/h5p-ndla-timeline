@@ -1,4 +1,5 @@
-import { H5PExtras, H5PContentId, H5PEvent, EventDispatcher } from 'h5p-types';
+import { H5PExtras, H5PContentId, H5PEvent, EventDispatcher, IH5PContentType } from 'h5p-types';
+import { H5P } from 'h5p-utils';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { App } from '../App';
@@ -6,12 +7,12 @@ import { H5PContainerContext } from '../contexts/H5PContainerContext';
 import { LocalizationContext } from '../contexts/LocalizationContext';
 import { Params } from '../types/Params';
 import { Translations } from '../types/Translations';
-import { H5P, updatePaths } from './H5P.util';
+import { updatePaths } from './H5P.util';
 
-export class H5PWrapper extends H5P.EventDispatcher {
+export class H5PWrapper extends H5P.EventDispatcher implements IH5PContentType<Params> {
   private wrapper: HTMLElement;
 
-  private params: Params;
+  public params: Params;
 
   private contentId: H5PContentId;
 

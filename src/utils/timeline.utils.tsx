@@ -4,7 +4,7 @@ import type {
   TimelineEra,
   TimelineSlide,
 } from '@knight-lab/timelinejs';
-import { Copyright, Media } from 'h5p-types';
+import { H5PCopyright, H5PMedia } from 'h5p-types';
 import * as React from 'react';
 import { renderToStaticMarkup, renderToString } from 'react-dom/server';
 import { CopyrightInformation } from '../components/CopyrightInformation/CopyrightInformation';
@@ -83,7 +83,7 @@ export const parseDate = (dateString: string): TimelineDate | null => {
 
 const getMedia = (
   eventItem: EventItemType<SlideType>,
-): string | Media | undefined => {
+): string | H5PMedia | undefined => {
   let media;
 
   switch (eventItem.mediaType) {
@@ -111,7 +111,7 @@ const getMedia = (
   return media;
 };
 
-const copyrightIsDefined = (copyright: Copyright | undefined): boolean => {
+const copyrightIsDefined = (copyright: H5PCopyright | undefined): boolean => {
   return !!copyright && !!copyright.license;
 };
 
