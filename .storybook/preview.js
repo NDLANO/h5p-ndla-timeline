@@ -1,10 +1,12 @@
-import * as React from "react";
-import { LocalizationContext } from "../src/contexts/LocalizationContext";
-import { semantics } from "../src/semantics";
-import "!style-loader!css-loader!sass-loader!../src/styles.scss";
+// @ts-check
+
+import * as React from 'react';
+import { LocalizationContext } from '../src/contexts/LocalizationContext';
+import semantics from '../semantics.json';
+import '!style-loader!css-loader!sass-loader!../src/styles.scss';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -13,24 +15,24 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ["Atoms", "Molecules", "Organisms", "Templates", "Pages"],
+      order: ['Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages'],
     },
   },
 };
 
-const translationField = semantics.find(field => field.name === "l10n");
+const translationField = semantics.find((field) => field.name === 'l10n');
 
 const translations = translationField
   ? Object.fromEntries(
-      translationField.fields.map(field => {
-        const defaultValue = field["default"] ?? field.name;
+      translationField.fields?.map((field) => {
+        const defaultValue = field['default'] ?? field.name;
         return [field.name, defaultValue];
-      }),
+      }) ?? [],
     )
   : {};
 
 export const decorators = [
-  Story => (
+  (Story) => (
     <LocalizationContext.Provider value={translations}>
       <Story />
     </LocalizationContext.Provider>
