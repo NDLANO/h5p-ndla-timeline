@@ -9,7 +9,6 @@ src
 .gitignore
 .h5pignore
 babel.config.js
-generate-semantics.ts
 jest.config.ts
 nodemon.json
 package-lock.json
