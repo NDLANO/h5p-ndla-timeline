@@ -5,10 +5,10 @@
 // -----------------------------------
 
 export type TranslationKey =
-  | "copyrightLabel"
-  | "copyrightTitle"
-  | "copyrightAuthor"
-  | "copyrightYear"
-  | "copyrightSource"
-  | "copyrightLicense"
-  | "copyrightVersion";
+  | 'copyrightLabel'
+  | 'copyrightTitle'
+  | 'copyrightAuthor'
+  | 'copyrightYear'
+  | 'copyrightSource'
+  | 'copyrightLicense'
+  | 'copyrightVersion';

@@ -1,15 +1,15 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import * as React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { TimelineSlideItem, TimelineSlideItemProps } from "./TimelineSlideItem";
+import * as React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { TimelineSlideItem, TimelineSlideItemProps } from './TimelineSlideItem';
 
 export default {
-  title: "Molecules/Timeline Slide Item",
+  title: 'Molecules/Timeline Slide Item',
   component: TimelineSlideItem,
 } as ComponentMeta<typeof TimelineSlideItem>;
 
 const defaultArgs: TimelineSlideItemProps = {
-  title: "Title",
+  title: 'Title',
+  // eslint-disable-next-line no-console
   editAction: console.info,
 };
 

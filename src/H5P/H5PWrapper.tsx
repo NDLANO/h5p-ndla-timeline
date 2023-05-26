@@ -1,12 +1,12 @@
-import { H5PExtras, H5PContentId, H5PEvent, EventDispatcher } from "h5p-types";
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { App } from "../App";
-import { H5PContainerContext } from "../contexts/H5PContainerContext";
-import { LocalizationContext } from "../contexts/LocalizationContext";
-import { Params } from "../types/Params";
-import { Translations } from "../types/Translations";
-import { H5P, updatePaths } from "./H5P.util";
+import { H5PExtras, H5PContentId, H5PEvent, EventDispatcher } from 'h5p-types';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import { App } from '../App';
+import { H5PContainerContext } from '../contexts/H5PContainerContext';
+import { LocalizationContext } from '../contexts/LocalizationContext';
+import { Params } from '../types/Params';
+import { Translations } from '../types/Translations';
+import { H5P, updatePaths } from './H5P.util';
 
 export class H5PWrapper extends H5P.EventDispatcher {
   private wrapper: HTMLElement;
@@ -31,14 +31,13 @@ export class H5PWrapper extends H5P.EventDispatcher {
   attach($container: JQuery<HTMLDivElement>): void {
     const containerElement = $container.get(0);
     if (!containerElement) {
-      console.error("Found no containing element to attach `h5p-timeline` to.");
+      console.error('Found no containing element to attach `h5p-timeline` to.');
       return;
     }
 
     containerElement.appendChild(this.wrapper);
-    containerElement.classList.add("h5p-timeline");
+    containerElement.classList.add('h5p-timeline');
 
-    // eslint-disable-next-line react/jsx-no-constructed-context-values
     const l10n = this.params.l10n ?? ({} as Translations);
     const { title } = this.extras.metadata;
 
@@ -64,8 +63,8 @@ export class H5PWrapper extends H5P.EventDispatcher {
   // Register an H5P media instance for resize exchange with H5P root
   registerInstanceForResize(instance: EventDispatcher): void {
     // Resize instance to fit inside parent and vice versa
-    H5PWrapper.bubbleDown(this, "resize", [instance]);
-    H5PWrapper.bubbleUp(instance, "resize", this);
+    H5PWrapper.bubbleDown(this, 'resize', [instance]);
+    H5PWrapper.bubbleUp(instance, 'resize', this);
   }
 
   // Bubble H5P events from parent to children
@@ -106,6 +105,6 @@ export class H5PWrapper extends H5P.EventDispatcher {
   }
 
   private static createWrapperElement(): HTMLDivElement {
-    return document.createElement("div");
+    return document.createElement('div');
   }
 }

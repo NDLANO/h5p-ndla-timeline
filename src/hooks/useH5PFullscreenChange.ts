@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from "react";
-import { H5PContainerContext } from "../contexts/H5PContainerContext";
+import { useContext, useEffect, useState } from 'react';
+import { H5PContainerContext } from '../contexts/H5PContainerContext';
 
 export const useH5PFullscreenChange = (
   callback: (isFullscreen: boolean) => void,
@@ -13,7 +13,7 @@ export const useH5PFullscreenChange = (
     }
 
     const observer = new MutationObserver(() => {
-      const isNowFullscreen = h5pContainer.classList.contains("h5p-fullscreen");
+      const isNowFullscreen = h5pContainer.classList.contains('h5p-fullscreen');
 
       const fullscreenChanged = isFullscreen !== isNowFullscreen;
       if (fullscreenChanged) {
@@ -24,7 +24,7 @@ export const useH5PFullscreenChange = (
 
     observer.observe(h5pContainer, {
       attributes: true,
-      attributeFilter: ["class"],
+      attributeFilter: ['class'],
     });
 
     return () => {

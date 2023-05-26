@@ -1,10 +1,10 @@
-import * as fs from "fs";
-import { H5PField, H5PBehaviour, H5PL10n } from "h5p-types";
-import { semantics } from "./src/semantics";
-import { findDuplicates } from "./src/utils/array.utils";
+import * as fs from 'fs';
+import { H5PField, H5PBehaviour, H5PL10n } from 'h5p-types';
+import { semantics } from './src/semantics';
+import { findDuplicates } from './src/utils/array.utils';
 
-const semanticsPath = "semantics.json";
-const translationKeyPath = "src/types/TranslationKey.ts";
+const semanticsPath = 'semantics.json';
+const translationKeyPath = 'src/types/TranslationKey.ts';
 
 async function createSemanticsJson(): Promise<void> {
   const textContent = JSON.stringify(semantics, null, 2);
@@ -12,7 +12,7 @@ async function createSemanticsJson(): Promise<void> {
 }
 
 const isH5PL10n = (obj: H5PField | H5PBehaviour | H5PL10n): obj is H5PL10n => {
-  return obj.name === "l10n";
+  return obj.name === 'l10n';
 };
 
 async function deleteTranslationKeysFile(): Promise<void> {
@@ -23,7 +23,7 @@ async function deleteTranslationKeysFile(): Promise<void> {
 }
 
 async function createTranslationKeys(): Promise<void> {
-  const translationField = semantics.find(field =>
+  const translationField = semantics.find((field) =>
     isH5PL10n(field),
   ) as H5PL10n | null;
 
@@ -38,11 +38,11 @@ async function createTranslationKeys(): Promise<void> {
   const duplicateKeysExist = duplicates.length > 0;
   if (duplicateKeysExist) {
     throw new Error(
-      `Duplicate translation keys exist:\n · ${duplicates.join("\n · ")}\n`,
+      `Duplicate translation keys exist:\n · ${duplicates.join('\n · ')}\n`,
     );
   }
 
-  const translationKeysString = translationKeys.join(`"\n  | "`);
+  const translationKeysString = translationKeys.join('"\n  | "');
 
   const textContent = `// --------- ⚠️  WARNING  ⚠️ ---------
 // This file is generated from the values within \`semantics.json\`'s l10n group. 

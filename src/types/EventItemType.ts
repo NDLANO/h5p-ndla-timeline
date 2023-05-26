@@ -1,9 +1,9 @@
-import { Copyright, Image } from "h5p-types";
-import { EventContent } from "./EventContent";
-import { LayoutOption } from "./LayoutOption";
-import { MediaType } from "./MediaType";
-import { SlideType } from "./SlideType";
-import { Tag } from "./Tag";
+import { Copyright, Image } from 'h5p-types';
+import { EventContent } from './EventContent';
+import { LayoutOption } from './LayoutOption';
+import { MediaType } from './MediaType';
+import { SlideType } from './SlideType';
+import { Tag } from './Tag';
 
 export type EventItemType<S extends SlideType> = {
   id: string;
@@ -20,26 +20,26 @@ export type EventItemType<S extends SlideType> = {
 
   appearance:
     | {
-        backgroundType: "none";
+        backgroundType: 'none';
       }
     | {
-        backgroundType: "color";
+        backgroundType: 'color';
         backgroundColor?: string;
       }
     | {
-        backgroundType: "image";
+        backgroundType: 'image';
         backgroundImage?: Image;
       };
 } & MediaType &
   (
     | {
         title?: string;
-        slideType: "title";
+        slideType: 'title';
         startDate?: string;
       }
     | {
         title: string;
-        slideType: "regular";
+        slideType: 'regular';
         startDate: string;
         tags?: Array<Tag>;
       }

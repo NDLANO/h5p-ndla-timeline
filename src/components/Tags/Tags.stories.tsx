@@ -1,12 +1,11 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import * as React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Tags } from "./Tags";
+import * as React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Tags } from './Tags';
 
 type TagsProps = React.ComponentPropsWithoutRef<typeof Tags>;
 
 export default {
-  title: "Molecules/Tags",
+  title: 'Molecules/Tags',
   component: Tags,
 } as ComponentMeta<typeof Tags>;
 
@@ -14,14 +13,14 @@ export const Default: ComponentStory<typeof Tags> = () => {
   const args: TagsProps = {
     tags: [
       {
-        id: "tag-1",
-        color: "darkgreen",
-        name: "Dark green tag",
+        id: 'tag-1',
+        color: 'darkgreen',
+        name: 'Dark green tag',
       },
       {
-        id: "tag-2",
-        color: "lightgreen",
-        name: "Light green tag",
+        id: 'tag-2',
+        color: 'lightgreen',
+        name: 'Light green tag',
       },
     ],
   };

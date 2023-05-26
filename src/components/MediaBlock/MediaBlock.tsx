@@ -1,35 +1,34 @@
-/* eslint-disable react/destructuring-assignment */
-import { Media } from "@knight-lab/timelinejs/src/js/media/Media";
-import { Audio, Image, Video } from "h5p-types";
-import * as React from "react";
-import { FC, useEffect, useMemo, useRef } from "react";
+import { Media } from '@knight-lab/timelinejs/src/js/media/Media';
+import { Audio, Image, Video } from 'h5p-types';
+import * as React from 'react';
+import { FC, useEffect, useMemo, useRef } from 'react';
 
 type MediaBlockProps =
   | {
-      type: "image";
+      type: 'image';
       media: Image;
     }
   | {
-      type: "video";
+      type: 'video';
       media: Video;
     }
   | {
-      type: "audio";
+      type: 'audio';
       media: Audio;
     }
   | {
-      type: "custom";
+      type: 'custom';
       media: string;
     };
 
-export const MediaBlock: FC<MediaBlockProps> = props => {
+export const MediaBlock: FC<MediaBlockProps> = (props) => {
   const { media } = props;
 
   const containerRef = useRef<HTMLDivElement>(null);
   const mediaRef = useMemo<Media>(
     () =>
       new Media({
-        url: props.type === "custom" ? props.media : props.media.path,
+        url: props.type === 'custom' ? props.media : props.media.path,
       }),
     [props.media, props.type],
   );
