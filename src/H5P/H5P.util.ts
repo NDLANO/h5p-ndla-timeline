@@ -1,10 +1,9 @@
-import { H5PObject, IH5PContentType, Media, H5PContentId } from 'h5p-types';
+import { IH5PContentType, Media, H5PContentId } from 'h5p-types';
+import { H5P } from 'h5p-utils';
 import { EventItemType } from '../types/EventItemType';
 import { Params } from '../types/Params';
 import { SlideType } from '../types/SlideType';
 import libraryJSON from '../../library.json';
-
-export const H5P: H5PObject = (window as any).H5P ?? {};
 
 export const normalizeAssetPath = (path: string, contentId: string): string => {
   const pathAlreadyAbsolute =

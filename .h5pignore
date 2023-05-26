@@ -4,6 +4,7 @@ build_info
 node_modules
 src
 .babelrc
+.eslintignore
 .eslintrc.json
 .gitignore
 .h5pignore
