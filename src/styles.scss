@@ -82,13 +82,36 @@
   .tl-text h3.tl-headline-date {
     color: #000 !important;
   }
-
-  .tl-icon-image,
-  .tl-slidenav-title,
+  
+    .tl-slidenav-title {
+    opacity: 0.25;
+  }
+  
+  .tl-slidenav-next .tl-slidenav-title {
+    margin-top: -25px;
+  }
+  
   .tl-slidenav-description {
-    display: none !important;
+    opacity: 0;
   }
 
+  .tl-slidenav-previous, .tl-slidenav-next {
+    &:hover, &:focus-visible {
+        .tl-slidenav-title {
+            filter: alpha(opacity=0);
+            -khtml-opacity: 0;
+            -moz-opacity: 0;
+            opacity: 100;
+        }
+        .tl-slidenav-description {
+            opacity: 0.5;
+        }
+    }
+  }
+  
+  .tl-slidenav-next .tl-slidenav-icon {
+    margin-bottom: 40px;
+  }
   .tl-timeaxis
     .tl-timeaxis-content-container
     .tl-timeaxis-minor
@@ -140,4 +163,5 @@
       z-index: 1;
     }
   }
+
 }
