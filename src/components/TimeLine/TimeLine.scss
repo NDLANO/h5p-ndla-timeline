@@ -198,7 +198,6 @@
  */
 .tl-slidenav-previous,
 .tl-slidenav-next {
-  display: block !important;
   font-family: "PT Sans Narrow", sans-serif !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
@@ -227,13 +226,10 @@
       }
     }
   }
-
-  .h5p-tl-slide-is-start & {
-    display: none !important;
-  }
 }
 
 .tl-slidenav-next {
+  display: block !important;
   // On hover, the value is set to `5rem` (or rather 80px)
   $margin-left__default: 4.75rem;
   $margin-left__skinny: 0.5rem;
