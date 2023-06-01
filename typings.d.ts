@@ -1,10 +1,10 @@
 /* eslint-disable max-classes-per-file */
 type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>;
 
-declare module "*.module.css";
-declare module "*.module.scss";
+declare module '*.module.css';
+declare module '*.module.scss';
 
-declare module "@knight-lab/timelinejs" {
+declare module '@knight-lab/timelinejs' {
   declare type TimelineMedia = {
     url: string;
     caption?: string;
@@ -79,10 +79,10 @@ declare module "@knight-lab/timelinejs" {
   declare type TimelineDefinition =
     | string
     | {
-        title?: Optional<TimelineSlide, "start_date">;
+        title?: Optional<TimelineSlide, 'start_date'>;
         events: Array<TimelineSlide>;
         eras: Array<TimelineEra>;
-        scale?: "human" | "cosmological" = "human";
+        scale?: 'human' | 'cosmological' = 'human';
       };
 
   // Definitions by: Roland Zwaga <https://github.com/rolandzwaga>
@@ -181,7 +181,7 @@ declare module "@knight-lab/timelinejs" {
   }
 }
 
-declare module "@knight-lab/timelinejs/src/js/media/Media" {
+declare module '@knight-lab/timelinejs/src/js/media/Media' {
   declare class Media {
     constructor(
       data?: {

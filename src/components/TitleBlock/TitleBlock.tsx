@@ -1,6 +1,6 @@
-import * as React from "react";
-import { FC } from "react";
-import styles from "./TitleBlock.module.scss";
+import * as React from 'react';
+import { FC } from 'react';
+import styles from './TitleBlock.module.scss';
 
 type TitleBlockProps = {
   title: string;

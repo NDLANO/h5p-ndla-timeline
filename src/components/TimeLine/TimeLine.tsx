@@ -1,29 +1,30 @@
 /* TimelineJS uses dangling underscore */
 /* eslint-disable no-underscore-dangle */
+import type { TimelineSlide } from '@knight-lab/timelinejs';
+import { Timeline } from '@knight-lab/timelinejs';
 import {
+  EventDispatcher,
   H5PContentId,
-  Copyright,
+  H5PCopyright,
   IH5PContentType,
   Media,
-  EventDispatcher,
-} from "h5p-types";
-import { Timeline } from "@knight-lab/timelinejs";
-import type { TimelineSlide } from "@knight-lab/timelinejs";
-import * as React from "react";
-import { useContext, useEffect, useRef, useState } from "react";
-import { hydrate } from "react-dom";
-import { useEffectOnce } from "react-use";
-import { L10nContext } from "../../contexts/LocalizationContext";
-import { H5P, buildH5PMediaInstance } from "../../H5P/H5P.util";
-import { useH5PFullscreenChange } from "../../hooks/useH5PFullscreenChange";
-import { Params } from "../../types/Params";
+} from 'h5p-types';
+import { H5P } from 'h5p-utils';
+import * as React from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
+import { hydrate } from 'react-dom';
+import { useEffectOnce } from 'react-use';
+import { buildH5PMediaInstance } from '../../H5P/H5P.util';
+import { L10nContext } from '../../contexts/LocalizationContext';
+import { useH5PFullscreenChange } from '../../hooks/useH5PFullscreenChange';
+import { Params } from '../../types/Params';
 import {
   addTabIndexToScrollableElements,
   createTimelineDefinition,
   getClosestLocaleCode,
-} from "../../utils/timeline.utils";
-import { CopyrightInformation } from "../CopyrightInformation/CopyrightInformation";
-import "./TimeLine.scss";
+} from '../../utils/timeline.utils';
+import { CopyrightInformation } from '../CopyrightInformation/CopyrightInformation';
+import './TimeLine.scss';
 
 type TimeLineProps = {
   data: Params;
@@ -56,7 +57,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   const h5pMediaInstances: { [index: string]: IH5PContentType | null } = {};
 
   useEffectOnce(() => {
-    if (typeof timelineDefinition === "string") {
+    if (typeof timelineDefinition === 'string') {
       return; // Edge case
     }
 
@@ -65,9 +66,9 @@ export const TimeLine: React.FC<TimeLineProps> = ({
      * cmp. mapEventToTimelineSlide in timeline.utils.tsx
      */
     const modifiedIds: Array<string> = [
-      timelineDefinition?.title?.unique_id ?? "",
+      timelineDefinition?.title?.unique_id ?? '',
       ...timelineDefinition.events.map(
-        (event: TimelineSlide) => event.unique_id ?? "",
+        (event: TimelineSlide) => event.unique_id ?? '',
       ),
     ];
 
@@ -78,12 +79,12 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       }
 
       const medium: Array<Media> | null =
-        item.mediaType === "video" && item.video?.[0].path ? item.video : null;
+        item.mediaType === 'video' && item.video?.[0].path ? item.video : null;
 
       const h5pMediaInstance: IH5PContentType | null = buildH5PMediaInstance(
         contentId,
         medium,
-        "H5P.Video",
+        'H5P.Video',
       );
 
       if (h5pMediaInstance !== null) {
@@ -104,7 +105,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     );
 
     // Timeline sends out events. No need for Mutation observers.
-    timeline.on("loaded", () => {
+    timeline.on('loaded', () => {
       if (!timelineContainer) {
         return;
       }
@@ -113,12 +114,12 @@ export const TimeLine: React.FC<TimeLineProps> = ({
        * Wait for each slide to be loaded to replace original medium
        * with H5P media instance
        */
-      timeline._storyslider._slides.forEach(slide => {
+      timeline._storyslider._slides.forEach((slide) => {
         if (!slide._media || !h5pMediaInstances[slide.data.unique_id]) {
           return; // No medium or no H5P override, skip
         }
 
-        slide._media.on("loaded", () => {
+        slide._media.on('loaded', () => {
           const mediaContentDOM = slide._media?._el?.content;
           if (!mediaContentDOM) {
             return;
@@ -148,7 +149,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     const { width } = container.getBoundingClientRect();
     setHeight(width / aspectRatio);
 
-    const observer = new ResizeObserver(entries => {
+    const observer = new ResizeObserver((entries) => {
       for (const entry of entries) {
         const borderBoxSize: ResizeObserverSize = Array.isArray(
           entry.borderBoxSize,
@@ -168,7 +169,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     };
   }, [aspectRatio]);
 
-  useH5PFullscreenChange(isFullscreen => {
+  useH5PFullscreenChange((isFullscreen) => {
     if (isFullscreen) {
       return;
     }
@@ -180,13 +181,13 @@ export const TimeLine: React.FC<TimeLineProps> = ({
 
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
-        window.dispatchEvent(new Event("resize"));
+        window.dispatchEvent(new Event('resize'));
       });
     });
 
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
-        window.dispatchEvent(new Event("resize"));
+        window.dispatchEvent(new Event('resize'));
       });
     });
   });
@@ -199,18 +200,19 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     const container = containerRef.current;
 
     Array.from(
-      container.querySelectorAll<HTMLElement>(".h5p-tl-copyright-information"),
-    ).forEach(element => {
-      let copyright: Copyright = {};
+      container.querySelectorAll<HTMLElement>('.h5p-tl-copyright-information'),
+    ).forEach((element) => {
+      let copyright: H5PCopyright = {};
 
       try {
-        copyright = JSON.parse(element.dataset.copyright ?? "{}");
+        copyright = JSON.parse(element.dataset.copyright ?? '{}');
 
         if (copyright.source) {
           // See `CopyrightInformation.tsx`
-          copyright.source = copyright.source.replace("h_t_t_p", "http");
+          copyright.source = copyright.source.replace('h_t_t_p', 'http');
         }
-      } catch (error) {
+      }
+      catch (error) {
         console.error(error);
       }
 
@@ -229,9 +231,9 @@ export const TimeLine: React.FC<TimeLineProps> = ({
      */
     Array.from(
       container.querySelectorAll<HTMLAnchorElement>(
-        ".h5p-tl-slide-description p a.tl-makelink",
+        '.h5p-tl-slide-description p a.tl-makelink',
       ),
-    ).forEach(element => {
+    ).forEach((element) => {
       const parent: HTMLElement | null = element.parentElement;
       if (parent) {
         parent.innerHTML = parent.innerHTML.replace(
@@ -241,21 +243,21 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       }
     });
 
-    const startClass = "h5p-tl-slide-is-start";
-    const endClass = "h5p-tl-slide-is-end";
+    const startClass = 'h5p-tl-slide-is-start';
+    const endClass = 'h5p-tl-slide-is-end';
 
     const timelineElement =
-      container.querySelector<HTMLElement>(".tl-timeline");
+      container.querySelector<HTMLElement>('.tl-timeline');
 
     const timeMarkers = Array.from(
-      container.querySelectorAll<HTMLDivElement>(".tl-timemarker"),
+      container.querySelectorAll<HTMLDivElement>('.tl-timemarker'),
     );
 
     const timeMarkerObservers = timeMarkers.map(
       (timeMarker, index): MutationObserver => {
-        const observer = new MutationObserver(changes => {
+        const observer = new MutationObserver((changes) => {
           for (const change of changes) {
-            const classListWasChanged = change.attributeName === "class";
+            const classListWasChanged = change.attributeName === 'class';
             if (!classListWasChanged) {
               continue;
             }
@@ -263,12 +265,13 @@ export const TimeLine: React.FC<TimeLineProps> = ({
             const isStartTimeMarker = index === 0;
             if (isStartTimeMarker) {
               const timelineIsAtStart = timeMarker.classList.contains(
-                "tl-timemarker-active",
+                'tl-timemarker-active',
               );
 
               if (timelineIsAtStart) {
                 timelineElement?.classList.add(startClass);
-              } else {
+              }
+              else {
                 timelineElement?.classList.remove(startClass);
               }
             }
@@ -276,12 +279,13 @@ export const TimeLine: React.FC<TimeLineProps> = ({
             const isEndTimeMarker = index === timeMarkers.length - 1;
             if (isEndTimeMarker) {
               const timelineIsAtEnd = timeMarker.classList.contains(
-                "tl-timemarker-active",
+                'tl-timemarker-active',
               );
 
               if (timelineIsAtEnd) {
                 timelineElement?.classList.add(endClass);
-              } else {
+              }
+              else {
                 timelineElement?.classList.remove(endClass);
               }
             }
@@ -297,11 +301,11 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     );
 
     const slideTextElements =
-      container.querySelectorAll<HTMLDivElement>(".tl-text");
+      container.querySelectorAll<HTMLDivElement>('.tl-text');
     addTabIndexToScrollableElements(slideTextElements);
 
     const slideContainer =
-      container.querySelector<HTMLDivElement>(".tl-storyslider");
+      container.querySelector<HTMLDivElement>('.tl-storyslider');
 
     if (!slideContainer) {
       return;
@@ -323,7 +327,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     observer.observe(slideContainer);
 
     return () => {
-      timeMarkerObservers.forEach(obs => obs.disconnect());
+      timeMarkerObservers.forEach((obs) => obs.disconnect());
       observer.disconnect();
     };
   }, [timelineIsRendered, translations]);
@@ -334,16 +338,16 @@ export const TimeLine: React.FC<TimeLineProps> = ({
 
   if (slideHeight > 0) {
     // @ts-expect-error CSS custom properties should be allowed
-    style["--h5p-timeline-slide-height"] = `${slideHeight}px`;
+    style['--h5p-timeline-slide-height'] = `${slideHeight}px`;
   }
 
   const className = [
-    "h5p-timeline-wrapper",
+    'h5p-timeline-wrapper',
     classNames,
-    slideWidth > 1180 ? `timeline-large-text` : undefined,
+    slideWidth > 1180 ? 'timeline-large-text' : undefined,
   ]
     .filter(Boolean)
-    .join(" ");
+    .join(' ');
 
   return (
     <div ref={containerRef} className={className} style={style}>

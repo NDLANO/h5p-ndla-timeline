@@ -1,11 +1,10 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import * as React from "react";
-import { EventItemType } from "../../types/EventItemType";
-import { SlideType } from "../../types/SlideType";
-import { MediaBlock } from "../MediaBlock/MediaBlock";
-import { TextContentBlock } from "../TextContentBlock/TextContentBlock";
-import { TitleBlock } from "../TitleBlock/TitleBlock";
-import styles from "./Grid.module.scss";
+import * as React from 'react';
+import { EventItemType } from '../../types/EventItemType';
+import { SlideType } from '../../types/SlideType';
+import { MediaBlock } from '../MediaBlock/MediaBlock';
+import { TextContentBlock } from '../TextContentBlock/TextContentBlock';
+import { TitleBlock } from '../TitleBlock/TitleBlock';
+import styles from './Grid.module.scss';
 
 type GridProps = {
   eventItem: EventItemType<SlideType>;
@@ -19,26 +18,26 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
 
   const media = React.useMemo(() => {
     switch (eventItem.mediaType) {
-      case "image":
+      case 'image':
         return eventItem.image;
 
-      case "video":
+      case 'video':
         return eventItem.video;
 
-      case "audio":
+      case 'audio':
         return eventItem.audio;
 
-      case "custom":
+      case 'custom':
         return eventItem.customMedia;
 
-      case "none":
+      case 'none':
         return null;
     }
   }, [eventItem]);
 
   const children = React.useMemo(
     () =>
-      items.map(gridItem => {
+      items.map((gridItem) => {
         return (
           <div
             key={gridItem.id}
@@ -50,15 +49,15 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
               width: `${gridItem.width}%`,
             }}
           >
-            {gridItem.type === "title" && (
-              <TitleBlock title={eventItem.title ?? ""} />
+            {gridItem.type === 'title' && (
+              <TitleBlock title={eventItem.title ?? ''} />
             )}
 
-            {gridItem.type === "textContent" && (
-              <TextContentBlock textContent={eventItem.description ?? ""} />
+            {gridItem.type === 'textContent' && (
+              <TextContentBlock textContent={eventItem.description ?? ''} />
             )}
 
-            {gridItem.type === "media" && media && (
+            {gridItem.type === 'media' && media && (
               // @ts-expect-error `media` gets its type depending on `eventItem.mediaType`
               <MediaBlock type={eventItem.mediaType} media={media} />
             )}

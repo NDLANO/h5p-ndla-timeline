@@ -1,13 +1,13 @@
-import { Copyright } from "h5p-types";
-import * as React from "react";
-import { FC, useState } from "react";
-import { useEffectOnce } from "react-use";
-import { useL10n } from "../../hooks/useLocalization";
-import { Popover } from "../Popover/Popover";
-import styles from "./CopyrightPopover.module.scss";
+import { H5PCopyright } from 'h5p-types';
+import * as React from 'react';
+import { FC, useState } from 'react';
+import { useEffectOnce } from 'react-use';
+import { useL10n } from '../../hooks/useLocalization';
+import { Popover } from '../Popover/Popover';
+import styles from './CopyrightPopover.module.scss';
 
 type Params = {
-  copyright: Copyright;
+  copyright: H5PCopyright;
   isOpen: boolean;
   onOpenChange: (isOpen: boolean) => void;
 };
@@ -21,15 +21,15 @@ export const CopyrightPopover: FC<Params> = ({
 
   const { title, author, source, year, license, version } = copyright;
 
-  const copyrightLabel = useL10n("copyrightLabel");
-  const titleLabel = useL10n("copyrightTitle");
-  const authorLabel = useL10n("copyrightAuthor");
-  const sourceLabel = useL10n("copyrightSource");
-  const yearLabel = useL10n("copyrightYear");
-  const licenseLabel = useL10n("copyrightLicense");
-  const versionLabel = useL10n("copyrightVersion");
+  const copyrightLabel = useL10n('copyrightLabel');
+  const titleLabel = useL10n('copyrightTitle');
+  const authorLabel = useL10n('copyrightAuthor');
+  const sourceLabel = useL10n('copyrightSource');
+  const yearLabel = useL10n('copyrightYear');
+  const licenseLabel = useL10n('copyrightLicense');
+  const versionLabel = useL10n('copyrightVersion');
 
-  const isUrl = source?.startsWith("http://") || source?.startsWith("https://");
+  const isUrl = source?.startsWith('http://') || source?.startsWith('https://');
 
   useEffectOnce(() => {
     setIsClient(true);
@@ -47,7 +47,7 @@ export const CopyrightPopover: FC<Params> = ({
             {copyrightLabel}
           </span>
         ),
-        "aria-label": copyrightLabel,
+        'aria-label': copyrightLabel,
       }}
     >
       <div className={styles.content}>

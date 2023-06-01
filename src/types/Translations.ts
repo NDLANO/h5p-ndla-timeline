@@ -1,3 +1,3 @@
-import { TranslationKey } from "./TranslationKey";
+import { TranslationKey } from './TranslationKey';
 
 export type Translations = Record<TranslationKey, string>;

@@ -7,21 +7,21 @@
 
 [id*="layout-right"] {
   .tl-media {
-    order: 1;
+    order: 2;
   }
 
   .tl-text {
-    order: 2;
+    order: 1;
   }
 }
 
 [id*="layout-left"] {
   .tl-text {
-    order: 1;
+    order: 2;
   }
 
   .tl-media {
-    order: 2;
+    order: 1;
   }
 }
 

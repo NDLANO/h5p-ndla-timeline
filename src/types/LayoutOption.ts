@@ -1,1 +1,1 @@
-export type LayoutOption = "right" | "left" | "custom";
+export type LayoutOption = 'right' | 'left' | 'custom';

@@ -1,23 +1,23 @@
-import { Audio, Image, Video } from "h5p-types";
+import { H5PAudio, H5PImage, H5PVideo } from 'h5p-types';
 
 export type MediaType =
   | {
-      mediaType: "image";
-      image?: Image;
+      mediaType: 'image';
+      image?: H5PImage;
       imageAlt?: string;
     }
   | {
-      mediaType: "video";
-      video?: Array<Video>;
+      mediaType: 'video';
+      video?: Array<H5PVideo>;
     }
   | {
-      mediaType: "audio";
-      audio?: Array<Audio>;
+      mediaType: 'audio';
+      audio?: Array<H5PAudio>;
     }
   | {
-      mediaType: "custom";
+      mediaType: 'custom';
       customMedia?: string;
     }
   | {
-      mediaType: "none";
+      mediaType: 'none';
     };

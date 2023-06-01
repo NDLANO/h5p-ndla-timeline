@@ -3,19 +3,19 @@ import type {
   TimelineDefinition,
   TimelineEra,
   TimelineSlide,
-} from "@knight-lab/timelinejs";
-import { Copyright, Media } from "h5p-types";
-import * as React from "react";
-import { renderToStaticMarkup, renderToString } from "react-dom/server";
-import { CopyrightInformation } from "../components/CopyrightInformation/CopyrightInformation";
-import { Grid } from "../components/Grid/Grid";
-import { Tags } from "../components/Tags/Tags";
-import { DateString } from "../types/DateString";
-import { Era } from "../types/Era";
-import { EventItemType } from "../types/EventItemType";
-import { Params } from "../types/Params";
-import { SlideType } from "../types/SlideType";
-import { isDefined } from "./is-defined.utils";
+} from '@knight-lab/timelinejs';
+import { H5PCopyright, H5PMedia } from 'h5p-types';
+import * as React from 'react';
+import { renderToStaticMarkup, renderToString } from 'react-dom/server';
+import { CopyrightInformation } from '../components/CopyrightInformation/CopyrightInformation';
+import { Grid } from '../components/Grid/Grid';
+import { Tags } from '../components/Tags/Tags';
+import { DateString } from '../types/DateString';
+import { Era } from '../types/Era';
+import { EventItemType } from '../types/EventItemType';
+import { Params } from '../types/Params';
+import { SlideType } from '../types/SlideType';
+import { isDefined } from './is-defined.utils';
 
 const html = String.raw;
 
@@ -26,15 +26,16 @@ export const isDateString = (str: string): str is DateString => {
 };
 
 export const parseDateString = (dateString: DateString): TimelineDate => {
-  const isNegativeYear = dateString.startsWith("-");
+  const isNegativeYear = dateString.startsWith('-');
   let year: string;
   let month: string;
   let day: string;
 
   if (isNegativeYear) {
-    [, year, month, day] = dateString.split("-");
-  } else {
-    [year, month, day] = dateString.split("-");
+    [, year, month, day] = dateString.split('-');
+  }
+  else {
+    [year, month, day] = dateString.split('-');
   }
 
   const ret: TimelineDate = {
@@ -61,10 +62,10 @@ const isDateValid = (dateString: DateString): boolean => {
   const date = parseDateString(dateString);
   const year =
     date.year < 0
-      ? `-${(-1 * date.year).toString().padStart(6, "0")}`
-      : `+${date.year.toString().padStart(6, "0")}`;
-  const month = (date.month ?? 1).toString().padStart(2, "0");
-  const day = (date.day ?? 1).toString().padStart(2, "0");
+      ? `-${(-1 * date.year).toString().padStart(6, '0')}`
+      : `+${date.year.toString().padStart(6, '0')}`;
+  const month = (date.month ?? 1).toString().padStart(2, '0');
+  const day = (date.day ?? 1).toString().padStart(2, '0');
   return !Number.isNaN(Date.parse(`${year}-${month}-${day}T00:00:00Z`));
 };
 
@@ -82,27 +83,27 @@ export const parseDate = (dateString: string): TimelineDate | null => {
 
 const getMedia = (
   eventItem: EventItemType<SlideType>,
-): string | Media | undefined => {
+): string | H5PMedia | undefined => {
   let media;
 
   switch (eventItem.mediaType) {
-    case "image":
+    case 'image':
       media = eventItem.image;
       break;
 
-    case "video":
+    case 'video':
       media = eventItem.video?.[0];
       break;
 
-    case "audio":
+    case 'audio':
       media = eventItem.audio?.[0];
       break;
 
-    case "custom":
+    case 'custom':
       media = eventItem.customMedia;
       break;
 
-    case "none":
+    case 'none':
       media = undefined;
       break;
   }
@@ -110,7 +111,7 @@ const getMedia = (
   return media;
 };
 
-const copyrightIsDefined = (copyright: Copyright | undefined): boolean => {
+const copyrightIsDefined = (copyright: H5PCopyright | undefined): boolean => {
   return !!copyright && !!copyright.license;
 };
 
@@ -143,14 +144,15 @@ export const mapEventToTimelineSlide = (
   const startDate = event.startDate ? parseDate(event.startDate) : null;
 
   let text;
-  const eventHasCustomLayout = event.layout === "custom";
+  const eventHasCustomLayout = event.layout === 'custom';
   if (eventHasCustomLayout) {
     text = renderToStaticMarkup(<Grid eventItem={event} />);
-  } else {
-    let tagsMarkup = "";
+  }
+  else {
+    let tagsMarkup = '';
 
     // TODO: Make a variable `hasTags` for this ugly if when TypeScript supports it
-    if ("tags" in event && event.tags && event.tags.length > 0) {
+    if ('tags' in event && event.tags && event.tags.length > 0) {
       // Has tags
       tagsMarkup = renderToStaticMarkup(
         <div className="h5p-tl-tags-container">
@@ -170,7 +172,8 @@ export const mapEventToTimelineSlide = (
           ${event.description}
           <div>${copyrightInformation}</div>
         </div>`;
-      } else {
+      }
+      else {
         text += html`<div class="h5p-tl-slide-description">
           ${event.description}
         </div>`;
@@ -203,16 +206,17 @@ export const mapEventToTimelineSlide = (
   const media = getMedia(event);
   if (media) {
     slide.media = {
-      url: typeof media === "string" ? media : media.path,
-      alt: event.mediaType === "image" ? event.imageAlt : undefined,
+      url: typeof media === 'string' ? media : media.path,
+      alt: event.mediaType === 'image' ? event.imageAlt : undefined,
     };
   }
 
-  if (event.appearance.backgroundType === "color") {
+  if (event.appearance.backgroundType === 'color') {
     slide.background = {
       color: event.appearance.backgroundColor,
     };
-  } else if (event.appearance.backgroundType === "image") {
+  }
+  else if (event.appearance.backgroundType === 'image') {
     slide.background = {
       url: event.appearance.backgroundImage?.path,
     };
@@ -267,28 +271,29 @@ export const createTimelineDefinition = (
 
   let classNames: string | undefined;
 
-  const scalingMode = data.behaviour?.scalingMode ?? "human";
-  const eventsAreIndexed = scalingMode === "index";
+  const scalingMode = data.behaviour?.scalingMode ?? 'human';
+  const eventsAreIndexed = scalingMode === 'index';
 
   if (eventsAreIndexed) {
-    classNames = "h5p-timeline--indexed";
-  } else {
+    classNames = 'h5p-timeline--indexed';
+  }
+  else {
     timeline.scale = scalingMode;
   }
 
   return [timeline, classNames];
 };
 
-export const fallbackLocale = "en";
+export const fallbackLocale = 'en';
 
 export const getClosestLocaleCode = (element: Element | null): string => {
   const closestElementWithLanguageAttribute = element?.closest(
-    "[lang], [xml\\:lang]",
+    '[lang], [xml\\:lang]',
   );
 
   const activeLocaleCode =
-    closestElementWithLanguageAttribute?.getAttribute("lang") ??
-    closestElementWithLanguageAttribute?.getAttribute("xml:lang") ??
+    closestElementWithLanguageAttribute?.getAttribute('lang') ??
+    closestElementWithLanguageAttribute?.getAttribute('xml:lang') ??
     fallbackLocale;
 
   return activeLocaleCode;
@@ -297,8 +302,8 @@ export const getClosestLocaleCode = (element: Element | null): string => {
 export const addTabIndexToScrollableElements = (
   elements: ArrayLike<HTMLElement>,
 ): void => {
-  Array.from(elements).forEach(element => {
-    const existingTabindex = element.getAttribute("tabindex");
-    element.setAttribute("tabindex", existingTabindex || "0");
+  Array.from(elements).forEach((element) => {
+    const existingTabindex = element.getAttribute('tabindex');
+    element.setAttribute('tabindex', existingTabindex || '0');
   });
 };
