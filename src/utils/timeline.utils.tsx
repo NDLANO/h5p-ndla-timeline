@@ -115,6 +115,29 @@ const copyrightIsDefined = (copyright: H5PCopyright | undefined): boolean => {
   return !!copyright && !!copyright.license;
 };
 
+const isDateOrderOK = (
+  startDate: TimelineDate | null,
+  endDate: TimelineDate | null,
+): boolean => {
+  const start: TimelineDate = Object.create(startDate);
+  start.year = start.year ?? -Infinity;
+  start.month = start.month ?? -Infinity;
+  start.day = start.day ?? -Infinity;
+
+  const end: TimelineDate = Object.create(endDate);
+  end.year = end.year ?? -Infinity;
+  end.month = end.month ?? -Infinity;
+  end.day = end.day ?? -Infinity;
+
+  return !(
+    start.year > end.year ||
+    (start.year === end.year && start.month > end.month) ||
+    (start.year === end.year &&
+      start.month === end.month &&
+      start.day > end.day)
+  );
+};
+
 export const mapEventToTimelineSlide = (
   event: EventItemType<SlideType>,
 ): TimelineSlide => {
@@ -171,9 +194,13 @@ export const mapEventToTimelineSlide = (
     },
   };
 
-  const endDate = event.endDate && parseDate(event.endDate);
-  if (endDate) {
-    slide.end_date = endDate;
+  const endDate = event.endDate ? parseDate(event.endDate) : null;
+
+  if (!isDateOrderOK(startDate, endDate)) {
+    // Do something to alert end-user of dates mismatch.
+    console.error(
+      `End date (${event.endDate}) should be LATER than start date (${event.startDate}) in Slide "${event.title}"`,
+    );
   }
 
   const media = getMedia(event);
@@ -204,6 +231,13 @@ export const mapEraToTimelineEra = (era: Era): TimelineEra | null => {
 
   if (!startDate || !endDate) {
     return null;
+  }
+
+  if (!isDateOrderOK(startDate, endDate)) {
+    // Do something to alert end-user of dates mismatch.
+    console.error(
+      `End date (${era.endDate}) should be LATER than start date (${era.startDate}) in Era "${era.name}"`,
+    );
   }
 
   return {
