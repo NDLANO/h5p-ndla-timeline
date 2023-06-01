@@ -1,17 +1,19 @@
-const webpack = require('webpack');
-const middleware = require('webpack-dev-middleware');
 const path = require('path');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const config = {
+const mode = process.argv.includes('--mode=production') ?
+  'production' :
+  'development';
+
+module.exports = {
   entry: {
     bundle: ['react-hot-loader/patch', './src/index.tsx'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
+    clean: true
   },
   module: {
     rules: [
@@ -64,10 +66,6 @@ const config = {
       {
         test: /\.less$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
-        // use: ExtractTextPlugin.extract({
-        //     fallback: "style-loader",
-        //     use: "css-loader!less-loader"
-        // })
       },
       {
         test: /\.svg$/,
@@ -92,28 +90,12 @@ const config = {
       'react-dom': '@hot-loader/react-dom',
     },
   },
-  devServer: {
-    static: true,
-  },
   plugins: [
     new BundleAnalyzerPlugin({
-      analyzerMode: 'static',
+      analyzerMode: mode !== 'production' ? 'static' : 'disabled',
       openAnalyzer: false,
     }),
-    new MiniCssExtractPlugin(),
-    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin()
   ],
-};
-
-module.exports = (env, argv) => {
-  const isProduction = argv.mode === 'production';
-  if (!isProduction) {
-    const compiler = webpack({ ...config, mode: 'development' });
-
-    middleware(compiler, {
-      writeToDisk: true,
-    });
-  }
-
-  return config;
+  ...(mode !== 'production' && { devtool: 'eval-cheap-module-source-map' })
 };
