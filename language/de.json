@@ -28,106 +28,6 @@
           "label": "Beschreibung"
         },
         {
-          "label": "Nutzungsrechte",
-          "fields": [
-            {
-              "label": "Titel"
-            },
-            {
-              "label": "Autor"
-            },
-            {
-              "label": "Jahr(e)"
-            },
-            {
-              "label": "Quelle"
-            },
-            {
-              "label": "Lizenz",
-              "options": [
-                {
-                  "label": "Unbestimmt"
-                },
-                {
-                  "label": "Namensnennung"
-                },
-                {
-                  "label": "Namensnennung-Weitergabe unter gleichen Bedingungen"
-                },
-                {
-                  "label": "Namensnennung-Keine Bearbeitungen"
-                },
-                {
-                  "label": "Namensnennung-Nichtkommerziell"
-                },
-                {
-                  "label": "Namensnennung-Nichtkommerziell-Weitergabe unter gleichen Bedingungen"
-                },
-                {
-                  "label": "Namensnennung-Nichtkommerziell-Keine Bearbeitung"
-                },
-                {
-                  "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                },
-                {
-                  "label": "General Public License"
-                },
-                {
-                  "label": "Gemeinfrei"
-                },
-                {
-                  "label": "Copyright"
-                }
-              ]
-            },
-            {
-              "label": "Lizenzversion",
-              "options": [
-                {
-                  "label": "4.0 International"
-                },
-                {
-                  "label": "3.0 Unportiert"
-                },
-                {
-                  "label": "2.5 Generic"
-                },
-                {
-                  "label": "2.0 Generic"
-                },
-                {
-                  "label": "1.0 Generic"
-                }
-              ]
-            },
-            {
-              "label": "Lizenzversion",
-              "options": [
-                {
-                  "label": "Version 3"
-                },
-                {
-                  "label": "Version 2"
-                },
-                {
-                  "label": "Version 1"
-                }
-              ]
-            },
-            {
-              "label": "Lizenzversion",
-              "options": [
-                {
-                  "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                },
-                {
-                  "label": "Public Domain Mark"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "label": "Layout",
           "options": [
             {
@@ -135,9 +35,6 @@
             },
             {
               "label": "Text links"
-            },
-            {
-              "label": "Zentriert (nur Text)"
             }
           ]
         },
@@ -195,7 +92,9 @@
                 }
               ]
             },
-            {},
+            {
+              "label": ""
+            },
             {
               "label": "Hintergrundfarbe",
               "default": "#757575"
@@ -208,6 +107,13 @@
       ]
     },
     {
+      "label": "Timeline-Elemente",
+      "entity": "Timeline-Element",
+      "widgets": [
+        {
+          "label": "Vorgabe"
+        }
+      ],
       "field": {
         "label": "Item",
         "fields": [
@@ -234,115 +140,12 @@
           },
           {
             "label": "Layout",
-            "fields": [
-              {
-                "label": "Title"
-              },
-              {
-                "label": "Author"
-              },
-              {
-                "label": "Year(s)"
-              },
-              {
-                "label": "Source"
-              },
-              {
-                "label": "License",
-                "options": [
-                  {
-                    "label": "Undisclosed"
-                  },
-                  {
-                    "label": "Attribution"
-                  },
-                  {
-                    "label": "Attribution-ShareAlike"
-                  },
-                  {
-                    "label": "Attribution-NoDerivs"
-                  },
-                  {
-                    "label": "Attribution-NonCommercial"
-                  },
-                  {
-                    "label": "Attribution-NonCommercial-ShareAlike"
-                  },
-                  {
-                    "label": "Attribution-NonCommercial-NoDerivs"
-                  },
-                  {
-                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                  },
-                  {
-                    "label": "General Public License"
-                  },
-                  {
-                    "label": "Public Domain"
-                  },
-                  {
-                    "label": "Copyright"
-                  }
-                ]
-              },
-              {
-                "label": "License Version",
-                "options": [
-                  {
-                    "label": "4.0 International"
-                  },
-                  {
-                    "label": "3.0 Unported"
-                  },
-                  {
-                    "label": "2.5 Generic"
-                  },
-                  {
-                    "label": "2.0 Generic"
-                  },
-                  {
-                    "label": "1.0 Generic"
-                  }
-                ]
-              },
-              {
-                "label": "License Version",
-                "options": [
-                  {
-                    "label": "Version 3"
-                  },
-                  {
-                    "label": "Version 2"
-                  },
-                  {
-                    "label": "Version 1"
-                  }
-                ]
-              },
-              {
-                "label": "License Version",
-                "options": [
-                  {
-                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                  },
-                  {
-                    "label": "Public Domain Mark"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "label": "Layout",
             "options": [
               {
                 "label": "Text on right (standard)"
               },
               {
                 "label": "Text on left"
-              },
-              {
-                "label": "Centered (Text only)"
               }
             ]
           },
@@ -421,7 +224,9 @@
                   }
                 ]
               },
-              {},
+              {
+                "label": ""
+              },
               {
                 "label": "Background color",
                 "default": "#757575"
@@ -432,14 +237,7 @@
             ]
           }
         ]
-      },
-      "label": "Timeline-Elemente",
-      "entity": "Timeline-Element",
-      "widgets": [
-        {
-          "label": "Vorgabe"
-        }
-      ]
+      }
     },
     {
       "label": "Tags",
@@ -457,8 +255,7 @@
                 "label": "Name"
               },
               {
-                "label": "Color",
-                "default": "#757575"
+                "label": "Color"
               }
             ]
           }
@@ -493,7 +290,9 @@
     {
       "label": "Behavioral settings",
       "fields": [
-        {},
+        {
+          "label": ""
+        },
         {
           "label": "Scaling mode",
           "description": "Choose between scaling modes. \"Human time\" shows date in years before and after the Common Era using regular notation, while \"Cosmological time\" shows dates using scientific notation. \"Indexed\" is useful when you want to skew timeframes and make all events seem equally far apart.",

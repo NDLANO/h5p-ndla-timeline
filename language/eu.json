@@ -4,6 +4,7 @@
       "label": "Erakutsi izenburuko diapositiba"
     },
     {
+      "label": "Izenburuko diapositiba",
       "fields": [
         {
           "label": "Id"
@@ -27,106 +28,6 @@
           "label": "Deskribapena"
         },
         {
-          "label": "Erabilera-eskubideak",
-          "fields": [
-            {
-              "label": "Izenburua"
-            },
-            {
-              "label": "Egilea"
-            },
-            {
-              "label": "Urtea(k)"
-            },
-            {
-              "label": "Source"
-            },
-            {
-              "label": "License",
-              "options": [
-                {
-                  "label": "Undisclosed"
-                },
-                {
-                  "label": "Attribution"
-                },
-                {
-                  "label": "Attribution-ShareAlike"
-                },
-                {
-                  "label": "Attribution-NoDerivs"
-                },
-                {
-                  "label": "Attribution-NonCommercial"
-                },
-                {
-                  "label": "Attribution-NonCommercial-ShareAlike"
-                },
-                {
-                  "label": "Attribution-NonCommercial-NoDerivs"
-                },
-                {
-                  "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                },
-                {
-                  "label": "General Public License"
-                },
-                {
-                  "label": "Public Domain"
-                },
-                {
-                  "label": "Copyright"
-                }
-              ]
-            },
-            {
-              "label": "License Version",
-              "options": [
-                {
-                  "label": "4.0 International"
-                },
-                {
-                  "label": "3.0 Unported"
-                },
-                {
-                  "label": "2.5 Generic"
-                },
-                {
-                  "label": "2.0 Generic"
-                },
-                {
-                  "label": "1.0 Generic"
-                }
-              ]
-            },
-            {
-              "label": "License Version",
-              "options": [
-                {
-                  "label": "Version 3"
-                },
-                {
-                  "label": "Version 2"
-                },
-                {
-                  "label": "Version 1"
-                }
-              ]
-            },
-            {
-              "label": "License Version",
-              "options": [
-                {
-                  "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                },
-                {
-                  "label": "Public Domain Mark"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "label": "Layout",
           "options": [
             {
@@ -134,9 +35,6 @@
             },
             {
               "label": "Text on left"
-            },
-            {
-              "label": "Centered (Text only)"
             }
           ]
         },
@@ -194,7 +92,9 @@
                 }
               ]
             },
-            {},
+            {
+              "label": ""
+            },
             {
               "label": "Background color",
               "default": "#757575"
@@ -204,11 +104,18 @@
             }
           ]
         }
-      ],
-      "label": "Izenburuko diapositiba"
+      ]
     },
     {
+      "label": "Timeline items",
+      "entity": "Timeline item",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
+        "label": "Item",
         "fields": [
           {
             "label": "Id"
@@ -233,115 +140,12 @@
           },
           {
             "label": "Layout",
-            "fields": [
-              {
-                "label": "Title"
-              },
-              {
-                "label": "Author"
-              },
-              {
-                "label": "Year(s)"
-              },
-              {
-                "label": "Source"
-              },
-              {
-                "label": "License",
-                "options": [
-                  {
-                    "label": "Undisclosed"
-                  },
-                  {
-                    "label": "Attribution"
-                  },
-                  {
-                    "label": "Attribution-ShareAlike"
-                  },
-                  {
-                    "label": "Attribution-NoDerivs"
-                  },
-                  {
-                    "label": "Attribution-NonCommercial"
-                  },
-                  {
-                    "label": "Attribution-NonCommercial-ShareAlike"
-                  },
-                  {
-                    "label": "Attribution-NonCommercial-NoDerivs"
-                  },
-                  {
-                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                  },
-                  {
-                    "label": "General Public License"
-                  },
-                  {
-                    "label": "Public Domain"
-                  },
-                  {
-                    "label": "Copyright"
-                  }
-                ]
-              },
-              {
-                "label": "License Version",
-                "options": [
-                  {
-                    "label": "4.0 International"
-                  },
-                  {
-                    "label": "3.0 Unported"
-                  },
-                  {
-                    "label": "2.5 Generic"
-                  },
-                  {
-                    "label": "2.0 Generic"
-                  },
-                  {
-                    "label": "1.0 Generic"
-                  }
-                ]
-              },
-              {
-                "label": "License Version",
-                "options": [
-                  {
-                    "label": "Version 3"
-                  },
-                  {
-                    "label": "Version 2"
-                  },
-                  {
-                    "label": "Version 1"
-                  }
-                ]
-              },
-              {
-                "label": "License Version",
-                "options": [
-                  {
-                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                  },
-                  {
-                    "label": "Public Domain Mark"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "label": "Layout",
             "options": [
               {
                 "label": "Text on right (standard)"
               },
               {
                 "label": "Text on left"
-              },
-              {
-                "label": "Centered (Text only)"
               }
             ]
           },
@@ -420,7 +224,9 @@
                   }
                 ]
               },
-              {},
+              {
+                "label": ""
+              },
               {
                 "label": "Background color",
                 "default": "#757575"
@@ -430,16 +236,8 @@
               }
             ]
           }
-        ],
-        "label": "Item"
-      },
-      "label": "Timeline items",
-      "entity": "Timeline item",
-      "widgets": [
-        {
-          "label": "Default"
-        }
-      ]
+        ]
+      }
     },
     {
       "label": "Tags",
@@ -457,8 +255,7 @@
                 "label": "Name"
               },
               {
-                "label": "Color",
-                "default": "#757575"
+                "label": "Color"
               }
             ]
           }
@@ -466,9 +263,13 @@
       ]
     },
     {
+      "label": "Eras",
       "fields": [
         {
+          "label": "Eras",
+          "entity": "Era",
           "field": {
+            "label": "Era",
             "fields": [
               {
                 "label": "Name"
@@ -481,19 +282,17 @@
                 "label": "End date",
                 "description": "YYYY-MM-DD — only year is required. Years can be negative."
               }
-            ],
-            "label": "Era"
-          },
-          "label": "Eras",
-          "entity": "Era"
+            ]
+          }
         }
-      ],
-      "label": "Eras"
+      ]
     },
     {
       "label": "Behavioral settings",
       "fields": [
-        {},
+        {
+          "label": ""
+        },
         {
           "label": "Scaling mode",
           "description": "Choose between scaling modes. \"Human time\" shows date in years before and after the Common Era using regular notation, while \"Cosmological time\" shows dates using scientific notation. \"Indexed\" is useful when you want to skew timeframes and make all events seem equally far apart.",

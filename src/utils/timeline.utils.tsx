@@ -4,10 +4,9 @@ import type {
   TimelineEra,
   TimelineSlide,
 } from '@knight-lab/timelinejs';
-import { H5PCopyright, H5PMedia } from 'h5p-types';
+import { H5PMedia } from 'h5p-types';
 import * as React from 'react';
-import { renderToStaticMarkup, renderToString } from 'react-dom/server';
-import { CopyrightInformation } from '../components/CopyrightInformation/CopyrightInformation';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { Grid } from '../components/Grid/Grid';
 import { Tags } from '../components/Tags/Tags';
 import { DateString } from '../types/DateString';
@@ -111,10 +110,6 @@ const getMedia = (
   return media;
 };
 
-const copyrightIsDefined = (copyright: H5PCopyright | undefined): boolean => {
-  return !!copyright && !!copyright.license;
-};
-
 const isDateOrderOK = (
   startDate: TimelineDate | null,
   endDate: TimelineDate | null,
@@ -125,9 +120,9 @@ const isDateOrderOK = (
   start.day = start.day ?? -Infinity;
 
   const end: TimelineDate = Object.create(endDate);
-  end.year = end.year ?? -Infinity;
-  end.month = end.month ?? -Infinity;
-  end.day = end.day ?? -Infinity;
+  end.year = end.year ?? Infinity;
+  end.month = end.month ?? Infinity;
+  end.day = end.day ?? Infinity;
 
   return !(
     start.year > end.year ||
@@ -163,21 +158,9 @@ export const mapEventToTimelineSlide = (
     text = tagsMarkup;
 
     if (event.description) {
-      const showCopyright = copyrightIsDefined(event.descriptionCopyright);
-      if (event.descriptionCopyright && showCopyright) {
-        const copyrightInformation = renderToString(
-          <CopyrightInformation copyright={event.descriptionCopyright} />,
-        );
-        text += html`<div class="h5p-tl-slide-description">
-          ${event.description}
-          <div>${copyrightInformation}</div>
-        </div>`;
-      }
-      else {
-        text += html`<div class="h5p-tl-slide-description">
-          ${event.description}
-        </div>`;
-      }
+      text += html`<div class="h5p-tl-slide-description">
+        ${event.description.params.text}
+      </div>`;
     }
   }
 

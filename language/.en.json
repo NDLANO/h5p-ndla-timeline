@@ -28,106 +28,6 @@
           "label": "Description"
         },
         {
-          "label": "Rights of use",
-          "fields": [
-            {
-              "label": "Title"
-            },
-            {
-              "label": "Author"
-            },
-            {
-              "label": "Year(s)"
-            },
-            {
-              "label": "Source"
-            },
-            {
-              "label": "License",
-              "options": [
-                {
-                  "label": "Undisclosed"
-                },
-                {
-                  "label": "Attribution"
-                },
-                {
-                  "label": "Attribution-ShareAlike"
-                },
-                {
-                  "label": "Attribution-NoDerivs"
-                },
-                {
-                  "label": "Attribution-NonCommercial"
-                },
-                {
-                  "label": "Attribution-NonCommercial-ShareAlike"
-                },
-                {
-                  "label": "Attribution-NonCommercial-NoDerivs"
-                },
-                {
-                  "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                },
-                {
-                  "label": "General Public License"
-                },
-                {
-                  "label": "Public Domain"
-                },
-                {
-                  "label": "Copyright"
-                }
-              ]
-            },
-            {
-              "label": "License Version",
-              "options": [
-                {
-                  "label": "4.0 International"
-                },
-                {
-                  "label": "3.0 Unported"
-                },
-                {
-                  "label": "2.5 Generic"
-                },
-                {
-                  "label": "2.0 Generic"
-                },
-                {
-                  "label": "1.0 Generic"
-                }
-              ]
-            },
-            {
-              "label": "License Version",
-              "options": [
-                {
-                  "label": "Version 3"
-                },
-                {
-                  "label": "Version 2"
-                },
-                {
-                  "label": "Version 1"
-                }
-              ]
-            },
-            {
-              "label": "License Version",
-              "options": [
-                {
-                  "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                },
-                {
-                  "label": "Public Domain Mark"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "label": "Layout",
           "options": [
             {
@@ -135,9 +35,6 @@
             },
             {
               "label": "Text on left"
-            },
-            {
-              "label": "Centered (Text only)"
             }
           ]
         },
@@ -243,115 +140,12 @@
           },
           {
             "label": "Layout",
-            "fields": [
-              {
-                "label": "Title"
-              },
-              {
-                "label": "Author"
-              },
-              {
-                "label": "Year(s)"
-              },
-              {
-                "label": "Source"
-              },
-              {
-                "label": "License",
-                "options": [
-                  {
-                    "label": "Undisclosed"
-                  },
-                  {
-                    "label": "Attribution"
-                  },
-                  {
-                    "label": "Attribution-ShareAlike"
-                  },
-                  {
-                    "label": "Attribution-NoDerivs"
-                  },
-                  {
-                    "label": "Attribution-NonCommercial"
-                  },
-                  {
-                    "label": "Attribution-NonCommercial-ShareAlike"
-                  },
-                  {
-                    "label": "Attribution-NonCommercial-NoDerivs"
-                  },
-                  {
-                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                  },
-                  {
-                    "label": "General Public License"
-                  },
-                  {
-                    "label": "Public Domain"
-                  },
-                  {
-                    "label": "Copyright"
-                  }
-                ]
-              },
-              {
-                "label": "License Version",
-                "options": [
-                  {
-                    "label": "4.0 International"
-                  },
-                  {
-                    "label": "3.0 Unported"
-                  },
-                  {
-                    "label": "2.5 Generic"
-                  },
-                  {
-                    "label": "2.0 Generic"
-                  },
-                  {
-                    "label": "1.0 Generic"
-                  }
-                ]
-              },
-              {
-                "label": "License Version",
-                "options": [
-                  {
-                    "label": "Version 3"
-                  },
-                  {
-                    "label": "Version 2"
-                  },
-                  {
-                    "label": "Version 1"
-                  }
-                ]
-              },
-              {
-                "label": "License Version",
-                "options": [
-                  {
-                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                  },
-                  {
-                    "label": "Public Domain Mark"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "label": "Layout",
             "options": [
               {
                 "label": "Text on right (standard)"
               },
               {
                 "label": "Text on left"
-              },
-              {
-                "label": "Centered (Text only)"
               }
             ]
           },
@@ -461,8 +255,7 @@
                 "label": "Name"
               },
               {
-                "label": "Color",
-                "default": "#757575"
+                "label": "Color"
               }
             ]
           }

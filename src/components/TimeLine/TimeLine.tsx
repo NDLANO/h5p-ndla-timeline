@@ -5,14 +5,12 @@ import { Timeline } from '@knight-lab/timelinejs';
 import {
   EventDispatcher,
   H5PContentId,
-  H5PCopyright,
   IH5PContentType,
   Media,
 } from 'h5p-types';
 import { H5P } from 'h5p-utils';
 import * as React from 'react';
 import { useContext, useEffect, useRef, useState } from 'react';
-import { hydrate } from 'react-dom';
 import { useEffectOnce } from 'react-use';
 import { buildH5PMediaInstance } from '../../H5P/H5P.util';
 import { L10nContext } from '../../contexts/LocalizationContext';
@@ -23,7 +21,6 @@ import {
   createTimelineDefinition,
   getClosestLocaleCode,
 } from '../../utils/timeline.utils';
-import { CopyrightInformation } from '../CopyrightInformation/CopyrightInformation';
 import './TimeLine.scss';
 
 type TimeLineProps = {
@@ -198,31 +195,6 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     }
 
     const container = containerRef.current;
-
-    Array.from(
-      container.querySelectorAll<HTMLElement>('.h5p-tl-copyright-information'),
-    ).forEach((element) => {
-      let copyright: H5PCopyright = {};
-
-      try {
-        copyright = JSON.parse(element.dataset.copyright ?? '{}');
-
-        if (copyright.source) {
-          // See `CopyrightInformation.tsx`
-          copyright.source = copyright.source.replace('h_t_t_p', 'http');
-        }
-      }
-      catch (error) {
-        console.error(error);
-      }
-
-      hydrate(
-        <L10nContext.Provider value={translations}>
-          <CopyrightInformation copyright={copyright} />
-        </L10nContext.Provider>,
-        element.parentElement,
-      );
-    });
 
     /*
      * TimelineJS replaces strings that hold a URL with everything but the

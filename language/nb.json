@@ -1,548 +1,347 @@
 {
-    "semantics": [
+  "semantics": [
+    {
+      "label": "Vis tittel-slide"
+    },
+    {
+      "label": "Tittel-slide",
+      "fields": [
         {
-            "label": "Vis tittel-slide"
+          "label": "Id"
         },
         {
-            "label": "Tittel-slide",
-            "fields": [
-                {
-                    "label": "Id"
-                },
-                {
-                    "label": "Slide-type",
-                    "default": "title"
-                },
-                {
-                    "label": "Tittel"
-                },
-                {
-                    "label": "Startdato",
-                    "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
-                },
-                {
-                    "label": "Sluttdato",
-                    "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
-                },
-                {
-                    "label": "Beskrivelse"
-                },
-                {
-                    "label": "Bruksrettigheter",
-                    "fields": [
-                        {
-                            "label": "Tittel"
-                        },
-                        {
-                            "label": "Forfatter"
-                        },
-                        {
-                            "label": "År"
-                        },
-                        {
-                            "label": "Kilde"
-                        },
-                        {
-                            "label": "Lisens",
-                            "options": [
-                                {
-                                    "label": "Undisclosed"
-                                },
-                                {
-                                    "label": "Attribution"
-                                },
-                                {
-                                    "label": "Attribution-ShareAlike"
-                                },
-                                {
-                                    "label": "Attribution-NoDerivs"
-                                },
-                                {
-                                    "label": "Attribution-NonCommercial"
-                                },
-                                {
-                                    "label": "Attribution-NonCommercial-ShareAlike"
-                                },
-                                {
-                                    "label": "Attribution-NonCommercial-NoDerivs"
-                                },
-                                {
-                                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                                },
-                                {
-                                    "label": "General Public License"
-                                },
-                                {
-                                    "label": "Public Domain"
-                                },
-                                {
-                                    "label": "Copyright"
-                                }
-                            ]
-                        },
-                        {
-                            "label": "Lisensversjon",
-                            "options": [
-                                {
-                                    "label": "4.0 International"
-                                },
-                                {
-                                    "label": "3.0 Unported"
-                                },
-                                {
-                                    "label": "2.5 Generic"
-                                },
-                                {
-                                    "label": "2.0 Generic"
-                                },
-                                {
-                                    "label": "1.0 Generic"
-                                }
-                            ]
-                        },
-                        {
-                            "label": "Lisensversjon",
-                            "options": [
-                                {
-                                    "label": "Version 3"
-                                },
-                                {
-                                    "label": "Version 2"
-                                },
-                                {
-                                    "label": "Version 1"
-                                }
-                            ]
-                        },
-                        {
-                            "label": "Lisensversjon",
-                            "options": [
-                                {
-                                    "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                                },
-                                {
-                                    "label": "Public Domain Mark"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "label": "Layout",
-                    "options": [
-                        {
-                            "label": "Tekst på høyre side (standard)"
-                        },
-                        {
-                            "label": "Tekst på venstre side"
-                        },
-                        {
-                            "label": "Midtstilt (kun tekst)"
-                        }
-                    ]
-                },
-                {
-                    "label": "Mediatype",
-                    "options": [
-                        {
-                            "label": "Bilde"
-                        },
-                        {
-                            "label": "Video"
-                        },
-                        {
-                            "label": "Lyd"
-                        },
-                        {
-                            "label": "Ekstern lenke"
-                        },
-                        {
-                            "label": "Ingen"
-                        }
-                    ]
-                },
-                {
-                    "label": "Bilde"
-                },
-                {
-                    "label": "Alternativ tekst",
-                    "description": "Påkrevd. Hvis bildet ikke kan lastes vises denne teksten istedenfor. Denne blir også brukt ved talesyntese."
-                },
-                {
-                    "label": "Video"
-                },
-                {
-                    "label": "Lyd"
-                },
-                {
-                    "label": "Ekstern lenke",
-                    "description": "Sett inn en lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med flere. Se hele listen i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
-                },
-                {
-                    "label": "Utseende",
-                    "fields": [
-                        {
-                            "label": "Bakgrunn",
-                            "options": [
-                                {
-                                    "label": "Farge"
-                                },
-                                {
-                                    "label": "Bilde"
-                                },
-                                {
-                                    "label": "Ingen"
-                                }
-                            ]
-                        },
-                        {},
-                        {
-                            "label": "Bakgrunnsfarge",
-                            "default": "#757575"
-                        },
-                        {
-                            "label": "Bakgrunnsbilde"
-                        }
-                    ]
-                }
-            ]
+          "label": "Slide-type",
+          "default": "title"
         },
         {
-            "label": "Tidslinje-slides",
-            "entity": "Tidslinje-slide",
-            "widgets": [
-                {
-                    "label": "Default"
-                }
-            ],
-            "field": {
-                "label": "Slide",
-                "fields": [
-                    {
-                        "label": "Id"
-                    },
-                    {
-                        "label": "Slide-type",
-                        "default": "regular"
-                    },
-                    {
-                        "label": "Tittel"
-                    },
-                    {
-                        "label": "Startdato",
-                        "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
-                    },
-                    {
-                        "label": "Sluttdato",
-                        "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
-                    },
-                    {
-                        "label": "Beskrivelse"
-                    },
-                    {
-                        "label": "Bruksrettigheter",
-                        "fields": [
-                            {
-                                "label": "Title"
-                            },
-                            {
-                                "label": "Author"
-                            },
-                            {
-                                "label": "Year(s)"
-                            },
-                            {
-                                "label": "Source"
-                            },
-                            {
-                                "label": "License",
-                                "options": [
-                                    {
-                                        "label": "Undisclosed"
-                                    },
-                                    {
-                                        "label": "Attribution"
-                                    },
-                                    {
-                                        "label": "Attribution-ShareAlike"
-                                    },
-                                    {
-                                        "label": "Attribution-NoDerivs"
-                                    },
-                                    {
-                                        "label": "Attribution-NonCommercial"
-                                    },
-                                    {
-                                        "label": "Attribution-NonCommercial-ShareAlike"
-                                    },
-                                    {
-                                        "label": "Attribution-NonCommercial-NoDerivs"
-                                    },
-                                    {
-                                        "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                                    },
-                                    {
-                                        "label": "General Public License"
-                                    },
-                                    {
-                                        "label": "Public Domain"
-                                    },
-                                    {
-                                        "label": "Copyright"
-                                    }
-                                ]
-                            },
-                            {
-                                "label": "License Version",
-                                "options": [
-                                    {
-                                        "label": "4.0 International"
-                                    },
-                                    {
-                                        "label": "3.0 Unported"
-                                    },
-                                    {
-                                        "label": "2.5 Generic"
-                                    },
-                                    {
-                                        "label": "2.0 Generic"
-                                    },
-                                    {
-                                        "label": "1.0 Generic"
-                                    }
-                                ]
-                            },
-                            {
-                                "label": "License Version",
-                                "options": [
-                                    {
-                                        "label": "Version 3"
-                                    },
-                                    {
-                                        "label": "Version 2"
-                                    },
-                                    {
-                                        "label": "Version 1"
-                                    }
-                                ]
-                            },
-                            {
-                                "label": "License Version",
-                                "options": [
-                                    {
-                                        "label": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
-                                    },
-                                    {
-                                        "label": "Public Domain Mark"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "label": "Layout",
-                        "options": [
-                            {
-                                "label": "Tekst på høyre side (standard)"
-                            },
-                            {
-                                "label": "Tekst på venstre side"
-                            },
-                            {
-                                "label": "Midtstilt (kun tekst)"
-                            }
-                        ]
-                    },
-                    {
-                        "label": "Mediatype",
-                        "options": [
-                            {
-                                "label": "Bilde"
-                            },
-                            {
-                                "label": "Video"
-                            },
-                            {
-                                "label": "Lyd"
-                            },
-                            {
-                                "label": "Ekstern lenke"
-                            },
-                            {
-                                "label": "Ingen"
-                            }
-                        ]
-                    },
-                    {
-                        "label": "Bilde"
-                    },
-                    {
-                        "label": "Alternativ tekst",
-                        "description": "Påkrevd. Hvis bildet ikke kan lastes vises denne teksten istedenfor. Denne blir også brukt ved talesyntese."
-                    },
-                    {
-                        "label": "Video"
-                    },
-                    {
-                        "label": "Lyd"
-                    },
-                    {
-                        "label": "Ekstern lenke",
-                        "description": "Sett inn en lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med flere. Se hele listen i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
-                    },
-                    {
-                        "label": "Tag-er",
-                        "entity": "Tag",
-                        "field": {
-                            "label": "Tag",
-                            "fields": [
-                                {
-                                    "label": "Id"
-                                },
-                                {
-                                    "label": "Navn"
-                                },
-                                {
-                                    "label": "Farge"
-                                },
-                                {
-                                    "label": "Er aktiv"
-                                }
-                            ]
-                        }
-                    },
-                    {
-                        "label": "Utseende",
-                        "fields": [
-                            {
-                                "label": "Bakgrunn",
-                                "options": [
-                                    {
-                                        "label": "Farge"
-                                    },
-                                    {
-                                        "label": "Bilde"
-                                    },
-                                    {
-                                        "label": "Ingen"
-                                    }
-                                ]
-                            },
-                            {},
-                            {
-                                "label": "Bakgrunnsfarge",
-                                "default": "#757575"
-                            },
-                            {
-                                "label": "Bakgrunnsbilde"
-                            }
-                        ]
-                    }
-                ]
+          "label": "Tittel"
+        },
+        {
+          "label": "Startdato",
+          "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+        },
+        {
+          "label": "Sluttdato",
+          "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+        },
+        {
+          "label": "Beskrivelse"
+        },
+        {
+          "label": "Layout",
+          "options": [
+            {
+              "label": "Tekst på høyre side (standard)"
+            },
+            {
+              "label": "Tekst på venstre side"
             }
+          ]
         },
         {
-            "label": "Tag-er",
-            "fields": [
-                {
-                    "label": "Tag-er",
-                    "entity": "Tag",
-                    "field": {
-                        "label": "Tag",
-                        "fields": [
-                            {
-                                "label": "Id"
-                            },
-                            {
-                                "label": "Navn"
-                            },
-                            {
-                                "label": "Farge",
-                                "default": "#757575"
-                            }
-                        ]
-                    }
-                }
-            ]
+          "label": "Mediatype",
+          "options": [
+            {
+              "label": "Bilde"
+            },
+            {
+              "label": "Video"
+            },
+            {
+              "label": "Lyd"
+            },
+            {
+              "label": "Ekstern lenke"
+            },
+            {
+              "label": "Ingen"
+            }
+          ]
         },
         {
-            "label": "Tidsperioder",
-            "fields": [
-                {
-                    "label": "Tidsperioder",
-                    "entity": "Tidsperiode",
-                    "field": {
-                        "label": "Tidsperiode",
-                        "fields": [
-                            {
-                                "label": "Navn"
-                            },
-                            {
-                                "label": "Startdato",
-                                "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
-                            },
-                            {
-                                "label": "Sluttdato",
-                                "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
-                            }
-                        ]
-                    }
-                }
-            ]
+          "label": "Bilde"
         },
         {
-            "label": "Innstillinger for oppførsel",
-            "fields": [
-                {},
-                {
-                    "label": "Tidsskala",
-                    "description": "Velg mellom ulike tidsskalaer. \"Vanlig tid\" viser datoer i år før og etter vår tidsregning, mens \"Kosmologisk tid\" bruker vitenskapelig notasjon for å vise årstall. \"Indeksert\" er nyttig hvis en ønsker å skjule årstall og heller ha likt mellomrom mellom hver hendelse i tidslinjen.",
-                    "options": [
-                        {
-                            "label": "Vanlig tid"
-                        },
-                        {
-                            "label": "Kosmologisk tid"
-                        },
-                        {
-                            "label": "Indeksert"
-                        }
-                    ]
-                }
-            ]
+          "label": "Alternativ tekst",
+          "description": "Påkrevd. Hvis bildet ikke kan lastes vises denne teksten istedenfor. Denne blir også brukt ved talesyntese."
         },
         {
-            "label": "Oversett",
-            "fields": [
+          "label": "Video"
+        },
+        {
+          "label": "Lyd"
+        },
+        {
+          "label": "Ekstern lenke",
+          "description": "Sett inn en lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med flere. Se hele listen i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+        },
+        {
+          "label": "Utseende",
+          "fields": [
+            {
+              "label": "Bakgrunn",
+              "options": [
                 {
-                    "label": "Bruksrett",
-                    "default": "Bruksrett"
+                  "label": "Farge"
                 },
                 {
-                    "label": "Bruksrettigheter - Tittel",
-                    "default": "Tittel"
+                  "label": "Bilde"
                 },
                 {
-                    "label": "Bruksrettigheter - Forfatter",
-                    "default": "Forfatter"
-                },
-                {
-                    "label": "Bruksrettigheter - År",
-                    "default": "År"
-                },
-                {
-                    "label": "Bruksrettigheter - Kilde",
-                    "default": "Kilde"
-                },
-                {
-                    "label": "Bruksrettigheter - Lisens",
-                    "default": "Lisens"
-                },
-                {
-                    "label": "Bruksrettigheter - Versjon",
-                    "default": "Versjon"
+                  "label": "Ingen"
                 }
-            ]
+              ]
+            },
+            {
+              "label": ""
+            },
+            {
+              "label": "Bakgrunnsfarge",
+              "default": "#757575"
+            },
+            {
+              "label": "Bakgrunnsbilde"
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "label": "Tidslinje-slides",
+      "entity": "Tidslinje-slide",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "field": {
+        "label": "Slide",
+        "fields": [
+          {
+            "label": "Id"
+          },
+          {
+            "label": "Slide-type",
+            "default": "regular"
+          },
+          {
+            "label": "Tittel"
+          },
+          {
+            "label": "Startdato",
+            "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+          },
+          {
+            "label": "Sluttdato",
+            "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+          },
+          {
+            "label": "Beskrivelse"
+          },
+          {
+            "label": "Layout",
+            "options": [
+              {
+                "label": "Tekst på høyre side (standard)"
+              },
+              {
+                "label": "Tekst på venstre side"
+              }
+            ]
+          },
+          {
+            "label": "Mediatype",
+            "options": [
+              {
+                "label": "Bilde"
+              },
+              {
+                "label": "Video"
+              },
+              {
+                "label": "Lyd"
+              },
+              {
+                "label": "Ekstern lenke"
+              },
+              {
+                "label": "Ingen"
+              }
+            ]
+          },
+          {
+            "label": "Bilde"
+          },
+          {
+            "label": "Alternativ tekst",
+            "description": "Påkrevd. Hvis bildet ikke kan lastes vises denne teksten istedenfor. Denne blir også brukt ved talesyntese."
+          },
+          {
+            "label": "Video"
+          },
+          {
+            "label": "Lyd"
+          },
+          {
+            "label": "Ekstern lenke",
+            "description": "Sett inn en lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med flere. Se hele listen i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+          },
+          {
+            "label": "Tag-er",
+            "entity": "Tag",
+            "field": {
+              "label": "Tag",
+              "fields": [
+                {
+                  "label": "Id"
+                },
+                {
+                  "label": "Navn"
+                },
+                {
+                  "label": "Farge"
+                },
+                {
+                  "label": "Er aktiv"
+                }
+              ]
+            }
+          },
+          {
+            "label": "Utseende",
+            "fields": [
+              {
+                "label": "Bakgrunn",
+                "options": [
+                  {
+                    "label": "Farge"
+                  },
+                  {
+                    "label": "Bilde"
+                  },
+                  {
+                    "label": "Ingen"
+                  }
+                ]
+              },
+              {
+                "label": ""
+              },
+              {
+                "label": "Bakgrunnsfarge",
+                "default": "#757575"
+              },
+              {
+                "label": "Bakgrunnsbilde"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tag-er",
+      "fields": [
+        {
+          "label": "Tag-er",
+          "entity": "Tag",
+          "field": {
+            "label": "Tag",
+            "fields": [
+              {
+                "label": "Id"
+              },
+              {
+                "label": "Navn"
+              },
+              {
+                "label": "Farge"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Tidsperioder",
+      "fields": [
+        {
+          "label": "Tidsperioder",
+          "entity": "Tidsperiode",
+          "field": {
+            "label": "Tidsperiode",
+            "fields": [
+              {
+                "label": "Navn"
+              },
+              {
+                "label": "Startdato",
+                "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+              },
+              {
+                "label": "Sluttdato",
+                "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "Innstillinger for oppførsel",
+      "fields": [
+        {
+          "label": ""
+        },
+        {
+          "label": "Tidsskala",
+          "description": "Velg mellom ulike tidsskalaer. \"Vanlig tid\" viser datoer i år før og etter vår tidsregning, mens \"Kosmologisk tid\" bruker vitenskapelig notasjon for å vise årstall. \"Indeksert\" er nyttig hvis en ønsker å skjule årstall og heller ha likt mellomrom mellom hver hendelse i tidslinjen.",
+          "options": [
+            {
+              "label": "Vanlig tid"
+            },
+            {
+              "label": "Kosmologisk tid"
+            },
+            {
+              "label": "Indeksert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Oversett",
+      "fields": [
+        {
+          "label": "Bruksrett",
+          "default": "Bruksrett"
+        },
+        {
+          "label": "Bruksrettigheter - Tittel",
+          "default": "Tittel"
+        },
+        {
+          "label": "Bruksrettigheter - Forfatter",
+          "default": "Forfatter"
+        },
+        {
+          "label": "Bruksrettigheter - År",
+          "default": "År"
+        },
+        {
+          "label": "Bruksrettigheter - Kilde",
+          "default": "Kilde"
+        },
+        {
+          "label": "Bruksrettigheter - Lisens",
+          "default": "Lisens"
+        },
+        {
+          "label": "Bruksrettigheter - Versjon",
+          "default": "Versjon"
+        }
+      ]
+    }
+  ]
 }
