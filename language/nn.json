@@ -90,9 +90,6 @@
               ]
             },
             {
-              "label": ""
-            },
-            {
               "label": "Bakgrunnsfarge",
               "default": "#757575"
             },
@@ -219,9 +216,6 @@
                 ]
               },
               {
-                "label": ""
-              },
-              {
                 "label": "Bakgrunnsfarge",
                 "default": "#757575"
               },
@@ -286,7 +280,7 @@
       "label": "Innstillingar for oppførsel",
       "fields": [
         {
-          "label": ""
+          "label": "unused"
         },
         {
           "label": "Tidsskala",

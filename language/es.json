@@ -90,9 +90,6 @@
               ]
             },
             {
-              "label": ""
-            },
-            {
               "label": "Color del fondo",
               "default": "#757575"
             },
@@ -219,9 +216,6 @@
                 ]
               },
               {
-                "label": ""
-              },
-              {
                 "label": "Color del fondo",
                 "default": "#757575"
               },
@@ -286,7 +280,7 @@
       "label": "Configuraciones del comportamiento",
       "fields": [
         {
-          "label": ""
+          "label": "unused"
         },
         {
           "label": "Modo escalado",

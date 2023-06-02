@@ -194,12 +194,6 @@
             ]
           },
           {
-            "label": "",
-            "name": "unused_field",
-            "type": "text",
-            "widget": "none"
-          },
-          {
             "label": "Background color",
             "name": "backgroundColor",
             "type": "text",
@@ -533,12 +527,6 @@
               ]
             },
             {
-              "label": "",
-              "name": "unused_field",
-              "type": "text",
-              "widget": "none"
-            },
-            {
               "label": "Background color",
               "name": "backgroundColor",
               "type": "text",
@@ -789,11 +777,9 @@
     "importance": "low",
     "fields": [
       {
-        "label": "",
+        "label": "unused",
         "name": "unused",
-        "type": "select",
-        "options": [],
-        "default": "",
+        "type": "boolean",
         "widget": "none"
       },
       {

@@ -14,6 +14,7 @@ H5PUpgrades['H5P.NDLATimeline'] = (() => {
     0: {
       /**
        * Replace custom copyright widget and use metadata fields.
+       * Remove obsolete fields.
        * @param {object} parameters Parameters.
        * @param {function} finished Callback when done.
        * @param {object} extras Extras such as metadata.
@@ -136,6 +137,10 @@ H5PUpgrades['H5P.NDLATimeline'] = (() => {
               return item;
             });
           }
+        }
+
+        if (parameters.behaviour) {
+          delete parameters.behaviour.unused;
         }
 
         finished(null, parameters, extras);

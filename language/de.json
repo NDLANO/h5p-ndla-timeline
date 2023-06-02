@@ -90,9 +90,6 @@
               ]
             },
             {
-              "label": ""
-            },
-            {
               "label": "Hintergrundfarbe",
               "default": "#757575"
             },
@@ -219,9 +216,6 @@
                 ]
               },
               {
-                "label": ""
-              },
-              {
                 "label": "Background color",
                 "default": "#757575"
               },
@@ -286,7 +280,7 @@
       "label": "Behavioral settings",
       "fields": [
         {
-          "label": ""
+          "label": "unused"
         },
         {
           "label": "Scaling mode",
