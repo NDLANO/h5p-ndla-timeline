@@ -159,7 +159,7 @@ export const mapEventToTimelineSlide = (
 
     if (event.description) {
       text += html`<div class="h5p-tl-slide-description">
-        ${event.description.params.text}
+        ${event.description.params.text ?? ''}
       </div>`;
     }
   }
