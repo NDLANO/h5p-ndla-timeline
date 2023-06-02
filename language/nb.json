@@ -7,9 +7,6 @@
       "label": "Tittel-slide",
       "fields": [
         {
-          "label": "Id"
-        },
-        {
           "label": "Slide-type",
           "default": "title"
         },
@@ -117,9 +114,6 @@
       "field": {
         "label": "Slide",
         "fields": [
-          {
-            "label": "Id"
-          },
           {
             "label": "Slide-type",
             "default": "regular"
@@ -255,7 +249,8 @@
                 "label": "Navn"
               },
               {
-                "label": "Farge"
+                "label": "Farge",
+                "default": "#E0E0E0"
               }
             ]
           }

@@ -7,9 +7,6 @@
       "label": "Página del título",
       "fields": [
         {
-          "label": "Id"
-        },
-        {
           "label": "Tipo de página",
           "default": "título"
         },
@@ -117,9 +114,6 @@
       "field": {
         "label": "Elemento",
         "fields": [
-          {
-            "label": "Id"
-          },
           {
             "label": "Tipo de página",
             "default": "regular"
@@ -255,7 +249,8 @@
                 "label": "Nombre"
               },
               {
-                "label": "Color"
+                "label": "Color",
+                "default": "#E0E0E0"
               }
             ]
           }

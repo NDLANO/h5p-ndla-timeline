@@ -7,9 +7,6 @@
       "label": "Tittel-lysbilete",
       "fields": [
         {
-          "label": "Id"
-        },
-        {
           "label": "Lysbilete-type",
           "default": "title"
         },
@@ -117,9 +114,6 @@
       "field": {
         "label": "Lysbilete",
         "fields": [
-          {
-            "label": "Id"
-          },
           {
             "label": "Lysbilete-type",
             "default": "regular"
@@ -255,7 +249,8 @@
                 "label": "Namn"
               },
               {
-                "label": "Farge"
+                "label": "Farge",
+                "default": "#E0E0E0"
               }
             ]
           }

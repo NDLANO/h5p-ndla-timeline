@@ -7,9 +7,6 @@
       "label": "Diapositiva do título",
       "fields": [
         {
-          "label": "Id"
-        },
-        {
           "label": "Tipo de diapositiva",
           "default": "título"
         },
@@ -117,9 +114,6 @@
       "field": {
         "label": "Elemento",
         "fields": [
-          {
-            "label": "Id"
-          },
           {
             "label": "Tipo de diapositiva",
             "default": "normal"
@@ -255,7 +249,8 @@
                 "label": "Nome"
               },
               {
-                "label": "Cor"
+                "label": "Cor",
+                "default": "#E0E0E0"
               }
             ]
           }

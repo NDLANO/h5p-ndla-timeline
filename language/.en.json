@@ -7,9 +7,6 @@
       "label": "Title slide",
       "fields": [
         {
-          "label": "Id"
-        },
-        {
           "label": "Slide type",
           "default": "title"
         },
@@ -117,9 +114,6 @@
       "field": {
         "label": "Item",
         "fields": [
-          {
-            "label": "Id"
-          },
           {
             "label": "Slide type",
             "default": "regular"
@@ -255,7 +249,8 @@
                 "label": "Name"
               },
               {
-                "label": "Color"
+                "label": "Color",
+                "default": "#E0E0E0"
               }
             ]
           }

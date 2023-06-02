@@ -12,12 +12,6 @@
     "type": "group",
     "fields": [
       {
-        "label": "Id",
-        "name": "id",
-        "type": "text",
-        "widget": "uuid"
-      },
-      {
         "label": "Slide type",
         "name": "slideType",
         "type": "text",
@@ -316,12 +310,6 @@
       "importance": "low",
       "type": "group",
       "fields": [
-        {
-          "label": "Id",
-          "name": "id",
-          "type": "text",
-          "widget": "uuid"
-        },
         {
           "label": "Slide type",
           "name": "slideType",

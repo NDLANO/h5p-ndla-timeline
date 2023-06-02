@@ -15,6 +15,7 @@ import { EventItemType } from '../types/EventItemType';
 import { Params } from '../types/Params';
 import { SlideType } from '../types/SlideType';
 import { isDefined } from './is-defined.utils';
+import { H5P } from 'h5p-utils';
 
 const html = String.raw;
 
@@ -166,7 +167,7 @@ export const mapEventToTimelineSlide = (
 
   // The `layout-x` part of this ID is used for styling and must not be removed
   // before we find another way to change slide layouts
-  const id = `${event.id}_layout-${event.layout}`;
+  const id = `${H5P.createUUID()}_layout-${event.layout}`;
 
   const slide: TimelineSlide = {
     unique_id: id,
