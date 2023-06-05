@@ -196,7 +196,7 @@ export const mapEventToTimelineSlide = (
 
   const endDate = event.endDate ? parseDate(event.endDate) : null;
 
-  if (!isDateOrderOK(startDate, endDate)) {
+  if (event.endDate && !isDateOrderOK(startDate, endDate)) {
     // Do something to alert end-user of dates mismatch.
     console.error(
       `End date (${event.endDate}) should be LATER than start date (${event.startDate}) in Slide "${event.title}"`,
