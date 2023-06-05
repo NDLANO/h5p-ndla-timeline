@@ -12,8 +12,11 @@ export default {
 const eventItem: EventItemType<'regular'> = {
   id: '1',
   title: 'Dainty green tree frog',
-  description:
-    'The dainty green tree frog (Ranoidea gracilenta), also known as the graceful tree frog, is a tree frog native to eastern Queensland, and north-eastern New South Wales, Australia. (Wikipedia)',
+  description: {
+    params: {
+      text: 'The dainty green tree frog (Ranoidea gracilenta), also known as the graceful tree frog, is a tree frog native to eastern Queensland, and north-eastern New South Wales, Australia. (Wikipedia)',
+    }
+  },
   mediaType: 'image',
   slideType: 'regular',
   image: {

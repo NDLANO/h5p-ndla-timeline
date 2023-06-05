@@ -4,10 +4,8 @@
       "label": "Mostrar a diapositiva do título"
     },
     {
+      "label": "Diapositiva do título",
       "fields": [
-        {
-          "label": "Id"
-        },
         {
           "label": "Tipo de diapositiva",
           "default": "título"
@@ -27,106 +25,6 @@
           "label": "Descrición"
         },
         {
-          "label": "Dereitos de uso",
-          "fields": [
-            {
-              "label": "Título"
-            },
-            {
-              "label": "Autor"
-            },
-            {
-              "label": "Ano(s)"
-            },
-            {
-              "label": "Fonte"
-            },
-            {
-              "label": "Licenza",
-              "options": [
-                {
-                  "label": "Non revelado"
-                },
-                {
-                  "label": "Recoñecemento"
-                },
-                {
-                  "label": "Recoñecemento-Compartir igual"
-                },
-                {
-                  "label": "Recoñecement-Sen derivados"
-                },
-                {
-                  "label": "Recoñecemento-Non comercial"
-                },
-                {
-                  "label": "Recoñecemento-Non comercial-Compartir igual"
-                },
-                {
-                  "label": "Recoñecemento-Non comercial-Sen derivados"
-                },
-                {
-                  "label": "CC0 1.0 Universal (CC0 1.0) Dedicación de dominio público"
-                },
-                {
-                  "label": "Licenza Pública Xeral"
-                },
-                {
-                  "label": "Dominio público"
-                },
-                {
-                  "label": "Copyright"
-                }
-              ]
-            },
-            {
-              "label": "Versión da licenza",
-              "options": [
-                {
-                  "label": "4.0 internacional"
-                },
-                {
-                  "label": "3.0 Non adaptado"
-                },
-                {
-                  "label": "2.5 Xenérico"
-                },
-                {
-                  "label": "2.0 Xenérico"
-                },
-                {
-                  "label": "1.0 Xenérico"
-                }
-              ]
-            },
-            {
-              "label": "Versión da licenza",
-              "options": [
-                {
-                  "label": "Versión 3"
-                },
-                {
-                  "label": "Versión 2"
-                },
-                {
-                  "label": "Versión 1"
-                }
-              ]
-            },
-            {
-              "label": "Versión da licenza",
-              "options": [
-                {
-                  "label": "CC0 1.0 Universal (CC0 1.0) Dedicación de dominio público"
-                },
-                {
-                  "label": "Marca de dominio público"
-                }
-              ]
-            }
-          ]
-        },
-        {
           "label": "Deseño",
           "options": [
             {
@@ -134,9 +32,6 @@
             },
             {
               "label": "Texto á esquerda"
-            },
-            {
-              "label": "Centrado (só texto)"
             }
           ]
         },
@@ -194,7 +89,6 @@
                 }
               ]
             },
-            {},
             {
               "label": "Cor de fondo",
               "default": "#757575"
@@ -204,15 +98,19 @@
             }
           ]
         }
-      ],
-      "label": "Diapositiva do título"
+      ]
     },
     {
+      "label": "Elementos da cronoloxía",
+      "entity": "Elemento da cronoloxía",
+      "widgets": [
+        {
+          "label": "Por defecto"
+        }
+      ],
       "field": {
+        "label": "Elemento",
         "fields": [
-          {
-            "label": "Id"
-          },
           {
             "label": "Tipo de diapositiva",
             "default": "normal"
@@ -233,119 +131,17 @@
           },
           {
             "label": "Deseño",
-            "fields": [
-              {
-                "label": "Título"
-              },
-              {
-                "label": "Autor"
-              },
-              {
-                "label": "Ano(s)"
-              },
-              {
-                "label": "Fonte"
-              },
-              {
-                "label": "Licenza",
-                "options": [
-                  {
-                    "label": "Non revelado"
-                  },
-                  {
-                    "label": "Recoñecemento"
-                  },
-                  {
-                    "label": "Recoñecemento-Compartir igual"
-                  },
-                  {
-                    "label": "Recoñecemento-Sen derivados"
-                  },
-                  {
-                    "label": "Recoñecemento-Non comercial"
-                  },
-                  {
-                    "label": "Recoñecemento-Non comercial-Compartir igual"
-                  },
-                  {
-                    "label": "Recoñecemento-Non comercial-Sen derivados"
-                  },
-                  {
-                    "label": "CC0 1.0 Universal (CC0 1.0) Dedicación de dominio público"
-                  },
-                  {
-                    "label": "Licenza Pública Xeral"
-                  },
-                  {
-                    "label": "Dominio público"
-                  },
-                  {
-                    "label": "Copyright"
-                  }
-                ]
-              },
-              {
-                "label": "Versión da licenza",
-                "options": [
-                  {
-                    "label": "4.0 internacional"
-                  },
-                  {
-                    "label": "3.0 Non adaptado"
-                  },
-                  {
-                    "label": "2.5 Xenérico"
-                  },
-                  {
-                    "label": "2.0 Xenérico"
-                  },
-                  {
-                    "label": "1.0 Xenérico"
-                  }
-                ]
-              },
-              {
-                "label": "Versión da licenza",
-                "options": [
-                  {
-                    "label": "Versión 3"
-                  },
-                  {
-                    "label": "Versión 2"
-                  },
-                  {
-                    "label": "Versión 1"
-                  }
-                ]
-              },
-              {
-                "label": "Versión da licenza",
-                "options": [
-                  {
-                    "label": "CC0 1.0 Universal (CC0 1.0) Dedicación de dominio público"
-                  },
-                  {
-                    "label": "Marca de dominio público"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "label": "Deseño",
             "options": [
               {
                 "label": "Texto á dereita (estándar)"
               },
               {
                 "label": "Texto á esquerda"
-              },
-              {
-                "label": "Centrado (só texto)"
               }
             ]
           },
           {
+            "label": "Tipo de medio",
             "options": [
               {
                 "label": "Imaxe"
@@ -362,8 +158,7 @@
               {
                 "label": "Ningún"
               }
-            ],
-            "label": "Tipo de medio"
+            ]
           },
           {
             "label": "Imaxe"
@@ -420,7 +215,6 @@
                   }
                 ]
               },
-              {},
               {
                 "label": "Cor de fondo",
                 "default": "#757575"
@@ -430,16 +224,8 @@
               }
             ]
           }
-        ],
-        "label": "Elemento"
-      },
-      "label": "Elementos da cronoloxía",
-      "entity": "Elemento da cronoloxía",
-      "widgets": [
-        {
-          "label": "Por defecto"
-        }
-      ]
+        ]
+      }
     },
     {
       "label": "Etiquetas",
@@ -458,7 +244,7 @@
               },
               {
                 "label": "Cor",
-                "default": "#757575"
+                "default": "#E0E0E0"
               }
             ]
           }
@@ -491,8 +277,11 @@
       ]
     },
     {
+      "label": "Configuración do comportamento",
       "fields": [
-        {},
+        {
+          "label": "unused"
+        },
         {
           "label": "Modo de escalado",
           "description": "Escolla entre os modos de escala. \"Tempo humano\" amosa datas en anos anteriores e posteriores á Era Común usando notación regular, mentres que \"Tempo cosmolóxico\" amosa datas usando notación científica. \"Indexado\" é útil cando queres sesgar os períodos de tempo e facer que todos os eventos parezan igual de afastados.",
@@ -508,8 +297,7 @@
             }
           ]
         }
-      ],
-      "label": "Configuración do comportamento"
+      ]
     },
     {
       "label": "Adaptación local",

@@ -4,10 +4,8 @@
       "label": "Mostrar página del título"
     },
     {
+      "label": "Página del título",
       "fields": [
-        {
-          "label": "Id"
-        },
         {
           "label": "Tipo de página",
           "default": "título"
@@ -27,106 +25,6 @@
           "label": "Descripción"
         },
         {
-          "fields": [
-            {
-              "label": "Título"
-            },
-            {
-              "label": "Autor"
-            },
-            {
-              "label": "Año(s)"
-            },
-            {
-              "label": "Orígen"
-            },
-            {
-              "label": "Licencia",
-              "options": [
-                {
-                  "label": "No publicado"
-                },
-                {
-                  "label": "Atribución"
-                },
-                {
-                  "label": "Atribución-CompartirIgual"
-                },
-                {
-                  "label": "Attribución-NoDerivadas"
-                },
-                {
-                  "label": "Atribución-NoComercial"
-                },
-                {
-                  "label": "Atribución-NoComercial-CompartiIgual"
-                },
-                {
-                  "label": "Atribución-NoComercial-NoDerivadas"
-                },
-                {
-                  "label": "CC0 1.0 Universal (CC0 1.0) Dedicación de Dominio Público"
-                },
-                {
-                  "label": "Licencia Pública General"
-                },
-                {
-                  "label": "Dominio Público"
-                },
-                {
-                  "label": "Copyright"
-                }
-              ]
-            },
-            {
-              "label": "Versión de Licencia",
-              "options": [
-                {
-                  "label": "4.0 Internacional"
-                },
-                {
-                  "label": "3.0 No portada"
-                },
-                {
-                  "label": "2.5 Genérica"
-                },
-                {
-                  "label": "2.0 Genérica"
-                },
-                {
-                  "label": "1.0 Genérica"
-                }
-              ]
-            },
-            {
-              "label": "Versión de Licencia",
-              "options": [
-                {
-                  "label": "Versión 3"
-                },
-                {
-                  "label": "Versión 2"
-                },
-                {
-                  "label": "Versión 1"
-                }
-              ]
-            },
-            {
-              "label": "Versión de Licencia",
-              "options": [
-                {
-                  "label": "CC0 1.0 Universal (CC0 1.0) Dedicación de Dominio Público"
-                },
-                {
-                  "label": "Marca Dominio Público"
-                }
-              ]
-            }
-          ],
-          "label": "Derechos de uso"
-        },
-        {
           "label": "Diseño",
           "options": [
             {
@@ -134,9 +32,6 @@
             },
             {
               "label": "Texto a la izquierda"
-            },
-            {
-              "label": "Centrado (Solo texto)"
             }
           ]
         },
@@ -194,7 +89,6 @@
                 }
               ]
             },
-            {},
             {
               "label": "Color del fondo",
               "default": "#757575"
@@ -204,15 +98,19 @@
             }
           ]
         }
-      ],
-      "label": "Página del título"
+      ]
     },
     {
+      "label": "Elementos de línea de tiempo",
+      "entity": "Elemento de línea de tiempo",
+      "widgets": [
+        {
+          "label": "Predeterminado"
+        }
+      ],
       "field": {
+        "label": "Elemento",
         "fields": [
-          {
-            "label": "Id"
-          },
           {
             "label": "Tipo de página",
             "default": "regular"
@@ -233,115 +131,12 @@
           },
           {
             "label": "Diseño",
-            "fields": [
-              {
-                "label": "Título"
-              },
-              {
-                "label": "Autor"
-              },
-              {
-                "label": "Año(s)"
-              },
-              {
-                "label": "Origen"
-              },
-              {
-                "label": "Licencia",
-                "options": [
-                  {
-                    "label": "No publicada"
-                  },
-                  {
-                    "label": "Atribución"
-                  },
-                  {
-                    "label": "Atribución-CompartirIgual"
-                  },
-                  {
-                    "label": "Atribución-NoDerivadas"
-                  },
-                  {
-                    "label": "Atribución-NoComercial"
-                  },
-                  {
-                    "label": "Atribución-NoComercial-CompartirIgual"
-                  },
-                  {
-                    "label": "Atribución-NoComercial-NoDerivadas"
-                  },
-                  {
-                    "label": "CC0 1.0 Universal (CC0 1.0) Dedicación de Dominio Público"
-                  },
-                  {
-                    "label": "Licencia Pública General"
-                  },
-                  {
-                    "label": "Dominio Público"
-                  },
-                  {
-                    "label": "Copyright"
-                  }
-                ]
-              },
-              {
-                "label": "Versión de Licencia",
-                "options": [
-                  {
-                    "label": "4.0 Internacional"
-                  },
-                  {
-                    "label": "3.0 No portada"
-                  },
-                  {
-                    "label": "2.5 Genérica"
-                  },
-                  {
-                    "label": "2.0 Genérica"
-                  },
-                  {
-                    "label": "1.0 Genérica"
-                  }
-                ]
-              },
-              {
-                "label": "Versión de Licencia",
-                "options": [
-                  {
-                    "label": "Versión 3"
-                  },
-                  {
-                    "label": "Versión 2"
-                  },
-                  {
-                    "label": "Versión 1"
-                  }
-                ]
-              },
-              {
-                "label": "Versión de Licencia",
-                "options": [
-                  {
-                    "label": "CC0 1.0 Universal (CC0 1.0) Dedicación de Dominio Público"
-                  },
-                  {
-                    "label": "Marca Dominio Público"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "label": "Diseño",
             "options": [
               {
                 "label": "Texto a la derecha (estándar)"
               },
               {
                 "label": "Texto a la izquierda"
-              },
-              {
-                "label": "Centrado (Solo texto)"
               }
             ]
           },
@@ -420,7 +215,6 @@
                   }
                 ]
               },
-              {},
               {
                 "label": "Color del fondo",
                 "default": "#757575"
@@ -430,16 +224,8 @@
               }
             ]
           }
-        ],
-        "label": "Elemento"
-      },
-      "label": "Elementos de línea de tiempo",
-      "entity": "Elemento de línea de tiempo",
-      "widgets": [
-        {
-          "label": "Predeterminado"
-        }
-      ]
+        ]
+      }
     },
     {
       "label": "Marcas",
@@ -458,7 +244,7 @@
               },
               {
                 "label": "Color",
-                "default": "#757575"
+                "default": "#E0E0E0"
               }
             ]
           }
@@ -493,7 +279,9 @@
     {
       "label": "Configuraciones del comportamiento",
       "fields": [
-        {},
+        {
+          "label": "unused"
+        },
         {
           "label": "Modo de escala",
           "description": "Elegir entre modos de escala. \"Hora humana\" muestra la fecha en años antes y después de la Era común usando notación regular, mientras que \"Hora cosmológica\" muestra las fechas usando notación científica. \"Indexado\" es útil cuando usted quiere separar marcos temporales y hacer que los eventos se vean igualmente distanciados.",
