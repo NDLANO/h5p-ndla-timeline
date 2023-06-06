@@ -361,6 +361,57 @@
         }
       },
       {
+        "name": "info",
+        "label": "Information",
+        "importance": "high",
+        "type": "group",
+        "expanded": false,
+        "fields": [
+          {
+            "name": "credit",
+            "type": "text",
+            "label": "Credit",
+            "importance": "low",
+            "description": "Credits to the media",
+            "optional": true,
+            "widget": "html",
+            "tags": [
+              "a",
+              "strong",
+              "em"
+            ]
+          },
+          {
+            "name": "caption",
+            "type": "text",
+            "label": "Caption",
+            "importance": "low",
+            "description": "Caption text",
+            "optional": true,
+            "widget": "html",
+            "tags": [
+              "a",
+              "strong",
+              "em"
+            ]
+          }
+        ],
+        "widget": "showWhen",
+        "showWhen": {
+          "rules": [
+            {
+              "field": "mediaType",
+              "equals": [
+                "image",
+                "audio",
+                "video",
+                "custom"
+              ]
+            }
+          ]
+        }
+      },
+      {
         "label": "Appearance",
         "name": "appearance",
         "type": "group",
@@ -848,6 +899,57 @@
               {
                 "field": "mediaType",
                 "equals": "custom"
+              }
+            ]
+          }
+        },
+        {
+          "name": "info",
+          "label": "Information",
+          "importance": "high",
+          "type": "group",
+          "expanded": false,
+          "fields": [
+            {
+              "name": "credit",
+              "type": "text",
+              "label": "Credit",
+              "importance": "low",
+              "description": "Credits to the media",
+              "optional": true,
+              "widget": "html",
+              "tags": [
+                "a",
+                "strong",
+                "em"
+              ]
+            },
+            {
+              "name": "caption",
+              "type": "text",
+              "label": "Caption",
+              "importance": "low",
+              "description": "Caption text",
+              "optional": true,
+              "widget": "html",
+              "tags": [
+                "a",
+                "strong",
+                "em"
+              ]
+            }
+          ],
+          "widget": "showWhen",
+          "showWhen": {
+            "rules": [
+              {
+                "field": "mediaType",
+                "equals": [
+                  "image",
+                  "audio",
+                  "video",
+                  "custom"
+                ]
               }
             ]
           }

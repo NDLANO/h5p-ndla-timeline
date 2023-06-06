@@ -18,6 +18,12 @@ export type EventItemType<S extends SlideType> = {
   layout: LayoutOption;
   eventContent?: EventContent;
 
+  info?:
+    {
+      credit: string;
+      caption: string;
+    }
+
   appearance:
     | {
         backgroundType: 'none';

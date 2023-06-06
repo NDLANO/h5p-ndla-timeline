@@ -208,6 +208,8 @@ export const mapEventToTimelineSlide = (
     slide.media = {
       url: typeof media === 'string' ? media : media.path,
       alt: event.mediaType === 'image' ? event.imageAlt : undefined,
+      credit: event.info !== undefined ? event.info.credit : '',
+      caption: event.info !== undefined ? event.info.caption : '',
     };
   }
 
