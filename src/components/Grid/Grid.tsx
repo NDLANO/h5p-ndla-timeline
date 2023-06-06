@@ -54,7 +54,7 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
             )}
 
             {gridItem.type === 'textContent' && (
-              <TextContentBlock textContent={eventItem.description ?? ''} />
+              <TextContentBlock textContent={eventItem.description?.params?.text ?? ''} />
             )}
 
             {gridItem.type === 'media' && media && (
