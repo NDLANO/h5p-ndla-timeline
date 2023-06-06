@@ -4,8 +4,8 @@
   "license": "MPL",
   "machineName": "H5P.NDLATimeline",
   "majorVersion": 0,
-  "minorVersion": 0,
-  "patchVersion": 64,
+  "minorVersion": 1,
+  "patchVersion": 0,
   "runnable": 1,
   "fullscreen": 1,
   "preloadedJs": [
@@ -48,11 +48,6 @@
     },
     {
       "machineName": "H5PEditor.UUIDWidget",
-      "majorVersion": 1,
-      "minorVersion": 0
-    },
-    {
-      "machineName": "H5PEditor.Copyright",
       "majorVersion": 1,
       "minorVersion": 0
     }
