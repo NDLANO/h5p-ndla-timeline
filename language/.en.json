@@ -73,6 +73,19 @@
           "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
         },
         {
+          "label": "Information",
+          "fields": [
+            {
+              "label": "Credit",
+              "description": "Credits to the media"
+            },
+            {
+              "label": "Caption",
+              "description": "Caption text"
+            }
+          ]
+        },
+        {
           "label": "Appearance",
           "fields": [
             {
@@ -178,6 +191,19 @@
             "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
           },
           {
+            "label": "Information",
+            "fields": [
+              {
+                "label": "Credit",
+                "description": "Credits to the media"
+              },
+              {
+                "label": "Caption",
+                "description": "Caption text"
+              }
+            ]
+          },
+          {
             "label": "Tags",
             "entity": "Tag",
             "field": {
@@ -243,8 +269,7 @@
                 "label": "Name"
               },
               {
-                "label": "Color",
-                "default": "#E0E0E0"
+                "label": "Color"
               }
             ]
           }
