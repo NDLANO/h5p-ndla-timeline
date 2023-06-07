@@ -73,6 +73,19 @@
           "description": "Insertar un enlace a recursos externos. Ciertos sitios web serán renderizados como emblemas especializado, como por ejemplo Twitter, YouTube, Wikipedia, y Google Maps. Vea la lista completa en los <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
         },
         {
+          "label": "Information",
+          "fields": [
+            {
+              "label": "Credit",
+              "description": "Credits to the media"
+            },
+            {
+              "label": "Caption",
+              "description": "Caption text"
+            }
+          ]
+        },
+        {
           "label": "Apariencia",
           "fields": [
             {
@@ -176,6 +189,19 @@
           {
             "label": "Enlace externo",
             "description": "Insertar un enlace a recursos externos. Ciertos sitios web serán renderizados como símbolos especializados, como por ejemplo Twitter, YouTube, Wikipedia, y Google Maps. Vea la lista completa en los <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+          },
+          {
+            "label": "Information",
+            "fields": [
+              {
+                "label": "Credit",
+                "description": "Credits to the media"
+              },
+              {
+                "label": "Caption",
+                "description": "Caption text"
+              }
+            ]
           },
           {
             "label": "Marcas",

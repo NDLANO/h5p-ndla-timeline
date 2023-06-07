@@ -269,7 +269,8 @@
                 "label": "Name"
               },
               {
-                "label": "Color"
+                "label": "Color",
+                "default": "#E0E0E0"
               }
             ]
           }

@@ -73,6 +73,19 @@
           "description": "Sett inn ei lenkje til eksterne ressursar. Visse nettsider vil få ein spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med fleire. Sjå heile lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
         },
         {
+          "label": "Information",
+          "fields": [
+            {
+              "label": "Credit",
+              "description": "Credits to the media"
+            },
+            {
+              "label": "Caption",
+              "description": "Caption text"
+            }
+          ]
+        },
+        {
           "label": "Utsjånad",
           "fields": [
             {
@@ -176,6 +189,19 @@
           {
             "label": "Ekstern lenke",
             "description": "Sett inn ei lenkje til eksterne ressursar. Visse nettsider vil få ein spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med fleire. Sjå heile lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+          },
+          {
+            "label": "Information",
+            "fields": [
+              {
+                "label": "Credit",
+                "description": "Credits to the media"
+              },
+              {
+                "label": "Caption",
+                "description": "Caption text"
+              }
+            ]
           },
           {
             "label": "Tag-er",

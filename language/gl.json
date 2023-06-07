@@ -73,6 +73,19 @@
           "description": "Insira unha ligazón a recursos externos. Algúns sitios web amosaranse como insercións especializadas, como Twitter, YouTube, Wikipedia e Google Maps. Consulta a lista completa nos documentos de <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab</a>"
         },
         {
+          "label": "Information",
+          "fields": [
+            {
+              "label": "Credit",
+              "description": "Credits to the media"
+            },
+            {
+              "label": "Caption",
+              "description": "Caption text"
+            }
+          ]
+        },
+        {
           "label": "Aparencia",
           "fields": [
             {
@@ -176,6 +189,19 @@
           {
             "label": "Ligazón externa",
             "description": "Insire unha ligazón a recursos externos. Algúns sitios web amosaranse como insercións especializadas, como Twitter, YouTube, Wikipedia e Google Maps. Consulta a lista completa nos documentos de <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab</a>"
+          },
+          {
+            "label": "Information",
+            "fields": [
+              {
+                "label": "Credit",
+                "description": "Credits to the media"
+              },
+              {
+                "label": "Caption",
+                "description": "Caption text"
+              }
+            ]
           },
           {
             "label": "Etiquetas",
