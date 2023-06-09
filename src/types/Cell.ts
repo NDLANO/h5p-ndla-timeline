@@ -1,5 +1,5 @@
 export type Cell = {
-  x: number;
+  x: numdber;
   y: number;
   index: number;
 };
