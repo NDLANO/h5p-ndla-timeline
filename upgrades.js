@@ -144,6 +144,19 @@ H5PUpgrades['H5P.NDLATimeline'] = (() => {
         }
 
         finished(null, parameters, extras);
+      },
+
+      /**
+       * Remove obsolete fields from semantics.
+       * @param {object} parameters Parameters.
+       * @param {function} finished Callback when done.
+       * @param {object} extras Extras such as metadata.
+       */
+      2: (parameters, finished, extras) => {
+        if (parameters) {
+          delete parameters.l10n;
+        }
+        finished(null, parameters, extras);
       }
     }
   };
