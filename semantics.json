@@ -804,55 +804,5 @@
         "default": "human"
       }
     ]
-  },
-  {
-    "name": "l10n",
-    "type": "group",
-    "common": true,
-    "label": "Localize",
-    "fields": [
-      {
-        "label": "Rights of use",
-        "name": "copyrightLabel",
-        "default": "Rights of use",
-        "type": "text"
-      },
-      {
-        "label": "Copyright - Title",
-        "name": "copyrightTitle",
-        "default": "Title",
-        "type": "text"
-      },
-      {
-        "label": "Copyright - Author",
-        "name": "copyrightAuthor",
-        "default": "Author",
-        "type": "text"
-      },
-      {
-        "label": "Copyright - Year",
-        "name": "copyrightYear",
-        "default": "Year",
-        "type": "text"
-      },
-      {
-        "label": "Copyright - Source",
-        "name": "copyrightSource",
-        "default": "Source",
-        "type": "text"
-      },
-      {
-        "label": "Copyright - License",
-        "name": "copyrightLicense",
-        "default": "License",
-        "type": "text"
-      },
-      {
-        "label": "Copyright - Version",
-        "name": "copyrightVersion",
-        "default": "Version",
-        "type": "text"
-      }
-    ]
   }
 ]

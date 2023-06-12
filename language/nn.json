@@ -298,39 +298,6 @@
           ]
         }
       ]
-    },
-    {
-      "label": "Oversett",
-      "fields": [
-        {
-          "label": "Bruksrettar",
-          "default": "Bruksrettar"
-        },
-        {
-          "label": "Bruksrettar - Tittel",
-          "default": "Tittel"
-        },
-        {
-          "label": "Bruksrettar - Forfatter",
-          "default": "Forfatter"
-        },
-        {
-          "label": "Bruksrettar - År",
-          "default": "År"
-        },
-        {
-          "label": "Bruksrettar - Kjelde",
-          "default": "Kjelde"
-        },
-        {
-          "label": "Bruksrettar - Lisens",
-          "default": "Lisens"
-        },
-        {
-          "label": "Bruksrettar - Versjon",
-          "default": "Versjon"
-        }
-      ]
     }
   ]
 }

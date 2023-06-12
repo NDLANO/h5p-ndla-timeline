@@ -298,39 +298,6 @@
           ]
         }
       ]
-    },
-    {
-      "label": "Localize",
-      "fields": [
-        {
-          "label": "Rights of use",
-          "default": "Rights of use"
-        },
-        {
-          "label": "Copyright - Title",
-          "default": "Title"
-        },
-        {
-          "label": "Copyright - Author",
-          "default": "Author"
-        },
-        {
-          "label": "Copyright - Year",
-          "default": "Year"
-        },
-        {
-          "label": "Copyright - Source",
-          "default": "Source"
-        },
-        {
-          "label": "Copyright - License",
-          "default": "License"
-        },
-        {
-          "label": "Copyright - Version",
-          "default": "Version"
-        }
-      ]
     }
   ]
 }

@@ -298,39 +298,6 @@
           ]
         }
       ]
-    },
-    {
-      "label": "Oversett",
-      "fields": [
-        {
-          "label": "Bruksrett",
-          "default": "Bruksrett"
-        },
-        {
-          "label": "Bruksrettigheter - Tittel",
-          "default": "Tittel"
-        },
-        {
-          "label": "Bruksrettigheter - Forfatter",
-          "default": "Forfatter"
-        },
-        {
-          "label": "Bruksrettigheter - År",
-          "default": "År"
-        },
-        {
-          "label": "Bruksrettigheter - Kilde",
-          "default": "Kilde"
-        },
-        {
-          "label": "Bruksrettigheter - Lisens",
-          "default": "Lisens"
-        },
-        {
-          "label": "Bruksrettigheter - Versjon",
-          "default": "Versjon"
-        }
-      ]
     }
   ]
 }

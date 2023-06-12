@@ -298,39 +298,6 @@
           ]
         }
       ]
-    },
-    {
-      "label": "Adaptación local",
-      "fields": [
-        {
-          "label": "Derechos de uso",
-          "default": "Derechos de uso"
-        },
-        {
-          "label": "Copyright - Título",
-          "default": "Título"
-        },
-        {
-          "label": "Copyright - Autor",
-          "default": "Autor"
-        },
-        {
-          "label": "Copyright - Año",
-          "default": "Año"
-        },
-        {
-          "label": "Copyright - Origen",
-          "default": "Origen"
-        },
-        {
-          "label": "Copyright - Licencia",
-          "default": "Licencia"
-        },
-        {
-          "label": "Copyright - Versión",
-          "default": "Versión"
-        }
-      ]
     }
   ]
 }
