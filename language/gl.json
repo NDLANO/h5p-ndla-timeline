@@ -299,38 +299,173 @@
         }
       ]
     },
-    {
-      "label": "Adaptación local",
-      "fields": [
         {
-          "label": "Dereitos de uso",
-          "default": "Dereitos de uso"
-        },
-        {
-          "label": "Copyright - Título",
-          "default": "Título"
-        },
-        {
-          "label": "Copyright - Autor",
-          "default": "Autor"
-        },
-        {
-          "label": "Copyright - Ano",
-          "default": "Ano"
-        },
-        {
-          "label": "Copyright - Fonte",
-          "default": "Fonte"
-        },
-        {
-          "label": "Copyright - Licenza",
-          "default": "Licenza"
-        },
-        {
-          "label": "Copyright - Versión",
-          "default": "Versión"
+          "label": "Idioma",
+          "description": "O idioma da interface de usuario",
+          "options": [
+            {
+              "label": "Afrikaans"
+            },
+            {
+              "label": "Árabe"
+            },
+            {
+              "label": "Armenio"
+            },
+            {
+              "label": "Vasco"
+            },
+            {
+              "label": "Búlgaro"
+            },
+            {
+              "label": "Catalán"
+            },
+            {
+              "label": "Chines"
+            },
+            {
+              "label": "Croata / Hrvatski"
+            },
+            {
+              "label": "Checo"
+            },
+            {
+              "label": "Danés"
+            },
+            {
+              "label": "Holandés"
+            },
+            {
+              "label": "Inglés"
+            },
+            {
+              "label": "Inglés (formato 24 horas)"
+            },
+            {
+              "label": "Esperanto"
+            },
+            {
+              "label": "Estonio"
+            },
+            {
+              "label": "Faroes"
+            },
+            {
+              "label": "Farsi"
+            },
+            {
+              "label": "Finlandés"
+            },
+            {
+              "label": "Francés"
+            },
+            {
+              "label": "Galego"
+            },
+            {
+              "label": "Georgiano"
+            },
+            {
+              "label": "Alemán / Deutsch"
+            },
+            {
+              "label": "Grego"
+            },
+            {
+              "label": "Hebreo"
+            },
+            {
+              "label": "Húngaro"
+            },
+            {
+              "label": "Islandés"
+            },
+            {
+              "label": "Indonesio"
+            },
+            {
+              "label": "Italiano"
+            },
+            {
+              "label": "Xaponés"
+            },
+            {
+              "label": "Koreano"
+            },
+            {
+              "label": "Latvio"
+            },
+            {
+              "label": "Lituano"
+            },
+            {
+              "label": "Luxemburgués"
+            },
+            {
+              "label": "Malaio"
+            },
+            {
+              "label": "Nepalés"
+            },
+            {
+              "label": "Noruego"
+            },
+            {
+              "label": "Polaco"
+            },
+            {
+              "label": "Portugués"
+            },
+            {
+              "label": "Portugués (Brasileiro)"
+            },
+            {
+              "label": "Romanés"
+            },
+            {
+              "label": "Ruso"
+            },
+            {
+              "label": "Serbio - Cirílico"
+            },
+            {
+              "label": "Serbio - Latín"
+            },
+            {
+              "label": "Cingalés"
+            },
+            {
+              "label": "Eslovaco"
+            },
+            {
+              "label": "Sloveno"
+            },
+            {
+              "label": "Español"
+            },
+            {
+              "label": "Sueco"
+            },
+            {
+              "label": "Tagalo"
+            },
+            {
+              "label": "Tamil"
+            },
+            {
+              "label": "Taiwanes"
+            },
+            {
+              "label": "Telugu"
+            },
+            {
+              "label": "Turco"
+            },
+            {
+              "label": "Ukraniano"
+            }
+          ]
         }
-      ]
-    }
   ]
 }

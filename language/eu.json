@@ -300,35 +300,170 @@
       ]
     },
     {
-      "label": "Localize",
-      "fields": [
+      "label": "Hizkuntza",
+      "description": "Erabiltzailearen interfazearen hizkuntza",
+      "options": [
         {
-          "label": "Rights of use",
-          "default": "Rights of use"
+          "label": "Afrikaans"
         },
         {
-          "label": "Copyright - Title",
-          "default": "Title"
+          "label": "Arabiera"
         },
         {
-          "label": "Copyright - Author",
-          "default": "Author"
+          "label": "Armeniera"
         },
         {
-          "label": "Copyright - Year",
-          "default": "Year"
+          "label": "Euskara"
         },
         {
-          "label": "Copyright - Source",
-          "default": "Source"
+          "label": "Bulgariera"
         },
         {
-          "label": "Copyright - License",
-          "default": "License"
+          "label": "Katalana"
         },
         {
-          "label": "Copyright - Version",
-          "default": "Version"
+          "label": "Txinera"
+        },
+        {
+          "label": "Kroaziera"
+        },
+        {
+          "label": "Txekiera"
+        },
+        {
+          "label": "Daniera"
+        },
+        {
+          "label": "Nederlandera"
+        },
+        {
+          "label": "Ingelesa"
+        },
+        {
+          "label": "Ingelesa (24 orduko denbora)"
+        },
+        {
+          "label": "Esperanto"
+        },
+        {
+          "label": "Estoniera"
+        },
+        {
+          "label": "Faroera"
+        },
+        {
+          "label": "Persiera"
+        },
+        {
+          "label": "Suomiera"
+        },
+        {
+          "label": "Frantsesa"
+        },
+        {
+          "label": "Galego"
+        },
+        {
+          "label": "Georgiera"
+        },
+        {
+          "label": "Alemana"
+        },
+        {
+          "label": "Grekera"
+        },
+        {
+          "label": "Hebraiera"
+        },
+        {
+          "label": "Hungariera"
+        },
+        {
+          "label": "Islandiera"
+        },
+        {
+          "label": "Indonesiera"
+        },
+        {
+          "label": "Italiera"
+        },
+        {
+          "label": "Japoniera"
+        },
+        {
+          "label": "Koreera"
+        },
+        {
+          "label": "Letoniera"
+        },
+        {
+          "label": "Lituaniera"
+        },
+        {
+          "label": "Luxemburgera"
+        },
+        {
+          "label": "Malayera"
+        },
+        {
+          "label": "Nepalera"
+        },
+        {
+          "label": "Norvegiera"
+        },
+        {
+          "label": "Poloniera"
+        },
+        {
+          "label": "Portugesa"
+        },
+        {
+          "label": "Portugesa (Brasiliera)"
+        },
+        {
+          "label": "Erromantxera"
+        },
+        {
+          "label": "Errusiera"
+        },
+        {
+          "label": "Serbiera - Zirilikoa"
+        },
+        {
+          "label": "Serbiera - Latino"
+        },
+        {
+          "label": "Sinhala"
+        },
+        {
+          "label": "Eslovakiera"
+        },
+        {
+          "label": "Esloveniera"
+        },
+        {
+          "label": "Gaztelera"
+        },
+        {
+          "label": "Suediera"
+        },
+        {
+          "label": "Etiketaaloa"
+        },
+        {
+          "label": "Tamilera"
+        },
+        {
+          "label": "Taiwanera"
+        },
+        {
+          "label": "Telugu"
+        },
+        {
+          "label": "Turkiera"
+        },
+        {
+          "label": "Ukrainera"
         }
       ]
     }

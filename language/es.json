@@ -300,35 +300,170 @@
       ]
     },
     {
-      "label": "Localizar",
-      "fields": [
+      "label": "Idioma",
+      "description": "Idioma de la interfaz de usuario",
+      "options": [
         {
-          "label": "Derechos de uso",
-          "default": "Derechos de uso"
+          "label": "Afrikaans"
         },
         {
-          "label": "Copyright - Título",
-          "default": "Título"
+          "label": "Árabe"
         },
         {
-          "label": "Copyright - Autor",
-          "default": "Autor"
+          "label": "Armenio"
         },
         {
-          "label": "Copyright - Año",
-          "default": "Año"
+          "label": "Vasco"
         },
         {
-          "label": "Copyright - Origen",
-          "default": "Origen"
+          "label": "Búlgaro"
         },
         {
-          "label": "Copyright - Licencia",
-          "default": "Licencia"
+          "label": "Catalán"
         },
         {
-          "label": "Copyright - Versión",
-          "default": "Versión"
+          "label": "Chino"
+        },
+        {
+          "label": "Croata / Hrvatski"
+        },
+        {
+          "label": "Checo"
+        },
+        {
+          "label": "Danés"
+        },
+        {
+          "label": "Holandés"
+        },
+        {
+          "label": "Inglés"
+        },
+        {
+          "label": "Inglés (horario de 24-horas)"
+        },
+        {
+          "label": "Esperanto"
+        },
+        {
+          "label": "Estonio"
+        },
+        {
+          "label": "Feroés"
+        },
+        {
+          "label": "Persa"
+        },
+        {
+          "label": "Finlandés"
+        },
+        {
+          "label": "Francés"
+        },
+        {
+          "label": "Gallego"
+        },
+        {
+          "label": "Georgiano"
+        },
+        {
+          "label": "Alemán / Deutsch"
+        },
+        {
+          "label": "Griego"
+        },
+        {
+          "label": "Hebreo"
+        },
+        {
+          "label": "Húngaro"
+        },
+        {
+          "label": "Islandés"
+        },
+        {
+          "label": "Indonesio"
+        },
+        {
+          "label": "Italiano"
+        },
+        {
+          "label": "Japonés"
+        },
+        {
+          "label": "Coreano"
+        },
+        {
+          "label": "Latvio"
+        },
+        {
+          "label": "Lituano"
+        },
+        {
+          "label": "Luxemburgués"
+        },
+        {
+          "label": "Malayo"
+        },
+        {
+          "label": "Nepalí"
+        },
+        {
+          "label": "Noruego"
+        },
+        {
+          "label": "Polaco"
+        },
+        {
+          "label": "Portugués"
+        },
+        {
+          "label": "Portugués (Brasileño)"
+        },
+        {
+          "label": "Rumano"
+        },
+        {
+          "label": "Ruso"
+        },
+        {
+          "label": "Serbio - Cirílico"
+        },
+        {
+          "label": "Serbio - Latino"
+        },
+        {
+          "label": "Sinhalés"
+        },
+        {
+          "label": "Eslovaco"
+        },
+        {
+          "label": "Esloveno"
+        },
+        {
+          "label": "Español"
+        },
+        {
+          "label": "Sueco"
+        },
+        {
+          "label": "Tagalo"
+        },
+        {
+          "label": "Tamil"
+        },
+        {
+          "label": "Taiwanés"
+        },
+        {
+          "label": "Télugu"
+        },
+        {
+          "label": "Turco"
+        },
+        {
+          "label": "Ucraniano"
         }
       ]
     }

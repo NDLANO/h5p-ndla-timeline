@@ -300,35 +300,170 @@
       ]
     },
     {
-      "label": "Localize",
-      "fields": [
+      "label": "Sprache",
+      "description": "Die Sprache der Benutzeroberfläche",
+      "options": [
         {
-          "label": "Rights of use",
-          "default": "Rights of use"
+          "label": "Afrikaans"
         },
         {
-          "label": "Copyright - Title",
-          "default": "Title"
+          "label": "Arabisch"
         },
         {
-          "label": "Copyright - Author",
-          "default": "Author"
+          "label": "Armenisch"
         },
         {
-          "label": "Copyright - Year",
-          "default": "Year"
+          "label": "Baskisch"
         },
         {
-          "label": "Copyright - Source",
-          "default": "Source"
+          "label": "Bulgarisch"
         },
         {
-          "label": "Copyright - License",
-          "default": "License"
+          "label": "Katalanisch"
         },
         {
-          "label": "Copyright - Version",
-          "default": "Version"
+          "label": "Chinesisch"
+        },
+        {
+          "label": "Kroatisch"
+        },
+        {
+          "label": "Tschechisch"
+        },
+        {
+          "label": "Dänisch"
+        },
+        {
+          "label": "Niederländisch"
+        },
+        {
+          "label": "Englisch"
+        },
+        {
+          "label": "Englisch (24-Stunden-Zeitformat)"
+        },
+        {
+          "label": "Esperanto"
+        },
+        {
+          "label": "Estnisch"
+        },
+        {
+          "label": "Färöisch"
+        },
+        {
+          "label": "Farsi"
+        },
+        {
+          "label": "Finnisch"
+        },
+        {
+          "label": "Französisch"
+        },
+        {
+          "label": "Galicisch"
+        },
+        {
+          "label": "Georgisch"
+        },
+        {
+          "label": "Deutsch"
+        },
+        {
+          "label": "Griechisch"
+        },
+        {
+          "label": "Hebräisch"
+        },
+        {
+          "label": "Ungarisch"
+        },
+        {
+          "label": "Isländisch"
+        },
+        {
+          "label": "Indonesisch"
+        },
+        {
+          "label": "Italienisch"
+        },
+        {
+          "label": "Japanisch"
+        },
+        {
+          "label": "Koreanisch"
+        },
+        {
+          "label": "Lettisch"
+        },
+        {
+          "label": "Litauisch"
+        },
+        {
+          "label": "Luxembourgisch"
+        },
+        {
+          "label": "Malayisch"
+        },
+        {
+          "label": "Nepalesisch"
+        },
+        {
+          "label": "Norwegisch"
+        },
+        {
+          "label": "Polnisch"
+        },
+        {
+          "label": "Portugiesisch"
+        },
+        {
+          "label": "Portugiesisch (Brasilien)"
+        },
+        {
+          "label": "Rumänisch"
+        },
+        {
+          "label": "Russisch"
+        },
+        {
+          "label": "Serbisch - kyrillische Schrift"
+        },
+        {
+          "label": "Serbisch - lateinische Schrift"
+        },
+        {
+          "label": "Singhalesisch"
+        },
+        {
+          "label": "Slowakisch"
+        },
+        {
+          "label": "Slowenisch"
+        },
+        {
+          "label": "Spanisch"
+        },
+        {
+          "label": "Schwedisch"
+        },
+        {
+          "label": "Tagalog"
+        },
+        {
+          "label": "Tamil"
+        },
+        {
+          "label": "Taiwanesisch"
+        },
+        {
+          "label": "Telugu"
+        },
+        {
+          "label": "Türkisch"
+        },
+        {
+          "label": "Ukrainisch"
         }
       ]
     }

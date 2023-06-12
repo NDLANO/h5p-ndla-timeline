@@ -48,7 +48,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
 
   const containerRef = useRef<HTMLDivElement>(null);
   const containerId = `timeline-embed-${H5P.createUUID()}`;
-
+  const language: string = data.language as string;
   const aspectRatio = 16 / 9;
 
   const h5pMediaInstances: { [index: string]: IH5PContentType | null } = {};
@@ -94,7 +94,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   useEffectOnce(() => {
     // eslint-disable-next-line no-new
     const timeline = new Timeline(containerId, timelineDefinition, {
-      language: getClosestLocaleCode(containerRef.current),
+      language: language,
     });
 
     const timelineContainer = containerRef.current?.querySelector(
