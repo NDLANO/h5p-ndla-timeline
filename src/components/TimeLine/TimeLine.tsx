@@ -95,6 +95,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     // eslint-disable-next-line no-new
     const timeline = new Timeline(containerId, timelineDefinition, {
       language: getClosestLocaleCode(containerRef.current),
+      font: undefined,
     });
 
     const timelineContainer = containerRef.current?.querySelector(
