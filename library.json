@@ -1,7 +1,7 @@
 {
   "title": "NDLA Timeline",
   "description": "Create timelines and add images, video and audio.",
-  "license": "MPL",
+  "license": "MIT",
   "machineName": "H5P.NDLATimeline",
   "majorVersion": 0,
   "minorVersion": 1,
