@@ -1,6 +1,9 @@
 # h5p-timeline
 
-An H5P wrapper around [TimelineJS](https://timeline.knightlab.com/).
+An H5P wrapper around [TimelineJS](https://timeline.knightlab.com/). Please note
+that TimelineJS is used as a module dependency and itself is licensed under the
+Mozilla Public License 2.0. Please find the code if TimelineJS at
+https://github.com/NUKnightLab/TimelineJS3.
 
 ## Building and running on localhost
 Please first refer to https://h5p.org/development-environment if you are not
