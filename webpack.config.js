@@ -82,6 +82,11 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.ttf$/,
+        include: path.join(__dirname, 'src/fonts'),
+        type: 'asset/resource'
+      }
     ],
   },
   resolve: {

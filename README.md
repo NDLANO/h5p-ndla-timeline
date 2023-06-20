@@ -5,6 +5,9 @@ that TimelineJS is used as a module dependency and itself is licensed under the
 Mozilla Public License 2.0. Please find the code if TimelineJS at
 https://github.com/NUKnightLab/TimelineJS3.
 
+The font that is included is PT Serif by ParaType and is licensed under the
+[Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
+
 ## Building and running on localhost
 Please first refer to https://h5p.org/development-environment if you are not
 familiar with how an H5P development environment works.
