@@ -36,7 +36,7 @@
     "@storybook/addon-links": "^7.0.18",
     "@storybook/react": "^7.0.18",
     "@storybook/react-webpack5": "^7.0.18",
-    "@types/jest": "^29.5.1",
+    "@types/jest": "^29.5.2",
     "@types/jquery": "^3.5.16",
     "@types/react": "^17.0.60",
     "@types/react-dom": "^17.0.20",
