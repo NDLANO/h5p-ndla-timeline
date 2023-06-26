@@ -18,3 +18,4 @@ storybook-static
 tsconfig.json
 typings.d.ts
 webpack.config.js
+LICENSE

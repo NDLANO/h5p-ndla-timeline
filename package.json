@@ -4,7 +4,7 @@
   "description": "",
   "keywords": [],
   "author": "NDLA",
-  "license": "MPL",
+  "license": "MIT",
   "scripts": {
     "watch": "webpack --mode=development --watch",
     "build": "webpack --mode=production",
