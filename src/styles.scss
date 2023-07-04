@@ -140,6 +140,12 @@
       z-index: 1;
     }
   }
+
+  .tl-slide .tl-slide-content-container .tl-slide-content .tl-media {
+    overflow: auto;
+    max-height: calc( var(--h5p-timeline-slide-height) - 32px );
+  }
+
 }
 
 
