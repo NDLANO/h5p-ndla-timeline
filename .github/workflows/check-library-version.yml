@@ -16,4 +16,4 @@ jobs:
 
     steps:
       - name: Check library version
-        uses: boyum/comment-h5p-library-version-action@v2.3 # https://github.com/boyum/comment-h5p-library-version-action
+        uses: boyum/comment-h5p-library-version-action@v2.4 # https://github.com/boyum/comment-h5p-library-version-action
