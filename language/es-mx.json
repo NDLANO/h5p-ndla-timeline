@@ -15,11 +15,11 @@
         },
         {
           "label": "Fecha de inicio",
-          "description": "YYYY-MM-DD — solamente es necesario el año. Los años pueden ser negativos."
+          "description": "AAAA-MM-DD — solamente es necesario el año. Los años pueden ser negativos."
         },
         {
           "label": "Fecha de término",
-          "description": "YYYY-MM-DD — solamente el año es necesario. Los años pueden ser negativos."
+          "description": "AAAA-MM-DD — solamente el año es necesario. Los años pueden ser negativos."
         },
         {
           "label": "Descripción"
@@ -120,7 +120,7 @@
           },
           {
             "label": "Fecha de inicio",
-            "description": "YYYY-MM-DD — solamente el año es requerido. Los años pueden ser negativos."
+            "description": "AAAA-MM-DD — solamente el año es requerido. Los años pueden ser negativos."
           },
           {
             "label": "Fecha de término",
@@ -280,7 +280,7 @@
       "label": "Configuraciones del comportamiento",
       "fields": [
         {
-          "label": "unused"
+          "label": "no usado"
         },
         {
           "label": "Modo de escala",

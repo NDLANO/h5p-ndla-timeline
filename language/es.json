@@ -15,11 +15,11 @@
         },
         {
           "label": "Fecha de inicio",
-          "description": "YYYY-MM-DD — solamente es necesario el año. Los años pueden ser negativos."
+          "description": "AAAA-MM-DD — solamente es necesario el año. Los años pueden ser negativos."
         },
         {
           "label": "Fecha de término",
-          "description": "YYYY-MM-DD — solamente el año es necesario. Los años pueden ser negativos."
+          "description": "AAAA-MM-DD — solamente el año es necesario. Los años pueden ser negativos."
         },
         {
           "label": "Descripción"
@@ -69,7 +69,7 @@
           "label": "Audio"
         },
         {
-          "label": "enlace externo",
+          "label": "Enlace externo",
           "description": "Insertar un enlace a recursos externos. Ciertos sitios web serán renderizados como emblemas especializado, como por ejemplo Twitter, YouTube, Wikipedia, y Google Maps. Vea la lista completa en los <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
         },
         {
@@ -120,11 +120,11 @@
           },
           {
             "label": "Fecha de inicio",
-            "description": "YYYY-MM-DD — solamente el año es requerido. Los años pueden ser negativos."
+            "description": "AAAA-MM-DD — solamente el año es requerido. Los años pueden ser negativos."
           },
           {
             "label": "Fecha de término",
-            "description": "YYYY-MM-DD — solamente el año es requerido. Los años pueden ser negativos."
+            "description": "AAAA-MM-DD — solamente el año es requerido. Los años pueden ser negativos."
           },
           {
             "label": "Descripción"
@@ -265,11 +265,11 @@
               },
               {
                 "label": "Fecha de inicio",
-                "description": "YYYY-MM-DD — solo el año es requerido. Los años pueden ser negativos."
+                "description": "AAAA-MM-DD — solo el año es requerido. Los años pueden ser negativos."
               },
               {
                 "label": "Fecha de término",
-                "description": "YYYY-MM-DD — solo el año es requerido. Los años pueden ser negativos."
+                "description": "AAAA-MM-DD — solo el año es requerido. Los años pueden ser negativos."
               }
             ]
           }
@@ -280,7 +280,7 @@
       "label": "Configuraciones del comportamiento",
       "fields": [
         {
-          "label": "unused"
+          "label": "no usado"
         },
         {
           "label": "Modo escalado",
