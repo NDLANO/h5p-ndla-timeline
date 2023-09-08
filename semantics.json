@@ -24,26 +24,6 @@
         "type": "text"
       },
       {
-        "label": "Start date",
-        "description": "YYYY-MM-DD — only year is required. Years can be negative.",
-        "name": "startDate",
-        "type": "text",
-        "optional": true,
-        "regexp": {
-          "pattern": "^(-?)\\d{1,}(-(1[012]|[0]?[1-9])(-([12][0-9]|3[01]|[0]?[1-9]))?)?$"
-        }
-      },
-      {
-        "label": "End date",
-        "description": "YYYY-MM-DD — only year is required. Years can be negative.",
-        "name": "endDate",
-        "type": "text",
-        "optional": true,
-        "regexp": {
-          "pattern": "^(-?)\\d{1,}(-(1[012]|[0]?[1-9])(-([12][0-9]|3[01]|[0]?[1-9]))?)?$"
-        }
-      },
-      {
         "label": "Description",
         "name": "description",
         "type": "library",
