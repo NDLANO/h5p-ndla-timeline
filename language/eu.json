@@ -14,14 +14,6 @@
           "label": "Izenburua"
         },
         {
-          "label": "Hasiera data",
-          "description": "YYYY-MM-DD — urtea bakarrik da beharrezkoa. Urteak negatiboak izan daitezke."
-        },
-        {
-          "label": "Amaiera data",
-          "description": "YYYY-MM-DD — urtea bakarrik da beharrezkoa. Urteak negatiboak izan daitezke."
-        },
-        {
           "label": "Deskribapena"
         },
         {

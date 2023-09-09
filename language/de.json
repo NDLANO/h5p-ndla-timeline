@@ -14,14 +14,6 @@
           "label": "Titel"
         },
         {
-          "label": "Startdatum",
-          "description": "JJJJ-MM-TT — nur das Jahr ist erforderlich. Jahreszahlen können negativ sein."
-        },
-        {
-          "label": "Enddatum",
-          "description": "JJJJ-MM-TT — nur das Jahr ist erforderlich. Jahreszahlen können negativ sein."
-        },
-        {
           "label": "Beschreibung"
         },
         {

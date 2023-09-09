@@ -14,14 +14,6 @@
           "label": "Título"
         },
         {
-          "label": "Data de inicio",
-          "description": "AAAA-MM-DD: só é necesario o ano. Os anos poden ser negativos."
-        },
-        {
-          "label": "Data de fin",
-          "description": "AAAA-MM-DD: só é necesario o ano. Os anos poden ser negativos."
-        },
-        {
           "label": "Descrición"
         },
         {

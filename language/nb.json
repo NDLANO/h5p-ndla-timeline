@@ -14,14 +14,6 @@
           "label": "Tittel"
         },
         {
-          "label": "Startdato",
-          "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
-        },
-        {
-          "label": "Sluttdato",
-          "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
-        },
-        {
           "label": "Beskrivelse"
         },
         {

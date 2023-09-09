@@ -14,18 +14,10 @@
           "label": "Title"
         },
         {
-          "label": "Start date",
-          "description": "YYYY-MM-DD — only year is required. Years can be negative."
+          "label": "Media type"
         },
         {
-          "label": "End date",
-          "description": "YYYY-MM-DD — only year is required. Years can be negative."
-        },
-        {
-          "label": "Description"
-        },
-        {
-          "label": "Layout",
+          "label": "Image",
           "options": [
             {
               "label": "Text on right (standard)"
@@ -36,7 +28,7 @@
           ]
         },
         {
-          "label": "Media type",
+          "label": "Alternative text",
           "options": [
             {
               "label": "Image"
@@ -56,17 +48,17 @@
           ]
         },
         {
-          "label": "Image"
-        },
-        {
-          "label": "Alternative text",
-          "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
-        },
-        {
           "label": "Video"
         },
         {
-          "label": "Audio"
+          "label": "Audio",
+          "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
+        },
+        {
+          "label": "External link"
+        },
+        {
+          "label": "Appearance"
         },
         {
           "label": "External link",

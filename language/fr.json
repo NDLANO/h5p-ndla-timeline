@@ -4,6 +4,7 @@
       "label": "Afficher la diapositive de titre"
     },
     {
+      "label": "Diapositive de titre",
       "fields": [
         {
           "label": "Type de diapositive",
@@ -11,14 +12,6 @@
         },
         {
           "label": "Titre"
-        },
-        {
-          "label": "Date de début",
-          "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
-        },
-        {
-          "label": "Date de fin",
-          "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
         },
         {
           "label": "Description"
@@ -72,6 +65,7 @@
           "description": "Insérer un lien vers des ressources externes. Certains sites Web seront rendus sous forme d&#39;intégrations spécialisées, telles que Twitter, YouTube, Wikipedia et Google Maps. Voir la liste complète dans la <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Documentation Knightlab</a>"
         },
         {
+          "label": "Apparence",
           "fields": [
             {
               "label": "Arrière-plan",
@@ -94,14 +88,20 @@
             {
               "label": "Image d'arrière-plan'"
             }
-          ],
-          "label": "Apparence"
+          ]
         }
-      ],
-      "label": "Diapositive de titre"
+      ]
     },
     {
+      "label": "Éléments de la chronologie",
+      "entity": "Élément de chronologie",
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ],
       "field": {
+        "label": "Élément",
         "fields": [
           {
             "label": "Type de diapositive",
@@ -170,7 +170,10 @@
             "description": "Insérer un lien vers des ressources externes. Certains sites Web seront rendus sous forme d&#39;intégrations spécialisées, telles que Twitter, YouTube, Wikipedia et Google Maps. Voir la liste complète dans la <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Documentation Knightlab</a>"
           },
           {
+            "label": "Étiquettes",
+            "entity": "Étiquette",
             "field": {
+              "label": "Étiquette",
               "fields": [
                 {
                   "label": "Id"
@@ -184,11 +187,8 @@
                 {
                   "label": "Est actif"
                 }
-              ],
-              "label": "Étiquette"
-            },
-            "label": "Étiquettes",
-            "entity": "Étiquette"
+              ]
+            }
           },
           {
             "label": "Apparence",
@@ -216,16 +216,8 @@
               }
             ]
           }
-        ],
-        "label": "Élément"
-      },
-      "label": "Éléments de la chronologie",
-      "entity": "Élément de chronologie",
-      "widgets": [
-        {
-          "label": "Par défaut"
-        }
-      ]
+        ]
+      }
     },
     {
       "label": "Étiquettes",
@@ -252,9 +244,13 @@
       ]
     },
     {
+      "label": "Périodes",
       "fields": [
         {
+          "label": "Périodes",
+          "entity": "Période",
           "field": {
+            "label": "Période",
             "fields": [
               {
                 "label": "Nom"
@@ -267,14 +263,10 @@
                 "label": "Date de fin",
                 "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
               }
-            ],
-            "label": "Période"
-          },
-          "entity": "Période",
-          "label": "Périodes"
+            ]
+          }
         }
-      ],
-      "label": "Périodes"
+      ]
     },
     {
       "label": "Options générales",

@@ -14,14 +14,6 @@
           "label": "Tittel"
         },
         {
-          "label": "Startdato",
-          "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
-        },
-        {
-          "label": "Sluttdato",
-          "description": "ÅÅÅÅ-MM-DD — Berre årstall er naudsynt. Årstall kan vere negative."
-        },
-        {
           "label": "Skildring"
         },
         {
