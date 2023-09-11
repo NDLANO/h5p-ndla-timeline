@@ -3,7 +3,7 @@ import { H5P } from 'h5p-utils';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { App } from '../App';
-import { H5PContainerContext } from '../contexts/H5PContainerContext';
+import { H5PContext } from '../contexts/H5PContext';
 import { LocalizationContext } from '../contexts/LocalizationContext';
 import { Params } from '../types/Params';
 import { Translations } from '../types/Translations';
@@ -27,6 +27,22 @@ export class H5PWrapper extends H5P.EventDispatcher implements IH5PContentType<P
     this.params = params;
     this.contentId = contentId;
     this.extras = extras;
+
+    this.on('enterFullScreen', () => {
+      window.setTimeout(() => {
+        window.requestAnimationFrame(() => {
+          this.trigger('resize');
+        });
+      }, 250); // Browser may need time to enter fullscreen mode
+    });
+
+    this.on('exitFullScreen', () => {
+      window.setTimeout(() => {
+        window.requestAnimationFrame(() => {
+          this.trigger('resize');
+        });
+      }, 250); // Browser may need time to exit fullscreen mode
+    });
   }
 
   attach($container: JQuery<HTMLDivElement>): void {
@@ -39,15 +55,14 @@ export class H5PWrapper extends H5P.EventDispatcher implements IH5PContentType<P
     containerElement.appendChild(this.wrapper);
     containerElement.classList.add('h5p-timeline');
 
-    const l10n = this.params.l10n ?? ({} as Translations);
-    const { title } = this.extras.metadata;
-
     ReactDOM.render(
-      <H5PContainerContext.Provider value={containerElement}>
-        <LocalizationContext.Provider value={l10n}>
+      <H5PContext.Provider value={this}>
+        <LocalizationContext.Provider value={
+          this.params.l10n ?? ({} as Translations)
+        }>
           {this.params ? (
             <App
-              title={title}
+              title={this.extras.metadata.title}
               params={this.params}
               contentId={this.contentId}
               onMediaInstanceBuilt={(instance: EventDispatcher): void => {
@@ -56,7 +71,7 @@ export class H5PWrapper extends H5P.EventDispatcher implements IH5PContentType<P
             />
           ) : null}
         </LocalizationContext.Provider>
-      </H5PContainerContext.Provider>,
+      </H5PContext.Provider>,
       this.wrapper,
     );
   }

@@ -13,8 +13,8 @@ import * as React from 'react';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { useEffectOnce } from 'react-use';
 import { buildH5PMediaInstance } from '../../H5P/H5P.util';
+import { H5PContext } from '../../contexts/H5PContext';
 import { L10nContext } from '../../contexts/LocalizationContext';
-import { useH5PFullscreenChange } from '../../hooks/useH5PFullscreenChange';
 import { Params } from '../../types/Params';
 import {
   addTabIndexToScrollableElements,
@@ -44,8 +44,8 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   const [slideWidth, setSlideWidth] = useState(0);
   const [slideHeight, setSlideHeight] = useState(0);
   const [timelineIsRendered, setTimelineIsRendered] = useState(false);
+  const h5pInstance = useContext(H5PContext);
   const translations = useContext(L10nContext);
-
   const containerRef = useRef<HTMLDivElement>(null);
   const containerId = `timeline-embed-${H5P.createUUID()}`;
 
@@ -134,58 +134,22 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       });
 
       setTimelineIsRendered(true);
-    });
-  });
 
-  useEffect(() => {
-    if (!containerRef.current) {
-      return;
-    }
+      h5pInstance?.on('resize', () => {
+        window.requestAnimationFrame(() => {
+          if (!containerRef.current) {
+            return;
+          }
 
-    const container = containerRef.current;
+          const container = containerRef.current;
 
-    const { width } = container.getBoundingClientRect();
-    setHeight(width / aspectRatio);
-
-    const observer = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        const borderBoxSize: ResizeObserverSize = Array.isArray(
-          entry.borderBoxSize,
-        )
-          ? entry.borderBoxSize[0]
-          : entry.borderBoxSize;
-
-        const newWidth = borderBoxSize.inlineSize;
-        setHeight(newWidth / aspectRatio);
-      }
-    });
-
-    observer.observe(container);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [aspectRatio]);
-
-  useH5PFullscreenChange((isFullscreen) => {
-    if (isFullscreen) {
-      return;
-    }
-
-    // When fullscreen is turned off, we need to trigger Timeline.js'
-    // `_updateDisplay` method (https://github.com/NUKnightLab/TimelineJS3/blob/3.8.20/src/js/timeline/Timeline.js#L549).
-    // It needs to be updated twice, with a whole frame inbetween, therefore the
-    // two double rAFs.
-
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        window.dispatchEvent(new Event('resize'));
+          const { width } = container.getBoundingClientRect();
+          setHeight(width / aspectRatio);
+        });
       });
-    });
 
-    window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
-        window.dispatchEvent(new Event('resize'));
+        h5pInstance?.trigger('resize');
       });
     });
   });
@@ -216,6 +180,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       }
     });
 
+    // TODO: What do all these timeMarkerObservers actually do? They seem obsolete
     const startClass = 'h5p-tl-slide-is-start';
     const endClass = 'h5p-tl-slide-is-end';
 
@@ -289,6 +254,8 @@ export const TimeLine: React.FC<TimeLineProps> = ({
         slideContainer.getBoundingClientRect();
       setSlideHeight(newSlideHeight);
       setSlideWidth(newSlideWidth);
+
+      h5pInstance?.trigger('resize');
     };
 
     setSlideContainerHeight();
