@@ -108,6 +108,27 @@ export const TimeLine: React.FC<TimeLineProps> = ({
         return;
       }
 
+      // Timeline needs one extra resize after some(TM) time.
+      const waitToResize = (quitInMS = 5000, timeout = 50) => {
+        if (quitInMS < 0) {
+          return; // Tried long enough
+        }
+
+        const timelineMenuBar: HTMLElement|null =
+          timelineContainer.querySelector('.tl-menubar');
+
+        const menuBarTop = parseFloat(timelineMenuBar?.style.top ?? '');
+        if (
+          Number.isNaN(menuBarTop) || menuBarTop < 0
+        ) {
+          h5pInstance?.trigger('resize');
+          window.setTimeout(() => {
+            waitToResize(quitInMS - timeout);
+          }, timeout);
+        }
+      };
+      waitToResize();
+
       /*
        * Wait for each slide to be loaded to replace original medium
        * with H5P media instance
@@ -235,7 +256,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
         });
 
         return observer;
-      },
+      }
     );
 
     const slideTextElements =
