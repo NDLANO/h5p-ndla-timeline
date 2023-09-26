@@ -280,7 +280,7 @@
       "label": "Configuración do comportamento",
       "fields": [
         {
-          "label": "unused"
+          "label": "sen usar"
         },
         {
           "label": "Modo de escalado",
@@ -296,39 +296,6 @@
               "label": "Indexado"
             }
           ]
-        }
-      ]
-    },
-    {
-      "label": "Adaptación local",
-      "fields": [
-        {
-          "label": "Dereitos de uso",
-          "default": "Dereitos de uso"
-        },
-        {
-          "label": "Copyright - Título",
-          "default": "Título"
-        },
-        {
-          "label": "Copyright - Autor",
-          "default": "Autor"
-        },
-        {
-          "label": "Copyright - Ano",
-          "default": "Ano"
-        },
-        {
-          "label": "Copyright - Fonte",
-          "default": "Fonte"
-        },
-        {
-          "label": "Copyright - Licenza",
-          "default": "Licenza"
-        },
-        {
-          "label": "Copyright - Versión",
-          "default": "Versión"
         }
       ]
     }

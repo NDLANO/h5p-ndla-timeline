@@ -15,11 +15,11 @@
         },
         {
           "label": "Fecha de inicio",
-          "description": "YYYY-MM-DD — solamente es necesario el año. Los años pueden ser negativos."
+          "description": "AAAA-MM-DD — solamente es necesario el año. Los años pueden ser negativos."
         },
         {
           "label": "Fecha de término",
-          "description": "YYYY-MM-DD — solamente el año es necesario. Los años pueden ser negativos."
+          "description": "AAAA-MM-DD — solamente el año es necesario. Los años pueden ser negativos."
         },
         {
           "label": "Descripción"
@@ -120,7 +120,7 @@
           },
           {
             "label": "Fecha de inicio",
-            "description": "YYYY-MM-DD — solamente el año es requerido. Los años pueden ser negativos."
+            "description": "AAAA-MM-DD — solamente el año es requerido. Los años pueden ser negativos."
           },
           {
             "label": "Fecha de término",
@@ -280,7 +280,7 @@
       "label": "Configuraciones del comportamiento",
       "fields": [
         {
-          "label": "unused"
+          "label": "no usado"
         },
         {
           "label": "Modo de escala",
@@ -296,39 +296,6 @@
               "label": "Indexado"
             }
           ]
-        }
-      ]
-    },
-    {
-      "label": "Adaptación local",
-      "fields": [
-        {
-          "label": "Derechos de uso",
-          "default": "Derechos de uso"
-        },
-        {
-          "label": "Copyright - Título",
-          "default": "Título"
-        },
-        {
-          "label": "Copyright - Autor",
-          "default": "Autor"
-        },
-        {
-          "label": "Copyright - Año",
-          "default": "Año"
-        },
-        {
-          "label": "Copyright - Origen",
-          "default": "Origen"
-        },
-        {
-          "label": "Copyright - Licencia",
-          "default": "Licencia"
-        },
-        {
-          "label": "Copyright - Versión",
-          "default": "Versión"
         }
       ]
     }

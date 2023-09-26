@@ -1,0 +1,336 @@
+{
+  "semantics": [
+    {
+      "label": "Afficher la diapositive de titre"
+    },
+    {
+      "fields": [
+        {
+          "label": "Type de diapositive",
+          "default": "titre"
+        },
+        {
+          "label": "Titre"
+        },
+        {
+          "label": "Date de début",
+          "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
+        },
+        {
+          "label": "Date de fin",
+          "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
+        },
+        {
+          "label": "Description"
+        },
+        {
+          "label": "Mise en page",
+          "options": [
+            {
+              "label": "Texte à droite (standard)"
+            },
+            {
+              "label": "Texte à gauche"
+            }
+          ]
+        },
+        {
+          "label": "Type de média",
+          "options": [
+            {
+              "label": "Image"
+            },
+            {
+              "label": "Vidéo"
+            },
+            {
+              "label": "Audio"
+            },
+            {
+              "label": "Lien externe"
+            },
+            {
+              "label": "Aucun"
+            }
+          ]
+        },
+        {
+          "label": "Image d'arrière-plan"
+        },
+        {
+          "label": "Texte alternatif",
+          "description": "Requis. Si le navigateur ne peut pas charger l&#39;image, ce texte sera affiché à la place. Également utilisé par les lecteurs &quot;text-to-speech&quot;."
+        },
+        {
+          "label": "Vidéo"
+        },
+        {
+          "label": "Audio"
+        },
+        {
+          "label": "Lien externe",
+          "description": "Insérer un lien vers des ressources externes. Certains sites Web seront rendus sous forme d&#39;intégrations spécialisées, telles que Twitter, YouTube, Wikipedia et Google Maps. Voir la liste complète dans la <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Documentation Knightlab</a>"
+        },
+        {
+          "fields": [
+            {
+              "label": "Arrière-plan",
+              "options": [
+                {
+                  "label": "Couleur"
+                },
+                {
+                  "label": "Image"
+                },
+                {
+                  "label": "Aucun"
+                }
+              ]
+            },
+            {
+              "label": "Couleur d'arrière-plan",
+              "default": "#757575"
+            },
+            {
+              "label": "Image d'arrière-plan'"
+            }
+          ],
+          "label": "Apparence"
+        }
+      ],
+      "label": "Diapositive de titre"
+    },
+    {
+      "field": {
+        "fields": [
+          {
+            "label": "Type de diapositive",
+            "default": "régulier"
+          },
+          {
+            "label": "Titre"
+          },
+          {
+            "label": "Date de début",
+            "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
+          },
+          {
+            "label": "Date de fin",
+            "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
+          },
+          {
+            "label": "Description"
+          },
+          {
+            "label": "Mise en page",
+            "options": [
+              {
+                "label": "Texte à droite (standard)"
+              },
+              {
+                "label": "Texte à gauche"
+              }
+            ]
+          },
+          {
+            "label": "Type de média",
+            "options": [
+              {
+                "label": "Image"
+              },
+              {
+                "label": "Vidéo"
+              },
+              {
+                "label": "Audio"
+              },
+              {
+                "label": "Lien externe"
+              },
+              {
+                "label": "Aucun"
+              }
+            ]
+          },
+          {
+            "label": "Image"
+          },
+          {
+            "label": "Texte alternatif",
+            "description": "Requis. Si le navigateur ne peut pas charger l&#39;image, ce texte sera affiché à la place. Également utilisé par les lecteurs &quot;text-to-speech&quot;."
+          },
+          {
+            "label": "Vidéo"
+          },
+          {
+            "label": "Audio"
+          },
+          {
+            "label": "Lien externe",
+            "description": "Insérer un lien vers des ressources externes. Certains sites Web seront rendus sous forme d&#39;intégrations spécialisées, telles que Twitter, YouTube, Wikipedia et Google Maps. Voir la liste complète dans la <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Documentation Knightlab</a>"
+          },
+          {
+            "field": {
+              "fields": [
+                {
+                  "label": "Id"
+                },
+                {
+                  "label": "Nom"
+                },
+                {
+                  "label": "Couleur"
+                },
+                {
+                  "label": "Est actif"
+                }
+              ],
+              "label": "Étiquette"
+            },
+            "label": "Étiquettes",
+            "entity": "Étiquette"
+          },
+          {
+            "label": "Apparence",
+            "fields": [
+              {
+                "label": "Arrière-plan",
+                "options": [
+                  {
+                    "label": "Couleur"
+                  },
+                  {
+                    "label": "Image"
+                  },
+                  {
+                    "label": "Aucun"
+                  }
+                ]
+              },
+              {
+                "label": "Couleur de fond",
+                "default": "#757575"
+              },
+              {
+                "label": "Image d'arrière-plan'"
+              }
+            ]
+          }
+        ],
+        "label": "Élément"
+      },
+      "label": "Éléments de la chronologie",
+      "entity": "Élément de chronologie",
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ]
+    },
+    {
+      "label": "Étiquettes",
+      "fields": [
+        {
+          "label": "Étiquettes",
+          "entity": "Étiquette",
+          "field": {
+            "label": "Étiquette",
+            "fields": [
+              {
+                "label": "Id"
+              },
+              {
+                "label": "Nom"
+              },
+              {
+                "label": "Couleur",
+                "default": "#E0E0E0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "field": {
+            "fields": [
+              {
+                "label": "Nom"
+              },
+              {
+                "label": "Date de début",
+                "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
+              },
+              {
+                "label": "Date de fin",
+                "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
+              }
+            ],
+            "label": "Période"
+          },
+          "entity": "Période",
+          "label": "Périodes"
+        }
+      ],
+      "label": "Périodes"
+    },
+    {
+      "label": "Options générales",
+      "fields": [
+        {
+          "label": "inutilisé"
+        },
+        {
+          "label": "Mode de mise à l&#39;échelle",
+          "description": "Choisissez entre les modes de mise à l&#39;échelle. &quot;Le temps humain&quot; montre la date en années avant et après l&#39;ère commune en utilisant la notation régulière, tandis que le &quot;temps cosmologique&quot; montre les dates en utilisant la notation scientifique. &quot;Indexé&quot; est utile lorsque vous souhaitez biaiser les intervalles et faire en sorte que tous les événements semblent également éloignés les uns des autres.",
+          "options": [
+            {
+              "label": "Temps humain"
+            },
+            {
+              "label": "Temps cosmologique"
+            },
+            {
+              "label": "Indexé"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Traduction de l'interface",
+      "fields": [
+        {
+          "label": "Droits d'utilisation",
+          "default": "Droits d'utilisation"
+        },
+        {
+          "label": "Copyright - Titre",
+          "default": "Titre"
+        },
+        {
+          "label": "Copyright - Auteur",
+          "default": "Auteur"
+        },
+        {
+          "label": "Copyright - Année",
+          "default": "Année"
+        },
+        {
+          "label": "Copyright - Source",
+          "default": "Source"
+        },
+        {
+          "label": "Copyright - Licence",
+          "default": "Licence"
+        },
+        {
+          "label": "Copyright - Version",
+          "default": "Version"
+        }
+      ]
+    }
+  ]
+}
