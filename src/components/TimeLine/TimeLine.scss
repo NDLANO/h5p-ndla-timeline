@@ -42,7 +42,7 @@
  */
 .h5p-timeline-wrapper {
   height: 45rem;
-  max-height: 95vh;
+  max-height: 95%;
   max-width: 100%;
 
   .h5p-fullscreen & {
@@ -111,7 +111,7 @@
 
 .tl-timeera {
   /**
-   * There are six era indices. The first one starts with color 1, 
+   * There are six era indices. The first one starts with color 1,
    * the sixth one will get color 0. (index of n = n % 6).
    */
   $timeera-colors: (

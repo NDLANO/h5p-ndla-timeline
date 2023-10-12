@@ -4,10 +4,13 @@
   "license": "MIT",
   "machineName": "H5P.NDLATimeline",
   "majorVersion": 0,
-  "minorVersion": 2,
+  "minorVersion": 3,
   "patchVersion": 0,
   "runnable": 1,
   "fullscreen": 1,
+  "embedTypes": [
+    "iframe"
+  ],
   "preloadedJs": [
     {
       "path": "dist/bundle.js"
