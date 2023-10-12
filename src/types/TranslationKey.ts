@@ -1,8 +1,2 @@
-export type TranslationKey =
-  | 'copyrightLabel'
-  | 'copyrightTitle'
-  | 'copyrightAuthor'
-  | 'copyrightYear'
-  | 'copyrightSource'
-  | 'copyrightLicense'
-  | 'copyrightVersion';
+// Add translation keys here when adding them to semantics.json
+export type TranslationKey = '';
