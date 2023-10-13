@@ -168,17 +168,16 @@ export const mapEventToTimelineSlide = (
   // before we find another way to change slide layouts
   // Work around h5p-types that fails jest test when importing H5P
   const id = `${(window as any).H5P.createUUID()}_layout-${event.layout}`;
-
+  const endDate = event.endDate ? parseDate(event.endDate) : null;
   const slide: TimelineSlide = {
     unique_id: id,
     start_date: startDate ?? undefined,
+    end_date: endDate ?? undefined,
     text: {
       headline: event.title,
       text,
     },
   };
-
-  const endDate = event.endDate ? parseDate(event.endDate) : null;
 
   if (!isDateOrderOK(startDate, endDate)) {
     // Do something to alert end-user of dates mismatch.
