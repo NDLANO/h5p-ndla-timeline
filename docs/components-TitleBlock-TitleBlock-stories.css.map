@@ -1,1 +1,0 @@
-{"version":3,"file":"components-TitleBlock-TitleBlock-stories.css","mappings":"AAAA","sources":["webpack://h5p-timeline/./src/components/TitleBlock/TitleBlock.module.scss"],"sourcesContent":[".title {\n  font-size: 2.5rem;\n}\n"],"names":[],"sourceRoot":""}
