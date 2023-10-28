@@ -1,0 +1,336 @@
+{
+  "semantics": [
+    {
+      "label": "Show title slide"
+    },
+    {
+      "fields": [
+        {
+          "label": "Skaidrės tipas",
+          "default": "antraštė"
+        },
+        {
+          "label": "Antraštė"
+        },
+        {
+          "label": "Pradžios data",
+          "description": "MMMM-mm-dd — reikalingi tik metai. Metai gali būti atgaliniai."
+        },
+        {
+          "label": "Pabaigos data",
+          "description": "YYYY-MM-DD — only year is required. Years can be negative."
+        },
+        {
+          "label": "Aprašymas"
+        },
+        {
+          "label": "Išdėstymas",
+          "options": [
+            {
+              "label": "Tekstas dešinėje (standartinis)"
+            },
+            {
+              "label": "Tekstas kairėje"
+            }
+          ]
+        },
+        {
+          "label": "Media type",
+          "options": [
+            {
+              "label": "Image"
+            },
+            {
+              "label": "Video"
+            },
+            {
+              "label": "Audio"
+            },
+            {
+              "label": "External link"
+            },
+            {
+              "label": "None"
+            }
+          ]
+        },
+        {
+          "label": "Paveiksliukas"
+        },
+        {
+          "label": "Alternatyvus tekstas",
+          "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
+        },
+        {
+          "label": "Vaizdo įrašas"
+        },
+        {
+          "label": "Audio"
+        },
+        {
+          "label": "External link",
+          "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+        },
+        {
+          "label": "Išvaizda",
+          "fields": [
+            {
+              "label": "Fonas",
+              "options": [
+                {
+                  "label": "Spalva"
+                },
+                {
+                  "label": "Paveiksliukas"
+                },
+                {
+                  "label": "None"
+                }
+              ]
+            },
+            {
+              "label": "Fono spalva",
+              "default": "#757575"
+            },
+            {
+              "label": "Fono paveikslėlis"
+            }
+          ]
+        }
+      ],
+      "label": "Title slide"
+    },
+    {
+      "field": {
+        "fields": [
+          {
+            "label": "Slide type",
+            "default": "regular"
+          },
+          {
+            "label": "Title"
+          },
+          {
+            "label": "Start date",
+            "description": "YYYY-MM-DD — only year is required. Years can be negative."
+          },
+          {
+            "label": "End date",
+            "description": "YYYY-MM-DD — only year is required. Years can be negative."
+          },
+          {
+            "label": "Description"
+          },
+          {
+            "label": "Layout",
+            "options": [
+              {
+                "label": "Text on right (standard)"
+              },
+              {
+                "label": "Text on left"
+              }
+            ]
+          },
+          {
+            "label": "Media type",
+            "options": [
+              {
+                "label": "Image"
+              },
+              {
+                "label": "Video"
+              },
+              {
+                "label": "Audio"
+              },
+              {
+                "label": "External link"
+              },
+              {
+                "label": "None"
+              }
+            ]
+          },
+          {
+            "label": "Image"
+          },
+          {
+            "label": "Alternative text",
+            "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
+          },
+          {
+            "label": "Video"
+          },
+          {
+            "label": "Audio"
+          },
+          {
+            "label": "External link",
+            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+          },
+          {
+            "field": {
+              "fields": [
+                {
+                  "label": "Id"
+                },
+                {
+                  "label": "Name"
+                },
+                {
+                  "label": "Color"
+                },
+                {
+                  "label": "Is active"
+                }
+              ],
+              "label": "Tag"
+            },
+            "label": "Tags",
+            "entity": "Tag"
+          },
+          {
+            "label": "Appearance",
+            "fields": [
+              {
+                "label": "Background",
+                "options": [
+                  {
+                    "label": "Color"
+                  },
+                  {
+                    "label": "Image"
+                  },
+                  {
+                    "label": "None"
+                  }
+                ]
+              },
+              {
+                "label": "Background color",
+                "default": "#757575"
+              },
+              {
+                "label": "Background image"
+              }
+            ]
+          }
+        ],
+        "label": "Item"
+      },
+      "label": "Timeline items",
+      "entity": "Timeline item",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ]
+    },
+    {
+      "label": "Tags",
+      "fields": [
+        {
+          "label": "Tags",
+          "entity": "Tag",
+          "field": {
+            "label": "Tag",
+            "fields": [
+              {
+                "label": "Id"
+              },
+              {
+                "label": "Name"
+              },
+              {
+                "label": "Color",
+                "default": "#E0E0E0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "fields": [
+        {
+          "entity": "Era",
+          "label": "Eras",
+          "field": {
+            "label": "Era",
+            "fields": [
+              {
+                "label": "Name"
+              },
+              {
+                "label": "Start date",
+                "description": "YYYY-MM-DD — only year is required. Years can be negative."
+              },
+              {
+                "label": "End date",
+                "description": "YYYY-MM-DD — only year is required. Years can be negative."
+              }
+            ]
+          }
+        }
+      ],
+      "label": "Eras"
+    },
+    {
+      "label": "Behavioral settings",
+      "fields": [
+        {
+          "label": "unused"
+        },
+        {
+          "label": "Scaling mode",
+          "description": "Choose between scaling modes. \"Human time\" shows date in years before and after the Common Era using regular notation, while \"Cosmological time\" shows dates using scientific notation. \"Indexed\" is useful when you want to skew timeframes and make all events seem equally far apart.",
+          "options": [
+            {
+              "label": "Human time"
+            },
+            {
+              "label": "Cosmological time"
+            },
+            {
+              "label": "Indexed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Localize",
+      "fields": [
+        {
+          "label": "Rights of use",
+          "default": "Rights of use"
+        },
+        {
+          "label": "Copyright - Title",
+          "default": "Title"
+        },
+        {
+          "label": "Copyright - Author",
+          "default": "Author"
+        },
+        {
+          "label": "Copyright - Year",
+          "default": "Year"
+        },
+        {
+          "label": "Copyright - Source",
+          "default": "Source"
+        },
+        {
+          "label": "Copyright - License",
+          "default": "License"
+        },
+        {
+          "label": "Copyright - Version",
+          "default": "Version"
+        }
+      ]
+    }
+  ]
+}
