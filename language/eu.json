@@ -28,10 +28,10 @@
           "label": "Layout",
           "options": [
             {
-              "label": "Text on right (standard)"
+              "label": "Eskuineko testua (estandarra)"
             },
             {
-              "label": "Text on left"
+              "label": "Testua ezkerrean"
             }
           ]
         },
@@ -39,19 +39,19 @@
           "label": "Media type",
           "options": [
             {
-              "label": "Image"
+              "label": "Irudia"
             },
             {
-              "label": "Video"
+              "label": "Bideoa"
             },
             {
-              "label": "Audio"
+              "label": "Audioa"
             },
             {
-              "label": "External link"
+              "label": "Kanpoko esteka"
             },
             {
-              "label": "None"
+              "label": "Bat ere ez"
             }
           ]
         },
@@ -60,7 +60,7 @@
         },
         {
           "label": "Alternative text",
-          "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
+          "description": "Beharrezkoa. Arakatzaileak ezin badu irudia kargatu testu hau bistaratuko da. \"Testutik hizketarako\" irakurleek ere erabiltzen dute."
         },
         {
           "label": "Video"
@@ -70,157 +70,157 @@
         },
         {
           "label": "External link",
-          "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+          "description": "Sartu esteka bat kanpoko baliabideetara. Zenbait webgune kapsulatze espezializatu gisa errendatuko dira, hala nola, Twitter, YouTube, Wikipedia eta Google Maps. Ikusi zerrenda osoa <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab-eko dokumentuetan</a>"
         },
         {
           "label": "Appearance",
           "fields": [
             {
-              "label": "Background",
+              "label": "Atzeko planoa",
               "options": [
                 {
-                  "label": "Color"
+                  "label": "Kolorea"
                 },
                 {
-                  "label": "Image"
+                  "label": "Irudia"
                 },
                 {
-                  "label": "None"
+                  "label": "Bat ere ez"
                 }
               ]
             },
             {
-              "label": "Background color",
+              "label": "Atzeko planoko kolorea",
               "default": "#757575"
             },
             {
-              "label": "Background image"
+              "label": "Atzeko planoko irudia"
             }
           ]
         }
       ]
     },
     {
-      "label": "Timeline items",
-      "entity": "Timeline item",
+      "label": "Denbora-lerroko elementuak",
+      "entity": "Denbora-lerroaren elementua",
       "widgets": [
         {
-          "label": "Default"
+          "label": "Lehenetsia"
         }
       ],
       "field": {
-        "label": "Item",
+        "label": "Elementua",
         "fields": [
           {
-            "label": "Slide type",
-            "default": "regular"
+            "label": "Diapositiba mota",
+            "default": "erregularra"
           },
           {
-            "label": "Title"
+            "label": "Izenburua"
           },
           {
-            "label": "Start date",
-            "description": "YYYY-MM-DD — only year is required. Years can be negative."
+            "label": "Hasiera data",
+            "description": "YYYY-MM-DD — urtea bakarrik behar da. Urteak negatiboak izan daitezke."
           },
           {
-            "label": "End date",
-            "description": "YYYY-MM-DD — only year is required. Years can be negative."
+            "label": "Amaiera data",
+            "description": "YYYY-MM-DD — urtea bakarrik behar da. Urteak negatiboak izan daitezke."
           },
           {
-            "label": "Description"
+            "label": "Deskribapena"
           },
           {
-            "label": "Layout",
+            "label": "Diseinua",
             "options": [
               {
-                "label": "Text on right (standard)"
+                "label": "Eskuineko testua (estandarra)"
               },
               {
-                "label": "Text on left"
+                "label": "Testua ezkerrean"
               }
             ]
           },
           {
-            "label": "Media type",
+            "label": "Multimedia mota",
             "options": [
               {
-                "label": "Image"
+                "label": "Irudia"
               },
               {
-                "label": "Video"
+                "label": "Bideoa"
               },
               {
-                "label": "Audio"
+                "label": "Audioa"
               },
               {
-                "label": "External link"
+                "label": "Kanpoko esteka"
               },
               {
-                "label": "None"
+                "label": "Bat ere ez"
               }
             ]
           },
           {
-            "label": "Image"
+            "label": "Irudia"
           },
           {
-            "label": "Alternative text",
-            "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
+            "label": "Testu alternatiboa",
+            "description": "Beharrezkoa da. Nabigatzaileak ezin badu irudia kargatu, bere ordez testu hau bistaratuko da. Testu-irakurleek ere erabilia."
           },
           {
-            "label": "Video"
+            "label": "Bideoa"
           },
           {
-            "label": "Audio"
+            "label": "Audioa"
           },
           {
-            "label": "External link",
-            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+            "label": "Kanpoko esteka",
+            "description": "Sartu esteka bat kanpoko baliabideetara. Zenbait webgune kapsulatze espezializatu gisa errendatuko dira, hala nola, Twitter, YouTube, Wikipedia eta Google Maps. Ikusi zerrenda osoa <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab-eko dokumentuetan</a>"
           },
           {
-            "label": "Tags",
-            "entity": "Tag",
+            "label": "Etiketak",
+            "entity": "Etiketa",
             "field": {
-              "label": "Tag",
+              "label": "Etiketa",
               "fields": [
                 {
                   "label": "Id"
                 },
                 {
-                  "label": "Name"
+                  "label": "Izena"
                 },
                 {
-                  "label": "Color"
+                  "label": "Kolorea"
                 },
                 {
-                  "label": "Is active"
+                  "label": "Aktiboa dago"
                 }
               ]
             }
           },
           {
-            "label": "Appearance",
+            "label": "Itxura",
             "fields": [
               {
-                "label": "Background",
+                "label": "Atzeko planoa",
                 "options": [
                   {
-                    "label": "Color"
+                    "label": "Kolorea"
                   },
                   {
-                    "label": "Image"
+                    "label": "Irudia"
                   },
                   {
-                    "label": "None"
+                    "label": "Bat ere ez"
                   }
                 ]
               },
               {
-                "label": "Background color",
+                "label": "Atzeko planoaren kolorea",
                 "default": "#757575"
               },
               {
-                "label": "Background image"
+                "label": "Atzeko planoko irudia"
               }
             ]
           }
@@ -228,22 +228,22 @@
       }
     },
     {
-      "label": "Tags",
+      "label": "Etiketak",
       "fields": [
         {
-          "label": "Tags",
-          "entity": "Tag",
+          "label": "Etiketak",
+          "entity": "Etiketa",
           "field": {
-            "label": "Tag",
+            "label": "Etiketa",
             "fields": [
               {
                 "label": "Id"
               },
               {
-                "label": "Name"
+                "label": "Izena"
               },
               {
-                "label": "Color",
+                "label": "Kolorea",
                 "default": "#E0E0E0"
               }
             ]
@@ -252,24 +252,24 @@
       ]
     },
     {
-      "label": "Eras",
+      "label": "Aroak",
       "fields": [
         {
-          "label": "Eras",
-          "entity": "Era",
+          "label": "Aroak",
+          "entity": "Aro",
           "field": {
-            "label": "Era",
+            "label": "Aro",
             "fields": [
               {
-                "label": "Name"
+                "label": "Izena"
               },
               {
-                "label": "Start date",
-                "description": "YYYY-MM-DD — only year is required. Years can be negative."
+                "label": "Hasiera data",
+                "description": "YYYY-MM-DD — urtea bakarrik behar da. Urteak negatiboak izan daitezke."
               },
               {
-                "label": "End date",
-                "description": "YYYY-MM-DD — only year is required. Years can be negative."
+                "label": "Amaiera data",
+                "description": "YYYY-MM-DD — urtea bakarrik behar da. Urteak negatiboak izan daitezke."
               }
             ]
           }
@@ -277,23 +277,23 @@
       ]
     },
     {
-      "label": "Behavioral settings",
+      "label": "Jokabide-ezarpenak",
       "fields": [
         {
-          "label": "unused"
+          "label": "erabili gabea"
         },
         {
-          "label": "Scaling mode",
-          "description": "Choose between scaling modes. \"Human time\" shows date in years before and after the Common Era using regular notation, while \"Cosmological time\" shows dates using scientific notation. \"Indexed\" is useful when you want to skew timeframes and make all events seem equally far apart.",
+          "label": "Eskalatzeko modua",
+          "description": "Aukeratu eskalatzeko moduen artean. \"Giza-denbora\"-k Aro Komunaren aurreko eta ondorengo urteetako data erakusten du notazio arrunta erabiliz, eta \"Denbora kosmologikoa\"-k, aldiz, datak idazkera zientifikoa erabiliz. \"Indexatua\" erabilgarria da denbora-tarteak banandu nahi dituzunean eta gertaera guztiak berdin urrun daudela dirudi.",
           "options": [
             {
-              "label": "Human time"
+              "label": "Giza denbora"
             },
             {
-              "label": "Cosmological time"
+              "label": "Denbora kosmologikoa"
             },
             {
-              "label": "Indexed"
+              "label": "Indexatua"
             }
           ]
         }
