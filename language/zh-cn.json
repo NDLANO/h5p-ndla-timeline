@@ -1,0 +1,303 @@
+{
+  "semantics": [
+    {
+      "label": "显示标题幻灯片"
+    },
+    {
+      "label": "标题幻灯片",
+      "fields": [
+        {
+          "label": "幻灯片类型",
+          "default": "标题"
+        },
+        {
+          "label": "标题"
+        },
+        {
+          "label": "开始日期",
+          "description": "YYYY-MM-DD — 仅需要年份。年份可以为负数。"
+        },
+        {
+          "label": "结束日期",
+          "description": "YYYY-MM-DD — 仅需要年份。年份可以为负数。"
+        },
+        {
+          "label": "描述"
+        },
+        {
+          "label": "布局",
+          "options": [
+            {
+              "label": "文本在右侧（标准布局）"
+            },
+            {
+              "label": "文本在左侧"
+            }
+          ]
+        },
+        {
+          "label": "媒体类型",
+          "options": [
+            {
+              "label": "图像"
+            },
+            {
+              "label": "视频"
+            },
+            {
+              "label": "音频"
+            },
+            {
+              "label": "外部链接"
+            },
+            {
+              "label": "无"
+            }
+          ]
+        },
+        {
+          "label": "图像"
+        },
+        {
+          "label": "替代文本",
+          "description": "必填。如果浏览器无法加载图像，将显示此文本。还可供“文本转语音”阅读器使用。"
+        },
+        {
+          "label": "视频"
+        },
+        {
+          "label": "音频"
+        },
+        {
+          "label": "外部链接",
+          "description": "插入外部资源的链接。某些网站将呈现为专门的嵌入式，例如Twitter、YouTube、维基百科和Google地图。请在<a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab文档</a>中查看完整列表。"
+        },
+        {
+          "label": "外观",
+          "fields": [
+            {
+              "label": "背景",
+              "options": [
+                {
+                  "label": "颜色"
+                },
+                {
+                  "label": "图像"
+                },
+                {
+                  "label": "无"
+                }
+              ]
+            },
+            {
+              "label": "背景颜色",
+              "default": "#757575"
+            },
+            {
+              "label": "背景图像"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "时间轴项目",
+      "entity": "时间轴项目",
+      "widgets": [
+        {
+          "label": "默认"
+        }
+      ],
+      "field": {
+        "label": "项目",
+        "fields": [
+          {
+            "label": "幻灯片类型",
+            "default": "常规"
+          },
+          {
+            "label": "标题"
+          },
+          {
+            "label": "开始日期",
+            "description": "YYYY-MM-DD — 仅需要年份。年份可以为负数。"
+          },
+          {
+            "label": "结束日期",
+            "description": "YYYY-MM-DD — 仅需要年份。年份可以为负数。"
+          },
+          {
+            "label": "描述"
+          },
+          {
+            "label": "布局",
+            "options": [
+              {
+                "label": "文本在右侧（标准布局）"
+              },
+              {
+                "label": "文本在左侧"
+              }
+            ]
+          },
+          {
+            "label": "媒体类型",
+            "options": [
+              {
+                "label": "图像"
+              },
+              {
+                "label": "视频"
+              },
+              {
+                "label": "音频"
+              },
+              {
+                "label": "外部链接"
+              },
+              {
+                "label": "无"
+              }
+            ]
+          },
+          {
+            "label": "图像"
+          },
+          {
+            "label": "替代文本",
+            "description": "必填。如果浏览器无法加载图像，将显示此文本。还可供“文本转语音”阅读器使用。"
+          },
+          {
+            "label": "视频"
+          },
+          {
+            "label": "音频"
+          },
+          {
+            "label": "外部链接",
+            "description": "插入外部资源的链接。某些网站将呈现为专门的嵌入式，例如Twitter、YouTube、维基百科和Google地图。请在<a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab文档</a>中查看完整列表。"
+          },
+          {
+            "label": "标签",
+            "entity": "标签",
+            "field": {
+              "label": "标签",
+              "fields": [
+                {
+                  "label": "ID"
+                },
+                {
+                  "label": "名称"
+                },
+                {
+                  "label": "颜色"
+                },
+                {
+                  "label": "使用状态"
+                }
+              ]
+            }
+          },
+          {
+            "label": "外观",
+            "fields": [
+              {
+                "label": "背景",
+                "options": [
+                  {
+                    "label": "颜色"
+                  },
+                  {
+                    "label": "图像"
+                  },
+                  {
+                    "label": "无"
+                  }
+                ]
+              },
+              {
+                "label": "背景颜色",
+                "default": "#757575"
+              },
+              {
+                "label": "背景图像"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "标签",
+      "fields": [
+        {
+          "label": "标签",
+          "entity": "标签",
+          "field": {
+            "label": "标签",
+            "fields": [
+              {
+                "label": "ID"
+              },
+              {
+                "label": "名称"
+              },
+              {
+                "label": "颜色",
+                "default": "#E0E0E0"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "时代",
+      "fields": [
+        {
+          "label": "时代",
+          "entity": "时代",
+          "field": {
+            "label": "时代",
+            "fields": [
+              {
+                "label": "名称"
+              },
+              {
+                "label": "开始日期",
+                "description": "YYYY-MM-DD — 仅需要年份。年份可以为负数。"
+              },
+              {
+                "label": "结束日期",
+                "description": "YYYY-MM-DD — 仅需要年份。年份可以为负数。"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "label": "行为设置",
+      "fields": [
+        {
+          "label": "未使用"
+        },
+        {
+          "label": "缩放模式",
+          "description": "选择缩放模式。\"人类时间\"以常规表示法显示公元前后的年份，而\"宇宙时间\"使用科学表示法显示日期。\"索引\"对于扭曲时间轴，使所有事件看起来等距离开的情况很有用。",
+          "options": [
+            {
+              "label": "人类时间"
+            },
+            {
+              "label": "宇宙时间"
+            },
+            {
+              "label": "索引"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
