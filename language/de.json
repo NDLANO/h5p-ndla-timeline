@@ -14,7 +14,7 @@
           "label": "Titel"
         },
         {
-          "label": "Startdatum",
+          "label": "Anfangsdatum",
           "description": "JJJJ-MM-TT — nur das Jahr ist erforderlich. Jahreszahlen können negativ sein."
         },
         {
@@ -109,118 +109,118 @@
         }
       ],
       "field": {
-        "label": "Item",
+        "label": "Element",
         "fields": [
           {
-            "label": "Slide type",
-            "default": "regular"
+            "label": "Schaubildtyp",
+            "default": "regulär"
           },
           {
-            "label": "Title"
+            "label": "Titel"
           },
           {
-            "label": "Start date",
-            "description": "YYYY-MM-DD — only year is required. Years can be negative."
+            "label": "Anfangsdatum",
+            "description": "JJJJ-MM-TT — nur das Jahr ist erforderlich. Jahreszahlen können negativ sein."
           },
           {
-            "label": "End date",
-            "description": "YYYY-MM-DD — only year is required. Years can be negative."
+            "label": "Enddatum",
+            "description": "JJJJ-MM-TT — nur das Jahr ist erforderlich. Jahreszahlen können negativ sein."
           },
           {
-            "label": "Description"
+            "label": "Beschreibung"
           },
           {
             "label": "Layout",
             "options": [
               {
-                "label": "Text on right (standard)"
+                "label": "Text rechts (Standard)"
               },
               {
-                "label": "Text on left"
+                "label": "Text links"
               }
             ]
           },
           {
-            "label": "Media type",
+            "label": "Medientyp",
             "options": [
               {
-                "label": "Image"
+                "label": "Bild"
               },
               {
                 "label": "Video"
               },
               {
-                "label": "Audio"
+                "label": "Tondatei"
               },
               {
-                "label": "External link"
+                "label": "Externer Link"
               },
               {
-                "label": "None"
+                "label": "Nichts"
               }
             ]
           },
           {
-            "label": "Image"
+            "label": "Bild"
           },
           {
-            "label": "Alternative text",
-            "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by \"text-to-speech\" readers."
+            "label": "Alternativtext",
+            "description": "Erforderlich. Falls der Browser das Bild nicht laden kann, wird dieser Text stattdessen dargestellt. Wird auch von Vorlesewerkzeugen benutzt."
           },
           {
             "label": "Video"
           },
           {
-            "label": "Audio"
+            "label": "Tondatei"
           },
           {
-            "label": "External link",
-            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+            "label": "Externer Link",
+            "description": "Füge einen Link zu einer externen Ressource ein. Bestimmte Websites werden speziell eingebettet dargestellt, beispielsweise Twitter, YouTube, Wikipedia, und Google Maps. Siehe für eine vollständige Liste die <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
           },
           {
-            "label": "Tags",
-            "entity": "Tag",
+            "label": "Schlagworte",
+            "entity": "Schlagwort",
             "field": {
-              "label": "Tag",
+              "label": "Schlagwort",
               "fields": [
                 {
-                  "label": "Id"
+                  "label": "ID"
                 },
                 {
                   "label": "Name"
                 },
                 {
-                  "label": "Color"
+                  "label": "Farbe"
                 },
                 {
-                  "label": "Is active"
+                  "label": "Ist aktiv"
                 }
               ]
             }
           },
           {
-            "label": "Appearance",
+            "label": "Erscheinungsbild",
             "fields": [
               {
-                "label": "Background",
+                "label": "Hintergrund",
                 "options": [
                   {
-                    "label": "Color"
+                    "label": "Farbe"
                   },
                   {
-                    "label": "Image"
+                    "label": "Bild"
                   },
                   {
-                    "label": "None"
+                    "label": "Nichts"
                   }
                 ]
               },
               {
-                "label": "Background color",
+                "label": "Hintergrundfarbe",
                 "default": "#757575"
               },
               {
-                "label": "Background image"
+                "label": "Hintergrundbild"
               }
             ]
           }
@@ -228,22 +228,22 @@
       }
     },
     {
-      "label": "Tags",
+      "label": "Schlagworte",
       "fields": [
         {
-          "label": "Tags",
-          "entity": "Tag",
+          "label": "Schlagworte",
+          "entity": "Schlagwort",
           "field": {
-            "label": "Tag",
+            "label": "Schlagwort",
             "fields": [
               {
-                "label": "Id"
+                "label": "ID"
               },
               {
                 "label": "Name"
               },
               {
-                "label": "Color",
+                "label": "Farbe",
                 "default": "#E0E0E0"
               }
             ]
@@ -252,24 +252,24 @@
       ]
     },
     {
-      "label": "Eras",
+      "label": "Epochen",
       "fields": [
         {
-          "label": "Eras",
-          "entity": "Era",
+          "label": "Epochen",
+          "entity": "Epoche",
           "field": {
-            "label": "Era",
+            "label": "Epoche",
             "fields": [
               {
                 "label": "Name"
               },
               {
-                "label": "Start date",
-                "description": "YYYY-MM-DD — only year is required. Years can be negative."
+                "label": "Anfangsdatum",
+                "description": "JJJJ-MM-TT — nur das Jahr ist erforderlich. Jahreszahlen können negativ sein."
               },
               {
-                "label": "End date",
-                "description": "YYYY-MM-DD — only year is required. Years can be negative."
+                "label": "Enddatum",
+                "description": "JJJJ-MM-TT — nur das Jahr ist erforderlich. Jahreszahlen können negativ sein."
               }
             ]
           }
@@ -277,23 +277,23 @@
       ]
     },
     {
-      "label": "Behavioral settings",
+      "label": "Verhaltenseinstellungen",
       "fields": [
         {
-          "label": "unused"
+          "label": "unbenutzt"
         },
         {
-          "label": "Scaling mode",
-          "description": "Choose between scaling modes. \"Human time\" shows date in years before and after the Common Era using regular notation, while \"Cosmological time\" shows dates using scientific notation. \"Indexed\" is useful when you want to skew timeframes and make all events seem equally far apart.",
+          "label": "Art der Zeitskala",
+          "description": "Wähle eine Zeitskala. „Menschliche Zeit“ zeigt das Datum in Jahren vor und nach der Zeitrechnung in regulärer Schreibweise an, während „Kosmologische Zeit“ Daten in wissenschaftlicher Schreibweise anzeigt. „Indiziert“ ist nützlich, wenn du Zeitrahmen verzerren und alle Ereignisse gleich weit voneinander entfernt erscheinen lassen möchtest.",
           "options": [
             {
-              "label": "Human time"
+              "label": "Menschliche Zeit"
             },
             {
-              "label": "Cosmological time"
+              "label": "Kosmologische Zeit"
             },
             {
-              "label": "Indexed"
+              "label": "Indiziert"
             }
           ]
         }
