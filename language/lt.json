@@ -1,7 +1,7 @@
 {
   "semantics": [
     {
-      "label": "Show title slide"
+      "label": "Rodyti titulinę skaidrę"
     },
     {
       "fields": [
@@ -98,7 +98,7 @@
           ]
         }
       ],
-      "label": "Title slide"
+      "label": "Titulinė skaidrė"
     },
     {
       "field": {

@@ -70,7 +70,7 @@
         },
         {
           "label": "外部链接",
-          "description": "插入外部资源的链接。某些网站将呈现为专门的嵌入式，例如Twitter、YouTube、维基百科和Google地图。请在<a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab文档</a>中查看完整列表。"
+          "description": "插入外部资源的链接。某些网站将呈现为专门的嵌入方式，例如Twitter、YouTube、维基百科和Google地图。请在<a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab文档</a>中查看完整列表"
         },
         {
           "label": "外观",
@@ -175,7 +175,7 @@
           },
           {
             "label": "外部链接",
-            "description": "插入外部资源的链接。某些网站将呈现为专门的嵌入式，例如Twitter、YouTube、维基百科和Google地图。请在<a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab文档</a>中查看完整列表。"
+            "description": "插入外部资源的链接。某些网站将呈现为专门的嵌入方式，例如Twitter、YouTube、维基百科和Google地图。请在<a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab文档</a>中查看完整列表"
           },
           {
             "label": "标签",
@@ -252,13 +252,13 @@
       ]
     },
     {
-      "label": "时代",
+      "label": "重大事件",
       "fields": [
         {
-          "label": "时代",
-          "entity": "时代",
+          "label": "重大事件",
+          "entity": "重大事件",
           "field": {
-            "label": "时代",
+            "label": "重大事件",
             "fields": [
               {
                 "label": "名称"
@@ -284,7 +284,7 @@
         },
         {
           "label": "缩放模式",
-          "description": "选择缩放模式。\"人类时间\"以常规表示法显示公元前后的年份，而\"宇宙时间\"使用科学表示法显示日期。\"索引\"对于扭曲时间轴，使所有事件看起来等距离开的情况很有用。",
+          "description": "选择缩放模式。“人类时间”使用常规符号显示公元前后的年份，而“宇宙时间”则使用科学符号显示日期。“索引”在您想要扭曲时间框架并使所有事件看起来相距一样远时很有帮助。",
           "options": [
             {
               "label": "人类时间"
