@@ -1,7 +1,7 @@
 import { Root, Trigger, Content, Close, Arrow } from '@radix-ui/react-popover';
 import * as React from 'react';
 import { FC, ReactElement } from 'react';
-import styles from './Popover.module.scss';
+import * as styles from './Popover.module.scss';
 
 type Params = {
   isOpen: boolean;

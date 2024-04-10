@@ -2,7 +2,7 @@ import * as React from 'react';
 import { FC } from 'react';
 import fontColorContrast from 'font-color-contrast';
 import { Tag as TagType } from '../../types/Tag';
-import styles from './Tag.module.scss';
+import * as styles from './Tag.module.scss';
 
 type TagProps = {
   tag: TagType;

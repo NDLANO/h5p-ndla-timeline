@@ -1,4 +1,4 @@
-import { IH5PContentType, Media, H5PContentId } from 'h5p-types';
+import { IH5PContentType, H5PMedia, H5PContentId } from 'h5p-types';
 import { H5P } from 'h5p-utils';
 import { EventItemType } from '../types/EventItemType';
 import { Params } from '../types/Params';
@@ -95,7 +95,7 @@ export function getFullMachineName(machineName: string): string | null {
 /* Build H5P media instance from parameters */
 export function buildH5PMediaInstance(
   contentId: H5PContentId,
-  media: Array<Media> | null,
+  media: Array<H5PMedia> | null,
   machineName: string,
 ): IH5PContentType | null {
   if (media === null) {
