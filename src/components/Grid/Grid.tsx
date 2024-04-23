@@ -4,7 +4,7 @@ import { SlideType } from '../../types/SlideType';
 import { MediaBlock } from '../MediaBlock/MediaBlock';
 import { TextContentBlock } from '../TextContentBlock/TextContentBlock';
 import { TitleBlock } from '../TitleBlock/TitleBlock';
-import styles from './Grid.module.scss';
+import * as styles from './Grid.module.scss';
 
 type GridProps = {
   eventItem: EventItemType<SlideType>;

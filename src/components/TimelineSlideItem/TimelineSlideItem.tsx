@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './TimelineSlideItem.module.scss';
+import * as styles from './TimelineSlideItem.module.scss';
 
 export type TimelineSlideItemProps = {
   title: string;

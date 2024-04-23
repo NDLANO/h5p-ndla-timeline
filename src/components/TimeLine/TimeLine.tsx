@@ -6,7 +6,7 @@ import {
   EventDispatcher,
   H5PContentId,
   IH5PContentType,
-  Media,
+  H5PMedia,
 } from 'h5p-types';
 import { H5P } from 'h5p-utils';
 import * as React from 'react';
@@ -75,7 +75,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
         return;
       }
 
-      const medium: Array<Media> | null =
+      const medium: Array<H5PMedia> | null =
         item.mediaType === 'video' && item.video?.[0].path ? item.video : null;
 
       const h5pMediaInstance: IH5PContentType | null = buildH5PMediaInstance(

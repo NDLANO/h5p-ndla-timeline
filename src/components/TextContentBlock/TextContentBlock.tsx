@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FC } from 'react';
-import styles from './TextContentBlock.module.scss';
+import * as styles from './TextContentBlock.module.scss';
 
 type TextContentBlockProps = {
   textContent: string;
