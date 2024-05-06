@@ -35,7 +35,7 @@
     "@storybook/addon-essentials": "^7.1.1",
     "@storybook/addon-links": "^7.1.1",
     "@storybook/react": "^7.1.1",
-    "@storybook/react-webpack5": "^7.1.1",
+    "@storybook/react-webpack5": "^8.0.10",
     "@types/jest": "^29.5.12",
     "@types/jquery": "^3.5.29",
     "@types/react": "^17.0.60",
