@@ -24,6 +24,10 @@
     &:hover {
       color: #fff;
     }
+
+    &:focus-visible {
+      color: #fff;
+    }
   }
 
   .tl-menubar-button:disabled {
