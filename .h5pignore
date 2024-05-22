@@ -1,5 +1,4 @@
 .github
-.storybook
 build_info
 node_modules
 src
@@ -14,7 +13,6 @@ nodemon.json
 package-lock.json
 package.json
 README.md
-storybook-static
 tsconfig.json
 typings.d.ts
 webpack.config.js
