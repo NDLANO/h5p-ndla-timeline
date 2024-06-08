@@ -284,7 +284,7 @@
         },
         {
           "label": "Art der Zeitskala",
-          "description": "Wähle eine Zeitskala. „Menschliche Zeit“ zeigt das Datum in Jahren vor und nach der Zeitrechnung in regulärer Schreibweise an, während „Kosmologische Zeit“ Daten in wissenschaftlicher Schreibweise anzeigt. „Indiziert“ ist nützlich, wenn du Zeitrahmen verzerren und alle Ereignisse gleich weit voneinander entfernt erscheinen lassen möchtest.",
+          "description": "Wähle eine Zeitskala. „Menschliche Zeit“ zeigt das Datum in Jahren vor und nach der Zeitrechnung in regulärer Schreibweise an, während „Kosmologische Zeit“ Daten in wissenschaftlicher Schreibweise anzeigt. Letzteres wird automatisch bei sehr großen oder sehr kleinen Jahreszahlen verwendet. „Indiziert“ ist nützlich, wenn du Zeitrahmen verzerren und alle Ereignisse gleich weit voneinander entfernt erscheinen lassen möchtest.",
           "options": [
             {
               "label": "Menschliche Zeit"
