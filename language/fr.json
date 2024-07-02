@@ -284,7 +284,7 @@
         },
         {
           "label": "Mode de mise à l&#39;échelle",
-          "description": "Choisissez entre les modes de mise à l&#39;échelle. &quot;Le temps humain&quot; montre la date en années avant et après l&#39;ère commune en utilisant la notation régulière, tandis que le &quot;temps cosmologique&quot; montre les dates en utilisant la notation scientifique. &quot;Indexé&quot; est utile lorsque vous souhaitez biaiser les intervalles et faire en sorte que tous les événements semblent également éloignés les uns des autres.",
+          "description": "Choisissez entre les modes de mise à l&#39;échelle. &quot;Le temps humain&quot; montre la date en années avant et après l&#39;ère commune en utilisant la notation régulière, tandis que le &quot;temps cosmologique&quot; montre les dates en utilisant la notation scientifique. Cosmological time will be enforced if years are too small or too large. &quot;Indexé&quot; est utile lorsque vous souhaitez biaiser les intervalles et faire en sorte que tous les événements semblent également éloignés les uns des autres.",
           "options": [
             {
               "label": "Temps humain"
