@@ -130,6 +130,31 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       waitToResize();
 
       /*
+       * Workaround for TimelineJS using the "years ago" format for positive
+       * years as well if the scale is set to "cosmological"
+       */
+      if (
+        typeof timelineDefinition !== 'string' &&
+        timelineDefinition.scale === 'cosmological'
+      ) {
+        const headlineContainers = [...document.querySelectorAll('.tl-text-headline-container')];
+        headlineContainers.forEach((headlineContainer) => {
+          const headline = headlineContainer.querySelector('.tl-headline');
+          const headlineDate = headlineContainer.querySelector('.tl-headline-date');
+          if (!headline || !headlineDate) {
+            return;
+          }
+
+          const fullDate = headline.textContent ?? '';
+          if (parseInt(fullDate) < 0) {
+            return;
+          }
+
+          headlineDate.textContent = fullDate;
+        });
+      }
+
+      /*
        * Wait for each slide to be loaded to replace original medium
        * with H5P media instance
        */
