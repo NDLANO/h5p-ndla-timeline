@@ -284,7 +284,7 @@
         },
         {
           "label": "Modo de escala",
-          "description": "Elegir entre modos de escala. \"Hora humana\" muestra la fecha en años antes y después de la Era común usando notación regular, mientras que \"Hora cosmológica\" muestra las fechas usando notación científica. \"Indexado\" es útil cuando usted quiere separar marcos temporales y hacer que los eventos se vean igualmente distanciados.",
+          "description": "Elegir entre modos de escala. \"Hora humana\" muestra la fecha en años antes y después de la Era común usando notación regular, mientras que \"Hora cosmológica\" muestra las fechas usando notación científica. Cosmological time will be enforced if years are too small or too large. \"Indexado\" es útil cuando usted quiere separar marcos temporales y hacer que los eventos se vean igualmente distanciados.",
           "options": [
             {
               "label": "Hora humana"

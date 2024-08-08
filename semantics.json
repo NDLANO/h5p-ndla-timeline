@@ -784,7 +784,7 @@
       },
       {
         "label": "Scaling mode",
-        "description": "Choose between scaling modes. \"Human time\" shows date in years before and after the Common Era using regular notation, while \"Cosmological time\" shows dates using scientific notation. \"Indexed\" is useful when you want to skew timeframes and make all events seem equally far apart.",
+        "description": "Choose between scaling modes. \"Human time\" shows date in years before and after the Common Era using regular notation, while \"Cosmological time\" shows dates using scientific notation. Cosmological time will be enforced if years are too small or too large. \"Indexed\" is useful when you want to skew timeframes and make all events seem equally far apart.",
         "type": "select",
         "name": "scalingMode",
         "options": [

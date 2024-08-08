@@ -284,7 +284,7 @@
         },
         {
           "label": "缩放模式",
-          "description": "选择缩放模式。\"人类时间\"以常规表示法显示公元前后的年份，而\"宇宙时间\"使用科学表示法显示日期。\"索引\"对于扭曲时间轴，使所有事件看起来等距离开的情况很有用。",
+          "description": "选择缩放模式。\"人类时间\"以常规表示法显示公元前后的年份，而\"宇宙时间\"使用科学表示法显示日期。Cosmological time Cosmological time will be enforced if years are too small or too large. \"索引\"对于扭曲时间轴，使所有事件看起来等距离开的情况很有用。",
           "options": [
             {
               "label": "人类时间"
