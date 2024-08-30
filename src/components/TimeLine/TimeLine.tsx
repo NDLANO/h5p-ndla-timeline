@@ -137,20 +137,29 @@ export const TimeLine: React.FC<TimeLineProps> = ({
         typeof timelineDefinition !== 'string' &&
         timelineDefinition.scale === 'cosmological'
       ) {
-        const headlineContainers = [...document.querySelectorAll('.tl-text-headline-container')];
-        headlineContainers.forEach((headlineContainer) => {
-          const headline = headlineContainer.querySelector('.tl-headline');
+
+        let headlineContainers = [...document.querySelectorAll('.tl-text-headline-container')];
+        if (timelineDefinition?.title) {
+          headlineContainers.shift(); // Exclude title slide headline, has no year shown
+        }
+
+        headlineContainers.forEach((headlineContainer, index) => {
+          const startYear = timelineDefinition.events[index].start_date?.getFullYear?.();
+          if (!startYear || startYear < 0) {
+            return;
+          }
+
+          let endYear = timelineDefinition.events[index].end_date?.getFullYear?.();
+          if (endYear && endYear < startYear) {
+            endYear = undefined;
+          }
+
           const headlineDate = headlineContainer.querySelector('.tl-headline-date');
-          if (!headline || !headlineDate) {
+          if (!headlineDate) {
             return;
           }
 
-          const fullDate = headline.textContent ?? '';
-          if (parseInt(fullDate) < 0) {
-            return;
-          }
-
-          headlineDate.textContent = fullDate;
+          headlineDate.textContent = `${startYear}${endYear ? ` - ${endYear}` : ''}`;
         });
       }
 
