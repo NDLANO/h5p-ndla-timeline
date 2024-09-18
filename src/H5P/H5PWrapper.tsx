@@ -1,7 +1,7 @@
 import { H5PExtras, H5PContentId, H5PEvent, EventDispatcher, IH5PContentType } from 'h5p-types';
 import { H5P } from 'h5p-utils';
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom/client';
 import { App } from '../App';
 import { H5PContext } from '../contexts/H5PContext';
 import { LocalizationContext } from '../contexts/LocalizationContext';
@@ -55,7 +55,9 @@ export class H5PWrapper extends H5P.EventDispatcher implements IH5PContentType<P
     containerElement.appendChild(this.wrapper);
     containerElement.classList.add('h5p-timeline');
 
-    ReactDOM.render(
+    const root = ReactDOM.createRoot(this.wrapper);
+
+    root.render(
       <H5PContext.Provider value={this}>
         <LocalizationContext.Provider value={
           this.params.l10n ?? ({} as Translations)
@@ -72,7 +74,6 @@ export class H5PWrapper extends H5P.EventDispatcher implements IH5PContentType<P
           ) : null}
         </LocalizationContext.Provider>
       </H5PContext.Provider>,
-      this.wrapper,
     );
   }
 
