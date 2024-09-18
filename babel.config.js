@@ -4,5 +4,7 @@ module.exports = {
     '@babel/preset-react',
     '@babel/preset-typescript',
   ],
-  plugins: ['react-hot-loader/babel'],
+  plugins: [
+    ...(process.env.NODE_ENV === 'development' ? ['react-refresh/babel'] : []), // Use Fast Refresh in development
+  ],
 };
