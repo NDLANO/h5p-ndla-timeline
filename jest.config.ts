@@ -8,6 +8,7 @@ const config: Config.InitialOptions = {
   },
 
   testEnvironment: 'jsdom',
+  setupFiles: ['<rootDir>/setup.jest.js'],
   transformIgnorePatterns: ['/node_modules/(?!(@knight-lab)/)'],
 };
 
