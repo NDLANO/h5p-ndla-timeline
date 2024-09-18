@@ -1,14 +1,13 @@
 const path = require('path');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
-const mode = process.argv.includes('--mode=production') ?
-  'production' :
-  'development';
+const mode = process.argv.includes('--mode=production') ? 'production' : 'development';
 
 module.exports = {
   entry: {
-    bundle: ['react-hot-loader/patch', './src/index.tsx'],
+    bundle: ['./src/index.tsx'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -91,16 +90,17 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.tsx', '.ts', '.scss'],
-    alias: {
-      'react-dom': '@hot-loader/react-dom',
-    },
   },
   plugins: [
     new BundleAnalyzerPlugin({
       analyzerMode: mode !== 'production' ? 'static' : 'disabled',
       openAnalyzer: false,
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
+    ...(mode === 'development' ? [new ReactRefreshWebpackPlugin()] : []), // Add ReactRefreshWebpackPlugin in development mode
   ],
+  devServer: {
+    hot: true, // Enable hot module replacement
+  },
   ...(mode !== 'production' && { devtool: 'eval-cheap-module-source-map' })
 };
