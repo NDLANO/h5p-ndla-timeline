@@ -29,6 +29,7 @@ declare module '@knight-lab/timelinejs' {
     minute?: number;
     second?: number;
     millisecond?: number;
+    getFullYear?: () => number;
   };
 
   declare type TimelineEra = {

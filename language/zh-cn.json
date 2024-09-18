@@ -284,7 +284,7 @@
         },
         {
           "label": "缩放模式",
-          "description": "选择缩放模式。“人类时间”使用常规符号显示公元前后的年份，而“宇宙时间”则使用科学符号显示日期。“索引”在您想要扭曲时间框架并使所有事件看起来相距一样远时很有帮助。",
+          "description": "选择缩放模式。“人类时间”使用常规符号显示公元前后的年份，而“宇宙时间”则使用科学符号显示日期。Cosmological time will be enforced if years are too small or too large. “索引”在您想要扭曲时间框架并使所有事件看起来相距一样远时很有帮助。",
           "options": [
             {
               "label": "人类时间"
