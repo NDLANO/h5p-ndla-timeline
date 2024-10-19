@@ -18,6 +18,12 @@ import { isDefined } from './is-defined.utils';
 
 const html = String.raw;
 
+/** @constant {number} MIN_HUMAN_SCALE_YEAR Minimum year that can be displayed in human scale */
+export const MIN_HUMAN_SCALE_YEAR = -271820;
+
+/** @constant {number} MAX_HUMAN_SCALE_YEAR Maximum year that can be displayed in human scale */
+export const MAX_HUMAN_SCALE_YEAR = 275759;
+
 export const isDateString = (str: string): str is DateString => {
   const matches = str.match(/^-?\d{1,}((-\d{1,2})?(-\d{1,2})?)$/gi);
 
@@ -65,6 +71,16 @@ const isDateValid = (dateString: DateString): boolean => {
       : `+${date.year.toString().padStart(6, '0')}`;
   const month = (date.month ?? 1).toString().padStart(2, '0');
   const day = (date.day ?? 1).toString().padStart(2, '0');
+
+  /*
+   * -271821 is the smallest year that Date.parse can handle. The return value
+   * would exceed the maximum number that ECMAScript can handle, cmp.
+   * https://262.ecma-international.org/5.1/#sec-15.9.1.1
+   */
+  if (date.year < MIN_HUMAN_SCALE_YEAR || date.year > MAX_HUMAN_SCALE_YEAR) {
+    return true; // Will requite to enforce scale of "cosmological"
+  }
+
   return !Number.isNaN(Date.parse(`${year}-${month}-${day}T00:00:00Z`));
 };
 
@@ -254,7 +270,16 @@ export const createTimelineDefinition = (
 
   let classNames: string | undefined;
 
-  const scalingMode = data.behaviour?.scalingMode ?? 'human';
+  const needsComsicScale = events.some((event) => {
+    return (
+      (event.start_date?.year ?? 0) < MIN_HUMAN_SCALE_YEAR ||
+      (event.start_date?.year ?? 0) > MAX_HUMAN_SCALE_YEAR
+    );
+  });
+
+  const scalingMode = needsComsicScale ?
+    'cosmological' :
+    data.behaviour?.scalingMode ?? 'human';
   const eventsAreIndexed = scalingMode === 'index';
 
   if (eventsAreIndexed) {

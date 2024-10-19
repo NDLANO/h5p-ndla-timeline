@@ -284,7 +284,7 @@
         },
         {
           "label": "Eskalatzeko modua",
-          "description": "Aukeratu eskalatzeko moduen artean. \"Giza-denbora\"-k Aro Komunaren aurreko eta ondorengo urteetako data erakusten du notazio arrunta erabiliz, eta \"Denbora kosmologikoa\"-k, aldiz, datak idazkera zientifikoa erabiliz. \"Indexatua\" erabilgarria da denbora-tarteak banandu nahi dituzunean eta gertaera guztiak berdin urrun daudela dirudi.",
+          "description": "Aukeratu eskalatzeko moduen artean. \"Giza-denbora\"-k Aro Komunaren aurreko eta ondorengo urteetako data erakusten du notazio arrunta erabiliz, eta \"Denbora kosmologikoa\"-k, aldiz, datak idazkera zientifikoa erabiliz. Cosmological time will be enforced if years are too small or too large. \"Indexatua\" erabilgarria da denbora-tarteak banandu nahi dituzunean eta gertaera guztiak berdin urrun daudela dirudi.",
           "options": [
             {
               "label": "Giza denbora"

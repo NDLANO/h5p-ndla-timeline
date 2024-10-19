@@ -284,7 +284,7 @@
         },
         {
           "label": "Modo de escalado",
-          "description": "Escolla entre os modos de escala. \"Tempo humano\" amosa datas en anos anteriores e posteriores á Era Común usando notación regular, mentres que \"Tempo cosmolóxico\" amosa datas usando notación científica. \"Indexado\" é útil cando queres sesgar os períodos de tempo e facer que todos os eventos parezan igual de afastados.",
+          "description": "Escolla entre os modos de escala. \"Tempo humano\" amosa datas en anos anteriores e posteriores á Era Común usando notación regular, mentres que \"Tempo cosmolóxico\" amosa datas usando notación científica. Cosmological time will be enforced if years are too small or too large. \"Indexado\" é útil cando queres sesgar os períodos de tempo e facer que todos os eventos parezan igual de afastados.",
           "options": [
             {
               "label": "Tempo humano"
