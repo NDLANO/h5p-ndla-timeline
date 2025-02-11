@@ -63,17 +63,17 @@
           "description": "Beharrezkoa. Arakatzaileak ezin badu irudia kargatu testu hau bistaratuko da. \"Testutik hizketarako\" irakurleek ere erabiltzen dute."
         },
         {
-          "label": "Video"
+          "label": "Irudia"
         },
         {
           "label": "Audio"
         },
         {
-          "label": "External link",
+          "label": "Bideoa",
           "description": "Sartu esteka bat kanpoko baliabideetara. Zenbait webgune kapsulatze espezializatu gisa errendatuko dira, hala nola, Twitter, YouTube, Wikipedia eta Google Maps. Ikusi zerrenda osoa <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab-eko dokumentuetan</a>"
         },
         {
-          "label": "Appearance",
+          "label": "Audioa",
           "fields": [
             {
               "label": "Atzeko planoa",
