@@ -1,3 +1,5 @@
+var H5PUpgrades = window.H5PUpgrades || {};
+
 /* global H5PUpgrades */
 H5PUpgrades['H5P.NDLATimeline'] = (() => {
   // Avoiding to use H5P.createUUID as H5P function may change
