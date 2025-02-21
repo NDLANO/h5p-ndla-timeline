@@ -1,4 +1,4 @@
-var H5PUpgrades = H5PUpgrades || {};
+var H5PUpgrades = window.H5PUpgrades || {};
 
 /* global H5PUpgrades */
 H5PUpgrades['H5P.NDLATimeline'] = (() => {
