@@ -1,31 +1,31 @@
 {
   "semantics": [
     {
-      "label": "Vis tittel-slide"
+      "label": "Vis tittelside"
     },
     {
-      "label": "Tittel-slide",
+      "label": "Tittelside",
       "fields": [
         {
-          "label": "Slide-type",
-          "default": "title"
+          "label": "Sidetype",
+          "default": "tittel"
         },
         {
           "label": "Tittel"
         },
         {
           "label": "Startdato",
-          "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+          "description": "ÅÅÅÅ-MM-DD (Bare årstallet er nødvendig. Årstall kan være negative.)"
         },
         {
           "label": "Sluttdato",
-          "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+          "description": "ÅÅÅÅ-MM-DD (Bare årstallet er nødvendig. Årstall kan være negative.)"
         },
         {
           "label": "Beskrivelse"
         },
         {
-          "label": "Layout",
+          "label": "Oppsett",
           "options": [
             {
               "label": "Tekst på høyre side (standard)"
@@ -36,7 +36,7 @@
           ]
         },
         {
-          "label": "Mediatype",
+          "label": "Medietype",
           "options": [
             {
               "label": "Bilde"
@@ -60,7 +60,7 @@
         },
         {
           "label": "Alternativ tekst",
-          "description": "Påkrevd. Hvis bildet ikke kan lastes vises denne teksten istedenfor. Denne blir også brukt ved talesyntese."
+          "description": "Påkrevd. Hvis bildet ikke kan lastes inn, vises denne teksten i stedet. Den blir også brukt av skjermleser."
         },
         {
           "label": "Video"
@@ -70,7 +70,7 @@
         },
         {
           "label": "Ekstern lenke",
-          "description": "Sett inn en lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med flere. Se hele listen i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+          "description": "Sett inn ei lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning, for eksempel YouTube, Wikipedia og Google Maps. Se hele lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
         },
         {
           "label": "Utseende",
@@ -101,36 +101,36 @@
       ]
     },
     {
-      "label": "Tidslinje-slides",
-      "entity": "Tidslinje-slide",
+      "label": "Tidslinjesider",
+      "entity": "Tidslinjeside",
       "widgets": [
         {
-          "label": "Default"
+          "label": "Standard"
         }
       ],
       "field": {
-        "label": "Slide",
+        "label": "Side",
         "fields": [
           {
-            "label": "Slide-type",
-            "default": "regular"
+            "label": "Sidetype",
+            "default": "vanlig"
           },
           {
             "label": "Tittel"
           },
           {
             "label": "Startdato",
-            "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+            "description": "ÅÅÅÅ-MM-DD (Bare årstallet er nødvendig. Årstall kan være negative.)"
           },
           {
             "label": "Sluttdato",
-            "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+            "description": "ÅÅÅÅ-MM-DD (Bare årstallet er nødvendig. Årstall kan være negative.)"
           },
           {
             "label": "Beskrivelse"
           },
           {
-            "label": "Layout",
+            "label": "Oppsett",
             "options": [
               {
                 "label": "Tekst på høyre side (standard)"
@@ -141,7 +141,7 @@
             ]
           },
           {
-            "label": "Mediatype",
+            "label": "Medietype",
             "options": [
               {
                 "label": "Bilde"
@@ -165,7 +165,7 @@
           },
           {
             "label": "Alternativ tekst",
-            "description": "Påkrevd. Hvis bildet ikke kan lastes vises denne teksten istedenfor. Denne blir også brukt ved talesyntese."
+            "description": "Påkrevd. Hvis bildet ikke kan lastes inn, vises denne teksten i stedet. Den blir også brukt av skjermleser."
           },
           {
             "label": "Video"
@@ -175,16 +175,16 @@
           },
           {
             "label": "Ekstern lenke",
-            "description": "Sett inn en lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning. Disse er Twitter, YouTube, Wikipedia, Google Maps med flere. Se hele listen i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+            "description": "Sett inn ei lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning, for eksempel YouTube, Wikipedia og Google Maps. Se hele lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
           },
           {
-            "label": "Tag-er",
-            "entity": "Tag",
+            "label": "Tagger",
+            "entity": "Tagg",
             "field": {
-              "label": "Tag",
+              "label": "Tagg",
               "fields": [
                 {
-                  "label": "Id"
+                  "label": "ID"
                 },
                 {
                   "label": "Navn"
@@ -228,16 +228,16 @@
       }
     },
     {
-      "label": "Tag-er",
+      "label": "Tagger",
       "fields": [
         {
-          "label": "Tag-er",
-          "entity": "Tag",
+          "label": "Tagger",
+          "entity": "Tagg",
           "field": {
-            "label": "Tag",
+            "label": "Tagg",
             "fields": [
               {
-                "label": "Id"
+                "label": "ID"
               },
               {
                 "label": "Navn"
@@ -265,11 +265,11 @@
               },
               {
                 "label": "Startdato",
-                "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+                "description": "ÅÅÅÅ-MM-DD (Bare årstallet er nødvendig. Årstall kan være negative.)"
               },
               {
                 "label": "Sluttdato",
-                "description": "ÅÅÅÅ-MM-DD — Bare årstall er nødvendig. Årstall kan være negative."
+                "description": "ÅÅÅÅ-MM-DD (Bare årstallet er nødvendig. Årstall kan være negative.)"
               }
             ]
           }
@@ -277,20 +277,20 @@
       ]
     },
     {
-      "label": "Innstillinger for oppførsel",
+      "label": "Oppgaveinnstillinger",
       "fields": [
         {
-          "label": "unused"
+          "label": "ikke brukt"
         },
         {
           "label": "Tidsskala",
-          "description": "Velg mellom ulike tidsskalaer. \"Vanlig tid\" viser datoer i år før og etter vår tidsregning, mens \"Kosmologisk tid\" bruker vitenskapelig notasjon for å vise årstall. Cosmological time will be enforced if years are too small or too large. \"Indeksert\" er nyttig hvis en ønsker å skjule årstall og heller ha likt mellomrom mellom hver hendelse i tidslinjen.",
+          "description": "Velg en tidsskala. \"Vanlig\" viser år etter vanlig tidsregning. \"Kosmologisk\" bruker vitenskapelig notasjon for å vise årstall. Denne varianten blir brukt automatisk ved svært store eller svært små årstall. \"Indeksert\" er nyttig hvis du ønsker å ha likt mellomrom mellom hver hendelse i tidslinja.",
           "options": [
             {
-              "label": "Vanlig tid"
+              "label": "Vanlig"
             },
             {
-              "label": "Kosmologisk tid"
+              "label": "Kosmologisk"
             },
             {
               "label": "Indeksert"
