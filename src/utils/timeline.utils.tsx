@@ -183,6 +183,9 @@ export const mapEventToTimelineSlide = (
   // The `layout-x` part of this ID is used for styling and must not be removed
   // before we find another way to change slide layouts
   // Work around h5p-types that fails jest test when importing H5P
+
+  // TODO: Why was this not properly typed before?
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const id = `${(window as any).H5P.createUUID()}_layout-${event.layout}`;
   const endDate = event.endDate ? parseDate(event.endDate) : null;
   const slide: TimelineSlide = {
@@ -262,7 +265,6 @@ export const createTimelineDefinition = (
   };
 
   if (data.showTitleSlide && data.titleSlide) {
-    // eslint-disable-next-line no-param-reassign
     data.titleSlide.title = data.titleSlide.title ?? title;
     timeline.title =
       data.titleSlide && mapEventToTimelineSlide(data.titleSlide);

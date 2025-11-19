@@ -27,7 +27,7 @@ type H5PMetadata = {
 
 type H5PLibraryParams = {
   library?: string,
-  params: any,
+  params: object,
   metadata?: H5PMetadata,
   subContentId?: string
 }

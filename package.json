@@ -8,7 +8,7 @@
   "scripts": {
     "watch": "webpack --mode=development --watch",
     "build": "webpack --mode=production",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint": "eslint './src/**/*' --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest",
     "test:watch": "npm test -- --watch"
@@ -38,8 +38,7 @@
     "babel-jest": "^30.2.0",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
-    "eslint": "^8.57.1",
-    "eslint-config-ndla-h5p": "github:NDLANO/eslint-config-ndla-h5p",
+    "eslint-config-ndla-h5p": "github:ndlano/eslint-config-ndla-h5p",
     "file-loader": "^6.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^30.2.0",
@@ -53,6 +52,7 @@
     "ts-loader": "^9.5.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
+    "typescript-eslint": "^8.47.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.103.0",
     "webpack-bundle-analyzer": "^5.0.1",
@@ -60,5 +60,6 @@
     "webpack-dev-middleware": "^7.4.5",
     "webpack-dev-server": "^5.2.2"
   },
-  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead"
+  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
+  "type": "module"
 }
