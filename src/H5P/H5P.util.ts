@@ -22,8 +22,6 @@ function updateEventPaths(
 ): void {
   if (item.mediaType === 'image' && item.image) {
     // Item has uploaded image
-
-    // eslint-disable-next-line no-param-reassign
     item.image.path = normalizeAssetPath(item.image.path, contentId);
   }
   else if (
@@ -34,7 +32,6 @@ function updateEventPaths(
     // Item has uploaded video
 
     item.video.forEach((video) => {
-      // eslint-disable-next-line no-param-reassign
       video.path = normalizeAssetPath(video.path, contentId);
     });
   }
@@ -46,7 +43,6 @@ function updateEventPaths(
     // Item has uploaded audio
 
     item.audio.forEach((audio) => {
-      // eslint-disable-next-line no-param-reassign
       audio.path = normalizeAssetPath(audio.path, contentId);
     });
   }
@@ -55,7 +51,6 @@ function updateEventPaths(
     item.appearance.backgroundType === 'image' &&
     item.appearance.backgroundImage != null
   ) {
-    // eslint-disable-next-line no-param-reassign
     item.appearance.backgroundImage.path = normalizeAssetPath(
       item.appearance.backgroundImage.path,
       contentId,

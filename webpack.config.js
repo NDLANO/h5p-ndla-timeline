@@ -1,11 +1,16 @@
-const path = require('path');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+import path from 'path';
+import { fileURLToPath } from 'url';
+import process from 'node:process';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const mode = process.argv.includes('--mode=production') ? 'production' : 'development';
 
-module.exports = {
+export default {
   entry: {
     bundle: ['./src/index.tsx'],
   },
@@ -97,10 +102,10 @@ module.exports = {
       openAnalyzer: false,
     }),
     new MiniCssExtractPlugin(),
-    ...(mode === 'development' ? [new ReactRefreshWebpackPlugin()] : []), // Add ReactRefreshWebpackPlugin in development mode
+    ...(mode === 'development' ? [new ReactRefreshWebpackPlugin()] : []),
   ],
   devServer: {
-    hot: true, // Enable hot module replacement
+    hot: true,
   },
   ...(mode !== 'production' && { devtool: 'eval-cheap-module-source-map' })
 };

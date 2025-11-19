@@ -1,5 +1,5 @@
 /* TimelineJS uses dangling underscore */
-/* eslint-disable no-underscore-dangle */
+ 
 import type { TimelineSlide } from '@knight-lab/timelinejs';
 import { Timeline } from '@knight-lab/timelinejs';
 import {
@@ -92,7 +92,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   });
 
   useEffectOnce(() => {
-    // eslint-disable-next-line no-new
+     
     const timeline = new Timeline(containerId, timelineDefinition, {
       language: getClosestLocaleCode(containerRef.current),
       font: undefined,
@@ -138,7 +138,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
         timelineDefinition.scale === 'cosmological'
       ) {
 
-        let headlineContainers = [...document.querySelectorAll('.tl-text-headline-container')];
+        const headlineContainers = [...document.querySelectorAll('.tl-text-headline-container')];
         if (timelineDefinition?.title) {
           headlineContainers.shift(); // Exclude title slide headline, has no year shown
         }
