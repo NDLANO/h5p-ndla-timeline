@@ -37,6 +37,11 @@
   }
 }
 
+.tl-storyslider {
+  --arrow-width: 3rem;
+  --slide-to-arrow-gap: 0.5rem;
+}
+
 /**
  * {1} Override inline height style set by Timeline.js
  */
@@ -66,9 +71,17 @@
 
 .tl-slide {
   .tl-slide-content-container {
+    display: block;
+
     .tl-slide-content {
-      padding-bottom: 1rem;
-      padding-top: 1rem;
+      --width: calc(100% - 2 * var(--arrow-width) - 2 * var(--slide-to-arrow-gap));
+      margin-inline: auto;
+      max-width: var(--width) !important;
+      padding-bottom: 1rem !important;
+      padding-top: 1rem !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      width: var(--width) !important;
 
       .tl-skinny & {
         box-sizing: border-box;
@@ -201,6 +214,7 @@
   font-family: "PT Sans Narrow", sans-serif !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
+  transition: left 0.2s ease, right 0.2s ease;
 
   .tl-slidenav-title,
   .tl-slidenav-description {
@@ -216,6 +230,30 @@
       line-height: 1;
     }
   }
+
+  .tl-slidenav-content-container {
+    width: var(--arrow-width);
+
+    .tl-slidenav-icon {
+      margin: 0 !important;
+    }
+  }
+}
+
+.tl-slidenav-previous:hover {
+  .tl-slidenav-icon::before {
+    color: color-mix(in srgb, currentColor 90%, #ffffff 10%);
+  }
+
+  left: -2px;
+}
+
+.tl-slidenav-next:hover {
+  .tl-slidenav-icon::before {
+    color: color-mix(in srgb, currentColor 90%, #ffffff 10%);
+  }
+
+  right: -2px;
 }
 
 .tl-slidenav-previous {
@@ -230,22 +268,6 @@
 
 .tl-slidenav-next {
   display: block !important;
-  // On hover, the value is set to `5rem` (or rather 80px)
-  $margin-left__default: 4.75rem;
-  $margin-left__skinny: 0.5rem;
-
-  &:hover {
-    @media (hover: none) {
-      .tl-slidenav-icon {
-        margin-left: $margin-left__default !important;
-
-        .tl-skinny & {
-          margin-left: $margin-left__skinny !important;
-        }
-      }
-    }
-  }
-
   .h5p-tl-slide-is-end & {
     display: none !important;
   }
