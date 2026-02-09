@@ -70,7 +70,7 @@
         },
         {
           "label": "Bideoa",
-          "description": "Sartu esteka bat kanpoko baliabideetara. Zenbait webgune kapsulatze espezializatu gisa errendatuko dira, hala nola, Twitter, YouTube, Wikipedia eta Google Maps. Ikusi zerrenda osoa <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab-eko dokumentuetan</a>"
+          "description": "Sartu esteka bat kanpoko baliabideetara. Zenbait webgune kapsulatze espezializatu gisa errendatuko dira, hala nola, Twitter, YouTube, Wikipedia eta Google Maps. Ikusi zerrenda osoa Knightlab-eko dokumentuetan (https://timeline.knightlab.com/docs/media-types.html)"
         },
         {
           "label": "Audioa",
@@ -90,8 +90,7 @@
               ]
             },
             {
-              "label": "Atzeko planoko kolorea",
-              "default": "#757575"
+              "label": "Atzeko planoko kolorea"
             },
             {
               "label": "Atzeko planoko irudia"
@@ -175,7 +174,7 @@
           },
           {
             "label": "Kanpoko esteka",
-            "description": "Sartu esteka bat kanpoko baliabideetara. Zenbait webgune kapsulatze espezializatu gisa errendatuko dira, hala nola, Twitter, YouTube, Wikipedia eta Google Maps. Ikusi zerrenda osoa <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab-eko dokumentuetan</a>"
+            "description": "Sartu esteka bat kanpoko baliabideetara. Zenbait webgune kapsulatze espezializatu gisa errendatuko dira, hala nola, Twitter, YouTube, Wikipedia eta Google Maps. Ikusi zerrenda osoa Knightlab-eko dokumentuetan (https://timeline.knightlab.com/docs/media-types.html)"
           },
           {
             "label": "Etiketak",
@@ -216,8 +215,7 @@
                 ]
               },
               {
-                "label": "Atzeko planoaren kolorea",
-                "default": "#757575"
+                "label": "Atzeko planoaren kolorea"
               },
               {
                 "label": "Atzeko planoko irudia"
@@ -243,8 +241,7 @@
                 "label": "Izena"
               },
               {
-                "label": "Kolorea",
-                "default": "#E0E0E0"
+                "label": "Kolorea"
               }
             ]
           }
@@ -296,6 +293,19 @@
               "label": "Indexatua"
             }
           ]
+        }
+      ]
+    },
+    {
+      "label": "User interface",
+      "fields": [
+        {
+          "label": "Before the common era (BCE)",
+          "default": "BCE"
+        },
+        {
+          "label": "dummy",
+          "default": "dummy"
         }
       ]
     }

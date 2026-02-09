@@ -1,5 +1,5 @@
 /* TimelineJS uses dangling underscore */
- 
+
 import type { TimelineSlide } from '@knight-lab/timelinejs';
 import { Timeline } from '@knight-lab/timelinejs';
 import {
@@ -30,6 +30,31 @@ type TimeLineProps = {
   onMediaInstanceBuilt: (instance: EventDispatcher) => void;
 };
 
+/**
+ * Override BCE text in media instances
+ * TimelineJS uses BCE and doesn't provide proper support for localization as needed.
+ * @see https://github.com/NUKnightLab/TimelineJS3/issues/836
+ * @param {string} bceText The text to use instead of BCE
+ */
+const overrideBCE = (bceText: string): void => {
+  const bceSpan = '<span>BCE</span>';
+
+  const markers = document.querySelectorAll('.tl-timemarker');
+  markers.forEach((marker) => {
+    if (!marker.hasAttribute('aria-label')) {
+      const ariaLabel = marker.getAttribute('aria-label');
+      if (ariaLabel) {
+        marker.setAttribute('aria-label', ariaLabel.replace(bceSpan, `<span>${bceText}</span>`));
+      }
+    }
+  });
+
+  const tickTexts = document.querySelectorAll('.tl-timeaxis-tick-text');
+  tickTexts.forEach((tickText) => {
+    tickText.innerHTML = tickText.innerHTML.replace(bceSpan, `<span>${bceText}</span>`);
+  });
+};
+
 export const TimeLine: React.FC<TimeLineProps> = ({
   data,
   timelineTitle,
@@ -46,6 +71,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   const [timelineIsRendered, setTimelineIsRendered] = useState(false);
   const h5pInstance = useContext(H5PContext);
   const translations = useContext(L10nContext);
+
   const containerRef = useRef<HTMLDivElement>(null);
   const containerId = `timeline-embed-${H5P.createUUID()}`;
 
@@ -92,7 +118,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   });
 
   useEffectOnce(() => {
-     
+
     const timeline = new Timeline(containerId, timelineDefinition, {
       language: getClosestLocaleCode(containerRef.current),
       font: undefined,
@@ -107,6 +133,9 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       if (!timelineContainer) {
         return;
       }
+
+      /* Hack to override BCE in timeline footer */
+      overrideBCE(translations.bce);
 
       // Timeline needs one extra resize after some(TM) time.
       const waitToResize = (quitInMS = 5000, timeout = 50) => {

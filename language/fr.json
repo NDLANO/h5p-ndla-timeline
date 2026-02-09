@@ -4,6 +4,7 @@
       "label": "Afficher la diapositive de titre"
     },
     {
+      "label": "Diapositive de titre",
       "fields": [
         {
           "label": "Type de diapositive",
@@ -14,11 +15,11 @@
         },
         {
           "label": "Date de début",
-          "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
+          "description": "AAAA-MM-JJ — seule l'année est requise. Les années peuvent être négatives."
         },
         {
           "label": "Date de fin",
-          "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
+          "description": "AAAA-MM-JJ — seule l'année est requise. Les années peuvent être négatives."
         },
         {
           "label": "Description"
@@ -59,7 +60,7 @@
         },
         {
           "label": "Texte alternatif",
-          "description": "Requis. Si le navigateur ne peut pas charger l&#39;image, ce texte sera affiché à la place. Également utilisé par les lecteurs &quot;text-to-speech&quot;."
+          "description": "Requis. Si le navigateur ne peut pas charger l'image, ce texte sera affiché à la place. Également utilisé par les lecteurs \"text-to-speech\"."
         },
         {
           "label": "Vidéo"
@@ -69,9 +70,10 @@
         },
         {
           "label": "Lien externe",
-          "description": "Insérer un lien vers des ressources externes. Certains sites Web seront rendus sous forme d&#39;intégrations spécialisées, telles que Twitter, YouTube, Wikipedia et Google Maps. Voir la liste complète dans la <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Documentation Knightlab</a>"
+          "description": "Insérer un lien vers des ressources externes. Certains sites Web seront rendus sous forme d'intégrations spécialisées, telles que Twitter, YouTube, Wikipedia et Google Maps. Voir la liste complète dans la Documentation Knightlab (https://timeline.knightlab.com/docs/media-types.html)"
         },
         {
+          "label": "Apparence",
           "fields": [
             {
               "label": "Arrière-plan",
@@ -88,20 +90,25 @@
               ]
             },
             {
-              "label": "Couleur d'arrière-plan",
-              "default": "#757575"
+              "label": "Couleur d'arrière-plan"
             },
             {
               "label": "Image d'arrière-plan'"
             }
-          ],
-          "label": "Apparence"
+          ]
         }
-      ],
-      "label": "Diapositive de titre"
+      ]
     },
     {
+      "label": "Éléments de la chronologie",
+      "entity": "Élément de chronologie",
+      "widgets": [
+        {
+          "label": "Par défaut"
+        }
+      ],
       "field": {
+        "label": "Élément",
         "fields": [
           {
             "label": "Type de diapositive",
@@ -112,11 +119,11 @@
           },
           {
             "label": "Date de début",
-            "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
+            "description": "AAAA-MM-JJ — seule l'année est requise. Les années peuvent être négatives."
           },
           {
             "label": "Date de fin",
-            "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
+            "description": "AAAA-MM-JJ — seule l'année est requise. Les années peuvent être négatives."
           },
           {
             "label": "Description"
@@ -157,7 +164,7 @@
           },
           {
             "label": "Texte alternatif",
-            "description": "Requis. Si le navigateur ne peut pas charger l&#39;image, ce texte sera affiché à la place. Également utilisé par les lecteurs &quot;text-to-speech&quot;."
+            "description": "Requis. Si le navigateur ne peut pas charger l'image, ce texte sera affiché à la place. Également utilisé par les lecteurs \"text-to-speech\"."
           },
           {
             "label": "Vidéo"
@@ -167,10 +174,13 @@
           },
           {
             "label": "Lien externe",
-            "description": "Insérer un lien vers des ressources externes. Certains sites Web seront rendus sous forme d&#39;intégrations spécialisées, telles que Twitter, YouTube, Wikipedia et Google Maps. Voir la liste complète dans la <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Documentation Knightlab</a>"
+            "description": "Insérer un lien vers des ressources externes. Certains sites Web seront rendus sous forme d'intégrations spécialisées, telles que Twitter, YouTube, Wikipedia et Google Maps. Voir la liste complète dans la Documentation Knightlab (https://timeline.knightlab.com/docs/media-types.html)"
           },
           {
+            "label": "Étiquettes",
+            "entity": "Étiquette",
             "field": {
+              "label": "Étiquette",
               "fields": [
                 {
                   "label": "Id"
@@ -184,11 +194,8 @@
                 {
                   "label": "Est actif"
                 }
-              ],
-              "label": "Étiquette"
-            },
-            "label": "Étiquettes",
-            "entity": "Étiquette"
+              ]
+            }
           },
           {
             "label": "Apparence",
@@ -208,24 +215,15 @@
                 ]
               },
               {
-                "label": "Couleur de fond",
-                "default": "#757575"
+                "label": "Couleur de fond"
               },
               {
                 "label": "Image d'arrière-plan'"
               }
             ]
           }
-        ],
-        "label": "Élément"
-      },
-      "label": "Éléments de la chronologie",
-      "entity": "Élément de chronologie",
-      "widgets": [
-        {
-          "label": "Par défaut"
-        }
-      ]
+        ]
+      }
     },
     {
       "label": "Étiquettes",
@@ -243,8 +241,7 @@
                 "label": "Nom"
               },
               {
-                "label": "Couleur",
-                "default": "#E0E0E0"
+                "label": "Couleur"
               }
             ]
           }
@@ -252,29 +249,29 @@
       ]
     },
     {
+      "label": "Périodes",
       "fields": [
         {
+          "label": "Périodes",
+          "entity": "Période",
           "field": {
+            "label": "Période",
             "fields": [
               {
                 "label": "Nom"
               },
               {
                 "label": "Date de début",
-                "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
+                "description": "AAAA-MM-JJ — seule l'année est requise. Les années peuvent être négatives."
               },
               {
                 "label": "Date de fin",
-                "description": "AAAA-MM-JJ — seule l&#39;année est requise. Les années peuvent être négatives."
+                "description": "AAAA-MM-JJ — seule l'année est requise. Les années peuvent être négatives."
               }
-            ],
-            "label": "Période"
-          },
-          "entity": "Période",
-          "label": "Périodes"
+            ]
+          }
         }
-      ],
-      "label": "Périodes"
+      ]
     },
     {
       "label": "Options générales",
@@ -283,8 +280,8 @@
           "label": "inutilisé"
         },
         {
-          "label": "Mode de mise à l&#39;échelle",
-          "description": "Choisissez entre les modes de mise à l&#39;échelle. &quot;Le temps humain&quot; montre la date en années avant et après l&#39;ère commune en utilisant la notation régulière, tandis que le &quot;temps cosmologique&quot; montre les dates en utilisant la notation scientifique. Cosmological time will be enforced if years are too small or too large. &quot;Indexé&quot; est utile lorsque vous souhaitez biaiser les intervalles et faire en sorte que tous les événements semblent également éloignés les uns des autres.",
+          "label": "Mode de mise à l'échelle",
+          "description": "Choisissez entre les modes de mise à l'échelle. \"Le temps humain\" montre la date en années avant et après l'ère commune en utilisant la notation régulière, tandis que le \"temps cosmologique\" montre les dates en utilisant la notation scientifique. Cosmological time will be enforced if years are too small or too large. \"Indexé\" est utile lorsque vous souhaitez biaiser les intervalles et faire en sorte que tous les événements semblent également éloignés les uns des autres.",
           "options": [
             {
               "label": "Temps humain"
@@ -300,35 +297,15 @@
       ]
     },
     {
-      "label": "Traduction de l'interface",
+      "label": "Interface utilisateur",
       "fields": [
         {
-          "label": "Droits d'utilisation",
-          "default": "Droits d'utilisation"
+          "label": "Avant l'ère commune (AEC)",
+          "default": "AEC"
         },
         {
-          "label": "Copyright - Titre",
-          "default": "Titre"
-        },
-        {
-          "label": "Copyright - Auteur",
-          "default": "Auteur"
-        },
-        {
-          "label": "Copyright - Année",
-          "default": "Année"
-        },
-        {
-          "label": "Copyright - Source",
-          "default": "Source"
-        },
-        {
-          "label": "Copyright - Licence",
-          "default": "Licence"
-        },
-        {
-          "label": "Copyright - Version",
-          "default": "Version"
+          "label": "dummy",
+          "default": "dummy"
         }
       ]
     }

@@ -25,6 +25,9 @@ export class H5PWrapper extends H5P.EventDispatcher implements IH5PContentType<P
     updatePaths(params, contentId);
 
     this.params = params;
+    this.params.l10n = this.params.l10n ?? ({} as Translations);
+    this.params.l10n.bce = this.params.l10n.bce ?? 'BCE';
+
     this.contentId = contentId;
     this.extras = extras;
 

@@ -70,7 +70,7 @@
         },
         {
           "label": "Ligazón externa",
-          "description": "Insira unha ligazón a recursos externos. Algúns sitios web amosaranse como insercións especializadas, como Twitter, YouTube, Wikipedia e Google Maps. Consulta a lista completa nos documentos de <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab</a>"
+          "description": "Insira unha ligazón a recursos externos. Algúns sitios web amosaranse como insercións especializadas, como Twitter, YouTube, Wikipedia e Google Maps. Consulta a lista completa nos documentos de Knightlab (https://timeline.knightlab.com/docs/media-types.html)"
         },
         {
           "label": "Aparencia",
@@ -90,8 +90,7 @@
               ]
             },
             {
-              "label": "Cor de fondo",
-              "default": "#757575"
+              "label": "Cor de fondo"
             },
             {
               "label": "Imaxe de fondo"
@@ -175,7 +174,7 @@
           },
           {
             "label": "Ligazón externa",
-            "description": "Insire unha ligazón a recursos externos. Algúns sitios web amosaranse como insercións especializadas, como Twitter, YouTube, Wikipedia e Google Maps. Consulta a lista completa nos documentos de <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab</a>"
+            "description": "Insire unha ligazón a recursos externos. Algúns sitios web amosaranse como insercións especializadas, como Twitter, YouTube, Wikipedia e Google Maps. Consulta a lista completa nos documentos de Knightlab (https://timeline.knightlab.com/docs/media-types.html)"
           },
           {
             "label": "Etiquetas",
@@ -216,8 +215,7 @@
                 ]
               },
               {
-                "label": "Cor de fondo",
-                "default": "#757575"
+                "label": "Cor de fondo"
               },
               {
                 "label": "Imaxe de fondo"
@@ -243,8 +241,7 @@
                 "label": "Nome"
               },
               {
-                "label": "Cor",
-                "default": "#E0E0E0"
+                "label": "Cor"
               }
             ]
           }
@@ -296,6 +293,19 @@
               "label": "Indexado"
             }
           ]
+        }
+      ]
+    },
+    {
+      "label": "User interface",
+      "fields": [
+        {
+          "label": "Before the common era (BCE)",
+          "default": "BCE"
+        },
+        {
+          "label": "dummy",
+          "default": "dummy"
         }
       ]
     }

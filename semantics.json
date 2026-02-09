@@ -804,5 +804,26 @@
         "default": "human"
       }
     ]
+  },
+  {
+    "name": "l10n",
+    "type": "group",
+    "label": "User interface",
+    "common": true,
+    "fields": [
+      {
+        "name": "bce",
+        "type": "text",
+        "label": "Before the common era (BCE)",
+        "default": "BCE"
+      },
+      {
+        "name": "dummy",
+        "type": "text",
+        "label": "dummy",
+        "default": "dummy",
+        "widget": "none"
+      }
+    ]
   }
 ]

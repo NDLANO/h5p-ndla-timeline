@@ -70,7 +70,7 @@
         },
         {
           "label": "Ekstern lenke",
-          "description": "Sett inn ei lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning, for eksempel YouTube, Wikipedia og Google Maps. Se hele lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+          "description": "Sett inn ei lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning, for eksempel YouTube, Wikipedia og Google Maps. Se hele lista i Knightlabs dokumentasjon (https://timeline.knightlab.com/docs/media-types.html)."
         },
         {
           "label": "Utseende",
@@ -90,8 +90,7 @@
               ]
             },
             {
-              "label": "Bakgrunnsfarge",
-              "default": "#757575"
+              "label": "Bakgrunnsfarge"
             },
             {
               "label": "Bakgrunnsbilde"
@@ -175,7 +174,7 @@
           },
           {
             "label": "Ekstern lenke",
-            "description": "Sett inn ei lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning, for eksempel YouTube, Wikipedia og Google Maps. Se hele lista i <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlabs dokumentasjon</a>."
+            "description": "Sett inn ei lenke til eksterne ressurser. Enkelte nettsider vil få en spesialisert visning, for eksempel YouTube, Wikipedia og Google Maps. Se hele lista i Knightlabs dokumentasjon (https://timeline.knightlab.com/docs/media-types.html)."
           },
           {
             "label": "Tagger",
@@ -216,8 +215,7 @@
                 ]
               },
               {
-                "label": "Bakgrunnsfarge",
-                "default": "#757575"
+                "label": "Bakgrunnsfarge"
               },
               {
                 "label": "Bakgrunnsbilde"
@@ -243,8 +241,7 @@
                 "label": "Navn"
               },
               {
-                "label": "Farge",
-                "default": "#E0E0E0"
+                "label": "Farge"
               }
             ]
           }
@@ -296,6 +293,19 @@
               "label": "Indeksert"
             }
           ]
+        }
+      ]
+    },
+    {
+      "label": "Brukergrensesnitt",
+      "fields": [
+        {
+          "label": "Før vår tidsrening (fvt.)",
+          "default": "fvt."
+        },
+        {
+          "label": "dummy",
+          "default": "dummy"
         }
       ]
     }

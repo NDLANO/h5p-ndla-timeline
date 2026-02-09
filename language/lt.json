@@ -4,6 +4,7 @@
       "label": "Rodyti titulinę skaidrę"
     },
     {
+      "label": "Titulinė skaidrė",
       "fields": [
         {
           "label": "Skaidrės tipas",
@@ -69,7 +70,7 @@
         },
         {
           "label": "External link",
-          "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+          "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the Knightlab docs (https://timeline.knightlab.com/docs/media-types.html)"
         },
         {
           "label": "Išvaizda",
@@ -89,19 +90,25 @@
               ]
             },
             {
-              "label": "Fono spalva",
-              "default": "#757575"
+              "label": "Fono spalva"
             },
             {
               "label": "Fono paveikslėlis"
             }
           ]
         }
-      ],
-      "label": "Titulinė skaidrė"
+      ]
     },
     {
+      "label": "Timeline items",
+      "entity": "Timeline item",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
+        "label": "Item",
         "fields": [
           {
             "label": "Slide type",
@@ -167,10 +174,13 @@
           },
           {
             "label": "External link",
-            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the Knightlab docs (https://timeline.knightlab.com/docs/media-types.html)"
           },
           {
+            "label": "Tags",
+            "entity": "Tag",
             "field": {
+              "label": "Tag",
               "fields": [
                 {
                   "label": "Id"
@@ -184,11 +194,8 @@
                 {
                   "label": "Is active"
                 }
-              ],
-              "label": "Tag"
-            },
-            "label": "Tags",
-            "entity": "Tag"
+              ]
+            }
           },
           {
             "label": "Appearance",
@@ -208,24 +215,15 @@
                 ]
               },
               {
-                "label": "Background color",
-                "default": "#757575"
+                "label": "Background color"
               },
               {
                 "label": "Background image"
               }
             ]
           }
-        ],
-        "label": "Item"
-      },
-      "label": "Timeline items",
-      "entity": "Timeline item",
-      "widgets": [
-        {
-          "label": "Default"
-        }
-      ]
+        ]
+      }
     },
     {
       "label": "Tags",
@@ -243,8 +241,7 @@
                 "label": "Name"
               },
               {
-                "label": "Color",
-                "default": "#E0E0E0"
+                "label": "Color"
               }
             ]
           }
@@ -252,10 +249,11 @@
       ]
     },
     {
+      "label": "Eras",
       "fields": [
         {
-          "entity": "Era",
           "label": "Eras",
+          "entity": "Era",
           "field": {
             "label": "Era",
             "fields": [
@@ -273,8 +271,7 @@
             ]
           }
         }
-      ],
-      "label": "Eras"
+      ]
     },
     {
       "label": "Behavioral settings",
@@ -300,35 +297,15 @@
       ]
     },
     {
-      "label": "Localize",
+      "label": "User interface",
       "fields": [
         {
-          "label": "Rights of use",
-          "default": "Rights of use"
+          "label": "Before the common era (BCE)",
+          "default": "BCE"
         },
         {
-          "label": "Copyright - Title",
-          "default": "Title"
-        },
-        {
-          "label": "Copyright - Author",
-          "default": "Author"
-        },
-        {
-          "label": "Copyright - Year",
-          "default": "Year"
-        },
-        {
-          "label": "Copyright - Source",
-          "default": "Source"
-        },
-        {
-          "label": "Copyright - License",
-          "default": "License"
-        },
-        {
-          "label": "Copyright - Version",
-          "default": "Version"
+          "label": "dummy",
+          "default": "dummy"
         }
       ]
     }

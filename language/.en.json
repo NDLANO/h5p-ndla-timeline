@@ -70,7 +70,7 @@
         },
         {
           "label": "External link",
-          "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+          "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the Knightlab docs (https://timeline.knightlab.com/docs/media-types.html)"
         },
         {
           "label": "Appearance",
@@ -90,8 +90,7 @@
               ]
             },
             {
-              "label": "Background color",
-              "default": "#757575"
+              "label": "Background color"
             },
             {
               "label": "Background image"
@@ -175,7 +174,7 @@
           },
           {
             "label": "External link",
-            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+            "description": "Insert a link to external resources. Certain websites will be rendered as specialized embeds, such as Twitter, YouTube, Wikipedia, and Google Maps. See full list in the Knightlab docs (https://timeline.knightlab.com/docs/media-types.html)"
           },
           {
             "label": "Tags",
@@ -216,8 +215,7 @@
                 ]
               },
               {
-                "label": "Background color",
-                "default": "#757575"
+                "label": "Background color"
               },
               {
                 "label": "Background image"
@@ -243,8 +241,7 @@
                 "label": "Name"
               },
               {
-                "label": "Color",
-                "default": "#E0E0E0"
+                "label": "Color"
               }
             ]
           }
@@ -296,6 +293,19 @@
               "label": "Indexed"
             }
           ]
+        }
+      ]
+    },
+    {
+      "label": "User interface",
+      "fields": [
+        {
+          "label": "Before the common era (BCE)",
+          "default": "BCE"
+        },
+        {
+          "label": "dummy",
+          "default": "dummy"
         }
       ]
     }

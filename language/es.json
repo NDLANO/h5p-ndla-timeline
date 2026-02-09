@@ -70,7 +70,7 @@
         },
         {
           "label": "Enlace externo",
-          "description": "Insertar un enlace a recursos externos. Ciertos sitios web serán renderizados como emblemas especializado, como por ejemplo Twitter, YouTube, Wikipedia, y Google Maps. Vea la lista completa en los <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+          "description": "Insertar un enlace a recursos externos. Ciertos sitios web serán renderizados como emblemas especializado, como por ejemplo Twitter, YouTube, Wikipedia, y Google Maps. Vea la lista completa en los Knightlab docs (https://timeline.knightlab.com/docs/media-types.html)"
         },
         {
           "label": "Apariencia",
@@ -90,8 +90,7 @@
               ]
             },
             {
-              "label": "Color del fondo",
-              "default": "#757575"
+              "label": "Color del fondo"
             },
             {
               "label": "Imagen del fondo"
@@ -175,7 +174,7 @@
           },
           {
             "label": "Enlace externo",
-            "description": "Insertar un enlace a recursos externos. Ciertos sitios web serán renderizados como símbolos especializados, como por ejemplo Twitter, YouTube, Wikipedia, y Google Maps. Vea la lista completa en los <a href=\"https://timeline.knightlab.com/docs/media-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">Knightlab docs</a>"
+            "description": "Insertar un enlace a recursos externos. Ciertos sitios web serán renderizados como símbolos especializados, como por ejemplo Twitter, YouTube, Wikipedia, y Google Maps. Vea la lista completa en los Knightlab docs (https://timeline.knightlab.com/docs/media-types.html)"
           },
           {
             "label": "Marcas",
@@ -216,8 +215,7 @@
                 ]
               },
               {
-                "label": "Color del fondo",
-                "default": "#757575"
+                "label": "Color del fondo"
               },
               {
                 "label": "Imagen del fondo"
@@ -243,8 +241,7 @@
                 "label": "Nombre"
               },
               {
-                "label": "Color",
-                "default": "#E0E0E0"
+                "label": "Color"
               }
             ]
           }
@@ -296,6 +293,19 @@
               "label": "Indexado"
             }
           ]
+        }
+      ]
+    },
+    {
+      "label": "Interfaz de usuario",
+      "fields": [
+        {
+          "label": "Ante de la era común (AEC)",
+          "default": "AEC"
+        },
+        {
+          "label": "dummy",
+          "default": "dummy"
         }
       ]
     }
