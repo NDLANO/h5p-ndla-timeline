@@ -2,7 +2,7 @@ import { H5PExtras, H5PContentId, H5PEvent, EventDispatcher, IH5PContentType } f
 import { H5P } from 'h5p-utils';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { App } from '../App';
+import { App, SLIDE_PADDING_BLOCK_PX } from '../App';
 import { H5PContext } from '../contexts/H5PContext';
 import { LocalizationContext } from '../contexts/LocalizationContext';
 import { Params } from '../types/Params';
@@ -54,6 +54,8 @@ export class H5PWrapper extends H5P.EventDispatcher implements IH5PContentType<P
       console.error('Found no containing element to attach `h5p-timeline` to.');
       return;
     }
+
+    containerElement.style.setProperty('--tl-slide-padding-block', `${SLIDE_PADDING_BLOCK_PX}px`);
 
     containerElement.appendChild(this.wrapper);
     containerElement.classList.add('h5p-timeline');

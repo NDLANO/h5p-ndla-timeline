@@ -1,0 +1,7 @@
+.h5p-content-controls {
+  z-index: 10; // Content controls needs z-index above z-index of timeline
+
+  .h5p-enable-fullscreen {
+    background: #737373;
+  }
+}

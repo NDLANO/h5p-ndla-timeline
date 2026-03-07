@@ -1,0 +1,6 @@
+@import url("./tl-slidenav.scss");
+@import url("./tl-slide.scss");
+
+.tl-storyslider {
+  height: var(--tl-slide-height) !important; /* Timeline library sets height in JS. */
+}

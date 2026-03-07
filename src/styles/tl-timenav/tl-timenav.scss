@@ -1,0 +1,34 @@
+@import url("./tl-timemarker.scss");
+@import url("./tl-timeera.scss");
+
+.tl-timenav {
+  .tl-timenav-slider {
+    .tl-timeaxis {
+      .tl-timeaxis-content-container {
+        .tl-timeaxis-tick-hidden {
+          content-visibility: hidden;
+        }
+
+        .tl-timeaxis-major {
+          .tl-timeaxis-tick {
+            color: #333;
+          }
+        }
+
+        .tl-timeaxis-minor {
+          .tl-timeaxis-tick {
+            color: #404040;
+          }
+        }
+      }
+    }
+  }
+}
+
+.h5p-timeline--indexed {
+  .tl-timenav {
+    .tl-timeaxis {
+      display: none;
+    }
+  }
+}

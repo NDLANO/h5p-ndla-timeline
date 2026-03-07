@@ -1,0 +1,119 @@
+
+/* Local duplicate of default stylesheet by Knightlab, but not using external resources */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("@fonts/jizaRExUiTo99u79D0KEwA.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 700;
+  src: url("@fonts/BngSUXNadjH0qYEzV7ab-oWlsbg95AiFW_g.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: url("@fonts/EJRTQgYoZZY2vCFuvAFT_r21dw.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url("@fonts/EJRVQgYoZZY2vCFuvAFWzro.ttf") format('truetype');
+}
+
+/*	Font Base
+----------------------------------------------------- */
+.tl-timeline {
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3em;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 46px;
+  }
+
+  p {
+    font-family: 'PT Serif', serif;
+    font-size: 16px;
+    line-height: 1.3em;
+  }
+
+  ul {
+    font-family: 'PT Serif', serif;
+  }
+
+  .tl-media {
+    .tl-media-wikipedia h4 a,
+    h4,
+    h4 a {
+      font-family: 'PT Serif', serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  .tl-caption,
+  .tl-credit {
+    font-family: 'PT Serif', serif;
+  }
+
+  .vcard {
+    font-family: 'PT Sans Narrow', sans-serif !important;
+    font-weight: normal !important;
+  }
+
+  .tl-message,
+  .tl-timegroup-message {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    .tl-slidenav-title {
+      line-height: 1.3em !important;
+    }
+  }
+
+  .tl-timenav-slider {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 700;
+
+    h2.tl-headline {
+      font-family: 'PT Sans', sans-serif;
+      font-weight: 700;
+      text-transform: none;
+    }
+
+    .tl-timeaxis {
+      font-family: 'PT Sans Narrow', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .tl-menubar {
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+
+  blockquote,
+  blockquote p {
+    font-family: 'PT Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+}
