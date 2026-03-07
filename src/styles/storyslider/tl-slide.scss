@@ -18,7 +18,7 @@
         box-sizing: border-box;
         display: grid !important;
         gap: 1rem;
-        grid-template-columns: 60fr 40fr;
+        grid-template-columns: var(--tl-text-ratio) var(--tl-image-ratio); /* Note that timeline reverses the columns by default */
         padding: 0 !important; /* Timeline library sets padding in JS. */
         width: min(80rem, 100%) !important; /* Timeline library sets width in JS. */
 

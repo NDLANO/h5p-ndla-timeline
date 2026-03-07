@@ -277,7 +277,15 @@
       "label": "Behavioral settings",
       "fields": [
         {
-          "label": "unused"
+          "label": "Image-to-text ratio",
+          "options": [
+            {
+              "label": "Image: 40%, Text: 60%"
+            },
+            {
+              "label": "Image: 50%, Text: 50%"
+            }
+          ]
         },
         {
           "label": "Scaling mode",

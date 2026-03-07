@@ -277,7 +277,15 @@
       "label": "Oppgåveinnstillingar",
       "fields": [
         {
-          "label": "ikkje brukt"
+          "label": "Bilde-til-tekst-forhold",
+          "options": [
+            {
+              "label": "Bilde: 40%, Tekst: 60%"
+            },
+            {
+              "label": "Bilde: 50%, Tekst: 50%"
+            }
+          ]
         },
         {
           "label": "Tidsskala",

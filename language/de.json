@@ -277,7 +277,15 @@
       "label": "Verhaltenseinstellungen",
       "fields": [
         {
-          "label": "unbenutzt"
+          "label": "Bild-zu-Text-Verhältnis",
+          "options": [
+            {
+              "label": "Bild: 40%, Text: 60%"
+            },
+            {
+              "label": "Bild: 50%, Text: 50%"
+            }
+          ]
         },
         {
           "label": "Art der Zeitskala",

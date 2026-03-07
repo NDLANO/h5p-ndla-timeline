@@ -277,7 +277,15 @@
       "label": "Configuración do comportamento",
       "fields": [
         {
-          "label": "sen usar"
+          "label": "Image-to-text ratio",
+          "options": [
+            {
+              "label": "Image: 40%, Text: 60%"
+            },
+            {
+              "label": "Image: 50%, Text: 50%"
+            }
+          ]
         },
         {
           "label": "Modo de escalado",

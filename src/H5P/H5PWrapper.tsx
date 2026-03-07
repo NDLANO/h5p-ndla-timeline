@@ -27,6 +27,11 @@ export class H5PWrapper extends H5P.EventDispatcher implements IH5PContentType<P
     this.params = params;
     this.params.l10n = this.params.l10n ?? ({} as Translations);
     this.params.l10n.bce = this.params.l10n.bce ?? 'BCE';
+    this.params.behaviour = this.params.behaviour ?? {
+      imageToTextRatio: '40:60',
+      scalingMode: 'human',
+    };
+    this.params.behaviour.imageToTextRatio = this.params.behaviour.imageToTextRatio ?? '40:60';
 
     this.contentId = contentId;
     this.extras = extras;
@@ -56,6 +61,10 @@ export class H5PWrapper extends H5P.EventDispatcher implements IH5PContentType<P
     }
 
     containerElement.style.setProperty('--tl-slide-padding-block', `${SLIDE_PADDING_BLOCK_PX}px`);
+
+    const [imageRatio, textRatio] = this.params.behaviour.imageToTextRatio.split(':');
+    containerElement.style.setProperty('--tl-image-ratio', `${imageRatio}fr`);
+    containerElement.style.setProperty('--tl-text-ratio', `${textRatio}fr`);
 
     containerElement.appendChild(this.wrapper);
     containerElement.classList.add('h5p-timeline');

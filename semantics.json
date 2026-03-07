@@ -777,10 +777,20 @@
     "importance": "low",
     "fields": [
       {
-        "label": "unused",
-        "name": "unused",
-        "type": "boolean",
-        "widget": "none"
+        "name": "imageToTextRatio",
+        "label": "Image-to-text ratio",
+        "type": "select",
+        "options": [
+          {
+            "label": "Image: 40%, Text: 60%",
+            "value": "40:60"
+          },
+          {
+            "label": "Image: 50%, Text: 50%",
+            "value": "50:50"
+          }
+        ],
+        "default": "40:60"
       },
       {
         "label": "Scaling mode",
