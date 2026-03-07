@@ -24,8 +24,12 @@ import {
 
 /** @constant {number} SLIDE_PADDING_BLOCK_PX Padding for each slide in timeline in px. */
 export const SLIDE_PADDING_BLOCK_PX = 16;
+
 /** @constant {number} RESIZE_TRIGGER_COOLDOWN_MS Cooldown to prevent resize-trigger loops. */
 export const RESIZE_TRIGGER_COOLDOWN_MS = 200;
+
+/** @constant {number} SLIDE_TRANSITION_DURATION_MS Duration of slide transition in ms. */
+const SLIDE_TRANSITION_DURATION_MS = 750;
 
 type TimeLineProps = {
   data: Params;
@@ -186,7 +190,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       timeline.on(eventName, () => {
         window.setTimeout(() => {
           h5pInstance?.trigger('resize');
-        }, 1000);
+        }, SLIDE_TRANSITION_DURATION_MS); // Without timeout, we lose animation.
       });
     });
 
@@ -209,9 +213,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
           timelineContainer.querySelector('.tl-menubar');
 
         const menuBarTop = parseFloat(timelineMenuBar?.style.top ?? '');
-        if (
-          Number.isNaN(menuBarTop) || menuBarTop < 0
-        ) {
+        if (Number.isNaN(menuBarTop) || menuBarTop < 0) {
           h5pInstance?.trigger('resize');
           window.setTimeout(() => {
             waitToResize(quitInMS - timeout);
