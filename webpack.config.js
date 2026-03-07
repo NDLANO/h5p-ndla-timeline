@@ -94,6 +94,10 @@ export default {
     ],
   },
   resolve: {
+    alias: {
+      '@fonts': path.resolve(__dirname, 'src/fonts'),
+      '@styles': path.resolve(__dirname, 'src/styles'),
+    },
     extensions: ['.js', '.jsx', '.tsx', '.ts', '.scss'],
   },
   plugins: [

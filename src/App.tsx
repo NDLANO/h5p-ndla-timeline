@@ -1,7 +1,9 @@
 import { H5PContentId, EventDispatcher } from 'h5p-types';
 import * as React from 'react';
-import { TimeLine } from './components/TimeLine/TimeLine';
+import { TimeLine, SLIDE_PADDING_BLOCK_PX } from './components/TimeLine/TimeLine';
 import { Params } from './types/Params';
+
+export { SLIDE_PADDING_BLOCK_PX };
 
 export type AppProps = {
   title: string;

@@ -21,7 +21,15 @@ import {
   createTimelineDefinition,
   getClosestLocaleCode,
 } from '../../utils/timeline.utils';
-import './TimeLine.scss';
+
+/** @constant {number} SLIDE_PADDING_BLOCK_PX Padding for each slide in timeline in px. */
+export const SLIDE_PADDING_BLOCK_PX = 16;
+
+/** @constant {number} RESIZE_TRIGGER_COOLDOWN_MS Cooldown to prevent resize-trigger loops. */
+export const RESIZE_TRIGGER_COOLDOWN_MS = 200;
+
+/** @constant {number} SLIDE_TRANSITION_DURATION_MS Duration of slide transition in ms. */
+const SLIDE_TRANSITION_DURATION_MS = 750;
 
 type TimeLineProps = {
   data: Params;
@@ -29,6 +37,12 @@ type TimeLineProps = {
   contentId: H5PContentId;
   onMediaInstanceBuilt: (instance: EventDispatcher) => void;
 };
+
+declare module '@knight-lab/timelinejs' {
+  interface Timeline {
+    current_id: string;
+  }
+}
 
 /**
  * Override BCE text in media instances
@@ -65,9 +79,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
     () => createTimelineDefinition(timelineTitle, data),
     [data, timelineTitle],
   );
-  const [height, setHeight] = useState(0);
-  const [slideWidth, setSlideWidth] = useState(0);
-  const [slideHeight, setSlideHeight] = useState(0);
+
   const [timelineIsRendered, setTimelineIsRendered] = useState(false);
   const h5pInstance = useContext(H5PContext);
   const translations = useContext(L10nContext);
@@ -75,7 +87,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const containerId = `timeline-embed-${H5P.createUUID()}`;
 
-  const aspectRatio = 16 / 9;
+  // const aspectRatio = 16 / 9;
 
   const h5pMediaInstances: { [index: string]: IH5PContentType | null } = {};
 
@@ -118,15 +130,69 @@ export const TimeLine: React.FC<TimeLineProps> = ({
   });
 
   useEffectOnce(() => {
-
     const timeline = new Timeline(containerId, timelineDefinition, {
       language: getClosestLocaleCode(containerRef.current),
       font: undefined,
     });
 
+    let lastResizeTriggerAt = 0;
+
     const timelineContainer = containerRef.current?.querySelector(
       `#${containerId}`,
     );
+
+    h5pInstance?.on('resize', () => {
+      const now = Date.now();
+      if (now - lastResizeTriggerAt < RESIZE_TRIGGER_COOLDOWN_MS) {
+        return;
+      }
+
+      const currentSlideDOM = containerRef.current?.querySelector(`[id="${timeline.current_id}"]`);
+      if (!currentSlideDOM) {
+        return;
+      }
+
+      const currentSlideContentDOM = currentSlideDOM?.querySelector('.tl-slide-content');
+      if (!currentSlideContentDOM) {
+        return;
+      }
+
+      const storySliderDOM = containerRef.current?.querySelector('.tl-storyslider');
+      if (!storySliderDOM) {
+        return;
+      }
+
+      const isFullscreen = containerRef.current?.closest('.h5p-fullscreen') !== null;
+
+      let sliderHeight: number;
+      if (!isFullscreen) {
+        const currentSlideHeight = currentSlideContentDOM.getBoundingClientRect().height;
+        sliderHeight = currentSlideHeight + 2 * SLIDE_PADDING_BLOCK_PX;
+      }
+      else {
+        const timenavSliderDOM = containerRef.current?.querySelector('.tl-timenav-slider');
+        const timenavSliderHeight = timenavSliderDOM?.getBoundingClientRect().height ?? 0;
+        sliderHeight = window.innerHeight - timenavSliderHeight - 2 * SLIDE_PADDING_BLOCK_PX;
+      }
+
+      (storySliderDOM as HTMLElement).style.setProperty('--tl-slide-height', `${sliderHeight}px`);
+
+      const menuBarDOM = containerRef.current?.querySelector('.tl-menubar');
+      (menuBarDOM as HTMLElement).style.setProperty('--tl-menubar-top', `calc(${sliderHeight}px + 0.25rem)`);
+
+      window.setTimeout(() => {
+        lastResizeTriggerAt = now;
+        h5pInstance?.trigger('resize');
+      }, 0);
+    });
+
+    ['nav_left', 'nav_right', 'nav_next', 'nav_previous'].forEach((eventName) => {
+      timeline.on(eventName, () => {
+        window.setTimeout(() => {
+          h5pInstance?.trigger('resize');
+        }, SLIDE_TRANSITION_DURATION_MS); // Without timeout, we lose animation.
+      });
+    });
 
     // Timeline sends out events. No need for Mutation observers.
     timeline.on('loaded', () => {
@@ -147,9 +213,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
           timelineContainer.querySelector('.tl-menubar');
 
         const menuBarTop = parseFloat(timelineMenuBar?.style.top ?? '');
-        if (
-          Number.isNaN(menuBarTop) || menuBarTop < 0
-        ) {
+        if (Number.isNaN(menuBarTop) || menuBarTop < 0) {
           h5pInstance?.trigger('resize');
           window.setTimeout(() => {
             waitToResize(quitInMS - timeout);
@@ -218,19 +282,6 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       });
 
       setTimelineIsRendered(true);
-
-      h5pInstance?.on('resize', () => {
-        window.requestAnimationFrame(() => {
-          if (!containerRef.current) {
-            return;
-          }
-
-          const container = containerRef.current;
-
-          const { width } = container.getBoundingClientRect();
-          setHeight(width / aspectRatio);
-        });
-      });
 
       window.requestAnimationFrame(() => {
         h5pInstance?.trigger('resize');
@@ -333,48 +384,20 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       return;
     }
 
-    const setSlideContainerHeight = (): void => {
-      const { height: newSlideHeight, width: newSlideWidth } =
-        slideContainer.getBoundingClientRect();
-      setSlideHeight(newSlideHeight);
-      setSlideWidth(newSlideWidth);
-
-      h5pInstance?.trigger('resize');
-    };
-
-    setSlideContainerHeight();
-
-    const observer = new ResizeObserver(() => {
-      setSlideContainerHeight();
-    });
-
-    observer.observe(slideContainer);
-
     return () => {
       timeMarkerObservers.forEach((obs) => obs.disconnect());
-      observer.disconnect();
     };
   }, [timelineIsRendered, translations]);
-
-  const style: React.CSSProperties = {
-    height,
-  };
-
-  if (slideHeight > 0) {
-    // @ts-expect-error CSS custom properties should be allowed
-    style['--h5p-timeline-slide-height'] = `${slideHeight}px`;
-  }
 
   const className = [
     'h5p-timeline-wrapper',
     classNames,
-    slideWidth > 1180 ? 'timeline-large-text' : undefined,
   ]
     .filter(Boolean)
     .join(' ');
 
   return (
-    <div ref={containerRef} className={className} style={style}>
+    <div ref={containerRef} className={className}>
       <div id={containerId} />
     </div>
   );

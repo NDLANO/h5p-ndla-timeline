@@ -1,0 +1,54 @@
+@import url("@styles/font.scss");
+
+@import url("@styles/content-controls.scss");
+@import url("@styles/storyslider/storyslider.scss");
+@import url("@styles/tl-timenav/tl-timenav.scss");
+
+.h5p-timeline {
+  container-name: ndla-timeline;
+  container-type: inline-size;
+  font-size: 1rem;
+  height: 100%;
+
+  .h5p-timeline-wrapper {
+    max-height: 95%;
+    max-width: 100%;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .tl-menubar {
+    top: var(--tl-menubar-top) !important; /* Timeline library sets top in JS. */
+
+    .tl-menubar-button:not(:disabled) {
+      color: #000;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &:focus-visible {
+        color: #fff;
+      }
+    }
+
+    .tl-menubar-button:disabled {
+      color: #666;
+      opacity: 1;
+    }
+  }
+
+  .tl-attribution a {
+    color: #666;
+    font-size: 0.625rem;
+  }
+}
+
+.h5p-fullscreen {
+  .h5p-timeline-wrapper {
+    height: 100vh !important; /* TODO: Obsolete once fixed height is removed */
+    max-height: none;
+  }
+}
