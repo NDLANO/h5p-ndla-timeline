@@ -2,7 +2,7 @@ import * as React from 'react';
 import { FC } from 'react';
 import fontColorContrast from 'font-color-contrast';
 import { Tag as TagType } from '../../types/Tag';
-import * as styles from './Tag.module.scss';
+import './Tag.scss';
 
 type TagProps = {
   tag: TagType;
@@ -17,7 +17,7 @@ export const Tag: FC<TagProps> = ({ tag }) => {
     // changes the role.
     <li
       role="listitem"
-      className={styles.tag}
+      className="tag"
       style={{ backgroundColor, color: textColor }}
     >
       {name}

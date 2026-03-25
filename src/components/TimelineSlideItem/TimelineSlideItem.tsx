@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as styles from './TimelineSlideItem.module.scss';
+import './TimelineSlideItem.scss';
 
 export type TimelineSlideItemProps = {
   title: string;
@@ -11,7 +11,7 @@ export const TimelineSlideItem: React.FC<TimelineSlideItemProps> = ({
   editAction,
 }) => {
   return (
-    <button type="button" className={styles.topicMapItem} onClick={editAction}>
+    <button type="button" className='slideMapItem' onClick={editAction}>
       {title}
     </button>
   );

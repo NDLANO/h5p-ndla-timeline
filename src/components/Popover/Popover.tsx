@@ -1,7 +1,7 @@
 import { Root, Trigger, Content, Close, Arrow } from '@radix-ui/react-popover';
 import * as React from 'react';
 import { FC, ReactElement } from 'react';
-import * as styles from './Popover.module.scss';
+import './Popover.scss';
 
 type Params = {
   isOpen: boolean;
@@ -18,10 +18,10 @@ export const Popover: FC<Params> = ({
 }) => {
   return (
     <Root open={isOpen} onOpenChange={onOpenChange}>
-      <Trigger className={styles.trigger} {...triggerProps} />
-      <Content className={styles.content}>
-        <Close className={styles.close} />
-        <Arrow className={styles.arrow} />
+      <Trigger className={'trigger'} {...triggerProps} />
+      <Content className='content'>
+        <Close className='close' />
+        <Arrow className='arrow' />
         {children}
       </Content>
     </Root>

@@ -4,7 +4,7 @@ import { SlideType } from '../../types/SlideType';
 import { MediaBlock } from '../MediaBlock/MediaBlock';
 import { TextContentBlock } from '../TextContentBlock/TextContentBlock';
 import { TitleBlock } from '../TitleBlock/TitleBlock';
-import * as styles from './Grid.module.scss';
+import './Grid.scss';
 
 type GridProps = {
   eventItem: EventItemType<SlideType>;
@@ -41,7 +41,7 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
         return (
           <div
             key={gridItem.id}
-            className={styles.itemWrapper}
+            className='itemWrapper'
             style={{
               left: `${gridItem.x}%`,
               top: `${gridItem.y}%`,
@@ -68,8 +68,8 @@ export const Grid: React.FC<GridProps> = ({ eventItem }) => {
   );
 
   return (
-    <div className={styles.gridWrapper}>
-      <div className={styles.grid}>{children}</div>
+    <div className='gridWrapper'>
+      <div className='grid'>{children}</div>
     </div>
   );
 };

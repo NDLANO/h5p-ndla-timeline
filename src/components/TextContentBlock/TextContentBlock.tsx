@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FC } from 'react';
-import * as styles from './TextContentBlock.module.scss';
+import './TextContentBlock.scss';
 
 type TextContentBlockProps = {
   textContent: string;
@@ -11,7 +11,7 @@ export const TextContentBlock: FC<TextContentBlockProps> = ({
 }) => {
   return (
     <div
-      className={styles.textContent}
+      className='textContent'
       dangerouslySetInnerHTML={{ __html: textContent }}
     />
   );
