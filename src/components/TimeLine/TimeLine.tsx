@@ -2,7 +2,7 @@
 
 import type { TimelineSlide } from '@knight-lab/timelinejs';
 import { Timeline } from '@knight-lab/timelinejs';
-import {
+import type {
   EventDispatcher,
   H5PContentId,
   IH5PContentType,

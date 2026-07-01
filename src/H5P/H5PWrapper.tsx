@@ -1,4 +1,4 @@
-import { H5PExtras, H5PContentId, H5PEvent, EventDispatcher, IH5PContentType } from 'h5p-types';
+import type { H5PExtras, H5PContentId, H5PEvent, EventDispatcher, IH5PContentType } from 'h5p-types';
 import { H5P } from 'h5p-utils';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';

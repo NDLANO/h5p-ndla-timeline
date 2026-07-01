@@ -1,5 +1,5 @@
 import { Media } from '@knight-lab/timelinejs/src/js/media/Media';
-import { H5PAudio, H5PImage, H5PVideo } from 'h5p-types';
+import type { H5PAudio, H5PImage, H5PVideo } from 'h5p-types';
 import * as React from 'react';
 import { FC, useEffect, useMemo, useRef } from 'react';
 

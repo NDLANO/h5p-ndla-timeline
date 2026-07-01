@@ -1,4 +1,4 @@
-import { H5PCopyright, H5PImage } from 'h5p-types';
+import type { H5PCopyright, H5PImage } from 'h5p-types';
 import { H5PLibraryText } from './../types/H5PLibraryText';
 import { EventContent } from './EventContent';
 import { LayoutOption } from './LayoutOption';

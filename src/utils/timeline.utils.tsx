@@ -4,7 +4,7 @@ import type {
   TimelineEra,
   TimelineSlide,
 } from '@knight-lab/timelinejs';
-import { H5PMedia } from 'h5p-types';
+import type { H5PMedia } from 'h5p-types';
 import * as React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { Grid } from '../components/Grid/Grid';

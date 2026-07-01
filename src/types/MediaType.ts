@@ -1,4 +1,4 @@
-import { H5PAudio, H5PImage, H5PVideo } from 'h5p-types';
+import type { H5PAudio, H5PImage, H5PVideo } from 'h5p-types';
 
 export type MediaType =
   | {

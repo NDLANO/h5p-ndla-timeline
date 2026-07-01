@@ -1,4 +1,4 @@
-import { H5PContentId, EventDispatcher } from 'h5p-types';
+import type { H5PContentId, EventDispatcher } from 'h5p-types';
 import * as React from 'react';
 import { TimeLine, SLIDE_PADDING_BLOCK_PX } from './components/TimeLine/TimeLine';
 import { Params } from './types/Params';

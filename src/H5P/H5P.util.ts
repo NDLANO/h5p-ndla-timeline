@@ -1,4 +1,4 @@
-import { IH5PContentType, H5PMedia, H5PContentId } from 'h5p-types';
+import type { IH5PContentType, H5PMedia, H5PContentId } from 'h5p-types';
 import { H5P } from 'h5p-utils';
 import { EventItemType } from '../types/EventItemType';
 import { Params } from '../types/Params';
