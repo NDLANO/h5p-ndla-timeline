@@ -46,7 +46,7 @@
     "less-loader": "^13.0.0",
     "mini-css-extract-plugin": "^2.10.2",
     "react-refresh": "^0.18.0",
-    "sass": "^1.102.0",
+    "sass": "^1.103.0",
     "sass-loader": "^17.0.0",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.6.2",
