@@ -209,7 +209,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
           return; // Tried long enough
         }
 
-        const timelineMenuBar: HTMLElement|null =
+        const timelineMenuBar: HTMLElement | null =
           timelineContainer.querySelector('.tl-menubar');
 
         const menuBarTop = parseFloat(timelineMenuBar?.style.top ?? '');

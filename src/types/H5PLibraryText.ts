@@ -1,13 +1,13 @@
 type H5PMetadataAuthor = {
   name: string,
   role: 'Author' | 'Editor' | 'Licensee' | 'Originator',
-}
+};
 
 type H5PMetadataChange = {
   date: string,
   author: string,
   log: string
-}
+};
 
 type H5PMetadata = {
   title?: string;
@@ -23,17 +23,17 @@ type H5PMetadata = {
   authorComments?: string,
   defaultLanguage?: string,
   contentType?: string
-}
+};
 
 type H5PLibraryParams = {
   library?: string,
   params: object,
   metadata?: H5PMetadata,
   subContentId?: string
-}
+};
 
 export type H5PLibraryText = H5PLibraryParams & {
   params: {
     text: string;
   }
-}
+};

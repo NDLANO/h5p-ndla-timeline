@@ -5,21 +5,21 @@ import { FC, useEffect, useMemo, useRef } from 'react';
 
 type MediaBlockProps =
   | {
-      type: 'image';
-      media: H5PImage;
-    }
+    type: 'image';
+    media: H5PImage;
+  }
   | {
-      type: 'video';
-      media: H5PVideo;
-    }
+    type: 'video';
+    media: H5PVideo;
+  }
   | {
-      type: 'audio';
-      media: H5PAudio;
-    }
+    type: 'audio';
+    media: H5PAudio;
+  }
   | {
-      type: 'custom';
-      media: string;
-    };
+    type: 'custom';
+    media: string;
+  };
 
 export const MediaBlock: FC<MediaBlockProps> = (props) => {
   const { media } = props;

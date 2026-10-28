@@ -133,6 +133,7 @@ describe('Timeline utils', () => {
       expect(actual).toBe(expected);
     });
 
+    // eslint-disable-next-line @stylistic/ts/max-len
     it('should return locale code of the closest element with a locale code, if the language is set on the element itself', () => {
       const locale1 = 'en';
       const locale2 = 'nb';

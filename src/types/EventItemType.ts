@@ -21,27 +21,27 @@ export type EventItemType<S extends SlideType> = {
 
   appearance:
     | {
-        backgroundType: 'none';
-      }
+      backgroundType: 'none';
+    }
     | {
-        backgroundType: 'color';
-        backgroundColor?: string;
-      }
+      backgroundType: 'color';
+      backgroundColor?: string;
+    }
     | {
-        backgroundType: 'image';
-        backgroundImage?: H5PImage;
-      };
+      backgroundType: 'image';
+      backgroundImage?: H5PImage;
+    };
 } & MediaType &
   (
     | {
-        title?: string;
-        slideType: 'title';
-        startDate?: string;
-      }
+      title?: string;
+      slideType: 'title';
+      startDate?: string;
+    }
     | {
-        title: string;
-        slideType: 'regular';
-        startDate: string;
-        tags?: Array<Tag>;
-      }
+      title: string;
+      slideType: 'regular';
+      startDate: string;
+      tags?: Array<Tag>;
+    }
   );
