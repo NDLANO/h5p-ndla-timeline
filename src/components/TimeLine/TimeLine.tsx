@@ -69,6 +69,29 @@ const overrideBCE = (bceText: string): void => {
   });
 };
 
+/**
+ * Replace h tags with styled div tags.
+ */
+const overrideHTags = () => {
+  for (let i = 1; i <= 6; i++) {
+    const hTags = [...document.querySelectorAll(`h${i}`)];
+    hTags.forEach((hTag) => {
+      const divTag = document.createElement('div');
+
+      for (const attribute of hTag.attributes) {
+        divTag.setAttribute(attribute.name, attribute.value);
+      }
+      divTag.classList.add(`h${i}`);
+
+      while (hTag.firstChild) {
+        divTag.appendChild(hTag.firstChild);
+      }
+
+      hTag.replaceWith(divTag);
+    });
+  }
+};
+
 export const TimeLine: React.FC<TimeLineProps> = ({
   data,
   timelineTitle,
@@ -202,6 +225,9 @@ export const TimeLine: React.FC<TimeLineProps> = ({
 
       /* Hack to override BCE in timeline footer */
       overrideBCE(translations.bce);
+
+      /* Replace h tags with styled divs */
+      overrideHTags();
 
       // Timeline needs one extra resize after some(TM) time.
       const waitToResize = (quitInMS = 5000, timeout = 50) => {
