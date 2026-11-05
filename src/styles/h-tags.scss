@@ -1,0 +1,275 @@
+/*
+ * Heading rules ported from @knight-lab/timelinejs (dist/css/timeline.css).
+ * The timeline replaces h1-h6 elements with div.h1-div.h6 (see overrideHTags in
+ * TimeLine.tsx), so the library's element selectors no longer match. These are
+ * the same rules with h-tags rewritten to the corresponding classes.
+ * Regenerate when upgrading @knight-lab/timelinejs.
+ */
+
+.tl-timeline .h1,
+.tl-timeline .h2,
+.tl-timeline .h3,
+.tl-timeline .h4,
+.tl-timeline .h5,
+.tl-timeline .h6 {
+  color: #000;
+}
+.tl-timeline .h1,
+.tl-timeline .h2,
+.tl-timeline .h3 {
+  font-size: 28px;
+  line-height: 28px;
+}
+.tl-timeline .h1 small,
+.tl-timeline .h2 small,
+.tl-timeline .h3 small {
+  font-size: 24px;
+  line-height: 24px;
+}
+.tl-timeline .h4,
+.tl-timeline .h5,
+.tl-timeline .h6 {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+.tl-timeline .h4 small,
+.tl-timeline .h5 small,
+.tl-timeline .h6 small {
+  font-size: 15px;
+  line-height: 15px;
+}
+.tl-timeline .h2.tl-headline-title {
+  font-size: 38px;
+  line-height: 38px;
+}
+.tl-timeline .h2.tl-headline-title small {
+  display: block;
+  margin-top: 5px;
+  font-size: 24px;
+  line-height: 24px;
+}
+.tl-timeline .h2 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+@media only screen and (max-width: 800px), only screen and (max-device-width: 800px) {
+  .tl-timeline .h1,
+  .tl-timeline .h2,
+  .tl-timeline .h3 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+@media only screen and (max-width: 500px), only screen and (max-device-width: 500px) {
+  .tl-timeline .h1,
+  .tl-timeline .h2,
+  .tl-timeline .h3 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+.tl-skinny .h2 {
+  margin-top: 0px;
+}
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text .h2.tl-headline,
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text .h2.tl-headline p {
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 12px;
+  height: 100%;
+  overflow: hidden;
+  font-weight: normal;
+  margin: 0;
+  color: #bfbfbf;
+  position: relative;
+}
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text .h2.tl-headline.tl-headline-fadeout:after,
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text .h2.tl-headline p.tl-headline-fadeout:after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 50%;
+  background: -moz-linear-gradient(top, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(229, 229, 229, 0)), color-stop(50%, #e5e5e5));
+  background: -webkit-linear-gradient(top, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
+  background: -o-linear-gradient(top, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
+  background: -ms-linear-gradient(top, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
+  background: linear-gradient(to bottom, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@thecolor', endColorstr='@thecolor', GradientType=0);
+}
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text .h2.tl-headline {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text .h2.tl-headline,
+.tl-timemarker:focus .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text .h2.tl-headline {
+  color: #FFF;
+}
+.tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text .h2.tl-headline.tl-headline-fadeout:after,
+.tl-timemarker:focus .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text .h2.tl-headline.tl-headline-fadeout:after {
+  background: -moz-linear-gradient(top, rgba(115, 115, 115, 0) 0%, #737373 80%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(115, 115, 115, 0)), color-stop(80%, #737373));
+  background: -webkit-linear-gradient(top, rgba(115, 115, 115, 0) 0%, #737373 80%);
+  background: -o-linear-gradient(top, rgba(115, 115, 115, 0) 0%, #737373 80%);
+  background: -ms-linear-gradient(top, rgba(115, 115, 115, 0) 0%, #737373 80%);
+  background: linear-gradient(to bottom, rgba(115, 115, 115, 0) 0%, #737373 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@thecolor', endColorstr='@thecolor', GradientType=0);
+}
+.tl-timemarker:hover.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text .h2.tl-headline.tl-headline-fadeout:after,
+.tl-timemarker:focus.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text .h2.tl-headline.tl-headline-fadeout:after {
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(80%, #FFF));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@thecolor', endColorstr='@thecolor', GradientType=0);
+}
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text .h2.tl-headline {
+  color: #333;
+}
+.tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text .h2.tl-headline.tl-headline-fadeout:after {
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(80%, #FFF));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #FFF 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@thecolor', endColorstr='@thecolor', GradientType=0);
+}
+.tl-timeera .tl-timeera-content-container .tl-timeera-content .tl-timeera-text .h2.tl-headline {
+  bottom: 0px;
+  position: absolute;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  line-height: 10px;
+  overflow: hidden;
+  font-weight: normal;
+  margin: 0;
+  color: #FFF;
+  margin-left: 10px;
+}
+.tl-timeera .tl-timeera-content-container .tl-timeera-content .tl-timeera-text .h2.tl-headline.tl-headline-fadeout:after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 50%;
+  background: -moz-linear-gradient(top, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(229, 229, 229, 0)), color-stop(50%, #e5e5e5));
+  background: -webkit-linear-gradient(top, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
+  background: -o-linear-gradient(top, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
+  background: -ms-linear-gradient(top, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
+  background: linear-gradient(to bottom, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@thecolor', endColorstr='@thecolor', GradientType=0);
+}
+.tl-slide.tl-full-image-background .h1,
+.tl-slide.tl-full-color-background .h1,
+.tl-slide.tl-full-image-background .h2,
+.tl-slide.tl-full-color-background .h2,
+.tl-slide.tl-full-image-background .h3,
+.tl-slide.tl-full-color-background .h3,
+.tl-slide.tl-full-image-background .h4,
+.tl-slide.tl-full-color-background .h4,
+.tl-slide.tl-full-image-background .h5,
+.tl-slide.tl-full-color-background .h5,
+.tl-slide.tl-full-image-background .h6,
+.tl-slide.tl-full-color-background .h6 {
+  color: #FFF !important;
+  text-shadow: 1px 1px 1px #000 !important;
+}
+.tl-slide.tl-full-image-background .h1,
+.tl-slide.tl-full-image-background .h2,
+.tl-slide.tl-full-image-background .h3,
+.tl-slide.tl-full-image-background .h4,
+.tl-slide.tl-full-image-background .h5,
+.tl-slide.tl-full-image-background .h6 {
+  text-shadow: 1px 1px 2px #000;
+}
+.tl-slide.tl-text-background .tl-text .tl-text-content-container .h2 {
+  margin-top: 5px;
+}
+.tl-text .h2.tl-headline-title,
+.tl-text .h2.tl-headline {
+  margin-top: 0;
+}
+.tl-text .h3.tl-headline-date {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: normal;
+  margin: 0 0 3px 0;
+  color: #b3b3b3;
+}
+.tl-text .h3.tl-headline-date small {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: normal;
+  color: #b3b3b3;
+}
+.tl-full-image-background .tl-text .h3.tl-headline-date,
+.tl-full-color-background .tl-text .h3.tl-headline-date,
+.tl-full-image-background .tl-text p .h3.tl-headline-date,
+.tl-full-color-background .tl-text p .h3.tl-headline-date {
+  color: #f2f2f2 !important;
+}
+.tl-full-image-background .tl-text .h3.tl-headline-date small,
+.tl-full-color-background .tl-text .h3.tl-headline-date small,
+.tl-full-image-background .tl-text p .h3.tl-headline-date small,
+.tl-full-color-background .tl-text p .h3.tl-headline-date small {
+  color: #f2f2f2 !important;
+}
+.tl-skinny .tl-text .h2.tl-headline-title,
+.tl-skinny .tl-text .h2.tl-headline {
+  font-size: 32px;
+  line-height: 36px;
+}
+.tl-medium .tl-text .h2.tl-headline-title,
+.tl-medium .tl-text .h2.tl-headline {
+  font-size: 32px;
+  line-height: 36px;
+}
+.tl-media .tl-media-wikipedia .h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.tl-media .tl-media-wikipedia .h4 a {
+  color: #000;
+  text-decoration: none;
+}
+.tl-slide.tl-full-image-background .tl-media .tl-media-wikipedia .h4 a,
+.tl-slide.tl-full-color-background .tl-media .tl-media-wikipedia .h4 a {
+  color: #FFF !important;
+  text-shadow: 1px 1px 1px #000 !important;
+}
+.tl-media .tl-media-website .h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 1;
+}
+.tl-media .tl-media-website .h4 a {
+  color: #000;
+  text-decoration: none;
+}
+.tl-slide.tl-full-image-background .tl-media .tl-media-website .h4 a,
+.tl-slide.tl-full-color-background .tl-media .tl-media-website .h4 a {
+  color: #FFF !important;
+  text-shadow: 1px 1px 1px #000 !important;
+}

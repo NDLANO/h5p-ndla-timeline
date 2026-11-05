@@ -71,10 +71,11 @@ const overrideBCE = (bceText: string): void => {
 
 /**
  * Replace h tags with styled div tags.
+ * @param {Element} container HTML element.
  */
-const overrideHTags = () => {
+const overrideHTags = (container: Element) => {
   for (let i = 1; i <= 6; i++) {
-    const hTags = [...document.querySelectorAll(`h${i}`)];
+    const hTags = [...container.querySelectorAll(`h${i}`)];
     hTags.forEach((hTag) => {
       const divTag = document.createElement('div');
 
@@ -227,7 +228,7 @@ export const TimeLine: React.FC<TimeLineProps> = ({
       overrideBCE(translations.bce);
 
       /* Replace h tags with styled divs */
-      overrideHTags();
+      overrideHTags(timelineContainer);
 
       // Timeline needs one extra resize after some(TM) time.
       const waitToResize = (quitInMS = 5000, timeout = 50) => {
